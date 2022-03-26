@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     // Select top mock up
     let mockUp = document.querySelector(".pack-page-container > .pack-container > .image-container");
-    
+    console.log(mockUp);
 
 
 
