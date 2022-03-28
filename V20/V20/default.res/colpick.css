@@ -79,14 +79,22 @@
 	padding-left: 20px;
 }
 
-/* Fix padding on headers */
+/* fix padding */
 
 .color-box {
 	border: none!important;
+	width: 40px!important;
+	height: 40px!important;
 }
 
 .inner-color-box {
 	border-radius: 50%!important;
+	width: 40px!important;
+	height: 40px!important;
+}
+
+.color-cell .color-box div.inner-color-box {
+	border-left: 40px solid white;
 }
 
 .stamp-page-container {
@@ -102,6 +110,9 @@
 .hidden {
     display: none;
 }
+
+
+
 
 /* END EDITS */
 
