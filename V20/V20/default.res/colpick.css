@@ -93,7 +93,8 @@
 	height: 40px!important;
 }
 
-.color-cell .color-box div.inner-color-box {
+.color-cell .color-box div.inner-color-box,
+.color-box-wrapper  .color-box div.inner-color-box {
 	border-left: 40px solid white;
 }
 
