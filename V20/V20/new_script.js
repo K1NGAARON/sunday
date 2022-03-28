@@ -16,7 +16,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     // Delete matching style column
     let matchingStyleCol = document.querySelectorAll(".header-table > tbody > tr:nth-child(2) > td:nth-child(3)");
-    console.log(matchingStyleCol);
 
     for (let i = 0; i < matchingStyleCol.length; i++) {
         matchingStyleCol[i].classList.add("hidden");
