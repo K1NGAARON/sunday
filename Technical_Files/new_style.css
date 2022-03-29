@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+	font-family: Poppins;
+	font-size: 12px;
+}
+
+body,
+html {
+	width: 1200px!important;
+	margin: 0 auto;
+}
+
+.header-table tr:nth-child(1) {
+    background-color: black;
+}
+
+.header-table {
+    border: none!important;
+}
+
+.header-table td {
+    border: none!important;
+    font-weight: 700;
+}
+
+#reportData .header-table tbody tr:first-child td:nth-child(1),
+#reportData .header-table tbody tr:first-child td:nth-child(2) {
+	display: none;
+}
+
+.table-standard.bom-page-table.bom_table thead tr th:nth-child(1),
+.table-standard.bom-page-table.bom_table tbody tr td:nth-child(1),
+.table-standard.bom-page-table.bom_table thead tr th:nth-child(2),
+.table-standard.bom-page-table.bom_table tbody tr td:nth-child(2),
+.table-standard.bom-page-table.bom_table thead tr th:nth-child(4),
+.table-standard.bom-page-table.bom_table tbody tr td:nth-child(4),
+.table-standard.bom-page-table.bom_table thead tr th:nth-child(5),
+.table-standard.bom-page-table.bom_table tbody tr td:nth-child(5) {
+	display: none;
+}
+
+.pack-page-container .pack-container .image-container {
+    height: 500px!important;
+	width: auto!important;
+}
+
+.image-container span {
+	display: none;
+}
+
+.pack-page-container .pack-container .image-container img {
+    height: 100%!important;
+    width: auto!important;
+}
+
+.table-standard.bom-page-table.bom_table {
+	width: 50%;
+}
+
+.header-table td, table.table-standard td, table.table-standard th {
+	border: none!important;
+}
+
+.table-standard.bom-page-table.bom_table thead tr th:nth-child(3) {
+	border-right: 1px solid black!important;
+}
+
+.table-standard.bom-page-table.bom_table tr {
+	border-bottom: 1px solid black!important;
+}
+
+.table-standard.bom-page-table.bom_table tr:last-child {
+	border-bottom: none!important;
+}
+
+.table-standard.bom-page-table.bom_table td {
+	padding: 30px 0;
+}
+
+.table-standard.bom-page-table.bom_table td:nth-child(odd) {
+	width: 50%;
+	border-right: 1px solid black!important;
+}
+
+.table-standard.bom-page-table.bom_table td:nth-child(even) {
+	padding-left: 20px;
+}
+
+.color-box {
+	border: none!important;
+	width: 40px!important;
+	height: 40px!important;
+}
+
+.inner-color-box {
+	border-radius: 50%!important;
+	width: 40px!important;
+	height: 40px!important;
+}
+
+.color-cell .color-box div.inner-color-box,
+.color-box-wrapper  .color-box div.inner-color-box {
+	border-left: 40px solid white;
+}
+
+.stamp-page-container {
+	border: none!important;
+}
+
+.center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}

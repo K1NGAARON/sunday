@@ -1,4 +1,5 @@
-/* EDITS BY AARON */
+/* 
+EDITS BY AARON
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
 * {
@@ -91,8 +92,6 @@ html {
 	padding-left: 20px;
 }
 
-/* fix padding */
-
 .color-box {
 	border: none!important;
 	width: 40px!important;
@@ -114,8 +113,6 @@ html {
 	border: none!important;
 }
 
-
-/* UTILITY */
 .center {
     text-align: center;
 }
@@ -124,10 +121,7 @@ html {
     display: none;
 }
 
-
-
-
-/* END EDITS */
+END EDITS */
 
 
 /*Main container*/
