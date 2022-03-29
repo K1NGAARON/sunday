@@ -1,0 +1,4578 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<base target="_blank">
+	
+		<title>Style Name: Unisex Hoodie</title>
+
+        <link rel="stylesheet" href="default.res/bootstrap-v3.2.0.min.css">
+        <script src="default.res/jquery-v1.11.2.min.js"></script>
+		<script src="default.res/handlebars-v2.0.0.min.js"></script>
+		<script src="default.res/gettext.js"></script>
+		
+		<link rel="stylesheet" href="default.res/theme/smoothness/jquery-ui.css">
+  
+		<script src="default.res/jquery-v1.11.2.min.js"></script>
+		<script src="default.res/jquery-ui.js"></script>
+		
+		<script src="default.res/colpick.js"></script>
+		<script src="new_script.js"></script>
+		<link rel="stylesheet" href="default.res/colpick.css">
+<script>
+function hexToRgb(hex) {
+	var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+	return result ? {
+		r: parseInt(result[1], 16),
+		g: parseInt(result[2], 16),
+		b: parseInt(result[3], 16)
+	} : null;
+}
+
+
+function cssRgbToHex(rgb) {
+	if (!rgb) return "#ffffff";
+
+	if (/^#[0-9A-F]{6}$/i.test(rgb)) return rgb;
+	
+	rgb = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+))?\)$/);
+
+
+	return rgbToHex(rgb[1] * 1, rgb[2] * 1, rgb[3] * 1);
+}
+
+
+function componentToHex(c) {
+	var hex = c.toString(16);
+	return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+	return "#" + rgbToHexClean(r, g, b);
+}
+
+function rgbToHexClean(r, g, b) {
+	return componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+function intToHex(i) {
+	return zeroPad(i.toString(16), 6);
+}
+
+
+function zeroPad(num, places) {
+  var zero = places - num.toString().length + 1;
+  return Array(+(zero > 0 && zero)).join("0") + num;
+}
+
+function getQueryParameter(name) {
+	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+		results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+
+
+function guid() {
+  function s4() {
+	return Math.floor((1 + Math.random()) * 0x10000)
+	  .toString(16)
+	  .substring(1);
+  }
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+	s4() + '-' + s4() + s4() + s4();
+}
+
+function getCurrentFileName()
+{
+	return location.pathname.replace(/^.*[\\\/]/, '');
+}
+
+//------------------------------------------------------
+//--annotation arrows canvas drawing utilities
+var arrow = [
+    [ 2, 0 ],
+    [ -10, -4 ],
+    [ -10, 4]
+];
+
+function drawFilledPolygon(ctx, shape) {
+    ctx.beginPath();
+    ctx.moveTo(shape[0][0],shape[0][1]);
+
+    for(p in shape)
+        if (p > 0) ctx.lineTo(shape[p][0],shape[p][1]);
+
+    ctx.lineTo(shape[0][0],shape[0][1]);
+    //ctx.fill();
+};
+
+function translateShape(shape,x,y) {
+    var rv = [];
+    for(p in shape)
+        rv.push([ shape[p][0] + x, shape[p][1] + y ]);
+    return rv;
+};
+
+function rotateShape(shape,ang) {
+    var rv = [];
+    for(p in shape)
+        rv.push(rotatePoint(ang,shape[p][0],shape[p][1]));
+    return rv;
+};
+function rotatePoint(ang,x,y) {
+    return [
+        (x * Math.cos(ang)) - (y * Math.sin(ang)),
+        (x * Math.sin(ang)) + (y * Math.cos(ang))
+    ];
+};
+
+function drawLineArrow(ctx, x1,y1,x2,y2) {
+    ctx.beginPath();
+    ctx.moveTo(x1,y1);
+    ctx.lineTo(x2,y2);
+    ctx.stroke();
+    var ang = Math.atan2(y2-y1,x2-x1);
+    drawFilledPolygon(ctx, translateShape(rotateShape(arrow,ang),x2,y2));
+};
+
+
+function addLineArrow(canvas, x1,y1,x2,y2) {
+    ctx = canvas.getContext('2d');
+	ctx.clearRect(0,0,$(canvas).width(),$(canvas).height());
+	drawLineArrow(ctx, x1,y1,x2,y2);
+};
+
+
+</script>
+		<script>// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+if (!Object.keys) {
+	Object.keys = (function () {
+		'use strict';
+		var hasOwnProperty = Object.prototype.hasOwnProperty,
+			hasDontEnumBug = !({ toString: null }).propertyIsEnumerable('toString'),
+			dontEnums = [
+				'toString',
+				'toLocaleString',
+				'valueOf',
+				'hasOwnProperty',
+				'isPrototypeOf',
+				'propertyIsEnumerable',
+				'constructor'
+			],
+			dontEnumsLength = dontEnums.length;
+
+		return function (obj) {
+			if (typeof obj !== 'function' && (typeof obj !== 'object' || obj === null)) {
+				throw new TypeError('Object.keys called on non-object');
+			}
+
+			var result = [], prop, i;
+
+			for (prop in obj) {
+				if (hasOwnProperty.call(obj, prop)) {
+					result.push(prop);
+				}
+			}
+
+			if (hasDontEnumBug) {
+				for (i = 0; i < dontEnumsLength; i++) {
+					if (hasOwnProperty.call(obj, dontEnums[i])) {
+						result.push(dontEnums[i]);
+					}
+				}
+			}
+			return result;
+		};
+	}());
+}
+
+// Production steps of ECMA-262, Edition 5, 15.4.4.18, Reference: http://es5.github.io/#x15.4.4.18
+if (!Array.prototype.forEach) {
+
+	Array.prototype.forEach = function (callback/*, thisArg*/) {
+
+		var T, k;
+
+		if (this == null) {
+			throw new TypeError('this is null or not defined');
+		}
+
+		// 1. Let O be the result of calling toObject() passing the
+		// |this| value as the argument.
+		var O = Object(this);
+
+		// 2. Let lenValue be the result of calling the Get() internal
+		// method of O with the argument "length".
+		// 3. Let len be toUint32(lenValue).
+		var len = O.length >>> 0;
+
+		// 4. If isCallable(callback) is false, throw a TypeError exception. 
+		// See: http://es5.github.com/#x9.11
+		if (typeof callback !== 'function') {
+			throw new TypeError(callback + ' is not a function');
+		}
+
+		// 5. If thisArg was supplied, let T be thisArg; else let
+		// T be undefined.
+		if (arguments.length > 1) {
+			T = arguments[1];
+		}
+
+		// 6. Let k be 0.
+		k = 0;
+
+		// 7. Repeat while k < len.
+		while (k < len) {
+
+			var kValue;
+
+			// a. Let Pk be ToString(k).
+			//    This is implicit for LHS operands of the in operator.
+			// b. Let kPresent be the result of calling the HasProperty
+			//    internal method of O with argument Pk.
+			//    This step can be combined with c.
+			// c. If kPresent is true, then
+			if (k in O) {
+
+				// i. Let kValue be the result of calling the Get internal
+				// method of O with argument Pk.
+				kValue = O[k];
+
+				// ii. Call the Call internal method of callback with T as
+				// the this value and argument list containing kValue, k, and O.
+				callback.call(T, kValue, k, O);
+			}
+			// d. Increase k by 1.
+			k++;
+		}
+		// 8. return undefined.
+	};
+}
+
+// filter
+if (!Array.prototype.filter) {
+	Array.prototype.filter = function (func, thisArg) {
+		'use strict';
+		if (!((typeof func === 'Function' || typeof func === 'function') && this))
+			throw new TypeError();
+
+		var len = this.length >>> 0,
+			res = new Array(len), // preallocate array
+			t = this, c = 0, i = -1;
+		if (thisArg === undefined) {
+			while (++i !== len) {
+				// checks to see if the key was set
+				if (i in this) {
+					if (func(t[i], i, t)) {
+						res[c++] = t[i];
+					}
+				}
+			}
+		}
+		else {
+			while (++i !== len) {
+				// checks to see if the key was set
+				if (i in this) {
+					if (func.call(thisArg, t[i], i, t)) {
+						res[c++] = t[i];
+					}
+				}
+			}
+		}
+
+		res.length = c; // shrink down array to proper size
+		return res;
+	};
+}
+
+// isArray polyfill
+if (!Array.isArray) {
+	Array.isArray = function (arg) {
+		return Object.prototype.toString.call(arg) === '[object Array]';
+	};
+}</script>
+		
+		<script>
+			// jsonp callback
+			var load = function (data) {
+				window.data = data.data;
+				window.bom_data = data.bom_data;
+				window.images_data = data.images_data;
+				window.stamp_data = data.stamp_data;
+				window.rulers_data = data.rulers_data;
+				window.allover_print_data = data.allover_print_data;
+				//window.pack_data = data.pack_data;
+				//window.layout_shapes = data.layout_shapes;
+				window.layout_fabrics = data.layout_fabrics;
+			}
+			
+			//init edit mode flag
+			var editMode = getQueryParameter("edit") == 1;
+			if (editMode)
+			{
+				//disable back button
+				history.pushState({ page: 1 }, "title 1", "#nbb");
+				window.onhashchange = function (event) {
+					window.location.hash = "nbb";
+
+				};
+			}
+			
+		</script>
+		
+		
+		
+		<script src="default.res/data.js"></script>
+		
+		<script>
+			// l10n
+				Gettext.load("en", "msgid \"Season\"\nmsgstr \"\"\n\nmsgid \"Category\"\nmsgstr \"\"\n\nmsgid \"Style ID\"\nmsgstr \"\"\n\nmsgid \"Style Name\"\nmsgstr \"\"\n\nmsgid \"Matching Style\"\nmsgstr \"\"\n\nmsgid \"Pattern ID\"\nmsgstr \"\"\n\nmsgid \"Designer\"\nmsgstr \"\"\n\nmsgid \"Material Name\"\nmsgstr \"\"\n\nmsgid \"Shape Name, No.\"\nmsgstr \"\"\n\nmsgid \"Pattern Name\"\nmsgstr \"\"\n\nmsgid \"Width\"\nmsgstr \"\"\n\nmsgid \"Height\"\nmsgstr \"\"\n\nmsgid \"Material\"\nmsgstr \"\"\n\nmsgid \"Get Original File\"\nmsgstr \"\"\n\nmsgid \"Layers\"\nmsgstr \"\"\n\nmsgid \"Diffuse color\"\nmsgstr \"\"\n\nmsgid \"Img\"\nmsgstr \"\"\n\nmsgid \"Material type\"\nmsgstr \"\"\n\nmsgid \"Continued from last page...\"\nmsgstr \"\"\n\nmsgid \"Remove\"\nmsgstr \"\"\n");
+				Gettext.setDefaultLang("en");
+			
+		</script>
+		
+		
+		
+		<script>
+			//Init Member vars
+			var layout_image_width = 710;
+			var MAX_PAGE_WIDTH = 780;
+			var INITIAL_PAGE_WIDTH = 770;
+			var MAX_ALLOWED_PAGE_HEIGHT = 750;
+			var MAX_STAMP_TALL_IMAGE_HEIGHT = 500; 
+			var MAX_STAMP_SHORT_IMAGE_HEIGHT = 250;
+			var MAX_STAMP_SHORT_IMAGE_SIZES_RELATION = 4/6; // x : y 
+			var ANNOTATION_WIDTH = 390;
+			var MAX_COLORWAYS_PER_ROW = 4;
+			var MAX_RULER_SIZES_PER_ROW = 11;
+			var MAX_PACK_IMAGES_PER_ROW = 5;
+			var ColorwayCount = data.bom ? Object.keys(data.bom).length : 0;
+			
+			function resetMemberVars()
+			{
+				data.lastPageNumber = 0;
+				shapeColors = {};
+				shapeNames = {};
+				shapeNumbers = 0;
+				annotationMarkerColors = {};
+				iCurrentColor = -1;
+				iCurrentAnnotationsColor = -1;	
+			}
+			
+			// data migration
+			data.unitPrecision = data.unitPrecision || data.stampPrecision || 2;
+			data.unitSign = data.unitSign || 'cm';
+		</script>
+		
+		<script>
+			var undoStack = new Array();
+			
+			function getUndoData()
+			{
+				return JSON.stringify({
+					'data': data,
+					'bom_data': bom_data,
+					'stamp_data': stamp_data,
+					'layout_fabrics': layout_fabrics
+				});
+			}
+			
+			function addUndoHistory()
+			{
+				undoStack.push(getUndoData());
+			}
+			
+			function undo()
+			{
+				//pop first, which is current state, to remove it then go on
+				undoStack.pop();
+				
+				if (undoStack.length > 0)
+				{
+					var undoData = JSON.parse(undoStack.pop());
+					data = undoData.data;
+					bom_data = undoData.bom_data;
+					stamp_data = undoData.stamp_data;
+					layout_fabrics = undoData.layout_fabrics;
+				}
+				//
+				buildReport();
+			}
+		</script>
+		
+		
+		<script>
+			//init aco color names
+			var acoColorNames = {};
+			if (data.colorLibs)
+			{
+				if (!data.colorLibs.__merged)
+				{
+					data.colorLibs.__merged = mergeColorLibs();
+					for (var i = 0; i < data.colorLibs.__merged.length; i++)
+					{
+						var acoColor = data.colorLibs.__merged[i];
+						acoColorNames[ intToHex(acoColor.int) ] = acoColor.name;
+					}
+				}
+			}
+			else
+			{
+				//add dummy node
+				data.colorLibs = {};
+				data.colorLibs.__merged = [];
+			}
+			
+			function getAcoColorName(hex)
+			{
+				return acoColorNames[hex];
+			}
+			
+			function mergeColorLibs()
+			{
+				var res = [];
+				for(var colorLib in data.colorLibs)
+				{
+					if (colorLib != "__merged")
+						[].push.apply(res, data.colorLibs[colorLib]);
+					
+				}
+				
+				return res;
+			}
+		</script>
+		
+		<script>
+			function getStyleFileName()
+			{
+				return data.userStyleId || data.garmentName;
+			}
+		</script>
+		
+		
+<script id="header-template" type="text/x-handlebars-template">
+	<header>
+		<div class="editor-options header-editor-options">
+			<a href="#" class="edit-header">{{trans "Edit Header"}}</a> <br />
+			{{#if annotatble}}
+				<span class="ui-icon ui-icon-comment"></span>
+			{{/if}}
+			<span class="ui-icon ui-icon-arrowrefresh-1-n undo"></span>
+		</div>
+		{{#with data.GarmentInfo}}
+			<table class="header-table">
+				<tr>
+					<td colspan="2">{{season.caption}}: {{season.value}}</td>
+					<td colspan="2">{{category.caption}}: {{category.value}}</td>
+					<td colspan="2"><img src="default.res/logo" class="logo-img" /></td>
+				</tr>
+				<tr>
+					<td>{{style_id.caption}}: {{style_id.value}}</td>
+					<td>{{style_name.caption}}: {{style_name.value}}</td>
+					<td>{{match_style.caption}}: {{match_style.value}}</td>
+					<td>{{pattern_id.caption}}: {{pattern_id.value}}</td>
+					<td>{{designer.caption}}: {{designer.value}}</td>
+					<td>{{trans "Page"}}: {{pageNumber ../data}}</td>
+				</tr>
+			</table>
+		{{/with}}
+	</header>
+</script>
+
+
+<script id="annotations-template" type="text/x-handlebars-template">
+	{{#each this}}
+		{{> annotation this }}
+	{{/each}}
+</script>
+
+
+<script id="annotation-template" type="text/x-handlebars-template">
+	
+	<div class="image-annotation" style="margin-left:{{left}}{{units}};margin-top:{{top}}{{units}}; height:{{height}}{{units}};width:{{width}}{{units}};">
+		<input type="hidden" value="{{id}}" />
+		{{> annotationArrows arrows }}
+		<div class="image-annotation-note">
+			{{{addLineBreaks note}}}
+		</div>
+		<div class="editor-options image-annotation-editor-options">
+			<a href="#" onclick="return editImageAnnotation(this);" class="edit-image-annotation">{{trans "Edit"}}</a> | 
+			<a href="#" onclick="return deleteImageAnnotation(this);" class="delete-image-annotation">{{trans "Delete"}}</a> | 
+			<span class="ui-icon ui-icon-transferthick-e-w icons-arrows" onclick="return addImageAnnotationArrow(this);" title="{{trans "Add Arrow"}}"></span> | 
+			<span class="ui-icon ui-icon-trash icons-arrows" onclick="return clearImageAnnotationArrows(this);" title="{{trans "Clear all Arrow"}}"></span>
+		</div>
+	</div>
+	
+</script>
+
+<script id="annotation-arrows-template" type="text/x-handlebars-template">
+	{{#each this}}
+		{{> annotationArrow this }}
+	{{/each}}
+</script>
+
+<script id="annotation-arrow-template" type="text/x-handlebars-template">
+	<canvas class="annotation-arrow-container" height="{{arrowHeight}}" width="{{arrowWidth}}" 
+		x1="{{x1}}" x2="{{x2}}" y1="{{y1}}" y2="{{y2}}"
+		style="margin-left:{{offsetX}}{{units}};margin-top:{{offsetY}}{{units}}; height:{{heightPercent}}{{units}};width:{{widthPercent}}{{units}};"></canvas>
+</script>
+
+<script id="pack-page-template" type="text/x-handlebars-template">
+	{{> header data=data annotatble=true }}
+	
+	<div class="pack-page-container"></div>
+	
+	<div class="pack-page-footer">
+		{{#if note}}
+			<div class="pack-page-note">{{{addLineBreaks note}}}</div>
+		{{/if}}
+		
+		{{#if customImages}}
+			{{#each customImages}}
+				<div class="pack-page-custom-image">
+					<div class="editor-options">
+						<span class="ui-icon ui-icon-close icon-delete-custom-image" onclick="return deletePackCustomImage({{../data.lastPageNumber}}-1, {{@index}});"></span>
+					</div>
+					<img class="" src="{{escapeUrl this}}" />
+				</div>
+				
+			{{/each}}
+		{{/if}}
+		
+		
+		<div class="editor-options pack-note-editor-options">
+			<a href="#" onclick="return editPackNote({{data.lastPageNumber}}-1);" class="edit-pack-note">{{trans "Edit Note"}}</a>
+			<br />
+			<a href="#" onclick="return addPackCustomImage({{data.lastPageNumber}}-1);" class="add-pack-custom-image">{{trans "Add Image"}}</a>
+		</div>
+		
+	</div>
+	
+	
+	<div class="clearfix"></div>
+	
+</script>
+
+<script id="pack-container-template" type="text/x-handlebars-template">
+	<div class="pack-container pack-items-per-row-{{pack_items_per_row}}"></div>
+	<div class="clearfix"></div>
+</script>
+
+<script id="pack-item-template" type="text/x-handlebars-template">
+	<div>
+		{{#if this.multipack}}
+			<span class="image-container multipack" style="min-width:1px;height:{{add pixelY 30}}px;">
+				{{> annotations this.annotations }}			
+				<img src="{{escapeUrl file}}"  style="max-height:{{pixelY}}px;"/>
+		{{else}}
+			<span class="image-container" style="min-width:1px;height:{{add pixelY 30}}px;width:{{containerPixleX}}px;">
+				{{> annotations this.annotations }}			
+				<img src="{{escapeUrl file}}"  style="/* max-height:{{pixelY}}px */;width:{{percentWidth}}%;"/>
+		{{/if}}
+			
+			<span>{{colorway}}</span>
+		</span>
+	</div>
+</script>
+
+
+
+
+<script id="layout-page-template" type="text/x-handlebars-template">
+	{{> header data=data annotatble=true }}
+	<div class="layout-image-area">
+		<div class="layout-image-container" style="width:{{layout_fabrics.data.setWidth}}px;">
+			{{#each layout_fabrics.shapes}}
+				{{#each shapes}}
+					<div class="layout-shape-marker layout-shape-marker-{{@../index}}-{{@index}}" style="margin-left:{{pixelX}}px;margin-top:{{pixelY}}px;border-color:{{shapeMarkerColor fabric}};">
+						<span class="layout-marker-text">{{shapeMarkerName fabric}}</span>
+						<div class="editor-options">
+							<span class="ui-icon ui-icon-close icon-delete-marker" onclick="return deleteLayoutMarker({{@../index}}, {{@index}});"></span>
+						</div>
+					</div>
+				{{/each}}
+				
+			{{/each}}
+			{{> annotations layout_fabrics.data.annotations }}
+			<img src="{{escapeUrl layout_fabrics.data.file}}" class="layout-image-2d" />
+		</div>
+	</div>
+	<table class="table-standard layout-fabrics-table">
+		<tr>
+			<th></th>
+			<th>{{trans "Material Name"}}</th>
+			<th>{{trans "Shape Name, No."}}</th>
+		</tr>
+		{{#each layout_fabrics.shapes}}
+			<tr>
+				<td class="layout-fabrics-marker-cell">
+					<div class="editor-options layout-row-editor-options">
+						<a href="#" onclick="return editLayoutRow({{@index}});" class="edit-layout-row">{{ trans "Edit"}}</a> | 
+						<a href="#" onclick="return deleteLayoutRow({{@index}});" class="delete-layout-row">{{ trans "Delete"}}</a> | 
+						<a href="#" onclick="return addLayoutMarker({{@index}});" class="add-layout-marker">{{ trans "Add Marker"}}</a>
+					</div>
+					
+					<div class="layout-shape-marker" style="border-color:{{shapeMarkerColor fabric}};">
+						<span class="layout-marker-text">{{shapeMarkerName fabric}}</span>
+					</div>
+				</td>
+				<td>{{material}}&nbsp;</td>
+				<td>{{{addLineBreaks shapeNames}}}</td>
+			</tr>			
+		{{/each}}
+	</table>
+	<div class="editor-options layout-table-editor-options">
+		<a href="#" onclick="return editLayoutRow();" class="add-layout-row">{{ trans "Add Row"}}</a>
+	</div>
+</script>
+
+
+
+<script id="stamp-page-template" type="text/x-handlebars-template">
+	{{> header data=data annotatble=true }}	
+	<div class="stamp-page-top-container">
+		<div class="stamp-page-container">
+			<div class="stamp-left-bar">
+				{{#if shape.size}}
+					<div class="stamp-info-box">
+						<span class="caption-bar">{{trans "Size"}}: </span>
+						<span>{{shape.size}}</span>
+					</div>
+				{{/if}}
+				
+				<div class="stamp-info-box">
+					<span class="caption-bar">{{trans "Pattern Name"}}: </span>
+					<span>
+						{{shape.name}}
+						{{#unless stamp.isFront}}
+							({{trans "Inside"}})
+						{{/unless}}
+					</span>
+				</div>
+					
+				{{#if displayInfo}}
+					{{#withKey stamp.sizes shape.size}} 
+						<div class="stamp-info-box">
+							<div class="stam-size-header">{{ trans "Artwork Dimensions" }}</div>
+							<table style="width: 80%">
+								<tbody>
+									<tr>
+										<td><div>{{trans "Width"}}: {{round dimensions_W ../GLOBAL.unitPrecision}} {{../GLOBAL.unitSign}}</div></td>
+										<td><div>{{trans "Height"}}: {{round dimensions_H ../GLOBAL.unitPrecision}} {{../GLOBAL.unitSign}}</div></td>
+									</tr>
+									<tr>
+										{{#if ../shape.positions}}
+											<td>
+												{{#ifCond ../../shape.positions.length "==" 1}}
+													{{#ifCond ../../../shape.positions.[0] '&&' ../../../shape.positions.[0].[0]}}
+														<div>{{trans "Position X"}}: {{round ../../../../shape.positions.[0].[0] ../../../../GLOBAL.unitPrecision}} {{../../../../GLOBAL.unitSign}}</div>
+													{{/ifCond}} 
+												{{/ifCond}}
+											</td>
+											<td>
+												{{#ifCond ../../shape.positions.length "==" 1}}
+													{{#ifCond ../../../shape.positions.[0] '&&' ../../../shape.positions.[0].[1]}} 
+														<div>{{trans "Position Y"}}: {{round ../../../../shape.positions.[0].[1] ../../../../GLOBAL.unitPrecision}} {{../../../../GLOBAL.unitSign}}</div>
+													{{/ifCond}}
+												{{/ifCond}}
+											</td>
+										{{/if}}
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					{{else}}
+						<div class="stamp-info-box">
+							<div class="stam-size-header">{{ trans "Artwork Dimensions" }}</div>
+							<div>{{trans "Width"}}: {{round stamp.dimensions_W GLOBAL.unitPrecision}} {{../GLOBAL.unitSign}}</div>
+							<div>{{trans "Height"}}: {{round stamp.dimensions_H GLOBAL.unitPrecision}} {{../GLOBAL.unitSign}}</div>
+						</div>
+					{{/withKey}}
+				{{/if}}
+			</div>
+			
+			<div class="stamp-right-bar">
+				<div class="stamp-info-box">
+					<p>
+						<span class="caption-bar">{{trans "Material"}}: </span>
+						<span>{{stamp.fabric_name}}</span>
+						<span class="link-container">
+							&nbsp;|&nbsp;
+							<a href="{{stamp.original_media}}">{{trans "Get Original File"}}</a>
+						</span>
+					</p>
+				
+					{{#if stamp.fabric_user_metadata}}
+						<p>
+							<span>{{trans "Information"}}:</span> 
+							<span>{{stamp.fabric_user_metadata}}</span> 
+						</p>
+					{{/if}}
+				</div>
+			</div>
+			
+			<div class="clearfix"></div>
+			
+			
+			
+				<div class="stamp-layout-container {{#if shape.is_wide_layout}} stamp-wide {{/if}}">
+				<div class="stamp-layout-wrapper">
+					{{> annotations shape.annotations }}	
+					{{#if stamp.isFront}}
+						<img src="{{escapeUrl shape.layoutImage}}" style="height:{{shape.originalHeight}}px;" />
+					{{else}}
+						<img src="{{escapeUrl shape.layoutImageInside}}" style="height:{{shape.originalHeight}}px;" />
+					{{/if}}	
+				</div>
+			</div>
+			
+		</div>
+		<div>
+			<table class="table-standard">
+				
+				<tr>
+					<th>{{trans "Layers"}}</th>
+					{{#each currentColorways}}
+						<th>{{this}}</th>
+					{{/each}}
+				</tr>
+				<tr>
+					<td>
+						<div class="editor-options stamp-row-editor-options">
+							{{#unless shape.rows.[0].name}}
+								<a href="#" onclick="return addStampRow({{stampIndex}}, {{shapeId}}, {{shapeIndex}}, -1);"  class="add-stamp-row">{{ trans "Add"}}</a>
+							{{/unless}}
+							
+						</div>
+					</td>
+					{{#loopStampColorways this shape.rows.[0] iColorwaysStart iColorwaysEnd}}
+						<td>
+							{{#if colorway.image}}
+								<img class="stamp-small" src="{{escapeUrl colorway.image}}" style="height:{{colorway.originalHeight}}px;" />
+							{{/if}}
+						</td>
+					{{/loopStampColorways}}
+				</tr>
+				
+				{{#ifCond shape.rows.length '>' 0}}
+					{{#each shape.rows}}
+						<tr>
+							<td>
+								<div class="editor-options stamp-row-editor-options">
+									<a href="#" onclick="return editStampRow({{../stampIndex}}, {{../shapeId}}, {{../shapeIndex}}, {{@index}});"  class="edit-stamp-row">{{ trans "Edit"}}</a> | 
+									{{!-- make a single row undeletable --}}
+									{{#ifCond @index '==' 0 }}
+										<a href="#" onclick="return false" class="delete-stamp-row disabled">{{ trans "Delete"}}</a> |
+									{{else}} 
+										<a href="#" onclick="return deleteStampRow({{../../stampIndex}}, {{../../shapeId}}, {{../../shapeIndex}}, {{@index}});"  class="delete-stamp-row">{{ trans "Delete"}}</a> |
+									{{/ifCond}}
+									<a href="#" onclick="return addStampRow({{../stampIndex}}, {{../shapeId}}, {{../shapeIndex}}, {{@index}});"  class="add-stamp-row">{{ trans "Add"}}</a>
+								</div>
+								<span>{{name}}</span>
+							</td>
+							{{#loopStampColorways ../this this ../iColorwaysStart ../iColorwaysEnd}}
+								<td>
+									{{createColorCell colorway false true}}
+								</td>
+							{{/loopStampColorways}}
+						</tr>
+						<tr>
+							<td>
+								<span>{{trans "Effect (Artwork Execution)"}}</span>
+							</td>
+							{{#loopStampColorways ../this this ../iColorwaysStart ../iColorwaysEnd}}
+								<td>
+									{{#if colorway.stampArtworkExecution}}
+									{{colorway.stampArtworkExecution}}
+									{{else}}
+									{{trans "None"}}
+									{{/if}}
+								</td>
+							{{/loopStampColorways}}
+						</tr>
+					{{/each}}
+				{{/ifCond}}
+			</table>
+			
+			<div class="stamp-page-footer">
+				<div class="editor-options stamp-note-editor-options">
+					<a href="#" onclick="return editStampNote({{stampIndex}}, {{shapeIndex}});" class="edit-stamp-note">{{trans "Edit Note"}}</a>
+					<br />
+					<a href="#" onclick="return deleteStampPage({{stampIndex}}, {{shapeIndex}});" class="delete-stamp-page">{{trans "Delete Page"}}</a>
+					<br />
+					<a href="#" onclick="return addStampCustomImage({{stampIndex}}, {{shapeIndex}});" class="add-stamp-custom-image">{{trans "Add Image"}}</a>
+				</div>
+				{{#if shape.note}}
+					<div class="stamp-page-note">{{{addLineBreaks shape.note}}}</div>
+				{{/if}}
+				
+				
+				{{#if shape.image_page_custom_images}}
+					{{#each shape.image_page_custom_images}}
+						<div class="stamp-page-custom-image">
+							<div class="editor-options">
+								<span class="ui-icon ui-icon-close icon-delete-custom-image" onclick="return deleteStampCustomImage({{../stampIndex}}, {{../shapeIndex}}, {{@index}});"></span>
+							</div>
+							<img class="" src="{{escapeUrl this}}" />
+						</div>
+					{{/each}}
+				{{/if}}
+				
+			</div>
+			
+		</div>
+	</div>
+</script>
+
+<script id="stamps-triplet" type="text/x-handlebars-template">
+   <tr class="empty-row">
+	   <td><div></div></td>
+	   <td><div></div></td>
+	   <td><div></div></td>
+	</tr>
+	<tr>
+		{{#each rowItems}}
+			<td style="border-bottom: none; padding-top: 10px;">
+				{{#if shape.size}}
+					<b><span>{{shape.size}}</span></b>
+				{{/if}}
+			</td>
+		{{/each}}
+	</tr>
+
+	<tr class="stamp-layout-container">
+		{{#each rowItems}}
+			<td class="{{#if is_wide_layout}} stamp-wide {{/if}}" style="border-bottom: none; border-top: none;">
+				<div class="stamp-layout-wrapper">
+					{{#if isFront}}
+						<img src="{{escapeUrl shape.layoutImage}}" style="height:{{imageHeight}}px;" />
+					{{else}}
+						<img src="{{escapeUrl shape.layoutImageInside}}" style="height:{{imageHeight}}px;" />
+					{{/if}}	
+				</div>
+			</td>
+		{{/each}}
+	</tr>
+
+	<tr>
+		{{#each rowItems}}
+			<td style="border-top: none; padding-bottom:10px">
+				<table class="inner-table">
+					<tbody>
+						<tr>
+							<td>
+								{{#withKey ../stamp.sizes shape.size}}
+									<div>{{trans "Width"}}: {{round dimensions_W ../../GLOBAL.unitPrecision}} {{../../GLOBAL.unitSign}}</div>
+								{{else}}
+									<div>{{trans "Width"}}: {{round ../../stamp.dimensions_W ../../GLOBAL.unitPrecision}} {{../../GLOBAL.unitSign}}</div>
+								{{/withKey}}
+								{{#if shape.positions}}
+									{{#ifCond ../shape.positions.length "==" 1}}
+										{{#ifCond ../shape.positions.[0] '&&' ../shape.positions.[0].[0]}} 
+											<div>{{trans "Position X"}}: {{round ../shape.positions.[0].[0] ../../../../GLOBAL.unitPrecision}} {{../../../../GLOBAL.unitSign}}</div>
+										{{/ifCond}} 
+									{{/ifCond}}
+								{{/if}}	
+							</td>
+							
+							<td>
+								{{#withKey ../stamp.sizes shape.size}}
+									<div>{{trans "Height"}}: {{round dimensions_H ../../GLOBAL.unitPrecision}} {{../../GLOBAL.unitSign}}</div>
+								{{else}}
+									<div>{{trans "Height"}}: {{round ../../stamp.dimensions_H ../../GLOBAL.unitPrecision}} {{../../GLOBAL.unitSign}}</div>
+								{{/withKey}}
+								{{#if shape.positions}}
+									{{#ifCond ../shape.positions.length "==" 1}}
+										{{#ifCond ../shape.positions.[0] '&&' ../shape.positions.[0].[1]}} 
+											<div>{{trans "Position Y"}}: {{round ../shape.positions.[0].[1] ../../../../GLOBAL.unitPrecision}} {{../../../../GLOBAL.unitSign}}</div>
+										{{/ifCond}}
+									{{/ifCond}}
+								{{/if}}	
+							</td> 
+						<tr>
+					</tbody>
+				</table>
+			</td>
+		{{/each}}
+	</tr>
+</script>
+
+<script id="stamps-page-template" type="text/x-handlebars-template">
+	{{> header data=data annotatble=false }}
+	<table class="border-spacing-table">
+		<thead>
+			<tr>
+				<th colspan="3">
+					<div class="stamp-info" style="text-align: center">
+						<span>{{trans "Artwork Layout"}}</span>
+					</div>
+					<div class="stamp-info" style="padding-bottom: 0px; padding-top: 0px;">
+						<span style="float: left;">
+							<span>{{trans "Pattern name"}}: </span>
+							<span>
+								{{shape.name}}
+								{{#unless stamp.isFront}}
+									({{trans "Inside"}})
+								{{/unless}}
+							</span>
+						</span>
+						<span style="float: right;">
+							<span class="caption-bar">{{trans "Material"}}: </span>
+							<span>{{stamp.fabric_name}}</span>
+							<span class="link-container">
+								&nbsp;|&nbsp;
+								<a href="{{stamp.original_media}}">{{trans "Get Original File"}}</a>
+							</span>
+						</span>
+					</div>
+					<div class="stamp-info" style="padding-bottom: 0px; padding-top: 0px;"> 
+						<span>{{trans "Colorways"}}:</span>
+						{{#each stamp.colorways}}
+							{{#ifCond this '&&' this.name}}
+								{{#ifCond @index '==' (calc ../../stamp.colorways.length '-' 1)}}
+									<span>{{this.name}}</span>
+								{{else}}
+									<span>{{this.name}}, </span>
+								{{/ifCond}}
+							{{/ifCond}}
+						{{/each}}
+					</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</script>
+
+<script id="bom-page-template" type="text/x-handlebars-template">
+	{{> header data=data annotatble=false }}
+	<table class="table-standard bom-page-table bom_table">
+		<thead>
+			<tr>
+				<th>{{trans "Group"}}</th>
+				<th>{{trans "Img"}}</th>
+				<th>{{trans "Material Name"}}</th>
+				<th>{{trans "Material type"}}</th>
+				<th>{{trans "Shape Name, No."}}</th>
+				{{#each colorways}}
+					<th>{{this}}</th>
+				{{/each}}
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</script>
+
+<script id="bom-row-template" type="text/x-handlebars-template">
+	<tr data-rowId="{{bomrow.rowId}}" data-sectionId={{bomrow.sectionId}}>
+		{{#if firstRow}}
+			<td class="new-section" rowspan="{{../rowsNum}}">
+				{{#if firstRow}} 
+					<div class="editor-options bom-section-editor-options bom-action-buttons" style="position: absolute;">
+						<a href="#" class="delete-bom-section">{{ trans "Delete"}}</a> | 
+						<a href="#" class="add-bom-section">{{ trans "Add"}}</a>
+						<div>
+							<span class="ui-icon ui-icon-arrowthick-1-n bom-section-up"></span>
+							<span class="ui-icon ui-icon-arrowthick-1-s bom-section-down"></span>
+						</div>
+					</div>
+				{{/if}}
+				<div class="editor-options bom-action-buttons">
+					<a href="#" class="edit-bom-section">{{ trans "Edit"}}</a>
+				</div>
+				<span><b>{{../sectionName}}</b></span>
+			</td>
+		{{/if}}
+		<td>
+			{{#each bomrow.images}}
+				<img class="fabric-map" src="{{escapeUrl src}}" style="height:{{image_height}}px; max-height:{{image_height}}px; min-width:{{image_width}}px;" />
+			{{/each}}
+		</td>
+		<td>
+			<div class="editor-options bom-row-editor-options bom-action-buttons">					
+				<a href="#" class="edit-bom-row">{{ trans "Edit"}}</a> |
+				<a href="#" class="delete-bom-row">{{ trans "Delete"}}</a> |
+				<a href="#" class="add-bom-row">{{ trans "Add"}}</a>
+				{{#unless isSingle}}
+					<div>
+						<div class="ui-icon ui-icon-arrowthick-1-n bom-row-up"></div>
+						<div class="ui-icon ui-icon-arrowthick-1-s bom-row-down"></div>
+					</div>
+				{{/unless}}	
+			</div>
+			<div>
+				<span>{{bomrow.fabric_name}}<span>
+			</div>
+		</td>
+		<td>
+			{{#if bomrow.fabric_type_name}}
+				{{{addLineBreaks bomrow.fabric_type_name}}}
+			{{else}}
+				{{{addLineBreaks bomrow.fabric_type}}}
+			{{/if}}
+			
+			{{#if bomrow.workmanship}}
+				{{#with bomrow.workmanship }}
+					<div>
+						{{trans "L"}}: {{round LengthUnit LengthUnitPrecision}} {{LengthUnitSign}}<br/>
+						{{trans "W"}}: {{round WidthUnit ../../GLOBAL.unitPrecision }} {{../../GLOBAL.unitSign}}<br/>
+						{{#if ThicknessUnit}}
+							{{trans "T"}}: {{round ThicknessUnit ThicknessUnitPrecision }} {{ThicknessUnitSign}}<br/>
+						{{/if}}
+						{{trans "Offset"}}: {{round edgeOffset ../../GLOBAL.unitPrecision}} {{../../GLOBAL.unitSign}}<br/>
+						{{trans "Lines Count"}}: {{linesCount}}<br/>
+						{{#if distance }}
+							{{trans "Distance"}}: {{round distance ../../GLOBAL.unitPrecision}} {{../../GLOBAL.unitSign}}
+						{{/if}}
+					</div>
+				{{/with}}
+			{{/if}}
+		</td>
+		
+		<td>
+			<div>{{{addLineBreaks bomrow.shapeNames}}}</div>
+		</td>
+		
+		{{#loopBomColorways this}}
+			<td class="color-cell">
+				{{createColorCell colorway_front colorway_back false}}
+			</td>
+		{{/loopBomColorways}}
+	</tr>
+</script>
+
+
+<script id="annotation-page-template" type="text/x-handlebars-template">
+	{{> header data=data annotatble=true }}
+	<div class="annotations-page-container">
+		{{#if continued}}
+			<div class="annotations-continued">
+				{{trans "Continued from last page..."}}
+			</div>
+		{{/if}}
+		<div class="annotations-conversation-container">
+			{{#if continued}}
+				<div class="annotations-entry annotations-entry-placeholder">
+					<div class="annotations-entry-entries-container">
+					</div>
+				</div>
+			{{/if}}
+		</div>
+		<div class="annotations-image-container">
+			{{newAnnotationsColor}}
+			{{#each annotation.annotation_markers}}
+				<div class="layout-shape-marker" style="margin-left:{{pixelX}}px;margin-top:{{pixelY}}px;border-color:{{annotationMarkerColor this}};">
+					<span class="layout-marker-text">{{id}}</span>
+				</div>
+			{{/each}}
+			{{> annotations annotation.imageAnnotations}}
+			<img src="{{escapeUrl annotation.file}}" style="width:{{annotation.setWidth}}px;"/>
+		</div>
+	</div>
+</script>
+
+
+<script id="annotation-entry-template" type="text/x-handlebars-template">
+	
+	<div class="annotations-entry">
+		{{#if userImagePath}}
+			<img class="user-image" src="{{escapeUrl userImagePath}}" />
+		{{else}}
+			<span class="user-image user-initials" >{{userInitials userName}}</span>
+		{{/if}}
+		<span class="user-name">{{userName}}</span>&nbsp;&nbsp;
+		<span class="layout-shape-marker" style="border-color:{{annotationMarkerColor this}};"><span class="layout-marker-text">{{id}}</span></span>
+		<br />
+		<span class="user-message">{{text}}</span>
+		<div class="clearfix"></div>
+		<div class="annotations-entry-entries-container">
+		</div>
+	</div>
+</script>
+
+<script id="rulers-page-template" type="text/x-handlebars-template">
+	{{> header data=data annotatble=false }}
+	<table class="table-standard rulers-page-table">
+		<thead>
+			<tr>
+				<th rowspan="2" id="two-line-cell">
+					<span>{{trans "Rulers Measurements"}}</span>
+				</th>
+				{{#if emptyCell}}
+					<th colspan="{{calc sizes.length "+" 1}}">
+						<span>{{trans "Grading Sizes Range"}}</span>
+						<div id="unit-sign">{{trans "Unit"}}: <span>{{unitSign}}</span></div>
+						<span></span>
+					</th>
+				{{else}}
+					<th colspan="{{sizes.length}}">
+						<span>{{trans "Grading Sizes Range"}}</span>
+						<div id="unit-sign">{{trans "Unit"}}: <span>{{unitSign}}</span></div>
+						<span></span>
+					</th>
+				{{/if}}
+			</tr>
+			<tr>
+				{{#each sizes}}
+					<th>
+						<span>{{this}}</span>
+					</th>
+				{{/each}}
+				{{#if emptyCell}}
+					<th id="empty-cell"></td>
+				{{/if}}
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</script>
+
+<script id="rulers-row-template" type="text/x-handlebars-template">
+	<tr>
+		<td>{{rulerName}}</td>
+		 {{#each rulers}}
+			<td>{{round this.length ../GLOBAL.unitPrecision}}</td>
+		{{/each}} 
+		{{#if emptyCell}}
+			<td id="empty-cell"></td>
+		{{/if}}
+	</tr>
+</script>
+
+<script id="allover-print-page-table" type="text/x-handlebars-template">
+	{{> header data=data annotatble=false }}
+	<table class="border-spacing-table">
+		<thead>
+			<tr>
+				<th colspan="2">
+					<div class="stamp-info" style="text-align: center">
+						<span>{{trans "Allover Print Layout"}}</span>
+					</div>
+					<div class="stamp-info" style="padding-bottom: 0px; padding-top: 0px;">
+						<span style="float: left;">
+							<span>{{trans "Pattern name"}}: </span>
+							<span>
+								{{#each shapes}}
+									{{#ifCond this '&&' this.name}}
+										{{#ifCond @index '==' (calc ../../shapes.length '-' 1)}}
+											<span>{{this.name}}</span>
+										{{else}}
+											<span>{{this.name}}, </span>
+										{{/ifCond}}
+									{{/ifCond}}
+								{{/each}}
+							</span>
+						</span>
+						<span style="float: right;">
+							<span class="caption-bar">{{trans "Material"}}: </span>
+							<span>{{name}}</span>
+							<span class="link-container">
+								&nbsp;|&nbsp;
+								<a href="{{originalMedia}}">{{trans "Get Original File"}}</a>
+							</span>
+						</span>
+					</div>
+					<div class="stamp-info" style="padding-top: 0px; padding-bottom: 30px;"> 
+						<span>{{trans "Colorways"}}:</span>
+						{{#each colorways}}
+							{{#if this}}
+								{{#ifCond @index '==' (calc ../../colorways.length '-' 1)}}
+									<span>{{this}}</span>
+								{{else}}
+									<span>{{this}}, </span>
+								{{/ifCond}}
+							{{/if}}
+						{{/each}}
+					</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td style="border: none; vertical-align: top; text-align: left;">
+					<div>
+						<div>
+							<img src="{{escapeUrl image}}" style="width: {{smallImagePixelsWidth}}px; padding: 0px; border: solid 1px lightgray" />
+							<span>{{round smallImageHeight GLOBAL.unitPrecision}} {{GLOBAL.unitSign}}</span>
+						</div>
+						<span style="display: block; width: {{smallImagePixelsWidth}}px; text-align: center">{{round smallImageWidth GLOBAL.unitPrecision}} {{GLOBAL.unitSign}}</span>
+					</div>
+				</td>
+				<td style="border: none; vertical-align: top; text-align: left;">
+					<div>
+						<div>
+							<img src="{{escapeUrl largeImage}}" style="width: {{largeImagePixelsWidth}}px; min-width: {{largeImagePixelsWidth}}px; padding: 0px; border: solid 1px lightgray" />
+							<span>{{round largeImageHeight GLOBAL.unitPrecision}} {{GLOBAL.unitSign}}</span>
+						</div>
+						<span style="display: block; width: {{largeImagePixelsWidth}}px; text-align: center">{{round largeImageWidth GLOBAL.unitPrecision}} {{GLOBAL.unitSign}}</span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</script>
+
+
+
+		
+		
+<script id="colorway-side-template" type="text/x-handlebars-template">
+	<div class="editFieldContainer">
+		<label>{{side}}</label>
+		
+		<input type="text" 
+			{{#if color}}
+				{{#if color.name}}
+					value="{{color.name}}" colorName bomColorway.front.name bomColorway.front.colorRGB}}" 				
+				{{/if}}
+				{{#if color.colorRGB}}
+					placeholder="{{colorName null color.colorRGB}}"
+				{{/if}}
+			{{/if}}
+		/>	
+			
+		<span class="edit-color-box" 
+			{{#if color}}
+				style="background-color:rgb({{colorFromJson color.colorRGB}});"
+			{{/if}}
+		></span>
+		
+		<a href="#">{{ trans "Clear"}}</a>
+		
+	</div>
+</script>
+
+
+
+<script id="bom-row-editor-template" type="text/x-handlebars-template">
+	<input type="hidden" class="rowId" value="{{rowId}}"/>
+	<input type="hidden" class="afterRowId" value="{{afterRowId}}"/>
+
+	<div class="editFieldContainer field-section_name">
+		<label>{{trans "Group Name"}}</label>
+		<input type="text" value="{{sectionName}}"/>
+	</div>
+	{{#unless editBomSection}}
+		<div class="editFieldContainer field-fabric_name">
+			<label>{{trans "Material Name"}}</label>
+			<input type="text" value="{{fabric_name}}"/>
+		</div>
+		<div class="editFieldContainer field-fabric_type fabric-type-edit">
+			<label>{{trans "Material type"}}</label>
+			{{#if fabric_type_name}}
+				<textarea>
+{{fabric_type_name}}
+{{#if workmanship}}{{#with workmanship}}{{trans "L"}}: {{round LengthUnit LengthUnitPrecision}} {{LengthUnitSign}}
+{{trans "W"}}: {{round WidthUnit ../../this.unitPrecision}} {{../../this.unitSign}}
+{{#if ThicknessUnit}}{{trans "T"}}: {{round ThicknessUnit ThicknessUnitPrecision}} {{ThicknessUnitSign}}{{/if}}
+{{trans "Offset"}}: {{round edgeOffset ../../this.unitPrecision}} {{../../this.unitSign}}
+{{trans "Lines Count"}}: {{linesCount}}
+{{#if distance}}{{trans "Distance"}}: {{round distance ../../this.unitPrecision}} {{../../this.unitSign}}{{/if}}{{/with}}{{/if}}
+			</textarea>
+			{{else}}
+			<textarea>
+{{fabric_type}}
+{{#if workmanship}}{{#with workmanship}}{{trans "L"}}: {{round LengthUnit LengthUnitPrecision}} {{LengthUnitSign}}
+{{trans "W"}}: {{round WidthUnit ../../this.unitPrecision}} {{../../this.unitSign}}
+{{trans "T"}}: {{round ThicknessUnit ThicknessUnitPrecision}} {{ThicknessUnitSign}}
+{{trans "Offset"}}: {{round edgeOffset ../../this.unitPrecision}} {{../../this.unitSign}}
+{{trans "Lines Count"}}: {{linesCount}}
+{{#if distance}}{{trans "Distance"}}: {{round distance ../../this.unitPrecision}} {{../../this.unitSign}}{{/if}}{{/with}}{{/if}}
+</textarea>
+			{{/if}}
+		</div>
+		<div class="editFieldContainer field-shapeNames">
+			<label>{{trans "Shapes"}}</label>
+			<textarea>{{shapeNames}}</textarea>
+		</div>
+		
+		{{#loopBomEditorColorways this}}
+			<div class="edit-colorway">
+				<u>{{colorway_data.name}}</u>
+				{{> colorwaySideEditor front }}
+				{{> colorwaySideEditor back }}
+			</div>
+		{{/loopBomEditorColorways}}
+	{{/unless}}
+	
+	<div class="editorButtons">
+		<button onclick="closeDialog(this);">{{trans "Cancel"}}</button>&nbsp;&nbsp;
+		{{#if editBomSection}}
+			<button onclick="saveBOMSection(this);">{{trans "Save"}}</button>
+		{{else}}
+			<button onclick="saveBOMRow(this {{#if isSection}}, {{isSection}} {{/if}});">{{trans "Save"}}</button>
+		{{/if}}
+	</div>
+</script>
+
+
+
+<script id="header-editor-template" type="text/x-handlebars-template">
+	{{#with GarmentInfo}}
+		<div class="editFieldContainer field-season">
+			<label>{{season.caption}}</label>
+			<input type="text" value="{{season.value}}"/>
+		</div>
+		<div class="editFieldContainer field-category">
+			<label>{{category.caption}}</label>
+			<input type="text" value="{{category.value}}"/>
+		</div>
+		<div class="editFieldContainer field-garmentId">
+			<label>{{style_id.caption}}</label>
+			<input type="text" value="{{style_id.value}}"/>
+		</div>
+		<div class="editFieldContainer field-garmentName">
+			<label>{{style_name.caption}}</label>
+			<input type="text" value="{{style_name.value}}"/>
+		</div>
+		<div class="editFieldContainer field-matchingStyle">
+			<label>{{match_style.caption}}</label>
+			<input type="text" value="{{match_style.value}}"/>
+		</div>
+		<div class="editFieldContainer field-patternId">
+			<label>{{pattern_id.caption}}</label>
+			<input type="text" value="{{pattern_id.value}}"/>
+		</div>
+		<div class="editFieldContainer field-designer">
+			<label>{{designer.caption}}</label>
+			<input type="text" value="{{designer.value}}"/>
+		</div>
+	{{/with}}
+	<div class="editorButtons">
+		<button onclick="closeDialog(this);">{{trans "Cancel"}}</button>&nbsp;&nbsp;
+		<button onclick="saveHeader(this);">{{trans "Save"}}</button>
+	</div>
+</script>
+
+
+
+
+<script id="pack-note-editor-template" type="text/x-handlebars-template">
+	<input type="hidden" class="pageNum" value="{{pageNum}}"/>
+	
+	<div class="editFieldContainer field-note field-pack-note">
+		<label>{{trans "Note"}}</label>
+		<textarea>{{note}}</textarea>
+	</div>
+	
+	<div class="editorButtons">
+		<button onclick="closeDialog(this);">{{trans "Cancel"}}</button>&nbsp;&nbsp;
+		<button onclick="savePackNote(this);">{{trans "Save"}}</button>
+	</div>
+</script>
+
+
+
+<script id="layout-row-editor-template" type="text/x-handlebars-template">
+	<input type="hidden" class="rowIndex" value="{{rowIndex}}"/>
+	
+	<div class="editFieldContainer field-material">
+		<label>{{trans "Material Name"}}</label>
+		<input type="text" value="{{layout_fabric.material}}"/>
+	</div>
+	
+	<div class="editFieldContainer field-shapeNames">
+		<label>{{trans "Shapes"}}</label>
+		<textarea>{{layout_fabric.shapeNames}}</textarea>
+	</div>
+	
+	<div class="editorButtons">
+		<button onclick="closeDialog(this);">{{trans "Cancel"}}</button>&nbsp;&nbsp;
+		<button onclick="saveLayoutRow(this);">{{trans "Save"}}</button>
+	</div>
+</script>
+
+
+
+
+<script id="stamp-note-editor-template" type="text/x-handlebars-template">
+	<div class="editFieldContainer field-note field-stamp-note">
+		<label>{{trans "Note"}}</label>
+		<textarea>{{note}}</textarea>
+	</div>
+	
+	<div class="editorButtons">
+		<button onclick="closeDialog(this);">{{trans "Cancel"}}</button>&nbsp;&nbsp;
+		<button onclick="saveStampNote({{stampIndex}}, {{shapeIndex}});">{{trans "Save"}}</button>
+	</div>
+</script>
+
+
+
+
+
+<script id="image-annotation-editor-template" type="text/x-handlebars-template">
+	<div class="editFieldContainer field-note field-stamp-note">
+		<label>{{trans "Annotation Note"}}</label>
+		<textarea>{{note}}</textarea>
+	</div>
+	
+	<div class="editorButtons">
+		<button onclick="closeDialog(this);">{{trans "Cancel"}}</button>&nbsp;&nbsp;
+		<button onclick="saveImageAnnotation();">{{trans "Save"}}</button>
+	</div>
+</script>
+
+
+
+<script id="stamp-row-editor-template" type="text/x-handlebars-template">
+	<input type="hidden" class="stampIndex" value="{{stampIndex}}"/>
+	<input type="hidden" class="shapeIndex" value="{{shapeIndex}}"/>
+	<input type="hidden" class="rowIndex" value="{{index}}"/>
+	<input type="hidden" class="afterRowIndex" value="{{afterRowIndex}}"/>
+	
+	<div class="editFieldContainer field-name">
+		<label>{{trans "Color Name"}}</label>
+		<input type="text" value="{{stampRow.name}}"/>
+	</div>
+	
+	{{#loopBomEditorColorways stampRow}}
+		<div class="edit-colorway">
+			<u>{{colorway_data.name}}</u>
+			{{> colorwaySideEditor color=bomColorway }}
+		</div>
+	{{/loopBomEditorColorways}}
+	
+	<div class="editorButtons">
+		<button onclick="closeDialog(this);">{{trans "Cancel"}}</button>&nbsp;&nbsp;
+		<button onclick="saveStampRow(this);">{{trans "Save"}}</button>
+	</div>
+</script>
+		
+		<script>//init some vars
+data.lastPageNumber = 0;
+
+Handlebars.registerHelper('stringifyJson', function (data, pretty) {
+	return new Handlebars.SafeString(pretty ? JSON.stringify(data) : JSON.stringify(data, null, "\t"));
+});
+
+Handlebars.registerHelper('trans', function(str) {
+	return Gettext.gettext(str);
+});
+
+Handlebars.registerHelper('fileName', function(str) {
+	
+	return getStyleFileName();
+});
+
+Handlebars.registerHelper('addLineBreaks', function(str) {
+	if (!str) return str;
+	return str.replace(/\n/g, '<br />');
+});
+
+Handlebars.registerHelper('escapeUrl', function(url) {
+	return url.split(/[\\\/]/).map(encodeURIComponent).join('/');
+});
+
+Handlebars.registerHelper('round', function(num, precision) {
+	return +(Math.round(num + "e+" + precision)  + "e-" + precision);
+});
+
+Handlebars.registerPartial('header', 
+	$("#header-template").html()
+);
+
+Handlebars.registerPartial('stampsTriplet', 
+	$("#stamps-triplet").html()
+);
+
+Handlebars.registerPartial('annotations', 
+	$("#annotations-template").html()
+);
+
+Handlebars.registerPartial('annotation', 
+	$("#annotation-template").html()
+);
+
+Handlebars.registerPartial('annotationArrows', 
+	$("#annotation-arrows-template").html()
+);
+
+Handlebars.registerPartial('annotationArrow', 
+	$("#annotation-arrow-template").html()
+);
+
+Handlebars.registerPartial('bomColorCell', 
+	$("#bom-color-cell-template").html()
+);
+
+Handlebars.registerHelper('add', function(x,y) {
+	return x + y;
+});
+
+
+Handlebars.registerHelper('getColorwaySideEditor', function(color,side) {
+	if (!str) return str;
+	return str.replace(/\n/g, '<br />');
+});
+
+Handlebars.registerPartial('colorwaySideEditor', 
+	$("#colorway-side-template").html()
+);
+
+
+Handlebars.registerHelper('colorFromJson', function(data) {
+	return new Handlebars.SafeString(JSON.stringify(data, null, "\t").replace(/\[/g, "").replace(/\]/g, ""));
+});
+
+Handlebars.registerHelper('pageNumber', function() {
+	data.lastPageNumber++;
+	return data.lastPageNumber;
+});
+
+Handlebars.registerHelper('colorName', function(name, rgbObj) {
+	if (name) return name;
+	var hex = rgbToHexClean(rgbObj[0],rgbObj[1],rgbObj[2]);
+	return new Handlebars.SafeString(getAcoColorName(hex) || '#' + hex);
+});
+
+
+Handlebars.registerHelper('userInitials', function(userName) {
+	if (!userName) return "N/A";
+	return new Handlebars.SafeString(userName.replace(/\W*(\w)\w*/g, '$1').toUpperCase());
+});
+
+
+Handlebars.registerHelper('encodeURL', function(data) {
+	return new Handlebars.SafeString(encodeURIComponent(data));
+});
+
+Handlebars.registerHelper('loopBomColorways', function(bomRowContainer, block) {
+	var accum = '';
+	for(var i = 0; i < MAX_COLORWAYS_PER_ROW; ++i)
+	{
+		//check if the ith column is being displayed on this page
+		if (bomRowContainer.currentColorways[i])
+		{
+			var colorway = (bomRowContainer.currentBOMColorways && bomRowContainer.currentBOMColorways[i] ? bomRowContainer.currentBOMColorways[i] : null);
+			
+			if (colorway == null) colorway = {};
+			
+			var blockData = { 'colorway_front': colorway.front, 'colorway_back': colorway.back };
+			
+			var front = (bomRowContainer.colorway_front && bomRowContainer.colorway_front[i] ? bomRowContainer.colorway_front[i] : null);
+			var back = (bomRowContainer.colorway_back && bomRowContainer.colorway_back[i] ? bomRowContainer.colorway_back[i] : null);
+		
+			//var blockData = {'colorway_front': front, 'colorway_back': back};
+			
+			accum += block.fn(blockData);
+		}
+	}
+	return accum;
+});
+
+
+Handlebars.registerHelper('loopStampColorways', function(stampData, rowData, iColorwaysStart, iColorwaysEnd, block) {
+	var accum = '';
+	var colorways = rowData.colorways.slice(iColorwaysStart, iColorwaysEnd);
+	for(var i = 0; i < MAX_COLORWAYS_PER_ROW; ++i)
+	{
+		//check if the ith column is being displayed on this page
+		if (stampData.currentColorways[i])
+		{
+			var colorway = (colorways && colorways[i] ? colorways[i] : null);
+			
+			var blockData = {'colorway':colorway};
+			accum += block.fn(blockData);
+		}
+	}
+	return accum;
+});
+
+
+Handlebars.registerHelper('loopBomEditorColorways', function(bomRow, block) {
+	var accum = '';
+	
+	var iColorwayIndex = -1;
+
+	let colorwaysKeys = data.colorways ? data.colorways.map(({ id }) => id) : Object.keys(data.bom);
+
+	colorwaysKeys.forEach(colorway => {
+		iColorwayIndex++;
+		var colorway_name = colorway;
+		var colorway_data = data.bom[colorway];
+		
+		var bomColorway = (bomRow && bomRow.colorways && bomRow.colorways[iColorwayIndex] ? bomRow.colorways[iColorwayIndex] : null);
+		
+		var blockData = {'bomColorway': bomColorway, 'colorway_data': colorway_data};
+		if (bomColorway)
+		{
+			blockData.front = {'color':bomColorway.front, 'side': _("Front")};
+			blockData.back = {'color':bomColorway.back, 'side': _("Back")};
+		}	
+		accum += block.fn(blockData);
+	});
+	return accum;
+});
+
+
+var shapeColors = {};
+var shapeNames = {};
+var shapeNumbers = 0;
+
+var annotationMarkerColors = {};
+var availableColor = [ '#1CA6ED', '#EEA118', '#DF3549', '#E669DC', '#9061fA', '#63B12F', '#603913', '#24457A', '#ECCE14', '#EA1F15', '#FE465E', '#3C2243', '#25583D' ];
+var iCurrentColor = -1;
+var iCurrentAnnotationsColor = -1;
+
+Handlebars.registerHelper('resetColors', function() {
+	iCurrentColor = -1;
+});
+
+Handlebars.registerHelper('newAnnotationsColor', function() {
+	iCurrentAnnotationsColor++;
+});
+
+
+
+Handlebars.registerHelper('shapeMarkerColor', function(shape) {
+	if (!shapeColors[shape]) 
+		shapeColors[shape] = getNextAvailableColor();
+	
+	return shapeColors[shape];
+});
+
+Handlebars.registerHelper('shapeMarkerName', function(shape) {
+	if (!shapeNames[shape])
+	{
+		shapeNumbers++
+		shapeNames[shape] = shapeNumbers;
+	}
+	
+	return shapeNames[shape];
+});
+
+Handlebars.registerHelper('annotationMarkerColor', function(annotation) {
+	return availableColor[iCurrentAnnotationsColor];
+});
+
+Handlebars.registerHelper('withKey', function(obj, key, options) {
+	var context = obj ? obj[key] : null;
+	
+	if (Handlebars.Utils.isFunction(context)) {
+		context = context.call(this);
+	}
+
+	var fn = options.fn;
+
+	if (!Handlebars.Utils.isEmpty(context)) {
+		if (options.data && options.ids) {
+			var data = Handlebars.createFrame(options.data);
+			data.contextPath = Handlebars.Utils.appendContextPath(options.data.contextPath, options.ids[0]);
+			options = {data: data};
+		}
+
+		return fn(context, options);
+	} else {
+		return options.inverse(this);
+	}
+});
+
+Handlebars.registerHelper('createColorCell', function(frontData, backData, isInline) {
+	var createElement = function (sideData) {
+		if (isSpecialFabric(sideData.colorRGB, sideData.colorBlending)) {
+			return "<span>" + Gettext.gettext("No color assigned") + "</span>";
+		} else {
+			var color = 'rgb(' + sideData.colorRGB[0] + ',' + sideData.colorRGB[1] + ',' + sideData.colorRGB[2] + ')';
+			var name = '';
+
+			if (sideData.name) {
+				name = sideData.name;
+			} else {
+				var hex = rgbToHexClean(sideData.colorRGB[0], sideData.colorRGB[1], sideData.colorRGB[2]);
+				name = getAcoColorName(hex) || '#' + hex;
+			}
+
+			return ( 
+				(isInline ? '<div class="color-box-wrapper">' : '') + 
+				name +'&nbsp' + 
+				'<div class="color-box">' + 
+				'	<div class="inner-color-box" style="border-color:' + color + '"></div>' +
+				'</div>' +
+				(isInline ? '</div>' : '')
+			);
+		}
+
+		return "";
+	}
+
+	const createSide = sideData => {
+		if (sideData.vectorColorsMap) {
+			return new Handlebars.SafeString(sideData.vectorColorsMap.map(e => new Handlebars.SafeString(createElement(e))).join(""));
+		}
+		
+		if (sideData.colorRGB) {
+			return new Handlebars.SafeString(createElement(sideData));
+		}
+	};
+
+	// back and front
+	if (frontData &&
+		(frontData.colorRGB || frontData.vectorColorsMap) &&
+		backData &&
+		(backData.colorRGB || backData.vectorColorsMap)) {
+
+		// if back and front are transparant or equal
+		if ((isSpecialFabric(frontData.colorRGB, frontData.colorBlending) && isSpecialFabric(backData.colorRGB, backData.colorBlending)) || 
+			(Array.isArray(frontData.colorRGB) && Array.isArray(backData.colorRGB) && arraysAreEqual(frontData.colorRGB, backData.colorRGB)) ||
+			(Array.isArray(frontData.vectorColorsMap) && Array.isArray(backData.vectorColorsMap) && arraysAreEqual(frontData.colorRGB, backData.colorRGB))) {
+			return createSide(frontData);
+		}
+
+		// if back and front are different (and not "specialFabric" at the same time)
+		return new Handlebars.SafeString(createSide(frontData) + "<hr/>" + createSide(backData));
+	}
+
+	// if front only
+	if (frontData) {
+		return createSide(frontData);
+	}
+
+	//if back only
+	if (backData) {
+		return createSide(backData);
+	}
+});
+
+Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
+    switch (operator) {
+        case '==':
+            return (v1 == v2) ? options.fn(this) : options.inverse(this);
+        case '===':
+            return (v1 === v2) ? options.fn(this) : options.inverse(this);
+        case '!=':
+            return (v1 != v2) ? options.fn(this) : options.inverse(this);
+        case '!==':
+            return (v1 !== v2) ? options.fn(this) : options.inverse(this);
+        case '<':
+            return (v1 < v2) ? options.fn(this) : options.inverse(this);
+        case '<=':
+            return (v1 <= v2) ? options.fn(this) : options.inverse(this);
+        case '>':
+            return (v1 > v2) ? options.fn(this) : options.inverse(this);
+        case '>=':
+            return (v1 >= v2) ? options.fn(this) : options.inverse(this);
+        case '&&':
+            return (v1 && v2) ? options.fn(this) : options.inverse(this);
+        case '||':
+			return (v1 || v2) ? options.fn(this) : options.inverse(this);
+        default:
+            return options.inverse(this);
+    }
+});
+
+Handlebars.registerHelper('calc', function (v1, operator, v2){
+	switch(operator){
+		case '+' :{
+			return (v1 + v2);
+		}
+		case '-' :{
+			return (v1 - v2);
+		}
+		case '*' :{
+			return (v1 * v2);
+		}
+		case '/' :{
+			return (v1 / v2);
+		}
+	}
+	return null;
+});
+
+function arraysAreEqual (arr1, arr2) {
+	if (!Array.isArray(arr1) || !Array.isArray(arr2) || arr1.length != arr2.length) {
+		return false;
+	}
+		
+	for (var i = 0; i < arr1.length; i++ ) {
+		if (arr1[i] != arr2[i]) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+function isSpecialFabric (color, colorBlending) {
+	var WHITE_HEX = "FFFFFF";
+	var WHITE_RGB = [ 255, 255, 255 ];
+	var GREY_HEX = "7F7F7F"; // 255 / 2 == 127.5
+	var GREY_HEX2 = "#808080";
+	var GREY_RGB = [ 127, 127, 127 ];
+	var GREY_RGB2 = [ 128, 128, 128 ]; // 255 / 2 == 127.5
+
+	if (!color || !colorBlending) {
+		return false;
+	}
+
+    if (colorBlending == "multiply") {
+		if ((typeof color) == "string") {
+			return (WHITE_HEX == color);
+		} 
+
+		return arraysAreEqual(color, WHITE_RGB);
+	}
+	
+	if (colorBlending == "overlay") { 
+		if ((typeof color) == "string") {
+			return (GREY_HEX == color);
+		}
+
+		return (arraysAreEqual(color, GREY_RGB) || arraysAreEqual(color, GREY_RGB2));
+	}
+
+	return false;
+};
+
+function getNextAvailableColor() {
+	if (iCurrentColor < availableColor.length-1)
+		iCurrentColor++;
+	
+	return availableColor[iCurrentColor];
+}
+
+
+
+//Template building wrapper functions
+function appendTemplate(templateId, context, container)
+{
+	var source   = $("#" + templateId).html();
+	var template = Handlebars.compile(source);
+	context = { ...context, GLOBAL: data };
+	var html    = template(context);
+	//
+	if (!container)
+		container = $("#reportData");
+	container.append(html);
+}
+
+function appendPackItem(pack, packPage) {
+	appendTemplate("pack-item-template", pack, packPage);
+	return $(".pack-container .image-container:last");
+}
+
+function appendLayout(layout_shapes) {
+	appendTemplate("layout-page-template", layout_shapes);
+	return $(".layout-image-area");
+}
+
+function appendStampPage(stamp) {
+	appendTemplate("stamp-page-template", stamp);
+	return $(".stamp-page-top-container:last");
+}
+
+function appendStampsPage(stampsData) {
+	appendTemplate("stamps-page-template", stampsData);
+} 
+
+function appendBomPage(bomPageHeaderData) {
+	appendTemplate("bom-page-template", bomPageHeaderData);
+}
+
+function appendRulersPage(rulersPageHeaderData){
+	appendTemplate("rulers-page-template", rulersPageHeaderData);
+}
+
+function appendPackPage(data) {
+	appendTemplate("pack-page-template", data);
+}
+
+function appendPackContainer(data, page) {
+	appendTemplate("pack-container-template", data, page);
+}
+function appendAlloverPrintPage(alloverPrintData) {
+	appendTemplate("allover-print-page-table", alloverPrintData);
+}
+
+
+function nextBomPage(bomPageHeaderData) {
+	appendBomPage(bomPageHeaderData);
+	return $(".bom-page-table:last tbody");
+}
+
+function nextStampsPage(stampsData){
+	appendStampsPage(stampsData);
+	return $(".border-spacing-table:last tbody");
+}
+
+function nextRulersPage(rulersPageHeaderData){
+	appendRulersPage(rulersPageHeaderData);
+	return $(".rulers-page-table:last tbody");
+}
+
+function nextAlloverPrintPage(alloverPrintPageData){
+	appendAlloverPrintPage(alloverPrintPageData);
+	return $(".allover-print-page-table");
+}
+
+function nextPackPage(data) {
+	appendPackPage(data);
+	return $(".pack-page-container:last");
+}
+
+function nextPackContainer(data, page) {
+	appendPackContainer(data, page);
+	return $(".pack-container:last");
+}
+
+function nextAnnotationsPage(annotation) {
+	appendTemplate("annotation-page-template", annotation);
+	return $(".annotations-page-container:last");
+}
+
+
+
+function appendBomRow(bomRow, bomPage) {
+	appendTemplate("bom-row-template", bomRow, bomPage);
+}
+
+function appendRulersRow(rulersRow, rulersPage){
+	appendTemplate("rulers-row-template", rulersRow, rulersPage);
+}
+
+function nextAnnotationsPage(annotation) {
+	appendTemplate("annotation-page-template", annotation);
+	return $(".annotations-page-container:last");
+}
+
+function appendStampsRow(stampsRow, stampsPage){
+	appendTemplate('stamps-triplet', stampsRow, stampsPage);
+}
+
+function appendAnnotationsPage(annotation) {
+	appendTemplate("annotation-page-template", annotation);
+}
+
+function appendAnnotationEntry(entry, parentContainer) {
+	appendTemplate("annotation-entry-template", entry, parentContainer);
+	
+	//return the new entry created - the container for sub entries
+	return parentContainer.find(".annotations-entry:last .annotations-entry-entries-container");
+}</script>
+		<script>
+function buildReport(initial)
+{
+	addUndoHistory();
+	//reset some vars
+	resetMemberVars();
+	//var body = $('body');
+	//if (body.length == 0) body = $('body,html');
+	var lastScrollTop = $(window).scrollTop();
+	
+	$("#reportData").empty();
+	
+	buildImagePacks();
+	buildLayout();
+	buildBOMPages();
+	buildRulers();
+	buildStamps();
+	buildAnnotations();
+	buildAlloverPrint();
+	
+	drawAnnotationArrows();
+	
+	if (editMode) setEditMode();
+	
+	$("html,body").scrollTop(lastScrollTop);
+	
+	
+	if (!initial && window['bwApi']) {
+		bwApi.setModified();
+	}
+}
+
+function buildImagePacks()
+{
+	//image packs
+
+	if (!images_data) return;//skip if not images in data
+					
+	var packPage =null, packContainer =null;
+	var NOTE_HEIGHT = 100; //set through css (.pack-page-note) height + margin
+	
+	if (images_data.length > 0)
+		packPage = nextPackPage({'data':data, 'note': data.image_page_notes[data.lastPageNumber], 'customImages': data.image_page_custom_images[data.lastPageNumber]});
+	
+	for(var ipack=0; ipack < images_data.length; ipack++ ){
+		
+		var pack = images_data[ipack];
+		
+		//New pack
+		
+		//determine how many items per row in the pack
+		var packLength = pack.items.length;
+		var pack_items_per_row; 
+		
+		if (packLength <=5) 
+			pack_items_per_row = packLength;
+		else if (packLength <=10)
+			pack_items_per_row = Math.ceil(packLength/2);
+		else
+			pack_items_per_row = MAX_PACK_IMAGES_PER_ROW;
+			
+		
+		//create a new container - with the right images per row setting - and add it to page
+		packContainer = nextPackContainer({'pack_items_per_row': pack_items_per_row}, packPage);
+		packContainer[0].pack = pack;
+		
+		for(var iImage=0; iImage < pack.items.length; iImage++){
+			var image = pack.items[iImage];
+		
+			
+		
+			//calc image size to use
+			var pack_image_width_ratio = MAX_PAGE_WIDTH / image.originalWidth;
+		
+			//calculate the pack image height to use
+			image.percentX = 100 / pack_items_per_row;
+			image.containerPixleX = Math.min((image.originalWidth * pack_image_width_ratio) / pack_items_per_row, 735 / pack_items_per_row);
+			
+			image.pixelX = (image.originalWidth * pack_image_width_ratio) / pack_items_per_row;
+			
+			image.pixelX = (image.originalWidth * pack_image_width_ratio) / pack_items_per_row
+			
+			
+			image.pixelY = Math.min(image.originalHeight, (image.originalHeight * pack_image_width_ratio) / pack_items_per_row);
+			if (image.pixelY > 300)
+			{
+				//2 per row - limit image to max height of XXX to allow 2 rows per page
+				image.pixelY = 300;
+				NOTE_HEIGHT = 60;
+			}
+			
+			//calculate what the image width will be in pixles
+			var imgWidth  = image.pixelY * (image.originalWidth / image.originalHeight);
+			
+			//now in percent
+			imgWidth = (imgWidth / (INITIAL_PAGE_WIDTH / pack_items_per_row)) * 100;
+			image.percentWidth = imgWidth;
+			
+			
+			
+			
+			//init annotations as needed
+			if (!image.annotations) image.annotations = [];
+			
+			//add image to page
+			var packElement = appendPackItem(image, packContainer); 
+			packElement[0].packImage = image;
+			
+			if (packPage.outerHeight() > (MAX_ALLOWED_PAGE_HEIGHT - NOTE_HEIGHT) && packPage.find(".image-container").size() > 1)
+			{
+				
+				//if pack has only one image - move pack to next page
+				if(packContainer.find(".image-container").length == 1)
+				{
+					var lastPackContainer = $('.pack-container:last');
+					lastPackContainer.remove();
+					
+				}
+				else
+				{
+					//else remove image from pack - create new page, new container, add image back to container
+					var lastPackImage = $('.pack-container:last .image-container:last');
+					lastPackImage.remove();
+				}
+				
+				//new page
+				packPage = nextPackPage({'data':data, 'note': data.image_page_notes[data.lastPageNumber], 'customImages': data.image_page_custom_images[data.lastPageNumber]});
+				
+				//add last pack back
+				packContainer = nextPackContainer({'pack_items_per_row': pack_items_per_row}, packPage);
+				packContainer[0].pack = pack;
+				
+				//add item to pack again
+				packElement = appendPackItem(image, packContainer);
+				packElement[0].packImage = image;
+				
+			}
+			
+			//
+			//save annotations object with layout image element						
+			var packImg = packElement.find("img");
+			packImg[0].annotations = image.annotations;
+
+		}
+	}
+}
+
+function buildLayout()
+{
+	//layout shapes
+	
+	if (!data.shapes || layout_fabrics.shapes.length == 0) return; 
+	
+	//set the max width calculated for the image
+	layout_fabrics.data.setWidth = layout_image_width;
+	var image_ratio = layout_image_width / layout_fabrics.data.originalWidth;
+	
+	//loop through all shapes and set pixel size based on ratio
+	for(var ifabric=0; ifabric < layout_fabrics.shapes.length; ifabric++) {
+		var fabric = layout_fabrics.shapes[ifabric];
+		for(var i=0; i< fabric.shapes.length; i++) {
+			var shape = fabric.shapes[i];
+			shape.pixelX = shape.posX * layout_image_width;
+			shape.pixelY = shape.posY * (layout_fabrics.data.originalHeight * image_ratio);
+		}
+	}
+	
+	//init annotations if needed
+	if (!layout_fabrics.data.annotations) layout_fabrics.data.annotations = [];
+	
+	var layout_shapes_container = {'data': data, 'layout_fabrics': layout_fabrics};
+	
+	var layoutContainer = appendLayout(layout_shapes_container);
+	var layoutImage = layoutContainer.find("img.layout-image-2d");
+	
+	//save annotations object with layout image element
+	layoutImage[0].annotations = layout_fabrics.data.annotations;
+	
+}
+
+function buildBOMPages() {
+	var sections = bom_data;
+	var colorwayPages = Math.ceil(ColorwayCount / MAX_COLORWAYS_PER_ROW);
+	for(var iColorwaysSet=0; iColorwaysSet < colorwayPages; iColorwaysSet++ ){
+		var iColorwaysStart = iColorwaysSet * MAX_COLORWAYS_PER_ROW;
+		var iColorwaysEnd = iColorwaysStart + MAX_COLORWAYS_PER_ROW;
+		var currentColorways = [];
+		let colorwaysKeys = data.colorways ? data.colorways.map(({ id }) => id) : Object.keys(data.bom);
+
+		for (var iColorway = iColorwaysStart; iColorway < iColorwaysEnd; iColorway++){
+			var bomKey = colorwaysKeys[iColorway];
+			if (data.bom[bomKey])
+				currentColorways.push(data.bom[bomKey].name);
+		}
+		var bomPageHeaderData = {'colorways': currentColorways, 'data': data};
+		var bomPage = nextBomPage(bomPageHeaderData);
+
+		for (var sectionId = 0; sectionId < sections.length; sectionId++){
+			bomPage = buildBomSection(sections[sectionId], iColorwaysStart, iColorwaysEnd, bomPageHeaderData, bomPage);
+		}
+	}
+}
+
+function buildBomSection (data, iColorwaysStart, iColorwaysEnd, bomPageHeaderData, bomPage) {
+	var bom_data = data.rows;
+	if (bom_data.length == 0) {
+		console.assert(false, "buildBomSection: The row data is empty");
+		return; 
+	}
+	
+	for (var ibomrow=0; ibomrow < bom_data.length; ibomrow++ ) {
+		
+		var bomRowContainer = {};
+		bomRowContainer.bomrow = bom_data[ibomrow];
+		bomRowContainer.data = data;
+		bomRowContainer.isSingle = bom_data.length == 1;
+		
+		bomRowContainer.currentColorways = bomPageHeaderData.colorways;
+		bomRowContainer.currentBOMColorways = bomRowContainer.bomrow.colorways.slice(iColorwaysStart, iColorwaysEnd);
+		
+		if (ibomrow == 0){
+			bomRowContainer.firstRow = true;
+			bomRowContainer.rowsNum = bom_data.length;
+			bomRowContainer.sectionName = data.name;
+			bomRowContainer.sectionId = bom_data.sectionId;
+		}
+		
+		// only print the row if it participates in current colorways (in case we do not split the table).
+		if (ColorwayCount > MAX_COLORWAYS_PER_ROW || 
+			bomRowContainer.currentBOMColorways.filter(function (item) {  
+				return (item != null && item != {});
+			}).length > 0) {
+			appendBomRow(bomRowContainer, bomPage);
+
+			// check if page length went past max allowed length
+			if (bomPage.outerHeight() > (MAX_ALLOWED_PAGE_HEIGHT-40)) {
+				// remove the last row from the container
+				$('tr:last-child', bomPage).remove();
+
+				//move to next page
+				bomPage = nextBomPage(bomPageHeaderData);
+
+				//update number of items in the section
+				bomRowContainer.firstRow = true;
+				bomRowContainer.rowsNum = bom_data.length - ibomrow;
+				bomRowContainer.sectionName = data.name;
+				
+				//re-append last element to new page
+				appendBomRow(bomRowContainer, bomPage);
+			}
+		}
+	}
+
+	//check the last page has data, if not - remove it
+	if (bomPage.children().length == 0) {
+		//remove last page
+		bomPage.prev().remove(); //remove page header
+		//remove table
+		bomPage.remove();
+	}
+
+	return bomPage;
+}
+
+/**
+ * The function generates a template of a single stamp
+ * CAN BUILD MORE THAN 1 template (depends on number of colorways).
+ * @param {obj} stamp
+ * @param {int} istamp  
+ * @param {obj} shape 
+ * @param {int} iShape shape index (represents a position of current fabric in an array of the same fabrics. array.langth = number of garment sizes).
+ * @param {int} shapeId - shape id (represents the shape)
+ * @param {bool} displayInfo
+ */
+function buildSingleStamp (stamp, istamp, shape, shapeId, iShape, displayInfo) {
+	//Create one stamp page for each X numbers of colorways defined in the data
+	var colorwayPages = Math.ceil(ColorwayCount / MAX_COLORWAYS_PER_ROW);
+	for (var iColorwaysSet=0; iColorwaysSet < colorwayPages; iColorwaysSet++) {
+		var iColorwaysStart = iColorwaysSet * MAX_COLORWAYS_PER_ROW;
+		var iColorwaysEnd = iColorwaysStart + MAX_COLORWAYS_PER_ROW;
+		var currentColorways = [];
+
+		let colorwaysKeys = data.colorways ? data.colorways.map(({ id }) => id) : Object.keys(data.bom);
+		
+		for (var iColorway = iColorwaysStart; iColorway < iColorwaysEnd; iColorway++) {
+			var bomKey = colorwaysKeys[iColorway];
+			if (data.bom[bomKey]) {
+				currentColorways.push(data.bom[bomKey].name);
+			}
+		}
+		
+		if (stamp.colorways.slice(iColorwaysStart, iColorwaysEnd).filter(Boolean).length == 0) {
+			continue;
+		}
+
+		var stampData = {
+			'stamp': stamp, 
+			'data': data, 
+			'shape': shape, 
+			'currentColorways': currentColorways, 
+			'stampIndex': istamp, 
+			'shapeIndex': iShape,
+			'shapeId': shapeId, 
+			'iColorwaysStart': iColorwaysStart, 
+			'iColorwaysEnd': iColorwaysEnd, 
+			'displayInfo': displayInfo
+		};
+		
+		var MIN_LAYOUT_HEIGHT = 100;
+		
+		var stampPage = appendStampPage(stampData);
+			
+		var layoutImage = stampPage.find(".stamp-layout-container img");
+		if (!layoutImage[0]) {
+			return;
+		}
+		
+		var decrease = stampPage.outerHeight() > MAX_ALLOWED_PAGE_HEIGHT;
+		while (decrease) {
+			if (layoutImage.outerHeight() > MIN_LAYOUT_HEIGHT) {
+				layoutImage.outerHeight(layoutImage.outerHeight() - 10);
+				decrease = stampPage.outerHeight() > MAX_ALLOWED_PAGE_HEIGHT;
+			} else {
+				decrease = false;
+			}
+		}	
+		
+		//save annotations object with layout image element
+		layoutImage[0].annotations = shape.annotations;
+	}
+}
+
+function buildStamps () {
+	var getImageHeight = function (shape) {
+		var image_X_To_Y_Relation = shape.originalWidth/shape.originalHeight;
+		var maxHeight = (MAX_STAMP_SHORT_IMAGE_SIZES_RELATION < image_X_To_Y_Relation) ? MAX_STAMP_SHORT_IMAGE_HEIGHT : MAX_STAMP_TALL_IMAGE_HEIGHT;
+		var imageHeight = (shape.originalHeight/shape.originalWidth) * (MAX_PAGE_WIDTH/3);
+		return (imageHeight > maxHeight) ? maxHeight : imageHeight;
+	};
+	var removeLastStampsRow = function (stampsPage) {
+		for (var i = 0;  i < 3; i++) {
+			document.querySelector(".border-spacing-table:last-child>tbody>tr:last-child").remove();
+		}
+	};
+
+	for (var istamp = 0; istamp < stamp_data.length; istamp++) {
+		var stamp = stamp_data[istamp];
+		var shapeIds = Object.keys(stamp.shapes);
+
+		for (var shapeIdIndex=0; shapeIdIndex < shapeIds.length; shapeIdIndex++) {
+			var shapeId = shapeIds[shapeIdIndex];
+			var shapeSizes = stamp.shapes[shapeId]; //stamp.shapes is an object which contains <key : shapeId> <value : list of shape objects (each of them has got the same shape id but with diffrerent sizes)>
+
+			if (shapeSizes.length == 0) {
+				console.assert(false, "No sizes for shape");
+				continue;
+			}
+
+			if (shapeSizes.length == 1) {
+				// If there is only one size there is no reason to display the MULTI-STAMPS template 
+				buildSingleStamp(stamp, istamp, shapeSizes[0], shapeId, shapeIdIndex, true);
+				continue;
+			}
+
+			//If there is more than one size: display the SINGLE-STAMPS template with pattern name only and MULTI-STAMPS template with all the sizes.
+			
+			//collect data
+			var stampDataNodes = [];
+			var shapeObj = {};
+			for (var iShape=0; iShape < shapeSizes.length; iShape++) {
+				var shape = shapeSizes[iShape];
+				shapeObj = shape;
+				
+				//init annotations if needed
+				if (!shape.annotations) shape.annotations = [];
+							
+				//print page only if layout image exists and page is not deleted for shape
+				if (!shape.pageDeleted) {
+					stampDataNodes.push({'shape': shape, imageHeight: getImageHeight(shape), isFront: stamp.isFront});
+				}
+			}
+			
+			buildSingleStamp(stamp, istamp, shapeSizes[0], shapeId, shapeIdIndex, false);
+
+			var currentStampsPage = nextStampsPage({
+				'data': data, 
+				'stamp': stamp, 
+				'shape': shapeObj,
+				'colorways': stamp.colorways.filter(Boolean),
+			});
+
+			var rows = splitToSubArrays(stampDataNodes, 3);
+			for (var rowIndex = 0; rowIndex < rows.length; rowIndex++) {
+				var rowData = {
+					'rowItems': rows[rowIndex], 
+					'data': data, 
+					'stamp': stamp, 
+					'shape': shapeObj,
+				};
+				appendStampsRow(rowData, currentStampsPage);
+
+				if (currentStampsPage.outerHeight() > MAX_ALLOWED_PAGE_HEIGHT) {
+					// remove the last table row
+					removeLastStampsRow(currentStampsPage);
+					// append into a new page
+					currentStampsPage = nextStampsPage(rowData, currentStampsPage);
+					appendStampsRow(rowData, currentStampsPage);
+				}
+			}
+		}
+	}
+}
+
+function splitToSubArrays(inputArray, subArraySize){
+	var  outputArray = [];
+	var size = inputArray.length;
+
+	if(size > 0 && subArraySize > 0){
+		for (var i=0; i<size; i+=subArraySize){
+			outputArray.push(inputArray.slice(i,i+subArraySize));
+		}
+	}
+
+	return outputArray;
+}
+
+function buildAnnotations()
+{
+	//annotations
+	if (!data.annotations) {
+		return;
+	}
+	
+	for(var iannotation=0; iannotation < data.annotations.length; iannotation++ ){
+		var annotation = data.annotations[iannotation];
+		//annotation.data = data;
+		annotation.setWidth = ANNOTATION_WIDTH;
+		
+		//init IMAGE annotations if needed
+		if (!annotation.imageAnnotations) annotation.imageAnnotations = [];
+		
+		
+		var annotation_image_ratio = ANNOTATION_WIDTH / annotation.originalWidth;
+		for(var iMarker=0; iMarker<annotation.annotation_markers.length; iMarker++){
+			var marker = annotation.annotation_markers[iMarker];
+			marker.pixelX = marker.posX * ANNOTATION_WIDTH;
+			marker.pixelY = marker.posY * (annotation.originalHeight * annotation_image_ratio);
+		}				
+		
+		var annotationContainer = {'annotation':annotation, 'data':data};
+		
+		var annotationPage = nextAnnotationsPage(annotationContainer);
+		
+		//save annotations object with layout image element
+		var annotationPageImage = annotationPage.find(".annotations-image-container img");
+		annotationPageImage[0].annotations = annotation.imageAnnotations;
+		
+		
+		//Annotation entries
+		for(var iAnnotationEntry=0; iAnnotationEntry < annotation.entries.length; iAnnotationEntry++ ){
+			var annotationEntry = annotation.entries[iAnnotationEntry];
+			var topEntry = appendAnnotationEntry(annotationEntry, annotationPage);
+			
+			//check if passed page height
+			if (annotationPage.outerHeight() > MAX_ALLOWED_PAGE_HEIGHT)
+			{
+				//remove the last enrty from the container
+				$('.annotations-entry:last', annotationPage).remove();
+				
+				//move to next page
+				annotationContainer.continued = true;
+				annotationPage = nextAnnotationsPage(annotationContainer);
+				//save annotations object with layout image element
+				annotationPageImage = annotationPage.find(".annotations-image-container img");
+				annotationPageImage[0].annotations = annotation.imageAnnotations;
+				
+				//re-append last element to new page
+				topEntry = appendAnnotationEntry(annotationEntry, annotationPage);
+			}
+			
+			
+			//Annotation entries entries!!!
+			if (annotationEntry.entries)
+			{
+				for(var iAnnotationEntryEntry=0; iAnnotationEntryEntry < annotationEntry.entries.length; iAnnotationEntryEntry++ ){
+					var annotationEntryEntry = annotationEntry.entries[iAnnotationEntryEntry];
+					appendAnnotationEntry(annotationEntryEntry, topEntry);
+					
+					//check if passed page height
+					if (annotationPage.outerHeight() > MAX_ALLOWED_PAGE_HEIGHT)
+					{
+						//remove the last enrty from the container
+						$('.annotations-entry:last', annotationPage).remove();
+						
+						//move to next page
+						annotation.continued = true;
+						annotationPage = nextAnnotationsPage(annotation);
+						//save annotations object with layout image element
+						annotationPageImage = annotationPage.find(".annotations-image-container img");
+						annotationPageImage[0].annotations = annotation.imageAnnotations;
+						
+						//reaquire top entry var
+						topEntry = annotationPage.find(".annotations-entry:last .annotations-entry-entries-container");
+						//re-append last element to new page
+						appendAnnotationEntry(annotationEntryEntry, topEntry);
+					}
+					
+				}
+			}
+			
+		}
+	}
+}
+
+function drawAnnotationArrows()
+{
+	$("canvas.annotation-arrow-container").each(function (index){
+		var jThis = $(this);
+		addLineArrow(this, jThis.attr("x1"), jThis.attr("y1"), jThis.attr("x2"), jThis.attr("y2"));
+	});
+}
+
+function buildRulers() {
+	if (!rulers_data || ! rulers_data.rows || !rulers_data.rows.length || rulers_data.rows.length == 0){
+		return false;
+	}
+	var rulerPagesNum = Math.ceil(rulers_data.sizes.length / MAX_RULER_SIZES_PER_ROW);
+	var rows = rulers_data.rows;
+
+	for(var iSizesSet=0; iSizesSet < rulerPagesNum; iSizesSet++ ){
+		var iSizesStart = iSizesSet * MAX_RULER_SIZES_PER_ROW;
+		var iSizesEnd = iSizesStart + MAX_RULER_SIZES_PER_ROW;
+		var currentSizes = [];
+		var sizesKeys = rulers_data.sizes;
+		var currentSizes = sizesKeys.slice(iSizesStart, iSizesEnd);
+		var emptyCell = currentSizes.length < MAX_RULER_SIZES_PER_ROW;
+		var rulersPageHeaderData = {'sizes': currentSizes, 'unitSign': rulers_data.unitSign, 'data': data, 'emptyCell': emptyCell};
+		var rulersPage = nextRulersPage(rulersPageHeaderData);
+
+		for (var rowIndex = 0; rowIndex < rows.length; rowIndex++){
+			var row = {'rulerName': rows[rowIndex].name, 'rulers': rows[rowIndex].rulers.slice(iSizesStart, iSizesEnd), 'data':data, 'emptyCell': emptyCell};
+			appendRulersRow(row, rulersPage);
+
+			if (rulersPage.outerHeight() > MAX_ALLOWED_PAGE_HEIGHT){
+				//remove the last enrty from the container
+				$('tr:last-child', rulersPage).remove();
+				// append ito new page
+				rulersPage = nextRulersPage(rulersPageHeaderData);
+				appendRulersRow(row, rulersPage);
+			}
+		}
+	}
+}
+
+// allover-print
+
+function buildAlloverPrint() {
+	var UNITS_TABLE = {
+        'cm': {
+            'cm': 1,
+            'mm': 10,
+            'in': 0.39370079,
+        },
+        'mm': {
+            'cm': 0.1,
+            'mm': 1,
+            'in': 0.039370079,
+        },
+        'in': {
+            'cm': 2.54,
+            'mm': 25.4,
+            'in': 1,
+        },
+    };
+	var POSSIBLE_UNITS = Object.keys(UNITS_TABLE);
+	var LARGE_IMAGE_SIZE_CM = 32;
+	var WIDTH_COEFFICIENT = 0.6;
+
+	function unitToPixels(smallImageWidth, unitSign) {
+		var largeImageWidth = convertUnits('cm', unitSign, LARGE_IMAGE_SIZE_CM);
+		return (MAX_PAGE_WIDTH * WIDTH_COEFFICIENT) / (smallImageWidth + largeImageWidth);
+	}
+
+	function convertUnits(fromUnitSign, toUnitSign, value) {
+		if (!validateUnitSign(fromUnitSign) || 
+			!validateUnitSign(toUnitSign) || 
+			!value || 
+			typeof(value) != "number") {
+
+			console.warn(INVALID_DATA_MSG);
+			return undefined;
+		}
+
+		fromUnitSign = fromUnitSign.toLowerCase();
+		toUnitSign = toUnitSign.toLowerCase();
+
+		return value * UNITS_TABLE[fromUnitSign][toUnitSign];
+	}
+
+	function validateUnitSign(unitSign) {
+		if (!unitSign || typeof(unitSign) != 'string') {
+			console.warn(INVALID_DATA_MSG);
+			return false;
+		}
+
+		unitSign = unitSign.toLowerCase();
+
+		if (POSSIBLE_UNITS.indexOf(unitSign) == -1) { 
+			console.warn(INVALID_DATA_MSG);
+			return false;
+		}
+
+		return true;
+	}
+
+	function build() {
+		var rows = allover_print_data;
+
+		if (!rows || !rows.length || rows.length == 0) {
+				return false;
+		}
+
+		for (var i = 0; i < rows.length; i++) {
+			var currentRow = rows[i];
+			var unitSizeInPixels = unitToPixels(currentRow.smallImageWidth, data.unitSign);
+
+			currentRow.data = data;
+			currentRow.largeImageWidth = convertUnits("cm", data.unitSign, LARGE_IMAGE_SIZE_CM);
+			currentRow.largeImageHeight = convertUnits("cm", data.unitSign, LARGE_IMAGE_SIZE_CM);
+			currentRow.largeImagePixelsWidth = currentRow.largeImageWidth * unitSizeInPixels;
+			currentRow.largeImagePixelsHeight = currentRow.largeImageHeight * unitSizeInPixels;
+			currentRow.smallImagePixelsWidth = currentRow.smallImageWidth * unitSizeInPixels;
+			currentRow.smallImagePixelsHeight = currentRow.smallImageHeight * unitSizeInPixels;
+
+			nextAlloverPrintPage(currentRow);
+		} 
+	}
+
+	build();
+}
+</script>
+		
+		<!--editor scripts-->
+		<script>
+function setEditMode()
+{
+	$("body").addClass("report-edit-mode");
+	
+	//show editor sections
+	$(".editor-options").show();
+	
+	//attach to editor events
+	
+	//BOM row
+	$(".delete-bom-row").click(deleteBomRow);
+	$(".edit-bom-row").click(editBomRow);
+	$(".add-bom-row").click(addBomRowAfter);
+	$(".bom-row-up").click(moveBomRowUp);
+	$(".bom-row-down").click(moveBomRowDown);
+
+	//BOM section
+	$(".delete-bom-section").click(deleteBomSection);
+	$(".edit-bom-section").click(editBomSection);
+	$(".add-bom-section").click(addBomSectionAfter);
+	$(".bom-section-up").click(moveBomSectionUp);
+	$(".bom-section-down").click(moveBomSectionDown);
+	
+	
+	//edit header
+	$(".edit-header").click(editHeader);
+	
+	
+	//layout
+	$(".delete-layout-row").click(deleteLayoutRow);
+	//$(".edit-layout-row").click(editLayoutRow);
+	//$(".add-layout-row").click(addLayoutRowAfter);
+	
+	$(".layout-image-area .layout-shape-marker").draggable();
+	
+	
+	//layout marker dropping
+	$("html").droppable({
+	  drop: function( event, ui ) {
+		  var objDropped = ui.draggable;
+		  if (!objDropped.hasClass("ui-draggable"))
+		  {
+			objDropped = objDropped.parents(".ui-draggable"); //get the first object marked as draggable
+		  }
+		  
+		  if (objDropped.hasClass("layout-shape-marker")){
+		  
+			//layout shape marker dropped
+			saveLayoutMarkersPositions();
+		  }	
+		  else if (objDropped.hasClass("image-annotation")){
+			//annotation being repositioned.
+			annotationMoved(objDropped, event);
+		  }
+		  else if (objDropped.hasClass("ui-dialog")){
+			//ui dialog being moved
+		  }
+		  else
+		  {
+			alert(_("You can't drop that there"));
+			buildReport();
+		  }
+	  }
+	});
+	
+	
+	//annotation dropping
+	$("img").droppable({
+	  greedy: true,
+	  drop: function( event, ui ) {
+		  // console.log(ui, event, event.toElement, event.target);
+		  var objDropped = ui.draggable;
+		  if (!objDropped.hasClass("ui-draggable"))
+		  {
+			objDropped = objDropped.parents(".ui-draggable"); //get the first object marked as draggable
+		  }
+		  
+		  var dropTarget = $(this)[0];
+		  
+		  if (objDropped.hasClass("ui-icon-comment")){
+			//new annotation
+			
+			addNewAnnotation(dropTarget, objDropped, event);
+		  }
+		  else if (objDropped.hasClass("image-container")){
+			//new annotation
+			
+			imageMoved(dropTarget, objDropped, event);
+		  }
+		  else if (objDropped.hasClass("image-annotation")){
+			//annotation being repositioned.
+			annotationMoved(objDropped, event);
+		  }
+		  else if (objDropped.hasClass("layout-shape-marker")){
+		  
+			//layout shape marker dropped
+			saveLayoutMarkersPositions();
+		  }
+	  }
+	});
+	
+	//stamps
+	//$(".delete-stamp-row").click(deleteStampRow);
+	
+	//image annotations
+	$(".ui-icon-comment").draggable();
+	
+	$(".image-annotation").draggable();
+	$(".image-annotation").resizable({
+		stop: function(e, ui) {
+				 resizeAnnotation(e, ui);
+			}
+		});
+	
+	//images
+	
+	$(".pack-container .image-container").draggable({
+		start: function(event, ui) {
+			
+			$(event.target).css('z-index', 1000);
+		},
+		stop: function(event, ui) {
+			$(event.target).css('z-index', 100);
+		}
+	});
+	
+	//image annotation arrows
+	initImageAnnotationArrowEditor();
+	
+	//undo
+	if (undoStack.length > 1)
+	{
+		$(".undo").click(function(){
+			undo();
+		});
+	}
+}
+
+function getEditorFieldValue(field)
+{
+	return $("#editDialog .editFieldContainer.field-" + field + " input").val();
+}
+
+function getEditorTextFieldValue(field)
+{
+	return $("#editDialog .editFieldContainer.field-" + field + " textarea").val();
+}
+
+function closeDialog(){
+	$("#editDialog").dialog('close');
+}
+
+
+
+//Header editing
+function editHeader(e){
+		
+	var editDialog = $("#editDialog");
+	editDialog.empty();
+	appendTemplate("header-editor-template", data, editDialog);
+	
+	$("#editDialog").dialog();
+	$("#editDialog").dialog( "option", "title", _("Edit Header") );
+	
+	//
+	return false;
+}
+
+
+function saveHeader () {
+	// migration
+	var info = data.GarmentInfo = data.GarmentInfo || {};
+	info.season = info.season || { 'caption': _("Season") };
+	info.category = info.category || { 'caption': _("Category") };
+	info.style_id = info.style_id || { 'caption': _("Style ID") };
+	info.style_name = info.style_name || { 'caption': _("Style Name") };
+	info.match_style = info.match_style || { 'caption': _("Matching Style") };
+	info.pattern_id = info.pattern_id || { 'caption': _("Pattern ID") };
+	info.designer = info.designer || { 'caption': _("Designer") };
+	
+	// save new values
+	info.season.value = getEditorFieldValue("season");
+	info.category.value = getEditorFieldValue("category");
+	info.style_id.value = getEditorFieldValue("garmentId");
+	info.style_name.value = getEditorFieldValue("garmentName");
+	info.match_style.value = getEditorFieldValue("matchingStyle");
+	info.pattern_id.value = getEditorFieldValue("patternId");
+	info.designer.value = getEditorFieldValue("designer");
+	
+	// rebuild report
+	buildReport();
+	
+	closeDialog();
+}
+</script>
+		<script>//image pack notes
+
+function editPackNote(pageNum){
+	//data.image_page_notes[pageNum]
+	var noteData = {'note':data.image_page_notes[pageNum], 'pageNum': pageNum};
+	
+	var editDialog = $("#editDialog");
+	editDialog.empty();
+	appendTemplate("pack-note-editor-template", noteData, editDialog);
+	
+	editDialog.dialog();
+	editDialog.dialog( "option", "title", _("Edit Pack Note") );
+	return false;
+}
+
+
+function savePackNote(el){
+	//
+	var pageNum = $("#editDialog .pageNum").val();
+	
+	data.image_page_notes[pageNum] = getEditorTextFieldValue("note");
+					
+	//rebuild report
+	buildReport();
+	
+	closeDialog();
+}
+
+
+//reordering images in image packs
+function imageMoved(dropTarget, objDropped, event){
+	
+	var dropTargetContainer = $(dropTarget).parents(".image-container");
+
+	//check if item was dropped on left side or right side of image
+	var leftSide = true;
+	
+	if (event.offsetX > ($(dropTarget).width() / 2))
+		leftSide = false;
+	
+	//get the pack image data from the element
+	var droppedPackContainer = objDropped.parents(".pack-container");
+	var droppedPack = droppedPackContainer[0].pack;
+	var droppedPackImage = objDropped[0].packImage;
+	
+	var targetPackContainer = $(dropTarget).parents(".pack-container");
+	var targetPack = targetPackContainer[0].pack;
+	var targetPackImage = dropTargetContainer[0].packImage;
+	
+	if (targetPack != droppedPack)
+	{
+		alert(_("You can't move images between different packs"));
+		buildReport();
+		return;
+	}
+	
+	var newIndex = targetPack.items.indexOf(targetPackImage);	
+	
+	console.log(dropTarget, targetPackImage);
+	//remove the row from the array
+	
+	droppedPack.items.splice(
+		droppedPack.items.indexOf(droppedPackImage),1);
+	
+	//readd it at the new index
+	
+	droppedPack.items.splice(newIndex, 0, droppedPackImage);
+	
+	buildReport();
+	
+	return;
+	
+	//
+	if (!dropTarget)
+	{
+		//not an annotatable object
+		buildReport();
+		return;
+	}
+	
+	var newPos = getAnnotationRelativePostition(dropTarget, event);
+	var newAnnotation = {'id': guid(), 'top': newPos.top, 'left': newPos.left, 'height': 100, 'width':200};
+	
+	dropTarget.annotations.push(newAnnotation);
+	
+	buildReport();
+}
+
+
+
+function addPackCustomImage(pageNum){
+    bwApi.copyUserFile({
+		filter: [
+			["Image Files", "jpeg;jpg;bmp;gif;png"]
+		],
+		allFormats: false,
+		allFiles: true
+	}).then(filename => {
+		if (!filename) {
+            return;
+        }
+
+        const pageData = data.image_page_custom_images;
+        const packPageImages = pageData[pageNum] = pageData[pageNum] || [];
+        packPageImages.push(filename);
+        
+        setTimeout(buildReport, 100);
+	});
+	
+	return false;
+}
+
+
+
+function deletePackCustomImage(pageNum, index)
+{
+	if (window.confirm(_("Are you sure you want to delete this image?")))
+	{
+		data.image_page_custom_images[pageNum].splice(index, 1);
+		buildReport();
+	}
+	return false;
+}</script>
+		<script>
+
+function deleteLayoutRow(rowIndex){
+	if (window.confirm(_("Are you sure you want to delete this row?")))
+	{
+		layout_fabrics.shapes.splice(rowIndex,1);
+		buildReport();
+	}
+	return false;
+}
+
+function editLayoutRow(rowIndex){
+	var rowData = {'rowIndex':rowIndex, 'layout_fabric': layout_fabrics.shapes[rowIndex]};
+		
+	var editDialog = $("#editDialog");
+	editDialog.empty();
+	appendTemplate("layout-row-editor-template", rowData, editDialog);
+	
+	
+	$("#editDialog").dialog();
+	$("#editDialog").dialog( "option", "title", _("Edit Layout Row") );
+	return false;
+}
+
+
+function saveLayoutRow(el){
+	//
+	
+	var rowIndex = $("#editDialog .rowIndex").val();
+	
+	var rowData = null;
+	if (rowIndex)
+	{
+		rowData = layout_fabrics.shapes[rowIndex];
+	}
+	else
+	{
+		//new row
+		
+		//start new row object
+		rowData = {}; 
+		rowData.fabric = guid();
+		rowData.shapes = [];
+		
+		//add new row to array
+		layout_fabrics.shapes.push(rowData);
+	}
+	
+	//save new data
+	rowData.material = getEditorFieldValue("material");
+	rowData.shapeNames = getEditorTextFieldValue("shapeNames");
+	
+	//rebuild report
+	buildReport();
+	
+	closeDialog();
+}
+
+function addLayoutMarker(rowIndex){
+	var fabric = layout_fabrics.shapes[rowIndex];
+	var newShape = {
+				 "fabric" : fabric.fabric,
+				 "posX" : 0.0,
+				 "posY" : 0.0
+				};
+	fabric.shapes.push(newShape);
+	
+	buildReport();
+	
+	return false;
+}
+
+function saveLayoutMarkersPositions(){
+	//
+	var image_ratio = layout_image_width / getFirstLayout().originalWidth;
+	var containerPos = $(".layout-image-2d").position();
+	
+	//loop through all shapes and get posX/Y data based on marker positions
+	for(var ifabric=0; ifabric < layout_fabrics.shapes.length; ifabric++){
+		var fabric = layout_fabrics.shapes[ifabric];
+		for(var i=0; i< fabric.shapes.length; i++){
+			var shape = fabric.shapes[i];
+			var marker = $(".layout-shape-marker-" + ifabric + "-" + i);
+			
+			//check if marker has been moved by checking top property which gets set when moved.
+			
+			if (marker.css("top") == "auto") continue;
+			
+			
+			var top = marker.css("top").replace("px","")
+						- containerPos.top
+						+ (1 * marker.css("margin-top").replace("px",""));
+			
+			var left = marker.css("left").replace("px","") 
+						- containerPos.left
+						+ (1 * marker.css("margin-left").replace("px",""));
+						
+			
+			shape.posX = left / layout_image_width;
+			
+			shape.posY = top / (getFirstLayout().originalHeight * image_ratio);
+			
+			//shape.pixelX = shape.posX * layout_image_width;
+			//shape.pixelY = shape.posY * (data.shapes.layout.originalHeight * image_ratio);
+		}
+	}
+	
+	
+	buildReport();
+	
+	return false;
+}
+
+
+
+
+function deleteLayoutMarker(fabricIndex, markerIndex){
+	
+	if (window.confirm(_("Are you sure you want to delete this marker?")))
+	{
+		layout_fabrics.shapes[fabricIndex].shapes.splice(markerIndex,1);
+		buildReport();
+	}
+	return false;
+}
+
+
+function getFirstLayout()
+{
+	return data.shapes.layout[0];
+}</script>
+		<script>var MSG = {
+	'deleteRow': _("BOM Row will be deleted. Are you sure?"),
+	'deleteSection': _("BOM Section will be deleted. Are you sure?"),
+	'undefinedSectionId': _("Group id is undefined."),
+	'duplicateRowDefinition': _("Duplicate row definition."),
+	'sectionDoesNotExist': _("Group does not exist."),
+	'rowDoesNotExist': _("Row does not exist."),
+};
+
+// delete
+
+function deleteFromBom(id, isSection) {
+	var bomSections = bom_data;
+	var deleted = false;
+	
+	if (window.confirm((isSection)? MSG.deleteSection : MSG.deleteRow)) {
+		for (var iSection = 0; iSection < bomSections.length; iSection++) {
+			var section = bomSections[iSection];
+
+			if (deleted) {
+				break;
+			}
+
+			if (isSection && section.sectionId == id) {
+				bomSections.splice(iSection, 1);
+				deleted = true;
+				break;
+			}
+
+			for(var iBomRow = 0; iBomRow < section.rows.length; iBomRow++ ) {
+				var bomRow = section.rows[iBomRow];
+
+				if (!isSection && bomRow.rowId == id) {
+					section.rows.splice(iBomRow, 1);
+					deleted = true;
+					break;
+				}
+			}
+		}
+
+		if (deleted) {
+			buildReport();
+		} else {
+			alert(_("unexpected error"));
+			return false;
+		}
+	}
+}
+
+function deleteBomRow(e) {
+	var rowId = $(this).parents("tr").attr("data-rowId");
+	var rowObj = findRow(rowId);
+
+	if (rowObj.section.rows.length > 1) {
+		deleteFromBom(rowId, false);
+	} else {
+		deleteBomSection.call(this, e);
+	}
+	
+	return false;
+}
+
+function deleteBomSection(e) {
+	var sectionId = $(this).parents("tr").attr("data-sectionid");
+	deleteFromBom(sectionId, true);
+	return false;
+}
+
+
+
+// edit bom row
+function editBomRow(e) {
+	var rowId = $(this).parents("tr").attr("data-rowId");
+	var bomSections = bom_data;
+	var sectionName = '';
+	var bomRows = [];
+	
+	for (var iSection = 0; iSection < bomSections.length; iSection++) {
+		var section = bomSections[iSection];
+
+		bomRows = section.rows.filter(function (item) {
+			if (item.rowId == rowId) {
+				sectionName = section.name;
+				return true;
+			}
+		}).concat(bomRows);
+	}
+	
+	if (bomRows.length != 1) {
+		console.assert(MSG.duplicateRowDefinition);
+		return;
+	}
+		
+	var editDialog = $("#editDialog");
+	var rowData = JSON.parse(JSON.stringify(bomRows[0]));
+	editDialog.empty();
+	rowData.unitSign = data.unitSign;
+	rowData.unitPrecision = data.unitPrecision;
+	rowData.sectionName = sectionName;
+	appendTemplate("bom-row-editor-template", rowData, editDialog);
+	initBomDialog(editDialog);
+	$("#editDialog").dialog("option", "title", _("Edit BOM Row"));
+
+	return false;
+}
+
+function editBomSection(e) {
+	var sectionId = $(this).parents("tr").attr("data-sectionid");
+	var rowId = $(this).parents("tr").attr("data-rowId");
+	var bomSections = bom_data;
+	var editedSection = null;
+	
+	if (!sectionId) {
+		console.assert(MSG.undefinedSectionId);
+		return;
+	}
+
+	for (var iSection = 0; iSection < bomSections.length; iSection++) {
+		var section = bomSections[iSection];
+
+		if (sectionId == section.sectionId) {
+			editedSection = section;
+			break;
+		}
+	}
+
+	if (!editedSection) {
+		console.assert(MSG.sectionDoesNotExist);
+		return;
+	}
+
+	var editDialog = $("#editDialog");
+
+	editDialog.empty();
+	appendTemplate("bom-row-editor-template", { 'sectionName': editedSection.name, 'editBomSection': true, 'rowId': rowId }, editDialog);
+	initBomDialog(editDialog);
+	$("#editDialog").dialog("option", "title", _("Edit BOM Section"));
+
+	return false;
+}
+
+
+
+// add bom row after
+function addBomRow(afterRowId, isSection) {
+	var bomRow = {'afterRowId':afterRowId, 'colorways': new Array(ColorwayCount), 'isSection': isSection};	
+	var rowObj = findRow(addBomRowAfter);
+	var editDialog = $("#editDialog");
+
+	if (rowObj) {
+		bomRow.sectionName = rowObj.section.name;
+	}
+
+	editDialog.empty();
+	appendTemplate("bom-row-editor-template", bomRow, editDialog);
+	initBomDialog(editDialog);
+	$("#editDialog").dialog( "option", "title", _("New BOM Row") );
+
+	return false;
+}
+
+// add bom row after
+function addBomRowAfter(e) {
+	var afterRowId = $(this).parents("tr").attr("data-rowId");
+	addBomRow(afterRowId, false);
+	return false;
+}
+
+function addBomSectionAfter(e) {
+	var sectionId = $(this).parents("tr").attr("data-sectionid");
+	
+	if (!sectionId) {
+		console.assert(MSG.undefinedSectionId);
+		return;
+	}
+
+	var afterRowId = $("[data-sectionid='" + sectionId + "']:last").attr("data-rowId");
+
+	addBomRow(afterRowId, true);
+
+	return false;
+}
+
+function initBomDialog(editDialog) {
+	//init color picker
+	editDialog.find('.edit-color-box').each(function( index ) {
+		
+		$(this).colpick({
+			//colorScheme:'dark',
+			layout:'rgbhex',
+			color: cssRgbToHex($(this).css('background-color')),
+			acoColors: data.colorLibs.__merged,
+			onSubmit:function(hsb,hex,rgb,el) {
+				$(el).css('background-color', '#'+hex);
+				$(el).prev().attr("placeholder", getAcoColorName(hex) || '#' + hex);
+				$(el).colpickHide();
+			}
+		});
+	});
+	
+	//initi clear link
+	editDialog.find('a').click(clearBomEditorColorway);
+	
+	
+	$("#editDialog").dialog();
+	$("#editDialog").css("max-height", "600px");
+}
+
+// move bon row up
+function moveBomRowUp(e) {
+	var rowId = $(this).parents("tr").attr("data-rowId");
+	var bomSections = bom_data;
+
+	for (var iSection = 0; iSection < bomSections.length; iSection++) {
+		var section = bomSections[iSection].rows;
+
+		for(var iBomRow=0; iBomRow < section.length; iBomRow++) {
+			var bomRow = section[iBomRow];
+
+			if (bomRow.rowId == rowId) {
+				if (iBomRow == 0) {
+					alert(_("Can't more this row up any further"));
+
+					return false;
+				}
+
+				section.splice(iBomRow,1); //remove
+				section.splice(iBomRow-1, 0, bomRow); //reinsert
+				buildReport();
+				
+				return false;
+			}
+		}
+	}
+	
+	alert("unexpected error") 
+	return false;
+}
+
+function moveBomSectionUp(e) {
+	var bomSections = bom_data;
+	var sectionId = $(this).parents("tr").attr("data-sectionid");
+
+	if (!sectionId) {
+		console.assert(MSG.undefinedSectionId);
+		return;
+	}
+	
+	for (var iSection = 0; iSection < bomSections.length; iSection++) {
+		var section = bomSections[iSection];
+		
+		if (section.sectionId == sectionId) {
+			if (iSection == 0) {
+				alert(_("Can't more this row up any further"));
+
+				return false;
+			}
+
+			bomSections.splice(iSection,1); //remove
+			bomSections.splice(iSection-1, 0, section); //reinsert
+			buildReport();
+			
+			return false;
+		}
+	}
+}
+
+// move bom row down
+function moveBomRowDown(e) {
+	var rowId = $(this).parents("tr").attr("data-rowId");
+	var bomSections = bom_data;
+
+	for (var iSection = 0; iSection < bomSections.length; iSection++) {
+		var section = bomSections[iSection].rows;
+
+		for(var iBomRow=0; iBomRow < section.length; iBomRow++ ){
+			
+			var bomRow = section[iBomRow];
+			if (bomRow.rowId == rowId) {
+				if (iBomRow == section.length - 1) {
+					alert(_("Can't more this row down any further"));
+
+					return false;
+				}
+
+				section.splice(iBomRow, 1); //remove
+				section.splice(iBomRow + 1, 0, bomRow); //reinsert
+				buildReport();
+
+				return false;
+			}
+		}
+	}
+	
+	alert("unexpected error") 
+	return false;
+}
+
+function moveBomSectionDown(e) {
+	var bomSections = bom_data;
+	var sectionId = $(this).parents("tr").attr("data-sectionid");
+
+	if (!sectionId) {
+		console.assert(MSG.undefinedSectionId);
+		return;
+	}
+	
+	for (var iSection = 0; iSection < bomSections.length; iSection++) {
+		var section = bomSections[iSection];
+		
+		if (section.sectionId == sectionId) {
+			if (iSection == bomSections.length - 1) {
+				alert(_("Can't more this row down any further"));
+
+				return false;
+			}
+
+			bomSections.splice(iSection, 1); //remove
+			bomSections.splice(iSection + 1, 0, section); //reinsert
+			buildReport();
+			
+			return false;
+		}
+	}
+}
+
+//Save changed/new BOM rows
+function saveBOMRow(el, isSection) {
+	if (!validateBomRow()) return false;
+	
+	var rowId = $("#editDialog .rowId").val();
+	var rowObj = null;
+	var bomRow = {};
+	
+	if (rowId) {
+		rowObj = findRow(rowId);
+
+		if (!rowObj) {
+			console.assert(MSG.rowDoesNotExist);
+			return;
+		}
+
+		bomRow = rowObj.row;
+		rowObj.section.name = getEditorFieldValue("section_name");
+	} else {
+		// insertion of a new row
+		rowId = $("#editDialog .afterRowId").val();
+		rowObj = findRow(rowId);
+
+		if (!rowObj) {
+			console.assert(MSG.rowDoesNotExist);
+			return;
+		}
+
+		var rows = rowObj.section.rows;
+		var newIndex = rows.indexOf(rowObj.row) + 1;
+		
+		//start new row object
+		bomRow.rowId = guid();
+		bomRow.sectionId = rowObj.section.sectionId;
+		bomRow.colorways = new Array(ColorwayCount);
+
+		// wrap with section 
+		if (isSection) {
+			var bomSections = bom_data;
+			var newSectionId = "section-" + guid();
+			var newIndex = bomSections.indexOf(rowObj.section) + 1;
+			var newSection = {
+				'rows': [bomRow],
+				'sectionId': newSectionId,
+				'name': getEditorFieldValue("section_name"),
+			};
+
+			bomRow.sectionId = newSectionId;
+			bomRow.firstRow = true;
+			bomSections.splice(newIndex, 0, newSection);
+		} else {
+			rows.splice(newIndex, 0, bomRow);
+			rowObj.section.name = getEditorFieldValue("section_name");
+		}
+	}
+
+	updateRowData(bomRow);
+	buildReport();
+	closeDialog();
+}
+
+function findRowInSection(rowId, section) {
+	var rows = section.rows;
+	
+	for (var iRow = 0; iRow < rows.length; iRow++) {
+		var row = rows[iRow];
+
+		if (row.rowId == rowId) {
+			return row;
+		}
+	}
+
+	return null;
+};
+
+function findRow(rowId) {
+	var bomSections = bom_data;
+
+	if (!rowId) {
+		return null;
+	}
+
+	for (var iSection = 0; iSection < bomSections.length; iSection++) {
+		var row = findRowInSection(rowId, bomSections[iSection]);
+
+		if (row) {
+			return {
+				'row': row,
+				'section': bomSections[iSection],
+			}
+		}
+	}
+
+	return null;
+}
+
+function updateRowData(bomRow) {
+	bomRow.fabric_name = getEditorFieldValue("fabric_name");
+	bomRow.fabric_type = getEditorTextFieldValue("fabric_type");
+	bomRow.fabric_type_name = getEditorTextFieldValue("fabric_type_name");
+	bomRow.shapeNames = getEditorTextFieldValue('shapeNames');
+	bomRow.workmanship = null;
+	
+	//colorways
+	var editDialog = $("#editDialog");
+	
+	var colorwayEditors = editDialog.find('.edit-colorway');
+	for (var iColorway = 0; iColorway < colorwayEditors.length; iColorway++)
+	{
+		var front = $(colorwayEditors[iColorway]).find(".editFieldContainer").first();
+		var back = $(colorwayEditors[iColorway]).find(".editFieldContainer").last();
+		var editorFront = getColorwayEditorColor(front);
+		var editorBack = getColorwayEditorColor(back);
+		var editorColorway = null;
+		if (editorFront || editorBack) {
+			editorColorway = {'front':editorFront, 'back': editorBack};
+		}
+		
+		bomRow.colorways[iColorway] = editorColorway;
+	}
+}
+
+function saveBOMSection(el) {
+	var rowId = $("#editDialog .rowId").val();
+	var bomSections = bom_data;
+	var editedSection = null;
+
+	for (var iSection = 0; iSection < bomSections.length; iSection++) {
+		var section = bomSections[iSection];
+
+		for (var iRow = 0; iRow < section.rows.length; iRow++) {
+			var row = section.rows[iRow];
+			if (row.rowId == rowId) {
+				editedSection = section;
+			}
+		}
+	}
+
+	if (!editedSection) {
+		console.warn("updateSectionData: section is undefined.");
+		return;
+	}
+
+	editedSection.name = getEditorFieldValue("section_name");
+
+	buildReport();
+	closeDialog();
+}
+
+// utils
+function validateBomRow() {
+	//validate colorways
+	var editDialog = $("#editDialog");
+	var hasAnyData = false;
+	//
+	var colorwayEditors = editDialog.find('.edit-colorway');
+	for (var iColorway = 0; iColorway < colorwayEditors.length; iColorway++) {
+		let colorwayName = data.colorways ? data.colorways[iColorway].name : data.bom[Object.keys(data.bom)[iColorway]].name;
+
+		var front = $(colorwayEditors[iColorway]).find(".editFieldContainer").first();
+		var back = $(colorwayEditors[iColorway]).find(".editFieldContainer").last();
+
+		if (!hasAnyData)
+		{
+			if (bomColorwaySideHasData(front) || bomColorwaySideHasData(back)) hasAnyData = true;
+		}
+		
+		if (!validateBomColorwaySide(front, colorwayName, "front")) return false;
+		if (!validateBomColorwaySide(back, colorwayName, "back")) return false;
+	}
+	
+	if (!hasAnyData)
+	{
+		alert(_("please specify at least one colorway"));
+		return false;
+	}
+	
+	return true;
+}
+
+function validateBomColorwaySide(side, colorwayName, sideName) {
+	
+	var name = side.find("input").val();
+	var color = side.find("input").attr("placeholder");
+	
+	if (name && (!color || color == ""))
+	{
+		alert(_("Please select a color for {colorway} {side}").bwFormat({ 'colorway': colorwayName, 'side': sideName }));
+		return false;
+	}
+	return true;
+}
+
+function bomColorwaySideHasData(side) {
+	
+	var name = side.find("input").val();
+	var color = side.find("input").attr("placeholder");
+	
+	if (!name && (!color || color == ""))
+	{
+		return false;
+	}
+	return true;
+}
+
+
+function getColorwayEditorColor(side) {
+	var name = side.find("input").val();
+	var color = cssRgbToHex(side.find(".edit-color-box").css('background-color')); //side.find("input").attr("placeholder");
+	var styleVal = side.find(".edit-color-box").attr('style');
+	if (styleVal)
+	{
+		var rgb = hexToRgb(color);
+		return {'name':name, 'colorRGB':[rgb.r, rgb.g, rgb.b]};
+	}
+	return null;
+}
+
+function clearBomEditorColorway() {
+	var parent = $(this).parents(".editFieldContainer");
+	var nameInput = parent.find("input");
+	nameInput.val("");
+	nameInput.attr("placeholder","");
+	parent.find(".edit-color-box").css("background-color","");
+	return false;
+}
+</script>
+		<script>
+
+function deleteStampRow(stampIndex, shapeId, shapeIndex, rowIndex){
+	
+	if (window.confirm(_("Adding/Deleting rows will resize the Stamp layout image. Annotations and arrows may need realignment.\nAre you sure you want to delete this row?")))
+	{
+		stamp_data[stampIndex].shapes[shapeId][shapeIndex].rows.splice(rowIndex, 1);
+		buildReport();
+	}
+	return false;
+}
+
+
+function addStampRow(stampIndex, shapeId, shapeIndex, rowIndex){
+	
+	if (window.confirm(_("Adding/Deleting rows will resize the Stamp layout image. Annotations and arrows may need realignment.\nAre you sure you want to add this row?")))
+	{
+		var stampRow = stamp_data[stampIndex].shapes[shapeId][shapeIndex].rows[rowIndex];
+			
+		var editDialog = $("#editDialog");
+		editDialog.empty();
+		var stampRowContainer = {'stampRow':null, 'stampIndex':stampIndex, 'shapeId': shapeId, 'shapeIndex': shapeIndex, 'afterRowIndex': rowIndex};
+		appendTemplate("stamp-row-editor-template", stampRowContainer, editDialog);
+		
+		$("#editDialog")[0].stampRowContainer = stampRowContainer;
+		
+		initStampRowDialog(editDialog);
+		
+		$("#editDialog").dialog( "option", "title", _("Edit Stamp Row") );
+	}
+	return false;
+}
+
+
+function editStampRow(stampIndex, shapeId, shapeIndex, rowIndex){
+	var stampRow = stamp_data[stampIndex].shapes[shapeId][shapeIndex].rows[rowIndex];
+		
+	var editDialog = $("#editDialog");
+	editDialog.empty();
+	var stampRowContainer = {'stampRow':stampRow,'shapeId':shapeId, 'stampIndex':stampIndex, 'shapeIndex': shapeIndex, 'index': rowIndex};
+	appendTemplate("stamp-row-editor-template", stampRowContainer, editDialog);
+	
+	$("#editDialog")[0].stampRowContainer = stampRowContainer;
+	
+	initStampRowDialog(editDialog);
+	
+	$("#editDialog").dialog( "option", "title", _("Edit Stamp Row") );
+	return false;
+}
+
+function editStampNote(stampIndex, shapeIndex){
+	//data.image_page_notes[pageNum]
+	var noteData = {'note':stamp_data[stampIndex].shapes[shapeIndex].note, 'stampIndex': stampIndex, 'shapeIndex': shapeIndex};
+	
+	var editDialog = $("#editDialog");
+	editDialog.empty();
+	appendTemplate("stamp-note-editor-template", noteData, editDialog);
+	
+	editDialog.dialog();
+	editDialog.dialog( "option", "title", _("Edit Stamp Note") );
+	return false;
+}
+
+
+function saveStampNote(stampIndex, shapeIndex){
+	//
+	
+	stamp_data[stampIndex].shapes[shapeIndex].note = getEditorTextFieldValue("note");
+					
+	//rebuild report
+	buildReport();
+	
+	closeDialog();
+}
+
+
+function deleteStampPage(stampIndex, shapeIndex){
+	if (window.confirm(_("Are you sure you want to delete this page?")))
+	{
+		stamp_data[stampIndex].shapes[shapeIndex].pageDeleted = true;
+		buildReport();
+	}
+	return false;
+}
+
+
+
+function initStampRowDialog(editDialog)
+{
+	
+	//init color picker
+	editDialog.find('.edit-color-box').each(function( index ) {
+		
+		$(this).colpick({
+			//colorScheme:'dark',
+			layout:'rgbhex',
+			color: cssRgbToHex($(this).css('background-color')),
+			acoColors: data.colorLibs.__merged,
+			onSubmit:function(hsb,hex,rgb,el) {
+				$(el).css('background-color', '#'+hex);
+				$(el).prev().attr("placeholder", getAcoColorName(hex) || '#' + hex);
+				$(el).colpickHide();
+			}
+		})
+	});
+	
+	//initi clear link
+	editDialog.find('a').click(clearBomEditorColorway);
+	
+	
+	$("#editDialog").dialog();
+}
+
+
+
+
+
+
+//Save changed/new stamp rows
+
+function saveStampRow(){
+	//
+	
+	//use this from bom row, works teh same
+	if (!validateBomRow()) return false;
+	
+	var stampRowContainer = $("#editDialog")[0].stampRowContainer;
+	
+	
+	var stampRow = null;
+	if (stampRowContainer.stampRow)
+	{
+		//existing
+		stampRow = stampRowContainer.stampRow;
+	}
+	else
+	{
+		//new row
+		var afterRowIndex = stampRowContainer.afterRowIndex;
+		
+		var newIndex = afterRowIndex + 1;
+		
+		//start new row object
+		var stampRow = {}; 
+		stampRow.colorways = new Array(ColorwayCount);
+		
+		//add new row to array
+		stamp_data[stampRowContainer.stampIndex].shapes[stampRowContainer.shapeId][stampRowContainer.shapeIndex].rows.splice(newIndex, 0, stampRow);
+	}
+	
+	//save new data
+	stampRow.name = getEditorFieldValue("name");
+	
+	//colorways
+	var editDialog = $("#editDialog");
+	
+	var colorwayEditors = editDialog.find('.edit-colorway');
+	for (var iColorway = 0; iColorway < colorwayEditors.length; iColorway++)
+	{
+		
+		var clway = $(colorwayEditors[iColorway]).find(".editFieldContainer").first();
+		var editorColorway = getColorwayEditorColor(clway);
+		
+		if (stampRow.colorways[iColorway]) {
+			stampRow.colorways[iColorway].colorRGB = editorColorway.colorRGB;
+			stampRow.colorways[iColorway].name = editorColorway.name;
+		} else {
+			stampRow.colorways[iColorway] = editorColorway;
+		}
+	}
+	
+	
+	//rebuild report
+	buildReport();
+	
+	closeDialog();
+}
+
+
+
+
+function addStampCustomImage(stampIndex, shapeIndex){
+	//data.image_page_notes[pageNum]
+	
+	bwApi.copyUserFile({
+		'filter': [
+			["Image Filse", "jpeg;jpg;bmp;gif;png"]
+		],
+		'allFormats': false,
+		'allFiles': true
+	}).then(filename => {
+		if (filename) {
+			// extract the extension from the original filename, and concatenate it to the current unix timestamp
+			var ext = /\..*?$/.exec(filename);
+			var res = Number(new Date) + ext;
+			
+			
+			var customImages = stamp_data[stampIndex].shapes[shapeIndex].image_page_custom_images || [];
+			
+			customImages.push(res);
+			
+			stamp_data[stampIndex].shapes[shapeIndex].image_page_custom_images = customImages;
+			
+			setTimeout(buildReport,100);
+			
+			return res;
+		//} else {
+		//	alert('no file was selected');
+		}
+	});
+
+	
+	return false;
+}
+
+function deleteStampCustomImage(stampIndex, shapeIndex, index)
+{
+	if (window.confirm(_("Are you sure you want to delete this image?")))
+	{
+		stamp_data[stampIndex].shapes[shapeIndex].image_page_custom_images.splice(index, 1);
+		buildReport();
+	}
+	return false;
+}</script>
+		<script>
+function editImageAnnotation(obj){
+	
+	//get the image this annotation belongs to
+	var topContainer = $(obj).parents(".image-annotation");
+	var img = topContainer.parent().find("img");
+	var annotationId = topContainer.find("input").val();
+	
+	//get the annotations data from the image
+	var annotations = img[0].annotations;
+	
+	
+	//get the annotation to edit by id
+	var annotation = annotations.filter(function (item) {  return item.id == annotationId;})[0];
+	
+	
+	var editDialog = $("#editDialog");
+	editDialog.empty();
+	appendTemplate("image-annotation-editor-template", annotation, editDialog);
+	
+	$("#editDialog")[0].annotation = annotation;
+	
+	$("#editDialog").dialog();
+	
+	
+	$("#editDialog").dialog( "option", "title", _("Edit Annotation") );
+	return false;
+}
+
+
+function deleteImageAnnotation(obj){
+	if (window.confirm(_("Are you sure you want to delete this annotation?")))
+	{
+		//get the image this annotation belongs to
+		var topContainer = $(obj).parents(".image-annotation");
+		var img = topContainer.parent().find("img");
+		var annotationId = topContainer.find("input").val();
+		
+		//get the annotations data from the image
+		var annotations = img[0].annotations;
+		
+		
+		//get the annotation to edit by id
+		var annotation = annotations.filter(function (item) {  return item.id == annotationId;})[0];
+		
+		var annotationIndex = annotations.indexOf(annotation);
+		
+		annotations.splice(annotationIndex,1);
+	
+		buildReport();
+	}
+	
+	return false;
+}
+
+
+function saveImageAnnotation(){
+	//
+	//get from dialog
+	var annotation = $("#editDialog")[0].annotation;
+	
+	annotation.note = getEditorTextFieldValue("note");
+					
+	//rebuild report
+	buildReport();
+	
+	closeDialog();
+}
+
+function addNewAnnotation(dropTarget, objDropped, event){
+	//
+	if (!dropTarget.annotations)
+	{
+		//not an annotatable object
+		buildReport();
+		return;
+	}
+	
+	var newPos = getAnnotationRelativePostition(dropTarget, event, 100, 200);
+	var newAnnotation = {'id': guid(), 'top': newPos.top, 'left': newPos.left, 'height': newPos.height, 'width':newPos.width, 'units': newPos.units};
+	
+	dropTarget.annotations.push(newAnnotation);
+	
+	buildReport();
+}
+
+function getAnnotationRelativePostition(dropTarget, event, height, width)
+{
+	
+	var containerPos = $(dropTarget).offset();
+	var marginTop = (1 * $(dropTarget).css("margin-top").replace("px",""));
+	var paddingTop = (1 * $(dropTarget).css("padding-top").replace("px",""));
+	
+	var marginLeft = (1 * $(dropTarget).css("margin-left").replace("px",""));
+	var paddingLeft = (1 * $(dropTarget).css("padding-left").replace("px",""));
+	
+	
+	var top = (event.pageY - containerPos.top) + marginTop + paddingTop;
+	
+	var left = (event.pageX - containerPos.left) + marginLeft + paddingLeft;
+	
+	//convert to %
+	var targetContainer = $(dropTarget).parent();
+	var units = "px";
+	/*
+	if (targetContainer[0].style.width.indexOf('%')>=0 || targetContainer.hasClass("annotations-image-container"))
+	{
+		units = "%";
+		var containerHeight = targetContainer.height();
+		if (targetContainer.css("padding-bottom") != "")
+		{
+			containerHeight += (1 * targetContainer.css("padding-bottom").replace("px",""));
+		}
+		
+		var widthPoint = 100 / targetContainer.width();
+		var heightPoint = 100 / containerHeight;
+		//
+		top = top * widthPoint; 
+		left = left * widthPoint;
+		height = height *  heightPoint; 
+		width = width * widthPoint;
+		
+	}
+	*/
+	return 	{'top': top, 'left': left, 'height': height, 'width': width, 'units': units};	
+}
+
+function annotationMoved(objDropped, event){
+	//
+	var topContainer = objDropped;
+	var img = topContainer.parent().find("img");
+	//console.log(img);
+	var annotationId = topContainer.find("input").val();
+	
+	//get the annotations data from the image
+	var annotations = img[0].annotations;
+	
+	
+	//get the annotation to edit by id
+	var annotation = annotations.filter(function (item) {  return item.id == annotationId;})[0];
+	
+	
+	var newPos = getAnnotationNewPostition(objDropped, img, event);
+	annotation.top = newPos.top;
+	annotation.left = newPos.left;
+	
+	buildReport();
+}
+
+function getAnnotationNewPostition(objDropped, img, event)
+{
+	var containerPos = img.position();
+	var marginTopImg = (1 * img.css("margin-top").replace("px",""));
+	var paddingTopImg = (1 * img.css("padding-top").replace("px",""));
+	
+	var marginLeftImg = 0;
+	if (img.css("margin-left")) marginLeftImg =(1 * img.css("margin-left").replace("px",""));
+	var paddingLeftImg = 0;
+	if (img.css("padding-left")) paddingLeftImg = (1 * img.css("padding-left").replace("px",""));
+	
+	var newTop = (1 * objDropped.css("top").replace("px",""));
+	var newLeft = (1 * objDropped.css("left").replace("px",""));
+	
+	var marginTopOld = (1 * objDropped.css("margin-top").replace("px",""));
+	var marginLeftOld = (1 * objDropped.css("margin-left").replace("px",""));
+	
+	var top = (newTop - containerPos.top) + marginTopImg + marginTopOld;
+	
+	var left = (newLeft - containerPos.left) + paddingLeftImg + marginLeftOld;
+	
+	//convert to %
+	var targetContainer = $(objDropped).parent();
+	var units = "px";
+	/*
+	if (targetContainer[0].style.width.indexOf('%')>=0 || targetContainer.hasClass("annotations-image-container"))
+	{
+		units = "%";
+		var containerHeight = targetContainer.height();
+		if (targetContainer.css("padding-bottom") != "")
+		{
+			containerHeight += (1 * targetContainer.css("padding-bottom").replace("px",""));
+		}
+		
+		var widthPoint = 100 / targetContainer.width();
+		var heightPoint = 100 / containerHeight;
+		//
+		top = top * widthPoint; 
+		left = left * widthPoint;
+	}
+	*/
+	
+	return 	{'top': top, 'left': left};	
+}
+
+function resizeAnnotation(e, ui){
+	var annotation = getAnnotationData(ui.element);
+	
+	var height = ui.size.height;
+	var width = ui.size.width;
+	
+	var targetContainer = $(ui.element).parent();
+	var units = "px";
+	/*
+	if (targetContainer[0].style.width.indexOf('%')>=0 || targetContainer.hasClass("annotations-image-container"))
+	{
+		units = "%";
+		
+		var containerHeight = targetContainer.height();
+		if (targetContainer.css("padding-bottom") != "")
+		{
+			containerHeight += (1 * targetContainer.css("padding-bottom").replace("px",""));
+		}
+		
+		var widthPoint = 100 / targetContainer.width();
+		var heightPoint = 100 / containerHeight;
+		
+		//
+		height = height *  heightPoint; 
+		width = width * widthPoint;
+	}
+	*/
+	annotation.height = height;
+	annotation.width = width;
+	
+	buildReport();
+}
+
+function getAnnotationData(ui)
+{
+	if (!ui.hasClass("image-annotation")) ui = ui.parents(".image-annotation");
+	
+	var topContainer = ui;
+	var img = topContainer.parent().find("img");
+	var annotationId = topContainer.find("input").val();
+	
+	//get the annotations data from the image
+	var annotations = img[0].annotations;
+	
+	
+	//get the annotation to edit by id
+	return annotations.filter(function (item) {  return item.id == annotationId;})[0];
+	
+}
+
+
+
+
+//------------------------
+//--annotation arrows
+function initImageAnnotationArrowEditor()
+{
+
+	//image annotation arrows
+	$("canvas.draw-arrows-container").unbind("mousedown").mousedown(function(e){
+		this.x1 = e.offsetX;
+		this.y1 = e.offsetY;
+		this.drawing = true;
+	});
+	
+	$("canvas.draw-arrows-container").unbind("mousemove").mousemove(function(e){
+		if (this.drawing && e.which==1)
+			addLineArrow(this, this.x1, this.y1, e.offsetX, e.offsetY);
+		else if (this.drawing)
+		{
+			endArrowDraw(this, e);
+		}
+	});
+	
+	
+	$("canvas.draw-arrows-container").unbind("mouseup").mouseup(function(e){
+		
+		if (this.drawing) endArrowDraw(this, e);
+	});
+	
+	
+	$("body").unbind("keyup").keyup(function(e){
+		if(e.which == 27){
+			// escape
+			var canvas = $(".draw-arrows-container");
+			if (canvas.is(":visible"))
+			{
+				canvas[0].drawing = false;
+				canvas.hide();
+			}
+		}
+	});
+	
+	function endArrowDraw(canvas, e)
+	{
+		canvas.drawing = false;
+		addLineArrow(canvas, canvas.x1, canvas.y1, e.offsetX, e.offsetY);
+		//
+		var imageAnnotationContainer = $(".draw-arrows-container")[0].imageAnnotationContainer;
+		var annotation = $(".draw-arrows-container")[0].annotation;
+		
+		saveImageAnnotationArrow(imageAnnotationContainer, annotation, canvas.x1, canvas.y1, e.offsetX, e.offsetY);
+		
+		$(".draw-arrows-container").hide();
+	}
+}
+
+
+function drawAnnotationArrow(imageAnnotationContainer, annotation)
+{
+	$(".draw-arrows-container")[0].imageAnnotationContainer = imageAnnotationContainer;
+	$(".draw-arrows-container")[0].annotation = annotation;
+	$(".draw-arrows-container").css("top", $(document).scrollTop() + "px");
+	$(".draw-arrows-container").css("width", $( document ).width());
+	$(".draw-arrows-container").css("height", $( window  ).height());
+	$(".draw-arrows-container").attr("width", $( document ).width());
+	$(".draw-arrows-container").attr("height", $( window  ).height());
+	$(".draw-arrows-container").show();
+}
+
+
+function addImageAnnotationArrow(obj){
+	
+	//get the image this annotation belongs to
+	var topContainer = $(obj).parents(".image-annotation");
+	var img = topContainer.parent().find("img");
+	var annotationId = topContainer.find("input").val();
+	
+	//get the annotations data from the image
+	var annotations = img[0].annotations;
+	
+	
+	//get the annotation to edit by id
+	var annotation = annotations.filter(function (item) {  return item.id == annotationId;})[0];
+	
+	drawAnnotationArrow(topContainer, annotation);
+	
+	return false;
+}
+
+
+function saveImageAnnotationArrow(imageAnnotationContainer, annotation, x1, y1, x2, y2){
+	
+	//get the image this annotation belongs to
+	console.log(imageAnnotationContainer, annotation, x1, y1, x2, y2);
+	
+	//get a relative point where imageAnnotationContainer begins
+	var imgPoint = $(imageAnnotationContainer).offset();
+	imgPoint.top -= $(document).scrollTop();
+	console.log(imgPoint);
+	
+	//get upper left corner of new arrows
+	var newArrowLeft = Math.min(x1, x2);
+	var newArrowTop = Math.min(y1, y2);
+	
+	//get the distance between the two points
+	var offsetX = newArrowLeft - imgPoint.left;
+	var offsetY = newArrowTop - imgPoint.top;
+	
+	
+	//reposition arrow so its surrounding box starts at 0,0
+	x1 = x1 - newArrowLeft;
+	x2 = x2 - newArrowLeft;
+	y1 = y1 - newArrowTop;
+	y2 = y2 - newArrowTop;
+	
+	var width = Math.max(x1,x2);
+	var height = Math.max(y1,y2);
+	//
+	var widthPercent = width;
+	var heightPercent = height;
+	
+	offsetX--;
+	offsetY--;
+	
+	//convert to %
+	
+	var units = "px";
+	/*
+	if (imageAnnotationContainer[0].style.width.indexOf('%')>=0 || imageAnnotationContainer.hasClass("annotations-image-container"))
+	{
+		units = "%";
+		
+		var widthPoint = 100 / (imageAnnotationContainer.width());//for borders
+		var heightPoint = 100 / (imageAnnotationContainer.height());
+		//
+		offsetX = offsetX * widthPoint;
+		offsetY = offsetY *  widthPoint; 
+		
+		widthPercent = width * widthPoint;
+		heightPercent = height * heightPoint;
+		
+	}
+	*/
+	var annotationArrow = {'offsetX':offsetX, 'offsetY': offsetY, 'x1': x1, 'x2': x2, 'y1': y1, 'y2': y2, 
+							'arrowHeight': height,
+							'arrowWidth': width, 'units': units, 
+							'widthPercent': widthPercent, 'heightPercent': heightPercent};
+	
+	//account for the 1px border around the annotation note
+	
+	
+	//calculate the angle, and reposition offset accordingly
+	var ang = Math.atan2(y2-y1,x2-x1);
+	ang *= 180 / Math.PI; 
+	if (ang < 0) ang = 360 + ang; 
+	
+	if (ang > 180 && ang < 360)
+	{
+		//arrow pointing up - offset y by height of arrow
+		//annotationArrow.offsetY -= annotationArrow.arrowHeight;
+	}
+	
+	if (ang > 90 && ang < 270)
+	{
+		//arrow pointing left - offset x by width of arrow
+		//annotationArrow.offsetX -= annotationArrow.arrowWidth;
+	}
+	
+	//annotationArrow.offsetX--;
+	//annotationArrow.offsetY--;
+	
+	//add to annotation arrows
+	if (!annotation.arrows) annotation.arrows = [];
+	//
+	annotation.arrows.push(annotationArrow);
+	
+	buildReport();
+	 
+	return false;
+}
+
+function clearImageAnnotationArrows(obj){
+	if (window.confirm(_("Are you sure you want to clear all arrows for this annotation?")))
+	{
+		//get the image this annotation belongs to
+		var topContainer = $(obj).parents(".image-annotation");
+		var img = topContainer.parent().find("img");
+		var annotationId = topContainer.find("input").val();
+		
+		//get the annotations data from the image
+		var annotations = img[0].annotations;
+		
+		
+		//get the annotation to edit by id
+		var annotation = annotations.filter(function (item) {  return item.id == annotationId;})[0];
+		
+		annotation.arrows = [];
+		
+		buildReport();
+	}
+	return false;
+}
+</script>
+	
+		
+		<style>
+			body{margin:0 auto;width:780px;}
+.image-container{display:inline-block;text-align: center;padding-bottom:10px;float:left;}
+.image-container img {max-width:100%;max-height:100%;display:block;text-align: center;margin:auto;}
+.image-container span {padding: 0 5px;}
+.image-container.multipack{float:none;max-width:100%;text-align:center;width:auto;}
+.image-container.multipack img {width:auto;max-width:100%;margin: 0 auto;display: block;}
+img.fabric-map{display:block;}
+
+.clearfix{clear:both;}
+.ui-dialog{z-index:1000000;}
+
+
+/* ##### Standard display ######*/
+/* Image Packs */
+.pack-page-container{width: 735px;  margin: auto;}
+.pack-container{border-top:solid 1px lightgrey;width:100%;padding-top:10px;}
+
+.pack-page-container .pack-container:first-child{border-top:none;}
+
+.pack-items-per-row-1 {text-align: center;}
+/*
+.pack-items-per-row-2 .image-container{width:50%;}
+.pack-items-per-row-3 .image-container{width:33%;}
+.pack-items-per-row-4 .image-container{width:25%;}
+.pack-items-per-row-5 .image-container{width:20%;}
+*/
+
+.pack-page-note{display:block;max-height:100px;overflow: hidden;float:left;}
+
+.pack-page-footer{max-height:100px;overflow: hidden;margin-top:20px;}
+.pack-page-custom-image{margin-left:10px;float:left;}
+.pack-page-custom-image img{max-height: 100px;}
+
+/* BOM */
+.bom_table{word-break: break-word;}
+
+/* Rulers */
+.rulers-page-table #two-line-cell{width: 170px; vertical-align: baseline;}
+.rulers-page-table thead :nth-child(2) th {width: 55px;}
+.rulers-page-table #empty-cell{width: auto;}
+.rulers-page-table #unit-sign{
+	float: right;
+    font-weight: normal;
+	margin-right: 10px;
+}
+.rulers-page-table #unit-sign span{
+    font-weight: bold;
+}
+
+
+
+/* Stamp page*/
+.stamp-page-container{overflow:hidden;margin-top:10px;width:100%;border:solid 1px lightgrey;padding:10px 20px;}
+.stamp-page-container .stamp-left-bar{float:left;width:50%;}
+.stamp-page-container .stamp-right-bar{float:right;width:50%;text-align:right;}
+.stamp-page-container .stamp-right-bar .stamp-info-box {display: inline-block;}
+.stamp-page-container .stamp-right-bar .stamp-info-box > p {text-align: left;}
+.stamp-page-container .stamp-right-bar .stamp-info-box .link-container {white-space: nowrap;}
+.stamp-page-container .stamp-layout-container{text-align: center;margin:-100px auto 0 auto;}
+.stamp-page-container .stamp-layout-container.stamp-wide{margin-top: 0px;}
+
+.stamp-layout-wrapper{display:inline-block;}
+
+.stamp-page-note{display:block;float:left;}
+
+.stamp-page-footer{height:100px;overflow: hidden;margin-top:20px;}
+.stamp-page-custom-image{margin-left:10px;float:left;}
+.stamp-page-custom-image img{max-height: 100px;}
+.icon-delete-custom-image{margin-top:-15px;cursor:pointer;}
+
+
+.caption-bar{}
+.stamp-info-box{padding-bottom:20px;}
+.stamp-small{max-height:90px;max-width:100px;}
+
+.color-box-wrapper {display:inline-block;margin-right:10px;}
+.color-box {border:solid 1px black;width:18px;height:18px;}
+.color-box div.inner-color-box{width:0px;height:16px;border-left:solid 16px white;}
+
+.stam-size-header{text-decoration:underline;}
+
+
+/* header*/
+.header-table{width:100%;border:solid 1px lightgrey;}
+
+header{margin-top:250px;}
+header:first-of-type{margin-top:50px;}
+
+.header-table td,
+table.table-standard td,
+table.table-standard th{padding:8px;border:solid 1px lightgrey;}
+table.table-standard{width:100%;margin-top:30px;}
+
+.logo-img{max-height:30px;max-width:160px;}
+
+/* Stamps page*/
+.border-spacing-table{
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 2.5px;
+	border-collapse: separate;
+    border-spacing: 4px 0px;
+}
+
+.border-spacing-table td{
+	width: 33%;
+	text-align: center;
+	font-weight: unset;
+	border: solid 0.5px lightgray;
+}
+
+.inner-table{width: 100%; border-spacing: 7px 4px; border-collapse: separate;}
+.inner-table td{border: none; font-size: smaller; text-align: left;}
+
+.border-spacing-table .empty-row { border: none}
+.border-spacing-table .empty-row td {border: none}
+.border-spacing-table .empty-row div {height: 4px; border: none}
+
+.border-spacing-table thead tr th > div{
+	width: 100%;
+	display: inline-block;
+	font-weight: 100;
+}
+ .border-spacing-table .stamp-info{
+	padding: 10px;
+	display: inline-block;
+}
+
+.border-spacing-table td .stamp-info > div{
+	float: right;
+} 
+
+.border-spacing-table div .stamp-info :first-child{
+	margin-right: 10px;
+	float: left;
+}
+
+.border-spacing-table img{
+	max-width: 250px;
+	padding: 0px 10px 0px 10px;
+}
+
+
+/* layout page*/
+.layout-image-area{width:100%;padding: 1%;box-sizing: border-box;display: block;BORDER: solid 1px lightgrey;margin: 5px 0px;}
+.layout-image-container{margin:0 auto;}
+img.layout-image-2d{width:100%;}
+
+.layout-shape-marker{
+	position:absolute;
+	border-radius: 0 50% 50% 50%;
+	behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+	width: 25px;
+	height: 25px;
+	border: 13px solid white;
+	line-height: 0;
+	text-align:center;
+	z-index:999999;
+}
+
+.layout-marker-text{position: absolute;left: -12px;width: 25px;text-align: center; color: white; font-weight: bold; }
+.icon-delete-marker {margin:-22px 0 0 8px;display:block;cursor:pointer;}
+.layout-fabrics-table .layout-shape-marker{margin-top:-13px;}
+
+.layout-fabrics-marker-cell{width: 43px;}
+
+
+/* Annotations page*/
+.annotations-page-container{overflow:hidden;margin-top: 10px;}
+.annotations-continued{width:100%;text-align: center;font-weight: bold;}
+.annotations-conversation-container{float:left;width:390px;}
+.annotations-image-container{float:right;width:390px;margin-top: 10px;position:relative;}
+.annotations-image-container img{width:100%;}
+
+.annotations-entry{overflow:hidden;padding: 0 10px;margin-top: 10px;margin-bottom:10px;}
+.annotations-entry > .user-image{float:left;width:50px;margin:0 10px 10px 0;}
+.annotations-entry > .user-initials{height: 50px;border: solid 1px lightgray;text-align: center;padding-top: 13px;}
+
+.annotations-entry > .user-name{float:left;display:block;color:darkslateblue;font-weight:bold;}
+.annotations-entry > .user-message{display:block;}
+
+.annotations-entry > .annotations-entry-entries-container{margin-left: 15px;border-left: dashed 1px;}
+
+.annotations-entry > .layout-shape-marker{margin-top: -4px;}
+
+.annotations-entry-entries-container > .annotations-entry > .layout-shape-marker{display:none;}
+
+
+
+/* ##### Edit Mode display ######*/
+.report-edit-mode .layout-image-area .layout-shape-marker{cursor:move;}
+ 
+.editor-options{display:none;position:relative;}
+.bom-action-buttons{background-color: #f1f1f1;border-radius: 5px;padding: 5px; white-space: nowrap; margin-bottom: 10px; text-align: center;}
+.new-section{min-width: 65px;}
+
+.editor-options.bom-section-editor-options{margin-left:-120px;} 
+
+/*.editor-options.bom-row-editor-options{margin-left:725px;} */
+.material-name table tbody rt td{border: none; background-color: red}
+
+.editor-options.layout-row-editor-options{margin-left: -195px;margin-top: -12px;}
+.editor-options.layout-table-editor-options{margin-left:-186px;margin-top:10px;}
+.editor-options.header-editor-options{margin-left:-100px;}
+.editor-options.pack-note-editor-options{margin-left:-100px;margin-top:20px;position: absolute;}
+.pack-page-custom-image > .editor-options{position:absolute;}
+.editor-options.stamp-row-editor-options{margin-left: -160px;}
+.editor-options.stamp-row-editor-options .disabled{color: gray;pointer-events: none; cursor: default;}
+.editor-options.stamp-note-editor-options{margin-left:-151px;margin-top:20px;}
+
+.bom-row-up, .bom-section-up {float:left; margin-left: calc(50% - 16px);}
+.bom-row-up,.bom-row-down{cursor:pointer;}
+
+
+.dialogs-container{display:none;}
+.editFieldContainer{overflow:hidden;}
+.editFieldContainer * {float:left;width: 100%;}
+
+.editFieldContainer textarea {height:120px; max-width: 244px; min-width: 244px; }
+.editFieldContainer.fabric-type-edit textarea {height: 48px; }
+
+.editorButtons{text-align: center;padding-top: 20px;}
+
+.edit-colorway{border: solid 1px lightgray;padding: 10px;margin-top: 10px;}
+.edit-colorway input{width:50%;}
+.edit-colorway a{width: auto;margin-left: 10px;}
+
+.edit-color-box{height:27px;width:27px;border:solid 1px black;margin-left:10px;cursor:pointer;}
+
+.colpick{z-index: 1000100;height: 178px;}
+.colpick.colpick_hasAcoColors{height:300px;}
+
+
+.field-pack-note textarea,
+.field-stamp-note textarea{height:300px;}
+
+
+/* IMAGE ANNOTATIONS & editing*/
+.image-annotation{position:absolute;width:200px;height:100px;z-index:9000;
+	border:solid 1px lightgray;background-color:rgba(255,255,255, .8);text-align:left;}
+
+.report-edit-mode .image-annotation{cursor:move;}
+.editor-options.image-annotation-editor-options{bottom:0px;width:100%;text-align: left;margin: 5px;}
+.image-annotation .editor-options,
+.image-annotation .image-annotation-note{cursor:inherit;}
+
+.image-annotation .image-annotation-note{margin: 5px;text-align:left;}
+
+.ui-icon-comment{z-index:10000;float:left;}
+.undo{cursor:pointer;}
+
+
+/* arrow drawings*/
+.draw-arrows-container{display:none;position: absolute; top: 0; left: 0;z-index:999999;cursor:crosshair;}
+
+.annotation-arrow-container{position:absolute;}
+
+.icons-arrows{display:inline-block;cursor:pointer;}
+
+
+/* aco Colors */
+.acoColorRow{margin: 3px 0px;
+padding: 2px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+border: solid 1px gray;
+cursor: pointer;}
+
+
+/* override for print media*/
+@media print {
+	body{padding:0px 20px;}
+	header{page-break-before: always;padding:20px 0px;margin-top:0px;}
+	header:first-of-type{page-break-before: initial;margin-top:0px;}
+	
+	.stamp-info-box .link-container{display:none;}
+	.report-edit-mode .editor-options{display:none!important;}
+}
+		</style>
+	</head>
+	<body>
+		
+		<div class="dialogs-container">
+			<div id="editDialog"></div>
+		</div>
+		
+		
+		<canvas class="draw-arrows-container"></canvas>
+		
+		 
+		<div id="reportData">
+			
+		</div>
+		
+		<script>
+			buildReport(true);
+		</script>
+	</body>			
+</html>
