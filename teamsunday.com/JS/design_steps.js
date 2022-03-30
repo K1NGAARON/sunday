@@ -2,6 +2,7 @@
 let titleHolder = document.querySelector(".design-steps-text-holder .title-holder")
 let textHolder = document.querySelector(".design-steps-text-holder .text-holder")
 let imageHolder = document.querySelector(".img-steps-holder");
+let designIntroHolder = document.querySelector(".design-intro-placeholder");
 
 let step1 = document.querySelector("#step-1");
 let step2 = document.querySelector("#step-2");
@@ -15,10 +16,11 @@ let titleHolder3 = "Technical Details";
 let titleHolder4 = "End result";
 
 // Content for the design steps
-let step1Text = "We’ll sit together and go through everything we need to design amazing clothing for your: brand guidelines, target audience, styles you like,…";
+let designIntroText = `Creating fashion products requires a lot of <span style="font-weight:700;">expertise</span> and <span style="font-weight:700;">creativity</span>. Our team of clothing experts designs unique pieces that make heads turn & people talk. We use your brand guidelines to design <span style="font-weight:700;">company fashion</span> your employees, clients & partners will love to wear.`;
+let step1Text = "We’ll have a meeting together and go through everything we need to design amazing clothing for you. For example: The brand guidelines & colors, the target audience, the products & styles you like, …";
 let step2Text = "Our team of design experts creates a 3D example of your item, so you get the most realistic vision of the product.";
-let step3Text = "We go through the technical details of your product, Pantone colours, decoration techniques, exact positioning,…";
-let step4Text = "We produce & Deliver the items exactly as you ordered, so your team can enjoy your awesome new company fashion.";
+let step3Text = "We go through the technical details of your product, Pantone colors, decoration techniques, exact positioning,…";
+let step4Text = "We produce & deliver the items exactly as you ordered, so your team can enjoy your awesome new company fashion and become true brand ambassadors.";
 
 
 function showStep1() {
