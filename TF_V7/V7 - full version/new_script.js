@@ -29,6 +29,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     // Select top mock up
-    let mockUp = document.querySelector(".pack-page-container > .pack-container > .image-container");
-    console.log(mockUp);
+    let firstIMG = document.querySelector(".image-container > img");
+    console.log(firstIMG);
+    console.log(firstIMG.getAttribute("src"));
+
+    // Select IMG destination
+    let IMGPlaceholder = document.querySelector(".table-standard.bom-page-table.bom_table");
+    IMGPlaceholder.classList.add("set-background");
+
+    // Move "Artwork dimensions to bottom of the table"
+
+
+
 });
