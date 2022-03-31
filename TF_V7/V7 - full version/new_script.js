@@ -34,11 +34,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log(firstIMG.getAttribute("src"));
 
     // Select IMG destination
-    let IMGPlaceholder = document.querySelector(".table-standard.bom-page-table.bom_table");
-    IMGPlaceholder.classList.add("set-background");
+    let IMGPlaceholder = document.querySelectorAll(".table-standard.bom-page-table.bom_table");
+    console.log(IMGPlaceholder);
 
-    // Move "Artwork dimensions to bottom of the table"
-
-
-
+    for (let i = 0; i < IMGPlaceholder.length; i++) {
+        console.log(IMGPlaceholder);
+        IMGPlaceholder[i].classList.add("set-background");
+    }
 });

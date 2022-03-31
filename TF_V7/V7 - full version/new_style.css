@@ -44,6 +44,13 @@ html {
 	width: 1200px!important;
 }
 
+.pack-container {
+	display: flex!important;
+	flex-direction: row!important;
+	justify-content: center!important;
+	flex-wrap: wrap!important;
+}
+
 .pack-page-container .pack-container .image-container {
     height: 500px!important;
 	width: auto!important;
@@ -55,13 +62,18 @@ html {
 
 .pack-page-container .pack-container .image-container img {
     height: auto!important;
-    max-width: 300px!important;
+    max-width: 500px!important;
 }
 
 .table-standard.bom-page-table.bom_table {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+}
+
+.bigger-img {
+	width: 500px!important;
+	margin: 0 auto!important;
 }
 
 .set-background {
@@ -137,4 +149,23 @@ html {
 
 .hidden {
     display: none;
+}
+
+	@media print {
+		.header-table tr:nth-child(1) {
+			background-color: black!important;
+		}
+		body,
+		html {
+		width: 1000px!important;
+		margin: 0 auto;
+	}
+	.pack-page-container {
+		width: 1000px!important;
+	}
+	
+	.pack-page-container .pack-container .image-container img {
+		height: auto!important;
+		max-width: 400px!important;
+	}
 }
