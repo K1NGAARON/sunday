@@ -36,7 +36,6 @@ let swimSuitsBtn = document.querySelector("#swimsuits-btn");
 let beachTowelBtn = document.querySelector("#beach-towel-btn");
 let beachBagBtn = document.querySelector("#beach-bag-btn");
 let flipFlopsBtn = document.querySelector("#flip-flops-btn");
-// let capsBtn = document.querySelector("#caps-btn");
 let beachChairsBtn = document.querySelector("#beach-chairs-btn");
 let fannyPacksBtn = document.querySelector("#fanny-packs-btn");
 let tshirtBtn = document.querySelector("#tshirt-btn");
@@ -58,12 +57,6 @@ function showSwimSuits() {
     secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Swimsuits-2.jpg";
     thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Swimsuits-3.jpg";
 };
-
-// function showCaps() {
-//     firstSlide.src = "/wp-content/uploads/2022/03/Sunglasses.jpg";
-//     secondSlide.src = "/wp-content/uploads/2022/03/Sunglasses2.jpg";
-//     thirdSlide.src = "/wp-content/uploads/2022/03/0Z9A9297.jpg";
-// };
 
 function showFlipFlops() {
     firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Flipflops-1.jpg";
@@ -91,7 +84,6 @@ function showSportsWear() {
 
 swimShortsBtn.addEventListener("click", showSwimShorts);
 swimSuitsBtn.addEventListener("click", showSwimSuits);
-// capsBtn.addEventListener("click", showCaps);
 flipFlopsBtn.addEventListener("click", showFlipFlops);
 fannyPacksBtn.addEventListener("click", showFannyPacks);
 tshirtBtn.addEventListener("click", showTShirts);
@@ -101,10 +93,10 @@ sportswearBtn.addEventListener("click", showSportsWear);
 // Design steps
 let titleHolder = document.querySelector(".design-steps-text-holder .title-holder")
 let textHolder = document.querySelector(".design-steps-text-holder .text-holder")
-let step1Text = "We’ll sit together and go through everything we need to design amazing clothing for your: brand guidelines, target audience, styles you like,…";
+let step1Text = "We’ll have a meeting together and go through everything we need to design amazing clothing for you. For example: The brand guidelines & colors, the target audience, the products & styles you like, …";
 let step2Text = "Our team of design experts creates a 3D example of your item, so you get the most realistic vision of the product.";
 let step3Text = "We go through the technical details of your product, Pantone colours, decoration techniques, exact positioning,…";
-let step4Text = "We produce & Deliver the items exactly as you ordered, so your team can enjoy your awesome new company fashion.";
+let step4Text = "We produce & deliver the items exactly as you ordered, so your team can enjoy your awesome new company fashion and become true brand ambassadors.";
 
 let titleHolder1 = "Design Briefing";
 let titleHolder2 = "3D Virtual Design";

@@ -1,53 +1,144 @@
-// Dynamic placeholders
-let titleHolder = document.querySelector(".design-steps-text-holder .title-holder")
-let textHolder = document.querySelector(".design-steps-text-holder .text-holder")
-let imageHolder = document.querySelector(".img-steps-holder");
-let designIntroHolder = document.querySelector(".design-intro-placeholder");
+// On global javascript
 
-let step1 = document.querySelector("#step-1");
-let step2 = document.querySelector("#step-2");
-let step3 = document.querySelector("#step-3");
-let step4 = document.querySelector("#step-4");
+function getDefaultParamsDesignSteps(title) {
+    return {
+        intro: 'intooooooooooooooooo',
+        steps: [
+            {
+                image: 'https://teamsunday.com/wp-content/uploads/2022/03/step1-1.png',
+                text: 'text 1',
+                title: 'title 1',
+            },
+            {
+                image: 'https://teamsunday.com/wp-content/uploads/2022/03/step2.png',
+                text: 'text 2',
+                title: 'text 2',
+            },
+            {
+                image: 'https://teamsunday.com/wp-content/uploads/2022/03/step3.png',
+                text: 'text 43',
+                title: 'text 3',
+            },
+            {
+                image: 'https://teamsunday.com/wp-content/uploads/2022/03/step4.png',
+                text: 'text 4',
+                title: 'text 4',
+            },
+        ],
+        subTitle: 'subtitleeeeeeeeeeee',
+        title: title
+    };
+}
 
-// Content for the titles
-let titleHolder1 = "Design Briefing";
-let titleHolder2 = "3D Virtual Design";
-let titleHolder3 = "Technical Details";
-let titleHolder4 = "End result";
-
-// Content for the design steps
-let designIntroText = `Creating fashion products requires a lot of <span style="font-weight:700;">expertise</span> and <span style="font-weight:700;">creativity</span>. Our team of clothing experts designs unique pieces that make heads turn & people talk. We use your brand guidelines to design <span style="font-weight:700;">company fashion</span> your employees, clients & partners will love to wear.`;
-let step1Text = "We’ll have a meeting together and go through everything we need to design amazing clothing for you. For example: The brand guidelines & colors, the target audience, the products & styles you like, …";
-let step2Text = "Our team of design experts creates a 3D example of your item, so you get the most realistic vision of the product.";
-let step3Text = "We go through the technical details of your product, Pantone colors, decoration techniques, exact positioning,…";
-let step4Text = "We produce & deliver the items exactly as you ordered, so your team can enjoy your awesome new company fashion and become true brand ambassadors.";
-
-
-function showStep1() {
-    imageHolder.src = "/wp-content/uploads/2022/03/step1-1.png";
-    titleHolder.innerHTML = titleHolder1;
-    textHolder.innerHTML = step1Text;
+window.designSteps = {
+    'casual_wear': getDefaultParamsDesignSteps('Custom casual wear'),
+    'sports_wear': getDefaultParamsDesignSteps('Custom sports wear'),
 };
 
-function showStep2() {
-    imageHolder.src = "/wp-content/uploads/2022/03/step2.png";
-    titleHolder.innerHTML = titleHolder2;
-    textHolder.innerHTML = step2Text;
-};
+window.createSteps = function (targetElement, uniqueToken) {
+    console.log("eerste lijn");
+    console.log('designsteps', window.hasOwnProperty('designSteps'));
+    console.log('window.designSteps', window.designSteps);
+    console.log('uniqueToken', uniqueToken);
+    if (!window.hasOwnProperty('designSteps')
+        || !window.designSteps.hasOwnProperty(uniqueToken)) {
+        return;
+    }
+    
+    console.log("achter de if");
 
-function showStep3() {
-    imageHolder.src = "/wp-content/uploads/2022/03/step3.png";
-    titleHolder.innerHTML = titleHolder3;
-    textHolder.innerHTML = step3Text;
-};
+    const params = window.designSteps[uniqueToken];
 
-function showStep4() {
-    imageHolder.src = "/wp-content/uploads/2022/03/step4-1.png";
-    titleHolder.innerHTML = titleHolder4;
-    textHolder.innerHTML = step4Text;
-};
+    if (!params.hasOwnProperty('steps')
+        || !Array.isArray(params.steps)
+        || params.steps.length < 1) {
+        return;
+    }
 
-step1.addEventListener("click", showStep1);
-step2.addEventListener("click", showStep2);
-step3.addEventListener("click", showStep3);
-step4.addEventListener("click", showStep4);
+    console.log("passed window.createSteps = function (targetElement, uniqueToken)");
+
+    let steps = '';
+    let currentStep = params.steps[0];
+
+    console.log(currentStep);
+
+
+    for (let i = 1; i <= params.steps.length; i++) {
+        let classes = i === 1
+            ? ' active'
+            : '';
+        steps += `
+<a id="step-${i}" class="design-tags solution-btn tag-button${classes}"
+    data-image="${params.steps[i-1].image}"
+    data-text="${params.steps[i-1].text}"
+    data-title="${params.steps[i-1].title}">
+     Step ${i}
+</a>
+`;
+    }
+
+    targetElement.innerHTML = `
+<div class="custom-section-full hidden">
+    <div class="custom-row">
+        <div class="custom-col">
+            <p class="small-headline">
+                ${params.title ?? ''}
+            </p>
+            <h2>
+                ${params.subTitle ?? ''}
+            </h2>
+            <p class="design-intro-placeholder">
+                ${params.intro ?? ''}
+            </p>
+            <div class="solution-btn-wrapper tag-button-container">
+                ${steps}
+            </div>
+            <div class="design-steps-text-holder">
+                <p class="title-holder" style="font-weight: 700; font-size: 16px; margin-top: 10px;">
+                    ${currentStep.title}
+                </p>
+                <p class="text-holder">
+                    ${currentStep.text}
+                </p>
+            </div>
+            
+        </div>
+        <div class="custom-col">
+            <img class="img-steps-holder" src="${currentStep.image}" alt="${currentStep.title}">
+        </div>
+    </div> 
+</div>
+    `;
+
+    // Bind events
+    $(targetElement).on('click', '.design-tags', (event) => {
+        const step = $(event.target);
+        const container = step.closest(targetElement);
+
+        container.find('.title-holder').html(step.attr('data-title'));
+        container.find('.text-holder').html(step.attr('data-text'));
+        container.find('.img-steps-holder').attr("src", step.attr('data-image'));
+    });
+}
+
+// Tags a button in a specific container
+//   needs class="tag-button-container"
+//   needs class="tag-button" on each button
+$('body').on('click', '.tag-button', (event) => {
+    const tagButton = $(event.target).closest('.tag-button');
+    console.log("clicked button");
+    console.log(tagButton);
+    const container = tagButton.closest('.tag-button-container');
+
+    container.find('.tag-button').removeClass('active');
+    tagButton.addClass('active');
+});
+
+// On each page
+window.addEventListener('DOMContentLoaded', () => {
+    console.log("loadeeeeeeeeeeeed");
+    const targetElement = document.getElementById('steps_container');
+    console.log(targetElement);
+    const uniqueToken = 'casual_wear'; // e.g. casual_wear
+    window.createSteps(targetElement, uniqueToken);
+});
