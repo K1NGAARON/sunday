@@ -44,9 +44,9 @@ let secondSlide = document.querySelector("#second-slide");
 let thirdSlide = document.querySelector("#third-slide");
 
 function showSweater() {
-    firstSlide.src = "/wp-content/uploads/2022/03/Sweaters2.jpg";
-    secondSlide.src = "/wp-content/uploads/2022/03/Sweaters1.jpg";
-    thirdSlide.src = "/wp-content/uploads/2022/03/Sweaters3.jpg";
+    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Christmas-sweater-1.jpg";
+    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Christmas-sweater-2.jpg";
+    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Christmas-sweater-3.jpg";
 };
 function showSocks() {
     firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Socks-1.jpg";
@@ -54,14 +54,14 @@ function showSocks() {
     thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Socks-3.jpg";
 };
 function showBeanies() {
-    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Beanie-1.jpg";
+    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Beanies.jpg";
     secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Beanie-2.jpg";
     thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Beanie-3.jpg";
 };
 function showScarf() {
     firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Scarf-1.jpg";
-    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Scarf-2.jpg";
-    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Scarf-3.jpg";
+    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Scarf-3.jpg";
+    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Scarf-4.jpg";
 };
 
 sweaterBtn.addEventListener("click", showSweater);

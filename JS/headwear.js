@@ -32,15 +32,17 @@ designStepsTags.forEach(function(EventTarget) {
 
 
 // Change images based on active class
-let baseballCapBtn = document.querySelector("#baseball-cap-btn");
-let dadHatsBtn = document.querySelector("#dad-hat-btn");
 let bucketHatBtn = document.querySelector("#bucket-hat-btn");
-let FoamTruckerCapBtn = document.querySelector("#foam-trucker-cap-btn");
 let bandanaBtn = document.querySelector("#bandana-btn");
 let buffBtn = document.querySelector("#buff-btn");
-let snapbackBtn = document.querySelector("#snapback-btn");
 let camperHatBtn = document.querySelector("#camper-hat-btn");
 let beanieBtn = document.querySelector("#beanie-btn");
+
+let snapbackBtn = document.querySelector("#snapback-btn");
+let baseballCapBtn = document.querySelector("#baseball-cap-btn");
+let dadHatsBtn = document.querySelector("#dad-hat-btn");
+let truckethatBtn = document.querySelector("#trucker-cap-btn");
+
 
 
 let firstSlide = document.querySelector("#first-slide");
@@ -53,11 +55,7 @@ function showBucketHats() {
     secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Buckethat-2.jpg";
     thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Buckethat-3.jpg";
 };
-function showFoamTruckerCaps() {
-    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Cap-1.jpg";
-    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Cap-2.jpg";
-    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Cap-3.jpg";
-};
+
 function showBandanas() {
     firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Bandana-3.jpg";
     secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Bandana-2.jpg";
@@ -75,11 +73,37 @@ function showBeanies() {
     thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Beanie-3.jpg";
 };
 
+function showSnapbacks() {
+    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Snapback-4.jpg";
+    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Snapback-3.jpg";
+    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Snapback-2.jpg";
+};
+function showBaseballCaps() {
+    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Baseballcap-2.jpg";
+    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Baseballcap-3.jpg";
+    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Baseballcap-1.jpg";
+};
+function showDadHats() {
+    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Dadhat-4.jpg";
+    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Dadhat-1.jpg";
+    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Dadhat-3.jpg";
+};
+function showTruckerHats() {
+    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Truckercap-4.jpg";
+    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Truckercap-1.jpg";
+    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Truckercap-2.jpg";
+};
+
 bucketHatBtn.addEventListener("click", showBucketHats);
-FoamTruckerCapBtn.addEventListener("click", showFoamTruckerCaps);
 bandanaBtn.addEventListener("click", showBandanas);
 buffBtn.addEventListener("click", showBuffs);
 beanieBtn.addEventListener("click", showBeanies);
+
+snapbackBtn.addEventListener("click", showSnapbacks);
+baseballCapBtn.addEventListener("click", showBaseballCaps);
+dadHatsBtn.addEventListener("click", showDadHats);
+truckethatBtn.addEventListener("click", showTruckerHats);
+
 
 // Design steps
 let titleHolder = document.querySelector(".design-steps-text-holder .title-holder")

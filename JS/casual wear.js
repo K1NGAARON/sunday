@@ -71,7 +71,7 @@ function showSocks() {
 function showSweatpants() {
   firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Sweatpants-1-1.jpg";
   secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Sweatpants-2-1.jpg";
-  thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Sweatpants-1-1.jpg";
+  thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Sweatpants-3.jpg";
 };
 
 function showBoxers() {
@@ -89,8 +89,8 @@ function showPolos() {
 
 hoodiesBtn.addEventListener("click", showHoodies);
 tShirtBtn.addEventListener("click", showTShirts);
-sweatpantsBtn.addEventListener("click", showSweatpants);
 sweatersBtn.addEventListener("click", showSweaters);
+sweatpantsBtn.addEventListener("click", showSweatpants);
 socksBtn.addEventListener("click", showSocks);
 boxersBtn.addEventListener("click", showBoxers);
 polosBtn.addEventListener("click", showPolos);

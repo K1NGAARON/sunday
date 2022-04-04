@@ -36,6 +36,11 @@ let sportswearBtn = document.querySelector("#sportswear-btn");
 let businessShirtsBtn = document.querySelector("#business-shirts-btn");
 let jacketsBtn = document.querySelector("#jackets-btn");
 
+let tShirtBtn = document.querySelector("#t-shirts-btn");
+let hoodiesBtn = document.querySelector("#hoodies-btn");
+let sweatersBtn = document.querySelector("#sweaters-btn");
+
+
 let firstSlide = document.querySelector("#first-slide");
 let secondSlide = document.querySelector("#second-slide");
 let thirdSlide = document.querySelector("#third-slide");
@@ -61,7 +66,25 @@ function showBusinessShirts() {
 function showJackets() {
     firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Jacket-1.jpg";
     secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Jacket-2.jpg";
-    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Jacket-3.jpg";
+    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Mercedes-Jacket.jpg";
+};
+
+function showHoodies() {
+  firstSlide.src = "/wp-content/uploads/2022/03/Hoodie3.jpg";
+  secondSlide.src = "/wp-content/uploads/2022/03/Hoodie2.jpg";
+  thirdSlide.src = "/wp-content/uploads/2022/03/Hoodie1.jpg";
+};
+
+function showTShirts() {
+  firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/T-shirt-1.jpg";
+  secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/T-shirt-2.jpg";
+  thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/T-shirt-3.jpg";
+};
+
+function showSweaters() {
+  firstSlide.src = "/wp-content/uploads/2022/03/Sweaters2.jpg";
+  secondSlide.src = "/wp-content/uploads/2022/03/Sweaters1.jpg";
+  thirdSlide.src = "/wp-content/uploads/2022/03/Sweaters3.jpg";
 };
 
 
@@ -70,6 +93,10 @@ socksBtn.addEventListener("click", showSocks);
 sportswearBtn.addEventListener("click", showSportswear);
 businessShirtsBtn.addEventListener("click", showBusinessShirts);
 jacketsBtn.addEventListener("click", showJackets);
+
+hoodiesBtn.addEventListener("click", showHoodies);
+tShirtBtn.addEventListener("click", showTShirts);
+sweatersBtn.addEventListener("click", showSweaters);
 
 
 // Design steps

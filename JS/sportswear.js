@@ -73,8 +73,8 @@ function showLeggings() {
 
 function showTrackSuits() {
     firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Tracksuits-1.jpg";
-    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Tracksuits-2.jpg";
-    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Tracksuits-3.jpg";
+    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Tracksuit-2.jpg";
+    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Tracksuit-3.jpg";
 };
 
 sportshirtBtn.addEventListener("click", showSportShirts);

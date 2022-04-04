@@ -37,9 +37,39 @@ let bathrobesBtn = document.querySelector("#bathropes-btn");
 let sliderBtn = document.querySelector("#sliders-btn");
 let flipFlopsBtn = document.querySelector("#flip-flops-btn");
 
+let tShirtBtn = document.querySelector("#t-shirts-btn");
+let hoodiesBtn = document.querySelector("#hoodies-btn");
+let sweatpantsBtn = document.querySelector("#sweatpants-btn");
+let sweatersBtn = document.querySelector("#sweaters-btn");
+
+
 let firstSlide = document.querySelector("#first-slide");
 let secondSlide = document.querySelector("#second-slide");
 let thirdSlide = document.querySelector("#third-slide");
+
+function showHoodies() {
+    firstSlide.src = "/wp-content/uploads/2022/03/Hoodie3.jpg";
+    secondSlide.src = "/wp-content/uploads/2022/03/Hoodie2.jpg";
+    thirdSlide.src = "/wp-content/uploads/2022/03/Hoodie1.jpg";
+  };
+  
+  function showTShirts() {
+    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/T-shirt-1.jpg";
+    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/T-shirt-2.jpg";
+    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/T-shirt-3.jpg";
+  };
+  
+  function showSweaters() {
+    firstSlide.src = "/wp-content/uploads/2022/03/Sweaters2.jpg";
+    secondSlide.src = "/wp-content/uploads/2022/03/Sweaters1.jpg";
+    thirdSlide.src = "/wp-content/uploads/2022/03/Sweaters3.jpg";
+  };
+
+  function showSweatpants() {
+    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Sweatpants-1-1.jpg";
+    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Sweatpants-2-1.jpg";
+    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Sweatpants-3.jpg";
+  };
 
 function showBeachTowels() {
     firstSlide.src = "/wp-content/uploads/2022/03/Gymproject-towel-8.jpg";
@@ -58,6 +88,11 @@ function showFlipFlops() {
     thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Flipflops-3.jpg";
 };
 
+
+hoodiesBtn.addEventListener("click", showHoodies);
+tShirtBtn.addEventListener("click", showTShirts);
+sweatpantsBtn.addEventListener("click", showSweatpants);
+sweatersBtn.addEventListener("click", showSweaters);
 towelBtn.addEventListener("click", showBeachTowels);
 sliderBtn.addEventListener("click", showSliders);
 flipFlopsBtn.addEventListener("click", showFlipFlops);

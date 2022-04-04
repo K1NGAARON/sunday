@@ -32,12 +32,12 @@ designStepsTags.forEach(function(EventTarget) {
 
 // Change images based on active class
 let businessShirtsBtn = document.querySelector("#business-shirt-btn");
-let merinoPulloverBtn = document.querySelector("#merino-pullover-btn");
 let jacketBtn = document.querySelector("#jacket-btn");
 let laptopSleeveBtn = document.querySelector("#laptop-sleeve-btn");
 let socksBtn = document.querySelector("#socks-btn");
-let backpackBtn = document.querySelector("#backpack-btn");
 let notebookBtn = document.querySelector("#notebook-btn");
+let pulloverBtn = document.querySelector("#pullover-btn");
+let backpackBtn = document.querySelector("#backpack-btn");
 
 let firstSlide = document.querySelector("#first-slide");
 let secondSlide = document.querySelector("#second-slide");
@@ -45,47 +45,60 @@ let thirdSlide = document.querySelector("#third-slide");
 
 
 function showSocks() {
-    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Socks-1.jpg";
-    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Socks-2.jpg";
-    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Socks-3.jpg";
+  firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Socks-1.jpg";
+  secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Socks-2.jpg";
+  thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Socks-3.jpg";
 };
 function showBusinessShirts() {
-    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Business-shirts-1.jpg";
-    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Business-shirts-2.jpg";
-    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Business-shirts-3.jpg";
+  firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Business-shirts-1.jpg";
+  secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Business-shirts-2.jpg";
+  thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Business-shirts-3.jpg";
 };
 
 function showJackets() {
-    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Jacket-1.jpg";
-    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Jacket-2.jpg";
-    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Jacket-3.jpg"; 
+  firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Jacket-1.jpg";
+  secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Jacket-2.jpg";
+  thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Mercedes-Jacket.jpg"; 
 };
 function showLaptopSleeves() {
-    firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Laptopsleeve-1.jpg";
-    secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Laptopsleeve-2.jpg";
-    thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Laptopsleeve-1.jpg";  
+  firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Laptopsleeve-1.jpg";
+  secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Laptopsleeve-2.jpg";
+  thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Laptopsleeve-1.jpg";  
 };
 
 function showNotebooks() {
-    firstSlide.src = "/wp-content/uploads/2022/03/Notebook-2.jpg";
-    secondSlide.src = "/wp-content/uploads/2022/03/Notebook-1.jpg";
-    thirdSlide.src = "/wp-content/uploads/2022/03/Notebook-2.jpg";
+  firstSlide.src = "/wp-content/uploads/2022/03/Notebook-2.jpg";
+  secondSlide.src = "/wp-content/uploads/2022/03/Notebook-1.jpg";
+  thirdSlide.src = "/wp-content/uploads/2022/03/Notebook-2.jpg";
 };
 
+function showPullovers() {
+  firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/sunday-black-pullover.jpg";
+  secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Sunday-pullover.jpg";
+  thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/sunday-black-pullover.jpg";
+};
+
+function showBackpacks() {
+  firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/sunday-bag.jpg";
+  secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/sunday-backpack.jpg";
+  thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/sunday-bag.jpg";
+};
 
 socksBtn.addEventListener("click", showSocks);
 businessShirtsBtn.addEventListener("click", showBusinessShirts);
 jacketBtn.addEventListener("click", showJackets);
 laptopSleeveBtn.addEventListener("click", showLaptopSleeves);
 notebookBtn.addEventListener("click", showNotebooks);
+pulloverBtn.addEventListener("click", showPullovers);
+backpackBtn.addEventListener("click", showBackpacks);
 
 // Design steps
 let titleHolder = document.querySelector(".design-steps-text-holder .title-holder")
 let textHolder = document.querySelector(".design-steps-text-holder .text-holder")
-let step1Text = "We’ll sit together and go through everything we need to design amazing clothing for your: brand guidelines, target audience, styles you like,…";
+let step1Text = "We’ll have a meeting together and go through everything we need to design amazing clothing for you. For example: The brand guidelines & colors, the target audience, the products & styles you like, …";
 let step2Text = "Our team of design experts creates a 3D example of your item, so you get the most realistic vision of the product.";
 let step3Text = "We go through the technical details of your product, Pantone colours, decoration techniques, exact positioning,…";
-let step4Text = "We produce & Deliver the items exactly as you ordered, so your team can enjoy your awesome new company fashion.";
+let step4Text = "We produce & deliver the items exactly as you ordered, so your team can enjoy your awesome new company fashion and become true brand ambassadors.";
 
 let titleHolder1 = "Design Briefing";
 let titleHolder2 = "3D Virtual Design";

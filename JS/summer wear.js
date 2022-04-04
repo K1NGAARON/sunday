@@ -59,12 +59,6 @@ function showSwimSuits() {
     thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Swimsuits-3.jpg";
 };
 
-// function showCaps() {
-//     firstSlide.src = "/wp-content/uploads/2022/03/Sunglasses.jpg";
-//     secondSlide.src = "/wp-content/uploads/2022/03/Sunglasses2.jpg";
-//     thirdSlide.src = "/wp-content/uploads/2022/03/0Z9A9297.jpg";
-// };
-
 function showFlipFlops() {
     firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Flipflops-1.jpg";
     secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Flipflops-2.jpg";
@@ -91,7 +85,6 @@ function showSportsWear() {
 
 swimShortsBtn.addEventListener("click", showSwimShorts);
 swimSuitsBtn.addEventListener("click", showSwimSuits);
-// capsBtn.addEventListener("click", showCaps);
 flipFlopsBtn.addEventListener("click", showFlipFlops);
 fannyPacksBtn.addEventListener("click", showFannyPacks);
 tshirtBtn.addEventListener("click", showTShirts);
