@@ -38,7 +38,7 @@ let text2 = document.getElementById('0102');
 
 function load() {
     // animate(text1, 0, 24513, 5000);
-    animate(text2, 0, 491, 6500);
+    animate(text2, 0, 226, 5500);
     // animate(text3, 0, 22, 5000);
 }
 

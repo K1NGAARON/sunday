@@ -1,0 +1,110 @@
+.client-quote p {
+	color: var(--purple);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+h4 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: var(--black);
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    text-align: center;
+}
+
+.wrapper {
+    position: relative;
+    color: var(--black);
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: 240px;
+}
+
+.line-area {
+    display: block;
+    width: 70%;
+    height: 1px;
+    background: var(--black);
+    position: absolute;
+    top: 50%;
+    left: 15%;
+}
+
+.wrapper .timeline-area {
+    height: 100%;
+}
+
+.single-item {
+    width: 6%;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    margin-right: 70px;
+    transition: width .5s;
+    z-index: 1;
+}
+
+.single-item > .steps-toggle {
+    height: 32px;
+    display: block;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.single-item > .steps-toggle:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--black);
+    margin: 0 auto 8px auto;
+    border-radius: 50%;
+    transition: width .5s;
+}
+
+
+.single-item > .steps-text {
+    display: none;
+    transition: width .5s;
+}
+
+.single-item > .steps-text.active {
+    position: absolute;
+    top: 50%;
+    margin-top: 20px;
+    display: block;
+    text-align: left;
+    transition: width .5s;
+}
+
+.single-item > .steps-toggle.active:before {
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    margin-top: -8px;
+    transition: width .5s;
+}
+
+/* 
+
+Add width 15% to active parent
+
+*/
+
+
+:root {
+    --black: #000;
+}
