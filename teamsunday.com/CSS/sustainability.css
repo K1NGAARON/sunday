@@ -179,6 +179,7 @@ ul li {
 .custom-section-full img {
     max-width: 600px;
     height: auto;
+    margin: 0 auto;
 }
 
 .custom-section-full.first-section {

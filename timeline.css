@@ -9,14 +9,23 @@
     font-family: 'Poppins';
 }
 
-h4 {
+.wrapper h4 {
     font-family: 'Poppins';
     font-weight: 700;
+    font-size: 18px;
     color: var(--black);
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 25%;
     text-align: center;
+}
+
+.wrapper h5 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--purple);
+    margin-bottom: 20px;
 }
 
 .wrapper {
@@ -27,16 +36,16 @@ h4 {
     display: block;
     width: 100%;
     height: 240px;
+    margin-bottom: 200px;
 }
 
 .line-area {
     display: block;
-    width: 70%;
-    height: 1px;
+    width: 100%;
+    height: 3px;
     background: var(--black);
     position: absolute;
     top: 50%;
-    left: 15%;
 }
 
 .wrapper .timeline-area {
@@ -44,11 +53,11 @@ h4 {
 }
 
 .single-item {
-    width: 6%;
+    width: 7%;
     display: inline-block;
     position: relative;
     height: 100%;
-    margin-right: 70px;
+    margin-right: 40px;
     transition: width .5s;
     z-index: 1;
 }
@@ -75,25 +84,10 @@ h4 {
     transition: width .5s;
 }
 
-
-.single-item > .steps-text {
-    display: none;
-    transition: width .5s;
-}
-
-.single-item > .steps-text.active {
-    position: absolute;
-    top: 50%;
-    margin-top: 20px;
-    display: block;
-    text-align: left;
-    transition: width .5s;
-}
-
 .single-item > .steps-toggle.active:before {
     width: 32px;
     height: 32px;
-    background-color: red;
+    background-color: var(--purple);
     margin-top: -8px;
     transition: width .5s;
 }
@@ -104,7 +98,19 @@ Add width 15% to active parent
 
 */
 
+.wrapper .timeline-body {
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--purple);
+    border-radius: 20px;
+    box-shadow: 0 7px 7px 0 rgb(34 43 55 / 15%);
+}
+
 
 :root {
     --black: #000;
+    --purple: #702dbd;
 }
