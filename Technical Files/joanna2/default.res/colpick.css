@@ -95,6 +95,12 @@ html {
 
 .table-standard.bom-page-table.bom_table thead tr th:nth-child(3) {
 	border: none!important;
+	padding-left: 0px!important;
+}
+
+.table-standard.bom-page-table.bom_table thead tr th:nth-child(6) {
+	text-align: center;
+	width: 50%;
 }
 
 .table-standard.bom-page-table.bom_table tr {
@@ -125,15 +131,30 @@ html {
 }
 
 .color-box {
-	border: none!important;
 	width: 40px!important;
 	height: 40px!important;
+	border-radius: 50%;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 .inner-color-box {
 	border-radius: 50%!important;
 	width: 40px!important;
 	height: 40px!important;
+}
+
+.color-cell {
+	display: flex!important;
+	flex-direction: row-reverse!important;
+	width: 100%!important;
+	align-items: center!important;
+	justify-content: flex-end!important;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
 }
 
 .color-cell .color-box div.inner-color-box,
@@ -156,11 +177,12 @@ html {
 	@media print {
 		.header-table tr:nth-child(1) {
 			background-color: black!important;
+			box-shadow:  inset 0 0 0 1000px #000!important;
 		}
 		body,
 		html {
 		width: 1000px!important;
-		margin: 0 auto;
+		margin: 0 auto!important;
 	}
 	.pack-page-container {
 		width: 1000px!important;

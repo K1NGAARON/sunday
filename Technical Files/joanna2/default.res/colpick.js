@@ -29,6 +29,48 @@ window.addEventListener('DOMContentLoaded', (event) => {
         replaceHoodie[i].innerHTML = "Color";
     }
 
+	// Change "Style ID" to "Product Category"
+	let replaceStyleID = document.querySelectorAll(".header-table > tbody > tr:nth-child(2) > td:nth-child(1)");
+	for (let i = 0; i < replaceStyleID.length; i++) {
+        replaceStyleID[i].innerHTML = "Product Category";
+    }
+
+	// Change "Pattern ID" to "Pattern name"
+	let replacePatternID = document.querySelectorAll(".header-table > tbody > tr:nth-child(2) > td:nth-child(4)");
+	for (let i = 0; i < replacePatternID.length; i++) {
+        replacePatternID[i].innerHTML = "Pattern Name";
+    }
+
+	// Change "Material Name" to "Fabric/decoration"
+	let replaceMaterialName = document.querySelectorAll(".table-standard.bom-page-table.bom_table > thead > tr > th:nth-child(3)");
+	for (let i = 0; i < replaceMaterialName.length; i++) {
+        replaceMaterialName[i].innerHTML = "Fabric/decoration";
+    }
+
+	// Delete "Position"
+	let removePosition = document.querySelectorAll(".stamp-info-box > table > tbody > tr:nth-child(2)");
+	for (let i = 0; i < removePosition.length; i++) {
+        removePosition[i].classList.add("hidden");
+    }
+
+	// Place "Width" & "Height" in a column
+	let widthHeightCol = document.querySelectorAll(".stamp-info-box > table > tbody > tr:nth-child(1)");
+	for (let i = 0; i < widthHeightCol.length; i++) {
+        widthHeightCol[i].classList.add("flex-col");
+    }
+
+	// Remove "Layers" and "product"
+	let removeLayersProducts = document.querySelectorAll(".table-standard > tbody > tr > th");
+	for (let i = 0; i < removeLayersProducts.length; i++) {
+        removeLayersProducts[i].classList.add("hidden");
+    }
+
+	// Remove "Effect Artwork Execution"
+	let removeEffectArtwork = document.querySelectorAll(".table-standard > tbody > tr:nth-child(4) > td");
+	for (let i = 0; i < removeEffectArtwork.length; i++) {
+        removeEffectArtwork[i].classList.add("hidden");
+    }
+
     // Select top mock up
     let firstIMG = document.querySelector(".image-container > img");
 
@@ -41,6 +83,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
         IMGPlaceholder[i].classList.add("set-background");
 		IMGPlaceholder[i].style.backgroundImage=`url(${firstIMGSrc})`;
     }
+
+	// Difuse color : color bold
+	// bol naast tekst
 });
 
 
