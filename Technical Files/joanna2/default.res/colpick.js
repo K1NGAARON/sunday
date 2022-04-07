@@ -32,14 +32,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	// Change "Style ID" to "Product Category"
 	let replaceStyleID = document.querySelectorAll(".header-table > tbody > tr:nth-child(2) > td:nth-child(1)");
 	for (let i = 0; i < replaceStyleID.length; i++) {
-        replaceStyleID[i].innerHTML = "Product Category";
+		let replaceStyleIDString = replaceStyleID.innerHTML;
+		let replaceStyleIDNew = replaceStyleID[i].replace("Style ID", "Product Category");
+		
+		// replaceStyleID[i].innerHTML = "Product Category";
     }
+
 
 	// Change "Pattern ID" to "Pattern name"
 	let replacePatternID = document.querySelectorAll(".header-table > tbody > tr:nth-child(2) > td:nth-child(4)");
-	for (let i = 0; i < replacePatternID.length; i++) {
-        replacePatternID[i].innerHTML = "Pattern Name";
-    }
+	// for (let i = 0; i < replacePatternID.length; i++) {
+    //     replacePatternID[i].innerHTML = "Pattern Name";
+    // }
 
 	// Change "Material Name" to "Fabric/decoration"
 	let replaceMaterialName = document.querySelectorAll(".table-standard.bom-page-table.bom_table > thead > tr > th:nth-child(3)");
