@@ -1,16 +1,12 @@
-// EDITS BY AARON
-
 window.addEventListener('DOMContentLoaded', (event) => {
     // Change logo to white Sunday logo
     let sundayLogo = document.querySelectorAll(".logo-img");
-
     for (let i = 0; i < sundayLogo.length; i++) {
         sundayLogo[i].src="https://teamsunday.com/wp-content/uploads/2022/03/Sunday_Full_White.png";
     }
 
     // Center Sunday logo on a black background
     let headerTF = document.querySelectorAll(".header-table > tbody > tr:first-child > td:nth-child(3)");
-
     for (let i = 0; i < headerTF.length; i++) {
         headerTF[i].setAttribute("colspan", "8");
         headerTF[i].classList.add("center");
@@ -18,14 +14,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     // Delete matching style column
     let matchingStyleCol = document.querySelectorAll(".header-table > tbody > tr:nth-child(2) > td:nth-child(3)");
-
     for (let i = 0; i < matchingStyleCol.length; i++) {
         matchingStyleCol[i].classList.add("hidden");
     }
 
     // Change "hoodie" to "color" in table head
     let replaceHoodie = document.querySelectorAll(".table-standard.bom-page-table.bom_table > thead > tr > th:nth-child(6)");
-
     for (let i = 0; i < replaceHoodie.length; i++) {
         replaceHoodie[i].innerHTML = "Color";
     }
@@ -62,12 +56,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     // Select top mock up
     let firstIMG = document.querySelector(".image-container > img");
-
 	let firstIMGSrc = firstIMG.src;
 
     // Select IMG destination
     let IMGPlaceholder = document.querySelectorAll(".table-standard.bom-page-table.bom_table");
-
     for (let i = 0; i < IMGPlaceholder.length; i++) {
         IMGPlaceholder[i].classList.add("set-background");
 		IMGPlaceholder[i].style.backgroundImage=`url(${firstIMGSrc})`;
@@ -75,7 +67,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	// Add replace-style-id to style ID replacement
 	let replaceStyleID = document.querySelectorAll(".header-table > tbody > tr:nth-child(2) > td:nth-child(1)");
-
 	for (let i = 0; i < replaceStyleID.length; i++) {
         replaceStyleID[i].classList.add("replace-style-id");
     }
@@ -89,6 +80,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	$('.editor-options.stamp-row-editor-options').next("span").each(function(){
 		$(this).text($(this).text().replace(/Diffuse color/g, "Color"));
 	});
+
+	// Bollen onder elkaar indien meer dan 1
+	// Width col
 });
 
 
