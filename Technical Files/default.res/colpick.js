@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         headerTF[i].classList.add("center");
     }
 
-    // Delete matching style column
+    // Hide matching style column
     let matchingStyleCol = document.querySelectorAll(".header-table > tbody > tr:nth-child(2) > td:nth-child(3)");
     for (let i = 0; i < matchingStyleCol.length; i++) {
         matchingStyleCol[i].classList.add("hidden");
@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         replaceMaterialName[i].innerHTML = "Fabric/decoration";
     }
 
-	// Delete "Position"
+	// Hide "Position"
 	let removePosition = document.querySelectorAll(".stamp-info-box > table > tbody > tr:nth-child(2)");
 	for (let i = 0; i < removePosition.length; i++) {
         removePosition[i].classList.add("hidden");
@@ -42,13 +42,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
         widthHeightCol[i].classList.add("flex-col");
     }
 
-	// Remove "Layers" and "product"
+	// Hide "Layers" and "product"
 	let removeLayersProducts = document.querySelectorAll(".table-standard > tbody > tr > th");
 	for (let i = 0; i < removeLayersProducts.length; i++) {
         removeLayersProducts[i].classList.add("hidden");
     }
 
-	// Remove "Effect Artwork Execution"
+	// Hide "Effect Artwork Execution"
 	let removeEffectArtwork = document.querySelectorAll(".table-standard > tbody > tr:nth-child(4) > td");
 	for (let i = 0; i < removeEffectArtwork.length; i++) {
         removeEffectArtwork[i].classList.add("hidden");
@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		$(this).text($(this).text().replace(/Diffuse color/g, "Color"));
 	});
 
-	// Bollen onder elkaar indien meer dan 1
+	// Place color boxes in a column if there's more than 1 color
 	$('.color-cell').each(function(){
 		var $this = $(this);
 		if ($this.find('.color-box').length > 1) { 
