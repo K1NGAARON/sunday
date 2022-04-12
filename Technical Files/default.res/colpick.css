@@ -100,7 +100,7 @@ html {
 .table-standard.bom-page-table.bom_table thead tr th:nth-child(6) {
 	text-align: center;
 	width: 50%;
-	padding-left: 110px;
+	padding-left: 140px;
 }
 
 .table-standard.bom-page-table.bom_table tr {
@@ -113,11 +113,13 @@ html {
 
 .table-standard.bom-page-table.bom_table td {
 	padding: 30px 0;
+	min-width: 300px!important;
 }
 
 .table-standard.bom-page-table.bom_table td:nth-child(odd) {
-	width: 40%;
+	width: 50%;
 	border-right: 1px solid black!important;
+	text-align: left!important;
 }
 
 .table-standard.bom-page-table.bom_table td:nth-child(even) {
@@ -126,6 +128,17 @@ html {
 }
 
 .stamp-page-top-container .table-standard {
+	width: 50%!important;
+	margin: 0 auto;
+	border: 1px solid black;
+	margin-top: 40px;
+}
+
+.table-standard tr {
+	text-align: center!important;
+}
+
+.stamp-page-top-container .table-standard tr td {
 	width: 50%!important;
 }
 
@@ -139,7 +152,7 @@ html {
 	height: 40px!important;
 	border-radius: 50%;
 	margin-right: 10px;
-	margin-left: 10px;
+	margin-left: 0;
 }
 
 .inner-color-box {
@@ -156,9 +169,18 @@ html {
 	justify-content: flex-end!important;
 }
 
-.flex-col {
+.flex-col,
+.color-cell.flex-col {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column!important;
+}
+
+.color-cell.flex-col {
+	align-items: flex-start!important;
+}
+
+.color-cell.flex-col .color-box:nth-child(1) {
+	margin-bottom: 20px!important;
 }
 
 .color-cell .color-box div.inner-color-box,

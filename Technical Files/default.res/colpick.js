@@ -82,7 +82,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	});
 
 	// Bollen onder elkaar indien meer dan 1
-	// Width col
+	$('.color-cell').each(function(){
+		var $this = $(this);
+		if ($this.find('.color-box').length > 1) { 
+			$this.addClass("flex-col");
+	}});
+
+
 });
 
 
