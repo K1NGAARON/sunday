@@ -1,0 +1,367 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --black-2: #222222;
+    --purple: #702dbd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Fundamentals */
+.case-study-template .custom-section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.case-study-template .custom-section.case-study-contact-section {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.case-study-template .custom-section .custom-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 30px;
+}
+
+.case-study-template .custom-section .custom-row.nav-row {
+    max-width: 90%;
+}
+
+.case-study-template .custom-section .custom-row .headline-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.case-study-template .custom-section .custom-row.in-short {
+    margin-bottom: 20px;
+}
+
+.case-study-template .custom-section .custom-row.intro-row {
+    margin-top: 40px;
+}
+
+.case-study-template .custom-section .custom-row.timeline-row-section {
+    max-width: 1000px;
+}
+
+.case-study-template .custom-section .custom-row .custom-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.case-study-template .breadcrumb-nav {
+    display: flex;
+}
+
+.case-study-template .custom-section .custom-row.header-row {
+    flex-direction: row;
+    max-width: 1200px;
+    margin-top: 80px;
+}
+
+.case-study-template .custom-section .custom-row.header-row .custom-col:nth-child(1) {
+    width: 60%;
+}
+
+.case-study-template .custom-section .custom-row.header-row .custom-col:nth-child(2) {
+    width: 40%;
+}
+
+.case-study-template #contact-section,
+.case-study-template .contact-person-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.case-study-template .contact-person-wrapper {
+    margin-top: 30px;
+}
+
+.case-study-template #contact-section {
+    max-width: 1200px;
+    padding: 60px 0!important;
+    margin-bottom: 0;
+}
+
+.case-study-template #contact-section .custom-col:nth-child(1) ul li::before {
+    color: var(--white);
+}
+
+.case-study-template .intro-component {
+    background-color: var(--white);
+    border: 1px solid var(--black-2);
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 30px 50px 0 rgb(36 50 66 / 10%);
+}
+
+/* Fonts, buttons & images */
+.case-study-template h1 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto 15px auto;
+}
+.case-study-template h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 40px 0 20px 0;
+}
+.case-study-template h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 40px 0 20px 0;
+}
+
+.case-study-template a {
+    color: var(--purple);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.case-study-template a:hover {
+    text-decoration: underline;
+}
+
+.case-study-template #contact-section a {
+    color: var(--white);
+}
+
+.case-study-template .black-link {
+    color: var(--black);
+}
+
+.case-study-template .breadcrumb-nav {
+    text-align: left;
+}
+
+.case-study-template p {
+    font-size: 16px;
+}
+
+.case-study-template .img-caption {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.case-study-template .intro-text {
+    font-style: italic
+}
+
+.case-study-template .client-quote {
+    font-style: italic;
+    color: var(--purple);
+    font-size: 22px;
+    margin: 30px 0;
+    padding-left: 30px;
+    border-left: 2px solid var(--purple);
+}
+
+.case-study-template .client-quote .client-author {
+    font-style: normal;
+    color: var(--black);
+    font-size: 18px;
+}
+
+
+.case-study-template img {
+
+}
+
+.case-study-template .contact-person:nth-child(1) {
+    margin-right: 20px;
+}
+
+.case-study-template .contact-person:nth-child(2) {
+    margin-left: 20px;
+}
+
+.case-study-template .contact-person img {
+    width: 125px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.case-study-template .contact-person p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.case-study-template .custom-row .custom-col .client-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.case-study-template .primary-btn {
+    display: flex;
+    color: var(--white);
+    background-color: var(--black)!important;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 13px 23px;
+    border-radius: 6px!important;
+    text-transform: capitalize;
+    text-align: center;
+    vertical-align: middle;
+    white-space: normal;
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.case-study-template .primary-btn:hover {
+    background-color: var(--purple)!important;
+    transition: all .25s ease-in-out;
+    transform: scale(1.02);
+    text-decoration: none;
+}
+
+.hs-button.primary.large {
+    margin-left: 0!important;
+}
+
+.hbspt-form .hs_i_agree_to_the_terms_and_conditions .hs-form-booleancheckbox span {
+    margin-left: 10px;
+}
+
+.case-study-template .float-button {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    transition: all .25s ease-in-out;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.case-study-template .float-button .primary-btn {
+    text-transform: none!important;
+}
+
+.case-study-template .float-button:hover {
+    transform: scale(1.1);
+    transition: all .25s ease-in-out;
+}
+
+
+
+/* Timeline component */
+.cases-timeline-wrapper h4 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--black);
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    text-align: center;
+}
+
+.cases-timeline-wrapper h5 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--purple);
+    margin-bottom: 20px;
+}
+
+.cases-timeline-wrapper {
+    position: relative;
+    color: var(--black);
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: 240px;
+    margin-bottom: 250px;
+}
+
+.line-area {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--black);
+    position: absolute;
+    top: 50%;
+}
+
+.cases-timeline-wrapper .timeline-area {
+    height: 100%;
+}
+
+.single-item {
+    width: 7%;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    margin-right: 40px;
+    transition: width .5s;
+    z-index: 1;
+}
+
+.single-item:hover {
+    cursor: pointer;
+}
+
+.single-item > .steps-toggle {
+    height: 32px;
+    display: block;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.single-item > .steps-toggle:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--black);
+    margin: 0 auto 8px auto;
+    border-radius: 50%;
+    transition: width .5s;
+}
+
+.single-item > .steps-toggle.active:before {
+    width: 32px;
+    height: 32px;
+    background-color: var(--purple);
+    margin-top: -8px;
+    transition: width .5s;
+}
+
+.cases-timeline-wrapper .timeline-body {
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--purple);
+    border-radius: 20px;
+    box-shadow: 0 7px 7px 0 rgb(34 43 55 / 15%);
+}

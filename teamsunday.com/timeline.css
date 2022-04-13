@@ -9,7 +9,7 @@
     font-family: 'Poppins';
 }
 
-.wrapper h4 {
+.cases-timeline-wrapper h4 {
     font-family: 'Poppins';
     font-weight: 700;
     font-size: 18px;
@@ -20,7 +20,7 @@
     text-align: center;
 }
 
-.wrapper h5 {
+.cases-timeline-wrapper h5 {
     font-family: 'Poppins';
     font-weight: 700;
     font-size: 26px;
@@ -28,7 +28,7 @@
     margin-bottom: 20px;
 }
 
-.wrapper {
+.cases-timeline-wrapper {
     position: relative;
     color: var(--black);
     text-align: center;
@@ -48,7 +48,7 @@
     top: 50%;
 }
 
-.wrapper .timeline-area {
+.cases-timeline-wrapper .timeline-area {
     height: 100%;
 }
 
@@ -92,13 +92,7 @@
     transition: width .5s;
 }
 
-/* 
-
-Add width 15% to active parent
-
-*/
-
-.wrapper .timeline-body {
+.cases-timeline-wrapper .timeline-body {
     width: 60%;
     margin: 0 auto;
     padding: 40px;
