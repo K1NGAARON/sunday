@@ -220,7 +220,7 @@ html {
 
 .floating-img {
 	position: absolute;
-	right: 0;
+	right: -70px;
 	top: 70px;
 }
 
@@ -247,6 +247,17 @@ html {
 	.pack-page-container .pack-container .image-container img {
 		height: auto!important;
 		max-width: 400px!important;
+	}
+
+	.stamp-page-top-container .table-standard {
+		width: 50%!important;
+		margin: 0 auto;
+		border: 1px solid black!important;
+		margin-top: 40px;
+	}
+
+	.color-box {
+		border: 1px solid #333!important;
 	}
 }
 
