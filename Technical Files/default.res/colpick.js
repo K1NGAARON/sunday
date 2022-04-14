@@ -88,6 +88,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			$this.addClass("flex-col");
 	}});
 
+	$('.table-standard > tbody > tr:nth-child(2) > td:nth-child(1)').each(function() {
+		$(this).addClass("artwork-holder");
+	});
+
+	$('.artwork-holder').each(function() {
+		var artworkText = `<p style="font-weight: 700; margin-top: 10px;" class="artwork-text">Artwork</p>`;
+		$(this).html(artworkText);
+	});
 
 });
 

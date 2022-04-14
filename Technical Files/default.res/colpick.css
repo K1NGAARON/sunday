@@ -26,6 +26,12 @@ html {
     font-weight: 700;
 }
 
+.header-table tbody tr:nth-child(1),
+.header-table tbody tr:nth-child(2),
+.header-table tbody tr:nth-child(2) td {
+	border: 1px solid black!important;
+}
+
 #reportData .header-table tbody tr:first-child td:nth-child(1),
 #reportData .header-table tbody tr:first-child td:nth-child(2) {
 	display: none;
@@ -40,6 +46,10 @@ html {
 .table-standard.bom-page-table.bom_table thead tr th:nth-child(5),
 .table-standard.bom-page-table.bom_table tbody tr td:nth-child(5) {
 	display: none;
+}
+
+.table-standard tbody tr:nth-child(3) td:nth-child(1) {
+	font-weight: 700;
 }
 
 .pack-page-container {
