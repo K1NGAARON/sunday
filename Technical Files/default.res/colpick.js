@@ -58,12 +58,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let firstIMG = document.querySelector(".image-container > img");
 	let firstIMGSrc = firstIMG.src;
 
-    // Select IMG destination
-    let IMGPlaceholder = document.querySelectorAll(".table-standard.bom-page-table.bom_table");
-    for (let i = 0; i < IMGPlaceholder.length; i++) {
-        IMGPlaceholder[i].classList.add("set-background");
-		IMGPlaceholder[i].style.backgroundImage=`url(${firstIMGSrc})`;
-    }
+	$('.table-standard.bom-page-table').each(function() {
+		var dynamicDivIMGHolder = `<div class="floating-img"><img src="${firstIMGSrc}"></div>`;
+		$(this).append(dynamicDivIMGHolder);
+	});
 
 	// Add replace-style-id to style ID replacement
 	let replaceStyleID = document.querySelectorAll(".header-table > tbody > tr:nth-child(2) > td:nth-child(1)");

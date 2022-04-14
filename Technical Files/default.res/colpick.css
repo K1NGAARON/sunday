@@ -214,6 +214,21 @@ html {
 	border: 1px solid #333!important;
 }
 
+.table-standard.bom-page-table {
+	position: relative;
+}
+
+.floating-img {
+	position: absolute;
+	right: 0;
+	top: 70px;
+}
+
+.floating-img img {
+	width: 500px;
+	height: auto;
+}
+
 
 	@media print {
 		.header-table tr:nth-child(1) {
