@@ -121,10 +121,16 @@ function scrollToForm() {
 
 
 $(document).ready(function() {
+    // define page height + 50%
+    var pageHeight = $("body").outerHeight();
+    console.log(pageHeight);
+    console.log(pageHeight / 2);
+    var pageHeightHalf = pageHeight / 2;
+
     $(window).scroll(function() {
         scrollPosition = $(this).scrollTop();
-        if (scrollPosition >= 500) {
-            floatingCTA.classList.toggle("hidden");
+        if (scrollPosition >= pageHeightHalf) {
+            floatingCTA.classList.remove("hidden");
         }
     });
 });
