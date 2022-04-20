@@ -43,6 +43,12 @@ ul li {
     margin: 0 auto;
 }
 
+.custom-section-full .custom-row .custom-col .ers-label {
+    max-height: 200px;
+    width: auto;
+    margin-left: 0;
+}
+
 .custom-section-full .custom-row p {
     max-width: none;
 }
@@ -65,7 +71,7 @@ ul li {
     justify-content: center;
     align-items: center;
     margin: 40px auto;
-    padding: 20px 0;
+    padding: 20px 30px;
 }
 
 .custom-section-full .custom-row.white-text {
@@ -131,7 +137,7 @@ ul li {
 }
 
 .custom-section-full h2 {
-    font-size: 32px;
+    font-size: 52px;
     font-weight: 700;
     margin-bottom: 15px;
 }
@@ -182,10 +188,19 @@ ul li {
     margin: 0 auto;
 }
 
+.custom-section-full .custom-row .custom-col:nth-child(1) img {
+    margin-left: 0;
+}
+
+.custom-section-full .custom-row .custom-col:nth-child(2) img {
+    margin-right: 0;
+}
+
 .custom-section-full.first-section {
-    background: url("https://teamsunday.com/wp-content/uploads/2022/03/Sustainability-at-Sunday.jpg");
+    background: url("https://teamsunday.com/wp-content/uploads/2022/04/Sustainable-company-fashion.jpg");
     background-position: center center;
     background-repeat: no-repeat;
+    height: 40vh;
 }
 
 .custom-section-full .custom-row.center-text {
@@ -339,6 +354,11 @@ img {
     .custom-section-full .custom-col.p-0-sm {
         padding: 0;
     }
+
+    .custom-section-full h2 {
+        font-size: 32px;
+    }
+
 }
 
 @media all and (max-width: 860px) {
