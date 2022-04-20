@@ -27,7 +27,7 @@
                     <br>
                     <span style="font-weight: 700;">Location:</span> HQ in Ghent, Belgium, remote employees globally
                     <br>
-                    <span style="font-weight: 700;">Insights:</span> Deliverect hired on average 20 people per month in 16 different countries
+                    <span style="font-weight: 700;">Insights:</span> Deliverect hires on average 20 people per month in 16 different countries
                     <br>
                     <span style="font-weight: 700;">Topic:</span> Onboarding & Ambassador marketing
                 </p>
@@ -82,9 +82,9 @@
             </p>
 
             <!-- Add image from top of wardrobe -->
-            <img style="margin-top: 40px;" src="/wp-content/uploads/2022/04/pasted-image-0-2.png" alt="Top of Wardrobe image (?)">
+            <img class="hidden" style="margin-top: 40px;" src="/wp-content/uploads/2022/04/pasted-image-0-2.png" alt="Top of Wardrobe image (?)">
 
-            <img style="margin-bottom: 40px;" src="/wp-content/uploads/2022/04/pasted-image-0-1.png" alt="World map with shipment countries">
+            <img class="" style="margin-bottom: 40px;" src="/wp-content/uploads/2022/04/pasted-image-0-1.png" alt="World map with shipment countries">
             <p class="img-caption">
                 The Wardrobe™ Map shows where in the world Deliverect have sent their onboarding boxes to.
             </p>
@@ -93,9 +93,7 @@
                 But how did the project really happen?
             </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, modi cum voluptates doloremque facere ipsam.
-                <br><br>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, aliquam natus!
+                In order to obtain the best possible results, we have developed a 7-step process that allows us to design jaw-dropping collections. In the timeline below you’ll see what Deliverect could expect from us, and what we expected from them in terms of timing once the project gets started.
             </p>
         </div>
         <div class="custom-row timeline-row-section">
@@ -190,14 +188,7 @@
                 <h3>
                     Contact form
                 </h3>
-                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-                <script>
-                hbspt.forms.create({
-                    region: "na1",
-                    portalId: "5721218",
-                    formId: "b5495909-ae0e-47ba-a094-b527693cee69"
-                });
-                </script>
+                <div class="_form_1"></div><script src="https://teamsunday48579.activehosted.com/f/embed.php?id=1" type="text/javascript" charset="utf-8"></script>
             </div>
         </div>
     </div>
