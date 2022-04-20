@@ -114,6 +114,17 @@ function scrollToForm() {
     contactSection.scrollIntoView();
 }
 
-setTimeout(function(){
-    floatingCTA.classList.toggle("hidden");
-},32000);
+// setTimeout(function(){
+//     floatingCTA.classList.toggle("hidden");
+// },32000);
+
+
+
+$(document).ready(function() {
+    $(window).scroll(function() {
+        scrollPosition = $(this).scrollTop();
+        if (scrollPosition >= 500) {
+            floatingCTA.classList.toggle("hidden");
+        }
+    });
+});
