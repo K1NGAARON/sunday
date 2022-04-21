@@ -97,6 +97,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	// Hide parent of "new setion"
 	$('tr > .new-section.hidden').closest('tr').css("display", "none");
+
+
+	// Set page height to 190mm
+	$('header').next().css("height", "190mm");
+
+
 });
 
 
