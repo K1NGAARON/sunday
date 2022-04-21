@@ -100,6 +100,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	// Set page height to 190mm
 	$('header').next().css("height", "160mm");
+
+
+	
+	
+	// Make position x & y bold
+	$('.inner-table > tbody > tr:nth-child(1) > td:nth-child(1) > div:nth-child(2)').each(function(){
+		$(this).addClass("bold");
+	});
+	$('.inner-table > tbody > tr:nth-child(1) > td:nth-child(2) > div:nth-child(2)').each(function(){
+		$(this).addClass("bold");
+	});
+
+	
 });
 
 

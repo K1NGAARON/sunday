@@ -124,6 +124,10 @@ table.table-standard {
 	width: auto!important;
 }
 
+.bold {
+	font-weight: 700!important;
+}
+
 .bigger-img {
 	width: 500px!important;
 	margin: 0 auto!important;
