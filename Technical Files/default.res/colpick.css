@@ -4,7 +4,7 @@
 
 * {
 	font-family: Poppins;
-	font-size: 14px;
+	font-size: 10px;
 }
 
 html {
@@ -70,11 +70,6 @@ table.table-standard {
 	font-weight: 700;
 }
 
-/* .pack-page-container {
-	width: 100%!important;
-	height: 190mm;
-} */
-
 .pack-container {
 	display: flex!important;
 	flex-direction: row!important;
@@ -102,7 +97,6 @@ table.table-standard {
 	width: 100%;
 	padding: 0 30px;
 	background-color: #ffffff;
-	/* height: 190mm; */
 }
 
 .stamp-layout-wrapper img {
@@ -185,8 +179,8 @@ table.table-standard {
 }
 
 .color-box {
-	width: 40px!important;
-	height: 40px!important;
+	width: 20px!important;
+	height: 20px!important;
 	border-radius: 50%;
 	margin-right: 10px;
 	margin-left: 0;
@@ -194,8 +188,8 @@ table.table-standard {
 
 .inner-color-box {
 	border-radius: 50%!important;
-	width: 40px!important;
-	height: 40px!important;
+	width: 20px!important;
+	height: 20px!important;
 }
 
 .color-cell {
@@ -214,15 +208,12 @@ table.table-standard {
 
 .color-cell.flex-col {
 	align-items: flex-start!important;
-}
-
-.color-cell.flex-col .color-box:nth-child(1) {
-	margin-bottom: 20px!important;
+	flex-direction: row-reverse!important;
 }
 
 .color-cell .color-box div.inner-color-box,
 .color-box-wrapper  .color-box div.inner-color-box {
-	border-left: 40px solid white;
+	border-left: 20px solid white;
 }
 
 .stamp-page-container {
@@ -249,7 +240,7 @@ table.table-standard {
 .floating-img {
 	position: absolute;
 	right: 30px;
-	top: 70px;
+	top: 50px;
 }
 
 .floating-img img {
@@ -257,40 +248,56 @@ table.table-standard {
 	height: auto;
 }
 
-
 	@media print {
 		.header-table tr:nth-child(1) {
 			background-color: black!important;
 			box-shadow:  inset 0 0 0 1000px #000!important;
 		}
+
 		body,
 		html {
-		width: 1000px!important;
-		margin: 0 auto!important;
-	}
-	.pack-page-container {
-		width: 1000px!important;
-	}
-	
-	.pack-page-container .pack-container .image-container img {
-		height: auto!important;
-		max-width: 400px!important;
-	}
+			width: 1000px!important;
+			margin: 0 auto!important;
+		}
 
-	.stamp-page-top-container .table-standard {
-		width: 50%!important;
-		margin: 0 auto;
-		border: 1px solid black!important;
-		margin-top: 40px;
-	}
+		.table-standard.bom-page-table.bom_table tbody {
+			width: 40%!important;
+		}
 
-	.color-box {
-		border: 1px solid #333!important;
+		.floating-img {
+			right: -50px!important;
+		}
+
+		.floating-img img {
+			width: 400px!important;
+		}
+
+		.pack-page-container {
+			width: 1000px!important;
+		}
+		
+		.pack-page-container .pack-container .image-container img {
+			height: auto!important;
+			max-width: 400px!important;
+		}
+
+		.stamp-page-top-container .table-standard {
+			width: 50%!important;
+			margin: 0 auto;
+			border: 1px solid black!important;
+			margin-top: 40px;
+		}
+
+		.color-box {
+			border: 1px solid #333!important;
+		}
 	}
-}
 
 
 /* END EDITS BY AARON */
+
+
+
 /*Main container*/
 .colpick {
 	position: absolute;
