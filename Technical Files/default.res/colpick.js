@@ -95,6 +95,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		$(this).html(artworkText);
 	});
 
+	// Hide parent of "new setion"
+	$('tr > .new-section.hidden').closest('tr').css("display", "none");
 });
 
 
