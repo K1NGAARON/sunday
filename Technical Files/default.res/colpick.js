@@ -100,7 +100,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 	// Set page height to 190mm
-	$('header').next().css("height", "190mm");
+	$('header').next().css("height", "160mm");
 
 
 });

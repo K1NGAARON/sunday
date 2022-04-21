@@ -97,7 +97,7 @@ table.table-standard {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	padding: 0 30px;
+	padding: 20px 30px;
 	background-color: #ffffff;
 }
 
@@ -271,7 +271,7 @@ table.table-standard {
 		}
 
 		.floating-img img {
-			width: 400px!important;
+			width: 350px!important;
 		}
 
 		.pack-page-container {
@@ -280,7 +280,7 @@ table.table-standard {
 		
 		.pack-page-container .pack-container .image-container img {
 			height: auto!important;
-			max-width: 400px!important;
+			max-width: 250px!important;
 		}
 
 		.stamp-page-top-container .table-standard {
