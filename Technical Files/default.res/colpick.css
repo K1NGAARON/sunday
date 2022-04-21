@@ -48,6 +48,8 @@ table.table-standard {
 .header-table tbody tr:nth-child(2),
 .header-table tbody tr:nth-child(2) td {
 	border: 1px solid black!important;
+	padding-right: 22px!important;
+	padding-left: 22px!important;
 }
 
 #reportData .header-table tbody tr:first-child td:nth-child(1),
