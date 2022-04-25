@@ -43,6 +43,10 @@ ul li {
     margin: 0 auto;
 }
 
+.platform-section {
+    background-color: var(--light-grey)!important;
+}
+
 .custom-section-full .custom-row .custom-col .ers-label {
     max-height: 200px;
     width: auto;
@@ -131,24 +135,28 @@ ul li {
 }
 
 .custom-section-full h1 {
+    font-family: Poppins;
     font-size: 56px;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
 .custom-section-full h2 {
+    font-family: Poppins;
     font-size: 52px;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
 .custom-section-full h3 {
+    font-family: Poppins;
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
 .custom-section-full p:not(.counter) {
+    font-family: Poppins;
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 15px;
@@ -358,7 +366,6 @@ img {
     .custom-section-full h2 {
         font-size: 32px;
     }
-
 }
 
 @media all and (max-width: 860px) {
