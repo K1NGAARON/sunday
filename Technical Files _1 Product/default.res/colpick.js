@@ -120,30 +120,59 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	let amountOfSizes = sizesTable.length;
 	console.log("Sizes", amountOfSizes);
 
-	// // Delete first logo pattern image
+	// Delete first logo pattern image
 	if (amountOfSizes > 0) {
 		$('.stamp-layout-container  > .stamp-layout-wrapper').remove();
 	} else {
 
 	}
+
+	// Delete left stamp left bar on multiple sizes
+	if (amountOfSizes > 0) {
+		// Center material and information
+		$('.stamp-page-top-container > .stamp-page-container > .stamp-left-bar').each(function() {
+			this.remove();
+		});
+
+		$('.stamp-page-top-container > .stamp-page-container > .stamp-right-bar').each(function() {
+			$(this).css("float", "none");
+			$(this).css("text-align", "center");
+			$(this).css("width", "fit-content");
+			$(this).css("margin", "20px auto");
+			$(this).css("padding", "20px");
+			$(this).css("border", "1px solid black");
+			$(this).css("border-radius", "9px");
+			$(this).css("font-weight", "700");
+		});
+	} else {
+		$('.stamp-page-top-container > .stamp-page-container > .stamp-left-bar').each(function() {
+			$(this).css("text-align", "center");
+			$(this).css("width", "300px");
+			$(this).css("margin", "20px auto");
+			$(this).css("padding", "20px");
+			// $(this).css("border", "1px solid black");
+			$(this).css("border-radius", "9px");
+			$(this).css("font-weight", "700");
+		});
+
+		$('.stamp-page-top-container > .stamp-page-container > .stamp-right-bar').each(function() {
+			$(this).css("text-align", "center");
+			$(this).css("width", "300px");
+			$(this).css("margin", "20px auto");
+			$(this).css("padding", "20px");
+			// $(this).css("border", "1px solid black");
+			$(this).css("border-radius", "9px");
+			$(this).css("font-weight", "700");
+		});
+
+		$('.stamp-page-top-container > .stamp-page-container > .stamp-left-bar > .stamp-info-box > table').each(function() {
+			$(this).css("width", "100%");
+		});
+	};
+
 	
 
-	// Center material and information
-	$('.stamp-page-top-container > .stamp-page-container > .stamp-left-bar').each(function() {
-		console.log("Left container", this);
-		this.remove();
-	});
 
-	$('.stamp-page-top-container > .stamp-page-container > .stamp-right-bar').each(function() {
-		$(this).css("float", "none");
-		$(this).css("text-align", "center");
-		$(this).css("width", "fit-content");
-		$(this).css("margin", "20px auto");
-		$(this).css("padding", "20px");
-		$(this).css("border", "1px solid black");
-		$(this).css("border-radius", "9px");
-		$(this).css("font-weight", "700");
-	});
 
 
 
