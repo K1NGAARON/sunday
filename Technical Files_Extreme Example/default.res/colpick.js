@@ -99,7 +99,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	// Hide parent of "new setion"
 	$('tr > .new-section.hidden').closest('tr').css("display", "none");
 
-	// Set page height to 190mm
 	$('header').next().css("height", "160mm");
 	
 	// Make position x & y bold
@@ -129,7 +128,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	// Delete left stamp left bar on multiple sizes
 	if (amountOfSizes > 0) {
-		// Center material and information
 		$('.stamp-page-top-container > .stamp-page-container > .stamp-left-bar').each(function() {
 			this.remove();
 		});
@@ -150,7 +148,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			$(this).css("width", "300px");
 			$(this).css("margin", "20px auto");
 			$(this).css("padding", "20px");
-			// $(this).css("border", "1px solid black");
 			$(this).css("border-radius", "9px");
 			$(this).css("font-weight", "700");
 		});
@@ -160,7 +157,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			$(this).css("width", "300px");
 			$(this).css("margin", "20px auto");
 			$(this).css("padding", "20px");
-			// $(this).css("border", "1px solid black");
 			$(this).css("border-radius", "9px");
 			$(this).css("font-weight", "700");
 		});
@@ -173,31 +169,36 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	// split color table over multiple pages (max 8 rows per page)
 	let colorTableFirst = document.querySelectorAll(".table-standard.bom-page-table.bom_table");
 	let colorTableRows = document.querySelectorAll(".table-standard.bom-page-table.bom_table > tbody > tr");
-	let colorTableRowsAmount = colorTableRows.length;
 
-	// Split array in half
 	let mainColorArray = Array.from(colorTableRows);
-	let halfArray = Math.ceil(mainColorArray.length / 2);
 
-	let firstColorArray = mainColorArray.slice(0, halfArray); // Splits the array in 2 
-	let secondColorArray = mainColorArray.slice(-halfArray);
+	if (mainColorArray.length < 8) {
+		// Less than 8 => keep
+	} else {
+		// Split array in half
+		let halfArray = Math.ceil(mainColorArray.length / 2);
 
-	// Remove color rows from table and add array 1 to the table
-	let firstTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table > tbody");
-	$(firstTable).html(firstColorArray);
+		let firstColorArray = mainColorArray.slice(0, halfArray); // Splits the array in 2 
+		let secondColorArray = mainColorArray.slice(-halfArray);
 
-	// Create a new page
-	let header = document.querySelector("header");
-	let headerClone = $(header).clone();
-	let bodyClone = $(colorTableFirst).clone().addClass("second-table");
+		// Remove color rows from table and add array 1 to the table
+		let firstTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table > tbody");
+		$(firstTable).html(firstColorArray);
 
-	$(colorTableFirst).after(headerClone);
-	$(headerClone).after(bodyClone);
+		// Create a new page
+		let header = document.querySelector("header");
+		let headerClone = $(header).clone();
+		let bodyClone = $(colorTableFirst).clone().addClass("second-table");
 
-	// Remove color rows from table and add array 1 to the table
-	let secondTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table.second-table > tbody");
+		$(colorTableFirst).after(headerClone);
+		$(headerClone).after(bodyClone);
 
-	$(secondTable).html(secondColorArray);
+		// Remove color rows from table and add array 1 to the table
+		let secondTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table.second-table > tbody");
+		$(secondTable).html(secondColorArray);
+	};
+	
+
 });
 
 
