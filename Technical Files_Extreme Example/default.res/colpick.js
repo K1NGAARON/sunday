@@ -174,36 +174,30 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	let colorTableFirst = document.querySelectorAll(".table-standard.bom-page-table.bom_table");
 	let colorTableRows = document.querySelectorAll(".table-standard.bom-page-table.bom_table > tbody > tr");
 	let colorTableRowsAmount = colorTableRows.length;
-	console.log('Color Table Rows Length', colorTableRowsAmount);
 
-		// Push first 8 rows to  an array
-		let mainColorArray = Array.from(colorTableRows);
-		console.log('Main Color Array', mainColorArray);
+	// Split array in half
+	let mainColorArray = Array.from(colorTableRows);
+	let halfArray = Math.ceil(mainColorArray.length / 2);
 
-		let firstColorArray = mainColorArray.slice(0, 8); // Splits the array in 2 
-		console.log('First Array', firstColorArray);
-		let secondColorArray = mainColorArray.slice(8)
-		console.log('Second Array', secondColorArray);
+	let firstColorArray = mainColorArray.slice(0, halfArray); // Splits the array in 2 
+	let secondColorArray = mainColorArray.slice(-halfArray);
 
-		// Remove color rows from table and add array 1 to the table
-		let firstTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table > tbody");
-		$(firstTable).html(firstColorArray);
+	// Remove color rows from table and add array 1 to the table
+	let firstTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table > tbody");
+	$(firstTable).html(firstColorArray);
 
-		// Create a new page
-		let header = document.querySelector("header");
-		let headerClone = $(header).clone();
-		let bodyClone = $(colorTableFirst).clone().addClass("second-table");
+	// Create a new page
+	let header = document.querySelector("header");
+	let headerClone = $(header).clone();
+	let bodyClone = $(colorTableFirst).clone().addClass("second-table");
 
-		$(colorTableFirst).after(headerClone);
-		$(headerClone).after(bodyClone);
+	$(colorTableFirst).after(headerClone);
+	$(headerClone).after(bodyClone);
 
-		// Remove color rows from table and add array 1 to the table
-		let secondTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table.second-table > tbody");
-		console.log('Second Table', secondTable);
+	// Remove color rows from table and add array 1 to the table
+	let secondTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table.second-table > tbody");
 
-		$(secondTable).html(secondColorArray);
-
-
+	$(secondTable).html(secondColorArray);
 });
 
 
