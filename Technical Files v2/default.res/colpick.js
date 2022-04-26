@@ -103,10 +103,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	
 	// Make position x & y bold
 	$('.inner-table > tbody > tr:nth-child(1) > td:nth-child(1) > div:nth-child(2)').each(function(){
-		$(this).addClass("bold");
+		$(this).addClass("hidden");
 	});
 	$('.inner-table > tbody > tr:nth-child(1) > td:nth-child(2) > div:nth-child(2)').each(function(){
-		$(this).addClass("bold");
+		$(this).addClass("hidden");
 	});
 
 	$('.border-spacing-table > thead').each(function() {
