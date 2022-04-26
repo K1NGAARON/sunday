@@ -127,7 +127,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	}
 	
-
 	// Center material and information
 	$('.stamp-page-top-container > .stamp-page-container > .stamp-left-bar').each(function() {
 		console.log("Left container", this);
@@ -144,9 +143,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		$(this).css("border-radius", "9px");
 		$(this).css("font-weight", "700");
 	});
-
-
-
 });
 
 
