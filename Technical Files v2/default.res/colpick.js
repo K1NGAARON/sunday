@@ -114,14 +114,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		$(this).addClass("hidden");
 	});
 
-	// Delete first logo pattern image
-	$('.stamp-layout-container  > .stamp-layout-wrapper').remove();
-	
 	// Delete "amount of sizes + 1" to remove all the "first images"
 	let sizesTable = document.querySelectorAll(".border-spacing-table > tbody > .stamp-layout-container");
 
 	let amountOfSizes = sizesTable.length;
 	console.log("Sizes", amountOfSizes);
+
+	// // Delete first logo pattern image
+	if (amountOfSizes > 0) {
+		$('.stamp-layout-container  > .stamp-layout-wrapper').remove();
+	} else {
+
+	}
+	
 
 	// Center material and information
 	$('.stamp-page-top-container > .stamp-page-container > .stamp-left-bar').each(function() {
