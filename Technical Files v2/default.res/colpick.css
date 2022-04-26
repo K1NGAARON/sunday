@@ -261,6 +261,11 @@ table.table-standard {
 	position: relative;
 }
 
+.artwork-logo img {
+	height: 50px!important;
+	max-width: none!important;
+}
+
 .floating-img {
 	position: absolute;
 	right: 30px;

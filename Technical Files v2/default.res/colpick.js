@@ -88,6 +88,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	$('.table-standard > tbody > tr:nth-child(2) > td:nth-child(1)').each(function() {
 		$(this).addClass("artwork-holder");
+		$(this).next().addClass("artwork-logo");
 	});
 
 	$('.artwork-holder').each(function() {
