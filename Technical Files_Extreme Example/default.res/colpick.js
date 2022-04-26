@@ -120,28 +120,90 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	let amountOfSizes = sizesTable.length;
 	console.log("Sizes", amountOfSizes);
 
-	// // Delete first logo pattern image
+	// Delete first logo pattern image
 	if (amountOfSizes > 0) {
 		$('.stamp-layout-container  > .stamp-layout-wrapper').remove();
 	} else {
 
-	}
-	
-	// Center material and information
-	$('.stamp-page-top-container > .stamp-page-container > .stamp-left-bar').each(function() {
-		this.remove();
-	});
+	};
 
-	$('.stamp-page-top-container > .stamp-page-container > .stamp-right-bar').each(function() {
-		$(this).css("float", "none");
-		$(this).css("text-align", "center");
-		$(this).css("width", "fit-content");
-		$(this).css("margin", "20px auto");
-		$(this).css("padding", "20px");
-		$(this).css("border", "1px solid black");
-		$(this).css("border-radius", "9px");
-		$(this).css("font-weight", "700");
-	});
+	// Delete left stamp left bar on multiple sizes
+	if (amountOfSizes > 0) {
+		// Center material and information
+		$('.stamp-page-top-container > .stamp-page-container > .stamp-left-bar').each(function() {
+			this.remove();
+		});
+
+		$('.stamp-page-top-container > .stamp-page-container > .stamp-right-bar').each(function() {
+			$(this).css("float", "none");
+			$(this).css("text-align", "center");
+			$(this).css("width", "fit-content");
+			$(this).css("margin", "20px auto");
+			$(this).css("padding", "20px");
+			$(this).css("border", "1px solid black");
+			$(this).css("border-radius", "9px");
+			$(this).css("font-weight", "700");
+		});
+	} else {
+		$('.stamp-page-top-container > .stamp-page-container > .stamp-left-bar').each(function() {
+			$(this).css("text-align", "center");
+			$(this).css("width", "300px");
+			$(this).css("margin", "20px auto");
+			$(this).css("padding", "20px");
+			// $(this).css("border", "1px solid black");
+			$(this).css("border-radius", "9px");
+			$(this).css("font-weight", "700");
+		});
+
+		$('.stamp-page-top-container > .stamp-page-container > .stamp-right-bar').each(function() {
+			$(this).css("text-align", "center");
+			$(this).css("width", "300px");
+			$(this).css("margin", "20px auto");
+			$(this).css("padding", "20px");
+			// $(this).css("border", "1px solid black");
+			$(this).css("border-radius", "9px");
+			$(this).css("font-weight", "700");
+		});
+
+		$('.stamp-page-top-container > .stamp-page-container > .stamp-left-bar > .stamp-info-box > table').each(function() {
+			$(this).css("width", "100%");
+		});
+	};
+
+	// split color table over multiple pages (max 8 rows per page)
+	let colorTableFirst = document.querySelectorAll(".table-standard.bom-page-table.bom_table");
+	let colorTableRows = document.querySelectorAll(".table-standard.bom-page-table.bom_table > tbody > tr");
+	let colorTableRowsAmount = colorTableRows.length;
+	console.log('Color Table Rows Length', colorTableRowsAmount);
+
+		// Push first 8 rows to  an array
+		let mainColorArray = Array.from(colorTableRows);
+		console.log('Main Color Array', mainColorArray);
+
+		let firstColorArray = mainColorArray.slice(0, 8); // Splits the array in 2 
+		console.log('First Array', firstColorArray);
+		let secondColorArray = mainColorArray.slice(8)
+		console.log('Second Array', secondColorArray);
+
+		// Remove color rows from table and add array 1 to the table
+		let firstTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table > tbody");
+		$(firstTable).html(firstColorArray);
+
+		// Create a new page
+		let header = document.querySelector("header");
+		let headerClone = $(header).clone();
+		let bodyClone = $(colorTableFirst).clone().addClass("second-table");
+
+		$(colorTableFirst).after(headerClone);
+		$(headerClone).after(bodyClone);
+
+		// Remove color rows from table and add array 1 to the table
+		let secondTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table.second-table > tbody");
+		console.log('Second Table', secondTable);
+
+		$(secondTable).html(secondColorArray);
+
+
 });
 
 
