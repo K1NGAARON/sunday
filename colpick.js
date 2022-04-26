@@ -129,7 +129,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	
 	// Center material and information
 	$('.stamp-page-top-container > .stamp-page-container > .stamp-left-bar').each(function() {
-		console.log("Left container", this);
 		this.remove();
 	});
 
