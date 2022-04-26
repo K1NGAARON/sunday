@@ -100,9 +100,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	// Set page height to 190mm
 	$('header').next().css("height", "160mm");
-
-
-	
 	
 	// Make position x & y bold
 	$('.inner-table > tbody > tr:nth-child(1) > td:nth-child(1) > div:nth-child(2)').each(function(){
@@ -112,7 +109,38 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		$(this).addClass("bold");
 	});
 
+	$('.border-spacing-table > thead').each(function() {
+		$(this).addClass("hidden");
+	});
+
+	// Delete first logo pattern image
+	$('.stamp-layout-container  > .stamp-layout-wrapper').remove();
 	
+	// Delete "amount of sizes + 1" to remove all the "first images"
+	let sizesTable = document.querySelectorAll(".border-spacing-table > tbody > .stamp-layout-container");
+
+	let amountOfSizes = sizesTable.length;
+	console.log("Sizes", amountOfSizes);
+
+	// Center material and information
+	$('.stamp-page-top-container > .stamp-page-container > .stamp-left-bar').each(function() {
+		console.log("Left container", this);
+		this.remove();
+	});
+
+	$('.stamp-page-top-container > .stamp-page-container > .stamp-right-bar').each(function() {
+		$(this).css("float", "none");
+		$(this).css("text-align", "center");
+		$(this).css("width", "fit-content");
+		$(this).css("margin", "20px auto");
+		$(this).css("padding", "20px");
+		$(this).css("border", "1px solid black");
+		$(this).css("border-radius", "9px");
+		$(this).css("font-weight", "700");
+	});
+
+
+
 });
 
 
