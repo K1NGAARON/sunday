@@ -116,7 +116,7 @@ table.table-standard {
 } 
 
 .border-spacing-table .empty-row {
-	height: 75px!important;
+	height: 110px!important;
 }
 
 .stamp-page-top-container .stamp-layout-wrapper img {
@@ -315,6 +315,11 @@ table.table-standard {
 		.color-box {
 			border: 1px solid #333!important;
 		}
+
+		.stamp-page-container .stamp-right-bar .stamp-info-box .link-container {
+			display: none!important;
+		}
+		
 	}
 
 
