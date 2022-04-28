@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<section id="content">
+    <div id="accordion" class="accordion-container">
+        <article class="content-entry">
+            <h4 class="article-title"><i></i>
+                Value driven
+            </h4>
+            <div class="accordion-content">
+                <p>
+                    What we do is about our customers, not about us. We make it our business to understand our customers and their business. Consequently, we deliver made-to measure solutions and services at an industry-leading level. We take pride in our work, but only after we have achieved the best results. Our ultimate goal is to consistently deliver the highest value for our customers.
+                </p>
+            </div>
+        </article>
+
+        <article class="content-entry">
+            <h4 class="article-title"><i></i>
+                Holistic
+            </h4>
+            <div class="accordion-content">
+                <p>
+                    We look at the total picture. End to end, we keep a helicopter overview on the process, to ensure we don’t miss out on any detail. Our customers can rest assured that we have already taken action to solve the unexpected. We aim for long term solutions that help everybody involved in the project, instead of short term fixes that harm others.
+                </p>
+            </div>
+        </article>
+
+        <article class="content-entry">
+            <h4 class="article-title"><i></i>Growth</h4>
+            <div class="accordion-content">
+                <p>
+                    We care deeply about our employees, our customers and our partners. Everything we do is linked to creating real ambassadorship internally and externally. Helping people unlock their true potential is at the core of our organisation.
+                </p>
+            </div>
+        </article>
+
+        <article class="content-entry">
+            <h4 class="article-title"><i></i>Worldly</h4>
+            <div class="accordion-content">
+                <p>
+                    We take up responsibility for our planet and purpose. We challenge industry standards by always taking the option of sustainability in our ideas, approach and operations. Fair pay and good working conditions for collaborators and suppliers is a matter of course. Our team consists of top professionals with a high degree of EQ and understanding of the world.
+                </p>
+            </div>
+        </article>
+
+        <article class="content-entry">
+            <h4 class="article-title"><i></i>Ownership</h4>
+            <div class="accordion-content">
+                <p>
+                    Our customers expect us to know and inspire them. They are carefree because we are meeting our commitments and take ownership. We operate at a world-class level because we constantly challenge ourselves to continuous improvement. We work as a team and use the expertise of the whole to make ourselves, our ideas and our execution better every day.
+                </p>
+            </div>
+        </article>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.accordion-container {
+    position: relative;
+    width: 100%;
+    border: 1px solid #0079c1;
+    border-top: none;
+    outline: 0;
+    cursor: pointer;
+    font-family: Poppins;
+}
+
+.accordion-container .article-title {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0.625em 0.625em 0.625em 2em;
+    border-top: 1px solid #0079c1;
+    font-size: 1.25em;
+    font-weight: normal;
+    color: #0079c1;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.accordion-container .article-title:hover,
+.accordion-container .article-title:active,
+.accordion-container .content-entry.open .article-title {
+    background-color: #62b5e5;
+    color: white;
+}
+
+.accordion-container .article-title:hover i:before,
+.accordion-container .article-title:hover i:active,
+.accordion-container .content-entry.open i {
+    color: white;
+}
+
+.accordion-container .content-entry i {
+    position: absolute;
+    top: 3px;
+    left: 12px;
+    font-style: normal;
+    font-size: 1.625em;
+    sans-serif;
+    color: #0079c1;
+}
+
+.accordion-container .content-entry i:before {
+    content: "+ ";
+}
+
+.accordion-container .content-entry.open i:before {
+    content: "- ";
+}
+
+.accordion-content {
+    display: none;
+    padding-left: 2.3125em;
+}
+/* This stuff is just for the Codepen demo */
+
+#content {
+    width: 100%;
+}
+
+.accordion-container,
+#description {
+    width: 90%;
+    margin: 1.875em auto;
+}
+
+#description p {
+    line-height: 1.5;
+}
+
+#description h2 {
+    text-align: center;
+}
+
+@media all and (min-width: 860px) {
+    #content {
+            width: 70%;
+            margin: 0 auto;
+    }
+}
+</style>
+
+<script>
+$(function() {
+		var Accordion = function(el, multiple) {
+				this.el = el || {};
+				this.multiple = multiple || false;
+
+				var links = this.el.find('.article-title');
+				links.on('click', {
+						el: this.el,
+						multiple: this.multiple
+				}, this.dropdown)
+		}
+
+		Accordion.prototype.dropdown = function(e) {
+				var $el = e.data.el;
+				$this = $(this),
+						$next = $this.next();
+
+				$next.slideToggle();
+				$this.parent().toggleClass('open');
+
+				if (!e.data.multiple) {
+						$el.find('.accordion-content').not($next).slideUp().parent().removeClass('open');
+				};
+		}
+		var accordion = new Accordion($('.accordion-container'), false);
+});
+
+$(document).on('click', function (event) {
+  if (!$(event.target).closest('#accordion').length) {
+    $this.parent().toggleClass('open');
+  }
+});
+</script>
