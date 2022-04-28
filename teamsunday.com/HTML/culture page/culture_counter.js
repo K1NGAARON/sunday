@@ -36,15 +36,15 @@ function animate(obj, initVal, lastVal, duration) {
     let text1 = document.getElementById('0101'); // Countries
     let text2 = document.getElementById('0102'); // Employees
     let text3 = document.getElementById('0103'); // Clients
-    let text4 = document.getElementById('0104'); // Packages Delivered
-    let text5 = document.getElementById('0105'); // Trees Planted
+    let text4 = document.getElementById('0104'); // Male-Female
+    let text5 = document.getElementById('0105'); // Average Age
     
     function load() {
         animate(text1, 0, 5, 4000);
         animate(text2, 0, 52, 4000);
         animate(text3, 0, 2266, 4000);
-        animate(text4, 0, 62153, 4000);
-        animate(text5, 0, 1243, 4000);
+        animate(text4, 0, 37, 4000);
+        animate(text5, 0, 26, 4000);
     }
     
 // Call function when the platform counter section is in viewport
