@@ -11,7 +11,7 @@ function animate(obj, initVal, lastVal, duration) {
     
         // if the start time is null, assign the current time to startTime
         if (!startTime) {
-                startTime = currentTime ;
+            startTime = currentTime ;
         }
     
         // calculate the value to be used in calculating the number to be displayed
