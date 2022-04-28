@@ -1,0 +1,9 @@
+.custom-row .custom-col .client-testimonial {
+    font-size: 24px;
+    font-style: italic;
+}
+
+.custom-row .custom-col .client-name {
+    font-size: 18px;
+    font-weight: 700;
+}
