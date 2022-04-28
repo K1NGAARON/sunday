@@ -171,7 +171,48 @@
             All vacancies ➔
         </a>
     </div>
-</div>    
+</div>
+
+<div class="custom-section-full contact-section">
+    <div class="custom-row" id="contact-section">
+        <div class="custom-col">
+            <h3>
+                Contact us
+            </h3>
+            <p>
+                Interested in custom swimwear for your company?
+                <br>
+                Reach out to us anyway you like:
+                <br>
+                <ul>
+                    <li>Fill in the contact form on the right</li>
+                    <li>E-mail us on <a href="mailto:hello@teamsunday.com">hello@teamsunday.com</a></li>
+                    <li>Call us on <a href="tel:+32 51 20 11 98">+32 51 20 11 98</a></li>
+                </ul>
+            </p>
+            <div class="contact-person-wrapper">
+                <div class="contact-person">
+                    <img src="https://www.teamsunday.com/wp-content/uploads/2022/03/Nicola.jpg" alt="Nicola - Sunday">
+                    <p>
+                        Nicola - Sunday
+                    </p>
+                </div>
+                <div class="contact-person">
+                    <img src="https://www.teamsunday.com/wp-content/uploads/2022/03/Eva.jpg" alt="Eva - Sunday">
+                    <p>
+                        Eva - Sunday
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="custom-col">
+            <h3>
+                Contact form
+            </h3>
+            <div class="_form_23"></div><script src="https://teamsunday48579.activehosted.com/f/embed.php?id=23" type="text/javascript" charset="utf-8"></script>
+        </div>
+    </div>
+</div>
 </body>
 </html>
 
@@ -415,6 +456,74 @@
     color: var(--black-3);
 }
 
+
+.custom-section-full.contact-section {
+    background-color: #62b5e570;
+    color: var(--white);
+}
+
+.custom-section-full.contact-section .custom-row {
+    background-color: transparent;
+}
+
+#contact-section {
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+#contact-section .custom-col:nth-child(1) ul li::before {
+    color: var(--white);
+}
+
+#contact-section ul li {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#contact-section a {
+    color: var(--white);
+    transition: var(--transition);
+}
+
+#contact-section a:hover {
+    color: var(--white);
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+.custom-section-full.contact-section .contact-person-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.custom-section-full.contact-section img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.custom-section-full.contact-section .contact-person {
+    text-align: center;
+}
+
+.custom-section-full.contact-section .contact-person p {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.custom-section-full.contact-section .contact-person:nth-child(1) {
+    margin-right: 15px;
+}
+
+.custom-section-full.contact-section .contact-person:nth-child(2) {
+    margin-left: 15px;
+}
+
+.hidden {
+    display: none!important;
+}
 
 
 </style>
