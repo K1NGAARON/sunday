@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Culture Page</title>
+    <link rel="stylesheet" href="culture_page.css">
 </head>
 <body>
 
@@ -62,6 +63,58 @@
             <h2>
                 Our Values
             </h2>
+            <section id="content">
+                <div id="accordion" class="accordion-container">
+                    <article class="content-entry">
+                        <h4 class="article-title"><i></i>
+                            Value driven
+                        </h4>
+                        <div class="accordion-content">
+                            <p>
+                                What we do is about our customers, not about us. We make it our business to understand our customers and their business. Consequently, we deliver made-to measure solutions and services at an industry-leading level. We take pride in our work, but only after we have achieved the best results. Our ultimate goal is to consistently deliver the highest value for our customers.
+                            </p>
+                        </div>
+                    </article>
+            
+                    <article class="content-entry">
+                        <h4 class="article-title"><i></i>
+                            Holistic
+                        </h4>
+                        <div class="accordion-content">
+                            <p>
+                                We look at the total picture. End to end, we keep a helicopter overview on the process, to ensure we don’t miss out on any detail. Our customers can rest assured that we have already taken action to solve the unexpected. We aim for long term solutions that help everybody involved in the project, instead of short term fixes that harm others.
+                            </p>
+                        </div>
+                    </article>
+            
+                    <article class="content-entry">
+                        <h4 class="article-title"><i></i>Growth</h4>
+                        <div class="accordion-content">
+                            <p>
+                                We care deeply about our employees, our customers and our partners. Everything we do is linked to creating real ambassadorship internally and externally. Helping people unlock their true potential is at the core of our organisation.
+                            </p>
+                        </div>
+                    </article>
+            
+                    <article class="content-entry">
+                        <h4 class="article-title"><i></i>Worldly</h4>
+                        <div class="accordion-content">
+                            <p>
+                                We take up responsibility for our planet and purpose. We challenge industry standards by always taking the option of sustainability in our ideas, approach and operations. Fair pay and good working conditions for collaborators and suppliers is a matter of course. Our team consists of top professionals with a high degree of EQ and understanding of the world.
+                            </p>
+                        </div>
+                    </article>
+            
+                    <article class="content-entry">
+                        <h4 class="article-title"><i></i>Ownership</h4>
+                        <div class="accordion-content">
+                            <p>
+                                Our customers expect us to know and inspire them. They are carefree because we are meeting our commitments and take ownership. We operate at a world-class level because we constantly challenge ourselves to continuous improvement. We work as a team and use the expertise of the whole to make ourselves, our ideas and our execution better every day.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </div>
         <div class="custom-col">
             <div class="review-wrapper">
@@ -213,317 +266,8 @@
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="culture_accordion.js"></script>
+<script src="culture_counter.js"></script>
 </body>
 </html>
-
-
-
-
-<style>
-:root {
-    --purple: #702dbd;
-    --green: #44d62c;
-    --yellow: #ffdd00;
-    --orange: #ff6720;
-    --blue: #62b5e5;
-    --dark-grey: #98999b;
-    --light-grey: #f5f5f5;
-    --white: #fff;
-    --black: #000;
-    --black-2: #222;
-    --black-3: #333;
-    --xmas-green: #01907e;
-    --transition: all .25s ease-in-out;
-}
-
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: Poppins;
-    line-height: 1.2;
-}
-
-.vce-row[data-vce-stretch-content=true] {
-    padding: 0!important;
-}
-
-.custom-section-full.first-section {
-    background-image: url("https://teamsunday.com/wp-content/uploads/2022/04/Office-building.jpg");
-    background-position: center center;
-    height: 50vh;
-    position: relative;
-}
-
-.custom-section-full.first-section .custom-row {
-    margin-top: 0;
-    padding-top: 0;
-    align-items: center;
-}
-
-.custom-section-full {
-    width: 100%;
-    max-width: none;
-    margin: 0 auto;
-    background-color: transparent;
-}
-
-.custom-section-full .custom-row {
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 60px auto;
-    padding: 40px 0;
-    background-color: transparent;
-}
-
-.custom-section-full .custom-row.m-t-20 {
-    margin-top: 20px;
-}
-.custom-section-full .custom-row.m-b-20 {
-    margin-bottom: 20px;
-}
-.custom-section-full .custom-row.p-t-0 {
-    padding-top: 0;
-}
-.custom-section-full .custom-row.p-b-0 {
-    padding-bottom: 0;
-}
-
-.custom-section-full .custom-row.row-reverse {
-    flex-direction: row-reverse;
-}
-
-.custom-section-full .custom-row.flex-col {
-    flex-direction: column;
-}
-
-.custom-section-full .custom-col {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding: 0 30px;
-}
-
-.center-content {
-    text-align: center;
-}
-
-.custom-section-full .custom-row .custom-btn {
-    display: flex;
-    max-width: fit-content;
-    margin: 20px 0;
-    padding: 13px 23px;
-    border-radius: 6px;
-    background-color: var(--purple)!important;
-    color: var(--white);
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: capitalize;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    white-space: normal;
-    cursor: pointer;
-    transition: var(--transition);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-.custom-section-full .custom-row .custom-btn:hover {
-    background-color: var(--black)!important;
-    transition: var(--transition);
-    transform: scale(1.05);
-}
-
-.custom-section-full h1 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: var(--white);
-    position: absolute;
-    top: 30%;
-    width: 60%;
-}
-
-.custom-section-full h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.custom-section-full h3 {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.custom-section-full p:not(.counter) {
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 15px;
-}
-
-.custom-section-full .small-headline {
-    margin-bottom: 0!important;
-}
-
-.custom-section-full a {
-    font-size: 14px;
-    font-weight: 700;
-    transition: var(--transition);
-}
-
-.custom-section-full a:hover {
-    transition: var(--transition);
-}
-
-.custom-section-full img {
-    max-width: 600px;
-    height: auto;
-}
-
-#gallery img {
-    margin: 0 20px;
-    max-width: 300px;
-    height: auto;
-}
-
-#counter-section {
-    background-color: #62b5e570;
-}
-
-#counter-section .custom-row {
-    color: var(--white);
-    font-weight: 700;
-}
-
-#counter-section .custom-row .counter {
-    font-size: 56px;
-}
-
-#counter-section .custom-row .description {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.review-wrapper {
-    background-color: var(--light-grey);
-    border-radius: 9px;
-    padding: 10px 30px;
-}
-
-.review-wrapper .review-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.review-wrapper .review-content .col {
-    padding: 10px;
-}
-
-.review-wrapper .review-content .col:nth-child(1) {
-    padding-left: 0;
-}
-
-.review-wrapper .review-content img {
-    border-radius: 9px;
-    max-height: 150px;
-    width: auto;
-}
-
-.review-wrapper .review-content h5 {
-    font-family: Poppins;
-    font-weight: 700;
-    font-size: 16px;
-    margin-top: 20px;
-    color: var(--black-3);
-}
-
-.review-wrapper .review-content .position {
-    font-size: 12px;
-    margin-top: 5px;
-    color: var(--black-3);
-}
-
-.review-wrapper .review-content .review-text {
-    font-size: 20px;
-    font-style: italic;
-    color: var(--black-3);
-}
-
-
-.custom-section-full.contact-section {
-    background-color: #62b5e570;
-    color: var(--white);
-}
-
-.custom-section-full.contact-section .custom-row {
-    background-color: transparent;
-}
-
-#contact-section {
-    margin: 0 auto;
-    align-items: flex-start;
-}
-
-#contact-section .custom-col:nth-child(1) ul li::before {
-    color: var(--white);
-}
-
-#contact-section ul li {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-#contact-section a {
-    color: var(--white);
-    transition: var(--transition);
-}
-
-#contact-section a:hover {
-    color: var(--white);
-    text-decoration: underline;
-    transition: var(--transition);
-}
-
-.custom-section-full.contact-section .contact-person-wrapper {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-}
-
-.custom-section-full.contact-section img {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.custom-section-full.contact-section .contact-person {
-    text-align: center;
-}
-
-.custom-section-full.contact-section .contact-person p {
-    font-weight: 700;
-    font-size: 12px;
-}
-
-.custom-section-full.contact-section .contact-person:nth-child(1) {
-    margin-right: 15px;
-}
-
-.custom-section-full.contact-section .contact-person:nth-child(2) {
-    margin-left: 15px;
-}
-
-.hidden {
-    display: none!important;
-}
-
-
-</style>

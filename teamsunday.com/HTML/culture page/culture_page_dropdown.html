@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="culture_page.css">
 </head>
 <body>
 <section id="content">
@@ -72,7 +73,7 @@
 .accordion-container {
     position: relative;
     width: 100%;
-    border: 1px solid #0079c1;
+    /* border: 1px solid #0079c1; */
     border-top: none;
     outline: 0;
     cursor: pointer;
@@ -84,12 +85,16 @@
     position: relative;
     margin: 0;
     padding: 0.625em 0.625em 0.625em 2em;
-    border-top: 1px solid #0079c1;
+    border-top: 1px solid var(--blue);
     font-size: 1.25em;
     font-weight: normal;
-    color: #0079c1;
+    color: var(--blue);
     font-weight: 700;
     cursor: pointer;
+}
+
+.accordion-container .article-title:nth-child(1) {
+    border-top: transparent;
 }
 
 .accordion-container .article-title:hover,
@@ -111,7 +116,6 @@
     left: 12px;
     font-style: normal;
     font-size: 1.625em;
-    sans-serif;
     color: #0079c1;
 }
 
@@ -157,30 +161,30 @@
 
 <script>
 $(function() {
-		var Accordion = function(el, multiple) {
-				this.el = el || {};
-				this.multiple = multiple || false;
+    var Accordion = function(el, multiple) {
+        this.el = el || {};
+        this.multiple = multiple || false;
 
-				var links = this.el.find('.article-title');
-				links.on('click', {
-						el: this.el,
-						multiple: this.multiple
-				}, this.dropdown)
-		}
+        var links = this.el.find('.article-title');
+        links.on('click', {
+                el: this.el,
+                multiple: this.multiple
+        }, this.dropdown)
+    }
 
-		Accordion.prototype.dropdown = function(e) {
-				var $el = e.data.el;
-				$this = $(this),
-						$next = $this.next();
+    Accordion.prototype.dropdown = function(e) {
+        var $el = e.data.el;
+        $this = $(this),
+            $next = $this.next();
 
-				$next.slideToggle();
-				$this.parent().toggleClass('open');
+        $next.slideToggle();
+        $this.parent().toggleClass('open');
 
-				if (!e.data.multiple) {
-						$el.find('.accordion-content').not($next).slideUp().parent().removeClass('open');
-				};
-		}
-		var accordion = new Accordion($('.accordion-container'), false);
+        if (!e.data.multiple) {
+            $el.find('.accordion-content').not($next).slideUp().parent().removeClass('open');
+        };
+    }
+    var accordion = new Accordion($('.accordion-container'), false);
 });
 
 $(document).on('click', function (event) {
