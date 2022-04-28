@@ -197,8 +197,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		let secondTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table.second-table > tbody");
 		$(secondTable).html(secondColorArray);
 	};
-	
-
 });
 
 
