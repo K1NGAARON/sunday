@@ -441,7 +441,7 @@
     font-family: 'Poppins';
     font-weight: 700;
     font-size: 20px;
-    color: var(--purple);
+    color: var(--blue);
     margin-bottom: 10px;
 }
 
@@ -508,7 +508,7 @@
 .single-item > .steps-toggle.active:before {
     width: 32px;
     height: 32px;
-    background-color: var(--purple);
+    background-color: var(--blue);
     margin-top: -8px;
     transition: width .5s;
 }
@@ -519,7 +519,7 @@
     padding: 30px;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--purple);
+    border: 1px solid var(--blue);
     border-radius: 20px;
     box-shadow: 0 7px 7px 0 rgb(34 43 55 / 15%);
 }
