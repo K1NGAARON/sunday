@@ -1,4 +1,4 @@
-$(function() {
+$( document ).ready(function() {
     var Accordion = function(el, multiple) {
         this.el = el || {};
         this.multiple = multiple || false;
@@ -13,20 +13,23 @@ $(function() {
     Accordion.prototype.dropdown = function(e) {
         var $el = e.data.el;
         $this = $(this),
-            $next = $this.next();
+            $next = $(this).next();
 
         $next.slideToggle();
-        $this.parent().toggleClass('open');
+        $(this).parent().toggleClass('open');
 
         if (!e.data.multiple) {
             $el.find('.accordion-content').not($next).slideUp().parent().removeClass('open');
         };
     }
     var accordion = new Accordion($('.accordion-container'), false);
+
+    $(document).on('click', function (event) {
+    if (!$(event.target).closest('#accordion').length) {
+        $(this).parent().toggleClass('open');
+    }
+    });
 });
 
-$(document).on('click', function (event) {
-  if (!$(event.target).closest('#accordion').length) {
-    $this.parent().toggleClass('open');
-  }
-});
+
+    
