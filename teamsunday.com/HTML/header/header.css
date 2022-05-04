@@ -140,6 +140,10 @@ a:hover {
     padding: 16px 16px;
 }
 
+.nav-toggle.active {
+    color: var(--purple);
+}
+
 .nav-item {
     margin: 0 15px;
     text-decoration: none;
