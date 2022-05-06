@@ -22,19 +22,19 @@ $(document).ready(function() {
     const timelineSteps = [
         {
             stepTitle : 'Interview HR team',
-            stepBody : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum reiciendis aut perferendis! Praesentium, quidem autem!'
+            stepBody : 'We received your resume and motivation letter: our international recruiter will set up a first meeting with you to get to know you better and talk about your future goals.'
         },
         {
             stepTitle : 'Interview direct manager',
-            stepBody : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum reiciendis aut perferendis! Praesentium, quidem autem!'
+            stepBody : 'You did well, we feel there could be a match: meet your (future) manager.'
         },
         {
             stepTitle : 'Interview founders',
-            stepBody : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum reiciendis aut perferendis! Praesentium, quidem autem!'
+            stepBody : 'Our founders love to meet you and see if they feel the match as well.'
         },
         {
             stepTitle : 'Welcome on board!',
-            stepBody : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum reiciendis aut perferendis! Praesentium, quidem autem!'
+            stepBody : 'Welcome aboard! We will guide you through your first days with an entire onboarding process.'
         }
     ]
     

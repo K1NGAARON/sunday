@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .custom-row .custom-col .client-testimonial {
     font-size: 24px;
     font-style: italic;

@@ -188,7 +188,9 @@
 }
 
 #counter-section .custom-row .counter {
+    font-family: Poppins;
     font-size: 56px;
+    font-weight: 700;
 }
 
 #counter-section .custom-row .description {
