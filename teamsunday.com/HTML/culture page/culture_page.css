@@ -199,7 +199,7 @@
 }
 
 .review-wrapper {
-    background-color: var(--light-grey);
+    background-color: var(--blue);
     border-radius: 9px;
     padding: 10px 30px;
 }
@@ -228,20 +228,23 @@
     font-family: Poppins;
     font-weight: 700;
     font-size: 16px;
-    color: var(--black-3);
+    color: var(--white);
 }
 
 .review-wrapper .review-content .position {
     font-size: 12px;
-    color: var(--black-3);
+    color: var(--white);
 }
 
 .review-wrapper .review-content .review-text {
     font-size: 20px;
     font-style: italic;
-    color: var(--black-3);
+    color: var(--white);
 }
 
+.custom-section-full.grey-section {
+    background-color: var(--light-grey);
+}
 
 .custom-section-full.contact-section {
     background-color: #62b5e570;

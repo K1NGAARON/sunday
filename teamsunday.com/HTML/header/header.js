@@ -1,18 +1,12 @@
 $(document).ready(function() {
-    // Show dropdown on click
     $(".nav-toggle").on('click', function() {
-        $(this).next().toggleClass("show").siblings().removeClass("show");
+        $(this).next(".nav-dropdown").toggleClass("show").siblings(".nav-dropdown").removeClass("show");
+        $(this).toggleClass("active").siblings(".nav-toggle").removeClass("active");
     });
 
-
-
-    // Add focus class to "open" nav item
-    
-
-
-
-
-
-
-
+    // Small menu
+    $("#menu-toggle").on("click", function() {
+        $(".small-menu-wrapper").toggle("show").toggleClass("opened");
+    });
 });
+

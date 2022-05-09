@@ -142,6 +142,7 @@ a:hover {
 
 .nav-toggle.active {
     color: var(--purple);
+    font-weight: 700;
 }
 
 .nav-item {
@@ -155,7 +156,8 @@ a:hover {
     color: var(--purple);
 }
 
-#navigation .fa-caret-down {
+#navigation .fa-caret-down,
+.small-menu-content .fa-caret-down {
     margin-left: 5px;
 }
 
@@ -282,15 +284,74 @@ a:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* SMALL MENU */
+#small-menu {
+    display: none;
+}
+
+
+@media all and (max-width: 860px) {
+    .contact-bar,
+    .sticky-announce-wrapper,
+    #header {
+        display: none;
+    }
+
+    .small-menu-wrapper {
+        display: none;
+        background-color: #fafafa;
+    }
+
+    .small-menu-wrapper.show {
+        display: block;
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+
+    .small-menu-wrapper.opened {
+        border-top: 1px solid #702dbd50;
+    }
+
+    .small-menu-wrapper .small-menu-content {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #small-menu {
+        display: block;
+        box-shadow: 0 4px 2px -2px rgb(0 0 0 / 5%);
+    }
+
+    #menu-toggle {
+        font-size: 50px;
+        color: var(--black);
+    }
+
+    .topnav-content-sm {
+        position: relative;
+        display: flex;
+        padding: 10px 30px;
+        align-items: center;
+    }
+
+    .topnav-content-sm .header-col {
+        width: 50%;
+    }
+
+    .topnav-content-sm .header-col:last-child {
+        text-align: right;
+    }
+
+    .sunday-nav-logo {
+        width: 250px;
+    }
+
+    .small-menu-wrapper .small-menu-content .nav-item {
+        font-weight: 700;
+        font-size: 16px;
+        margin: 10px 0;
+    }
+}
