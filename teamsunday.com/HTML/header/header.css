@@ -215,6 +215,7 @@ a:hover {
 
 .nav-dropdown.show {
     display: flex;
+    z-index: 99;
 }
 
 .nav-dropdown h4 {
