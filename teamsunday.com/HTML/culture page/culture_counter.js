@@ -35,7 +35,7 @@ function animate(obj, initVal, lastVal, duration) {
     
     let text1 = document.getElementById('0101'); // Countries
     let text2 = document.getElementById('0102'); // Employees
-    let text3 = document.getElementById('0103'); // Clients
+    let text3 = document.getElementById('0103'); // Amount of nationalities
     // let text4 = document.getElementById('0104'); // Male-Female
     let text5 = document.getElementById('0105'); // Average Age
     
@@ -51,8 +51,8 @@ function animate(obj, initVal, lastVal, duration) {
 $.first_time = true;
 $(window).scroll(function() {
     if($.first_time == true) {
-        var top_of_element = $(".custom-row.platform-counter").offset().top;
-        var bottom_of_element = $(".custom-row.platform-counter").offset().top + $(".custom-row.platform-counter").outerHeight();
+        var top_of_element = $(".timeline-row-section").offset().top;
+        var bottom_of_element = $(".timeline-row-section").offset().top + $(".timeline-row-section").outerHeight();
         var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
         var top_of_screen = $(window).scrollTop();
     

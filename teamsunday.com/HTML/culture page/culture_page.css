@@ -88,16 +88,27 @@
 
 .custom-section-full .custom-col.relative-col {
     position: relative;
+    text-align: center;
+}
+
+.custom-section-full .custom-col.relative-col img {
+    margin: 0 auto;
 }
 
 .custom-section-full .custom-col.relative-col h2 {
     position: absolute;
     top: 25%;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
 }
 
 .custom-section-full .custom-col.relative-col .custom-btn {
     position: absolute;
     top: 35%;
+    left: 60%;
+    width: 300px;
+    margin-left: -150px;
 }
 
 .center-content {
@@ -185,10 +196,13 @@
     height: auto;
 }
 
-#gallery img {
-    margin: 0 20px;
-    max-width: 300px;
-    height: auto;
+#gallery .full-width {
+    width: 100%;
+}
+
+#gallery .full-width img {
+    max-width: 25%;
+    margin: 0;
 }
 
 #counter-section {
@@ -250,7 +264,7 @@
 }
 
 .review-wrapper .review-content .review-text {
-    font-size: 20px;
+    font-size: 18px;
     font-style: italic;
     color: var(--white);
 }
