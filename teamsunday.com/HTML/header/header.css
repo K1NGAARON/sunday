@@ -327,7 +327,7 @@ a:hover {
     }
 
     #menu-toggle {
-        font-size: 50px;
+        font-size: 30px;
         color: var(--black);
     }
 
@@ -347,7 +347,7 @@ a:hover {
     }
 
     .sunday-nav-logo {
-        width: 250px;
+        width: 150px;
     }
 
     .small-menu-wrapper .small-menu-content .nav-item {
@@ -392,19 +392,15 @@ a:hover {
         display: flex;
     }
 
-    .small-nav-dropdown a {
+    .small-nav-dropdown a,
+    .small-menu-wrapper .multi-dropdown a {
         color: var(--black);
         margin: 5px 0;
+        font-size: 14px;
     }
 
     .small-nav-dropdown .view-all {
         font-weight: 700;
         color: var(--purple);
     }
-
-    .small-menu-wrapper .multi-dropdown a {
-        color: var(--black);
-        margin: 5px 0;
-    }
-
 }
