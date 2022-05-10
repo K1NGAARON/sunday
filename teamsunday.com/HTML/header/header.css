@@ -403,4 +403,8 @@ a:hover {
         font-weight: 700;
         color: var(--purple);
     }
+
+    .small-nav-dropdown .nav-item {
+        font-weight: 400!important;
+    }
 }
