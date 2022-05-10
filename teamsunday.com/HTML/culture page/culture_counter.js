@@ -47,7 +47,7 @@ function animate(obj, initVal, lastVal, duration) {
         animate(text5, 0, 27, 4000);
     }
     
-// Call function when the platform counter section is in viewport
+// Call function when the counter section is in viewport
 $.first_time = true;
 $(window).scroll(function() {
     if($.first_time == true) {
