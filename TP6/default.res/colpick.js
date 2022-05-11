@@ -70,9 +70,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
 	// Change "Style ID" to "Product Category"
-	$('.replace-style-id').each(function(){
-		$(this).text($(this).text().replace(/Style ID/g, "Product Category"));
-	});
+	// $('.replace-style-id').each(function(){
+	// 	$(this).text($(this).text().replace(/Style ID/g, "Product Category"));
+	// });
 
 	// Change "Diffuse Color" to "Color"
 	$('.editor-options.stamp-row-editor-options').next("span").each(function(){
