@@ -117,7 +117,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	let sizesTable = document.querySelectorAll(".border-spacing-table > tbody > .stamp-layout-container");
 
 	let amountOfSizes = sizesTable.length;
-	console.log("Sizes", amountOfSizes);
+		console.log("Sizes", amountOfSizes);
 
 	// Delete first logo pattern image
 	if (amountOfSizes > 0) {
