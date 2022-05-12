@@ -287,6 +287,10 @@
     align-items: flex-start;
 }
 
+#contact-section .custom-col {
+    margin: 0;
+}
+
 #contact-section .custom-col:nth-child(1) ul li::before {
     color: var(--white);
 }
@@ -566,6 +570,10 @@
 }
 
 @media all and (max-width: 540px) {
+    .custom-section-full.first-section {
+        height: 60vh;
+    }
+
     .custom-section-full .custom-row,
     .custom-section-full .custom-row.row-reverse {
         flex-direction: column;
@@ -616,6 +624,10 @@
         width: 24px;
         height: 24px;
         margin-top: -4px;
+    }
+
+    #counter-section {
+        display: none;
     }
 
     #counter-section .custom-row {

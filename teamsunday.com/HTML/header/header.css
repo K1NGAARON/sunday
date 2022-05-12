@@ -35,6 +35,7 @@ a:hover {
 
 #header {
     box-shadow: 0 4px 2px -2px rgb(0 0 0 / 5%);
+    background-color: var(--white);
 }
 
 /* CONTACT ABOVE NAV */
@@ -201,8 +202,6 @@ a:hover {
     transform: scale(1.05);
 }
 
-
-
 .nav-dropdown {
     position: absolute;
     top: 100%;
@@ -211,12 +210,14 @@ a:hover {
     border-top: 1px solid #712dbe50;
     display: none;
     justify-content: flex-start;
-    height: 65vh;
+    height: 75vh;
 }
 
 .nav-dropdown.show {
     display: flex;
     z-index: 99;
+    box-shadow: 0 7px 7px 0 rgb(34 43 55 / 15%);
+    height: 75vh;
 }
 
 .nav-dropdown h4 {
@@ -337,6 +338,7 @@ a:hover {
         display: flex;
         padding: 10px 20px;
         align-items: center;
+        background-color: var(--white);
     }
 
     .topnav-content-sm .header-col {
