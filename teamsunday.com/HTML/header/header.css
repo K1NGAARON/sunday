@@ -137,7 +137,8 @@ a:hover {
     width: 125px;
     height: auto;
     float: left;
-    padding: 16px 16px;
+    padding: 16px;
+    padding-left: 0;
 }
 
 .nav-toggle.active {
@@ -327,14 +328,14 @@ a:hover {
     }
 
     #menu-toggle {
-        font-size: 30px;
+        font-size: 25px;
         color: var(--black);
     }
 
     .topnav-content-sm {
         position: relative;
         display: flex;
-        padding: 10px 30px;
+        padding: 10px 20px;
         align-items: center;
     }
 
