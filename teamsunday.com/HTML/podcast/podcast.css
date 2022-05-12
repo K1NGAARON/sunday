@@ -160,3 +160,10 @@
 
 
 }
+
+@media all and (max-width: 1419px) {
+    #episodes .custom-row,
+    #episodes .custom-row .episode-wrapper {
+        width: 100%;
+    }
+}
