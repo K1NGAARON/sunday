@@ -59,6 +59,15 @@
     width: 30%;
 }
 
+#episode-post .podcast-platform {
+    color: var(--purple);
+    font-weight: 400;
+}
+
+#episode-post .podcast-platform:hover {
+    text-decoration: underline;
+}
+
 #breadcrumb {
     margin: 0;
     padding: 0;
