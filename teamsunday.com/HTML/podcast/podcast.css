@@ -48,6 +48,7 @@
     flex-direction: row;
     width: 70%;
     justify-content: center;
+    align-items: flex-start;
 }
 
 #episode-post .custom-row .col:nth-child(1) {
@@ -84,4 +85,69 @@
 
 #breadcrumb .custom-row a {
     color: var(--purple);
+}
+
+.m-w-70 {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+@media all and (max-width: 540px) {
+    #first h1 {
+        font-size: 22px;
+        width: 100%;
+    }
+
+    #episodes .episode-wrapper {
+        flex-direction: column;
+    }
+
+    #episodes .episode-wrapper img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #episodes .episode-wrapper .col:nth-child(1),
+    #episodes .episode-wrapper .col:nth-child(2) {
+        width: 100%;
+    }
+
+    #episodes .episode-wrapper h2 {
+        font-size: 18px;
+    }
+
+    .m-w-70 {
+        max-width: none;
+        margin: unset;
+    }
+
+    #episode-post .custom-row {
+        flex-direction: column;
+    }
+
+    #episode-post .custom-row .col:nth-child(1),
+    #episode-post .custom-row .col:nth-child(2) {
+        width: 100%;
+    }
+
+    #episode-post .custom-row .col .episode-video {
+        width: 100%;
+        height: auto;
+    }
+
+    #episode-post .custom-row h3 {
+        font-size: 18px;
+    }
+
+    #breadcrumb .custom-row {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #breadcrumb .custom-row a, 
+    #breadcrumb .custom-row p {
+        font-size: 10px;
+    }
+
+
 }
