@@ -10,14 +10,11 @@
     line-height: 1.2;
 }
 
-.hs-button.primary.large {
-    margin-left: 0;
-}
-
 ul li {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
+    font-family: Poppins;
 }
 
 .vce-row[data-vce-stretch-content=true] {
@@ -150,6 +147,7 @@ ul li {
 /* FIRST SECTION */
 .custom-section-full.first-section {
     position: relative;
+    max-height: none!important;
 }
 .custom-section-full.first-section .custom-row {
     width: 90%;
@@ -409,6 +407,7 @@ img {
     font-weight: 700;
     color: var(--dark-grey);
     margin-top: 40px;
+    display: none;
 }
 
 .custom-section-full .custom-logos-wrapper-below-btn {
@@ -416,6 +415,7 @@ img {
     flex-wrap: wrap;
     width: 60%;
     max-width: 360px;
+    display: none!important;
 }
 
 #contact-section {
