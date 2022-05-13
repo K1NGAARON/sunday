@@ -29,9 +29,10 @@
 }
 
 .custom-section-full.first-section {
-    background-image: url("https://teamsunday.com/wp-content/uploads/2022/05/Sunday-team-at-the-teambuilding.jpg");
+    background-image: url("https://teamsunday.com/wp-content/uploads/2022/05/Sunday-Team-2.jpg");
     height: 90vh;
     position: relative;
+    background-position: center 40%;
 }
 
 .custom-section-full.first-section .custom-row {
@@ -106,7 +107,7 @@
 .custom-section-full .custom-col.relative-col .custom-btn {
     position: absolute;
     top: 35%;
-    left: 60%;
+    left: 55%;
     width: 300px;
     margin-left: -150px;
 }
@@ -572,6 +573,7 @@
 @media all and (max-width: 540px) {
     .custom-section-full.first-section {
         height: 60vh;
+        background-position: center 20%;
     }
 
     .custom-section-full .custom-row,
