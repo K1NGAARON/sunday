@@ -11,3 +11,42 @@ html {
     font-size: 18px;
     font-weight: 700;
 }
+
+
+.custom-section-full.first-section {
+    position: unset;
+    height: 60vh;
+}
+
+.custom-section-full .custom-row h1 {
+    width: unset;
+    position: unset;
+    top: unset;
+    left: unset;
+    color: var(--black);
+}
+
+.custom-section-full .custom-col.relative-col h2 {
+    width: 500px;
+    margin-left: -250px;
+}
+
+.custom-section-full .custom-col.relative-col h2 {
+    top: 40%;
+}
+
+.custom-section-full .custom-col.relative-col .custom-btn {
+    top: 50%;
+}
+
+.custom-section-full .custom-row .usp li::marker {
+    color: var(--purple);
+}
+
+#counter-section .custom-row {
+    margin-top: 0;
+}
+
+.custom-section-full.grey-section .custom-row {
+    margin-bottom: 0;
+}
