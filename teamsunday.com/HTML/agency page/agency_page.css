@@ -15,8 +15,12 @@ html {
 
 .custom-section-full.first-section {
     position: unset;
-    height: 60vh;
+    height: 70vh;
+    background-image: url("https://teamsunday.com/wp-content/uploads/2022/01/Brooklyn-header-image.jpg");
+    background-position: top center;
 }
+
+
 
 .custom-section-full .custom-row h1 {
     width: unset;
@@ -24,6 +28,25 @@ html {
     top: unset;
     left: unset;
     color: var(--black);
+}
+
+#intro .custom-row {
+    width: 90%;
+    padding: 0;
+}
+
+#intro .custom-row p {
+    width: 70%;
+}
+
+#gallery .custom-row {
+    padding: 0;
+}
+
+.custom-section-full .custom-row {
+    width: 90%;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .custom-section-full .custom-col.relative-col h2 {
@@ -47,6 +70,89 @@ html {
     margin-top: 0;
 }
 
+
+#counter-section,
+.contact-section {
+    background-color: var(--black)!important;
+}
+
+.custom-section-full .custom-row .custom-btn {
+    background-color: var(--black)!important;
+}
+
+.review-wrapper {
+    background-color: var(--black);
+}
+
+
+
+
+
+
+
 .custom-section-full.grey-section .custom-row {
     margin-bottom: 0;
+}
+
+#strength .custom-row {
+    width: 90%;
+    padding-right: 0;
+}
+
+
+/* DESIGN STEPS */
+.custom-wrapper .custom-row {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.custom-wrapper h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.custom-wrapper .solution-btn.active,
+.custom-wrapper.solution-btn:hover {
+    background-color: var(--purple)!important;
+    color: var(--white)!important;
+}
+
+.custom-wrapper .solution-btn-wrapper {
+    margin-top: 20px;
+    display: flex;
+}
+
+.transparent-btn.vce-button--style-basic-container a.vce-button--style-basic,
+.btn.vce-button--style-basic-container a.vce-button--style-basic {
+	font-size: 12px!important;
+}
+
+.custom-wrapper .solution-btn {
+    display: flex;
+    max-width: 400px;
+    margin: 0 20px 20px 0;
+    padding: 13px 23px;
+    border-radius: 6px!important;
+    background-color: #f5f5f5!important;
+    background-color: var(--light-grey)!important;
+    color: #000;
+    color: var(--black);
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
