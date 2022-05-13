@@ -638,3 +638,33 @@ img {
         height: 60vh;
     }
 }
+
+
+
+
+/* CLIENT LOGOS */
+.client-logos-wrapper {
+    background-color: var(--light-grey);
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+}
+
+.client-logos-wrapper .client-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.client-logos-wrapper .client-logos img {
+    max-width: 125px;
+    height: auto;
+    margin: 0 20px;
+}
+
+#slideshow-row {
+    margin-top: 0;
+    padding-top: 0;
+}

@@ -1,3 +1,4 @@
+
 // product tags
 let productInspirationTags = document.querySelectorAll(".product-tags");
 
@@ -71,7 +72,7 @@ function showSocks() {
 function showSweatpants() {
   firstSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Sweatpants-1-1.jpg";
   secondSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Sweatpants-2-1.jpg";
-  thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/03/Sweatpants-1-1.jpg";
+  thirdSlide.src = "https://teamsunday.com/wp-content/uploads/2022/04/Sweatpants-3.jpg";
 };
 
 function showBoxers() {
@@ -98,10 +99,10 @@ polosBtn.addEventListener("click", showPolos);
 // Design steps
 let titleHolder = document.querySelector(".design-steps-text-holder .title-holder")
 let textHolder = document.querySelector(".design-steps-text-holder .text-holder")
-let step1Text = "We’ll have a meeting together and go through everything we need to design amazing clothing for you. For example: The brand guidelines & colors, the target audience, the products & styles you like, …";
+let step1Text = "We’ll sit together and go through everything we need to design amazing clothing for your: brand guidelines, target audience, styles you like, …";
 let step2Text = "Our team of design experts creates a 3D example of your item, so you get the most realistic vision of the product.";
-let step3Text = "We go through the technical details of your product, Pantone colours, decoration techniques, exact positioning,…";
-let step4Text = "We produce & deliver the items exactly as you ordered, so your team can enjoy your awesome new company fashion and become true brand ambassadors.";
+let step3Text = "We go through the technical details of your product, Pantone colours, decoration techniques, exact positioning, …";
+let step4Text = "We Produce & Deliver the items exactly as you ordered, so your team can enjoy your awesome new company fashion.";
 
 let titleHolder1 = "Design Briefing";
 let titleHolder2 = "3D Virtual Design";
