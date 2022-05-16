@@ -37,8 +37,6 @@ let jobsArray = [
     }
 ];
 
-
-
 // Create job post wrapper
 function createJobBox() {
     for (let i = 0; i < jobsArray.length; i++) {
