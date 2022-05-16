@@ -1,0 +1,43 @@
+:root {
+    --box-shadow: 0 7px 7px 0 rgb(34 43 55 / 15%)
+}
+
+.custom-section-full .custom-row h1 {
+    position: unset;
+    top: unset;
+    left: unset;
+    width: 100%;
+    color: var(--black);
+}
+
+.custom-section-full .custom-row.center-text {
+    text-align: center;   
+}
+
+#job-offers.custom-section-full {
+    background-color: var(--light-grey);
+}
+
+.custom-section-full .custom-row .job-post {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    justify-content: center;
+    margin: 0 20px;
+    border-radius: 9px;
+    box-shadow: var(--box-shadow);
+}
+
+.custom-section-full .custom-row .job-post img {
+    width: 100%;
+    height: auto;
+}
+
+.custom-section-full .custom-row .job-post h3 {
+    font-size: 18px;
+}
+
+.custom-section-full .custom-row .job-post h3,
+.custom-section-full .custom-row .job-post a {
+    margin: 20px 10px;
+}
