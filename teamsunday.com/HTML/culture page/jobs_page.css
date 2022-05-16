@@ -2,6 +2,32 @@
     --box-shadow: 0 7px 7px 0 rgb(34 43 55 / 15%)
 }
 
+
+.custom-section-full .filter-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-section-full .custom-row .filter-wrapper label {
+    margin-bottom: 0;
+    margin-right: 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.custom-section-full .custom-row .filter-wrapper select {
+    border: none;
+}
+
+.custom-section-full .custom-row .filter-wrapper select:focus-visible {
+    border: 2px solid var(--purple);
+    border-radius: 6px;
+}
+
+
+
 .custom-section-full .custom-row h1 {
     position: unset;
     top: unset;
