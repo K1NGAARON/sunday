@@ -6,34 +6,79 @@
 
 
 const jobsWrapper = document.querySelector("#jobs-section");
-let jobsArray = [
+const countryFlags = [
+    {
+        'belgium' : '',
+        'Netherlands' : '',
+        'Germany'  : '',
+        'Ireland' : '',
+        'Poland' : ''
+    }
+]
+const jobsArray = [
     {
         'positionTitle' : 'International Recruiter',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
-        'positionALT' : '',
+        'positionALT' : 'International recruiter at Sunday',
         'positionURL' : 'x',
-        'positionCountry' : 'Belgium'
+        'positionCountry' : 'Belgium',
+        'positionCity' : 'Roeselare'
     },
     {
-        'positionTitle' : 'SDR Germany',
+        'positionTitle' : 'Graphic Designer',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
-        'positionALT' : '',
+        'positionALT' : 'Graphic designer at Sunday',
         'positionURL' : 'x',
-        'positionCountry' : 'Germany'
+        'positionCountry' : 'Poland',
+        'positionCity' : 'Łódź'
     },
     {
-        'positionTitle' : 'Job Ireland',
+        'positionTitle' : 'PHP Developer',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
-        'positionALT' : '',
+        'positionALT' : 'PHP Developer at Sunday',
         'positionURL' : 'x',
-        'positionCountry' : 'Ireland'
+        'positionCountry' : 'Belgium',
+        'positionCity' : 'Roeselare'
     },
     {
-        'positionTitle' : 'Job Ireland',
+        'positionTitle' : 'Account Executive',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
-        'positionALT' : '',
+        'positionALT' : 'Account executive at Sunday',
         'positionURL' : 'x',
-        'positionCountry' : 'Ireland'
+        'positionCountry' : 'Germany',
+        'positionCity' : 'Berlin'
+    },
+    {
+        'positionTitle' : 'Sales Development Representative',
+        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
+        'positionALT' : 'Sales development representative at Sunday',
+        'positionURL' : 'x',
+        'positionCountry' : 'Ireland',
+        'positionCity' : 'Dublin'
+    },
+    {
+        'positionTitle' : 'Sales Development Representative',
+        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
+        'positionALT' : 'Sales development representative at Sunday',
+        'positionURL' : 'x',
+        'positionCountry' : 'Netherlands',
+        'positionCity' : 'Amsterdam'
+    },
+    {
+        'positionTitle' : 'Sales Development Representative',
+        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
+        'positionALT' : 'Sales development representative at Sunday',
+        'positionURL' : 'x',
+        'positionCountry' : 'Belgium',
+        'positionCity' : 'Roeselare'
+    },
+    {
+        'positionTitle' : 'Sales Development Representative',
+        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
+        'positionALT' : 'Sales development representative at Sunday',
+        'positionURL' : 'x',
+        'positionCountry' : 'Germany',
+        'positionCity' : 'Berlin'
     }
 ];
 
@@ -46,6 +91,12 @@ function createJobBox() {
                     <img src="${jobsArray[i].positionIMG}" alt="${jobsArray[i].positionALT}">
                 </div>
                 <div class="col">
+                    <div>
+                        <img src="" alt="${jobsArray[i].positionCountry}">
+                        <p>
+                            ${jobsArray[i].positionCity}
+                        </p>
+                    </div>
                     <h3>
                         ${jobsArray[i].positionTitle}
                     </h3>
