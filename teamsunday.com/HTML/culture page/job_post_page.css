@@ -4,6 +4,7 @@
     left: unset;
     width: 100%;
     color: var(--black);
+    font-size: 32px;
 }
 
 .row-section .breadcrumb {
@@ -24,7 +25,7 @@
     color: var(--white);
     padding: 30px;
     margin-top: 20px;
-    width: 70%;
+    width: 75%;
 }
 
 .row-section .contact-box a {
@@ -33,6 +34,7 @@
 
 .row-section ul {
     margin-left: 20px;
+    font-size: 14px;
 }
 
 .row-section ul li::marker {
@@ -54,4 +56,15 @@
 .form-left {
     margin-left: 0!important;
     padding-left: 0!important;
+}
+
+
+#job-post-page.custom-section-full .custom-row .contact-box .white-btn.custom-btn {
+    background-color: var(--white)!important;
+    color: var(--purple)!important;
+    margin-bottom: 0;
+}
+
+#job-post-page .contact-box h3 {
+    font-size: 16px;
 }
