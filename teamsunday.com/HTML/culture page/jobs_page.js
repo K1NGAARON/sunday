@@ -1,13 +1,13 @@
 const dropdown = document.querySelector("#country");
 
 function dropdownFilter() {
-    $(this).find("option:selected").each(function(){
+    $(this).find("option:selected").each(function() {
         var selectedCountry = $(this).attr("value");
-        if(selectedCountry){
-            $('.job-post').show();
+        if(selectedCountry) {
+            $('.job-post').show(); // Show everything first to ensure that making multiple selections work (kinda like a reset feature)
             $(".job-post").not("." + selectedCountry).hide();
             $(".job-post" + selectedCountry).show();
-        } else{
+        } else {
             $(".job-post").hide();
         }
     });
@@ -26,16 +26,6 @@ const jobsArray = [
         'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png' 
     },
     {
-        'positionTitle' : 'PHP Developer',
-        'positionText' : 'lorem10',
-        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
-        'positionALT' : 'PHP Developer at Sunday',
-        'positionURL' : 'x',
-        'positionCountry' : 'Belgium',
-        'positionCity' : 'Roeselare',
-        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png'
-    },
-    {
         'positionTitle' : 'Account Executive',
         'positionText' : 'lorem10',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
@@ -47,7 +37,7 @@ const jobsArray = [
     },
     {
         'positionTitle' : 'Sales Development Representative',
-        'positionText' : 'You will be in charge to extend our reach and feed the Irish team with Qualified Leads.',
+        'positionText' : 'Our business starts with you. Hunt for promising leads with us!',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
         'positionALT' : 'Sales development representative at Sunday',
         'positionURL' : 'x',
@@ -57,7 +47,7 @@ const jobsArray = [
     },
     {
         'positionTitle' : 'Sales Development Representative',
-        'positionText' : 'You will be in charge to extend our reach and feed the Dutch team with Qualified Leads.',
+        'positionText' : 'Our business starts with you. Hunt for promising leads with us!',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
         'positionALT' : 'Sales development representative at Sunday',
         'positionURL' : 'x',
@@ -67,7 +57,7 @@ const jobsArray = [
     },
     {
         'positionTitle' : 'Sales Development Representative',
-        'positionText' : 'lorem10',
+        'positionText' : 'Our business starts with you. Hunt for promising leads with us!',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
         'positionALT' : 'Sales development representative at Sunday',
         'positionURL' : 'x',
@@ -77,7 +67,7 @@ const jobsArray = [
     },
     {
         'positionTitle' : 'Sales Development Representative',
-        'positionText' : 'lorem10',
+        'positionText' : 'Our business starts with you. Hunt for promising leads with us!',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
         'positionALT' : 'Sales development representative at Sunday',
         'positionURL' : 'x',
