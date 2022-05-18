@@ -1,84 +1,89 @@
-// dropdown code
+const dropdown = document.querySelector("#country");
 
-
-
-
-
+function dropdownFilter() {
+    $(this).find("option:selected").each(function(){
+        var selectedCountry = $(this).attr("value");
+        if(selectedCountry){
+            $('.job-post').show();
+            $(".job-post").not("." + selectedCountry).hide();
+            $(".job-post" + selectedCountry).show();
+        } else{
+            $(".job-post").hide();
+        }
+    });
+};
 
 const jobsWrapper = document.querySelector("#jobs-section");
-const countryFlags = [
-    {
-        'belgium' : '',
-        'Netherlands' : '',
-        'Germany'  : '',
-        'Ireland' : '',
-        'Poland' : ''
-    }
-]
 const jobsArray = [
     {
         'positionTitle' : 'International Recruiter',
+        'positionText' : 'lorem10',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
         'positionALT' : 'International recruiter at Sunday',
         'positionURL' : 'x',
         'positionCountry' : 'Belgium',
-        'positionCity' : 'Roeselare'
-    },
-    {
-        'positionTitle' : 'Graphic Designer',
-        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
-        'positionALT' : 'Graphic designer at Sunday',
-        'positionURL' : 'x',
-        'positionCountry' : 'Poland',
-        'positionCity' : 'Łódź'
+        'positionCity' : 'Roeselare',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png' 
     },
     {
         'positionTitle' : 'PHP Developer',
+        'positionText' : 'lorem10',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
         'positionALT' : 'PHP Developer at Sunday',
         'positionURL' : 'x',
         'positionCountry' : 'Belgium',
-        'positionCity' : 'Roeselare'
+        'positionCity' : 'Roeselare',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png'
     },
     {
         'positionTitle' : 'Account Executive',
+        'positionText' : 'lorem10',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
         'positionALT' : 'Account executive at Sunday',
         'positionURL' : 'x',
         'positionCountry' : 'Germany',
-        'positionCity' : 'Berlin'
+        'positionCity' : 'Berlin',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Germany-Flag.png'
     },
     {
         'positionTitle' : 'Sales Development Representative',
+        'positionText' : 'You will be in charge to extend our reach and feed the Irish team with Qualified Leads.',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
         'positionALT' : 'Sales development representative at Sunday',
         'positionURL' : 'x',
         'positionCountry' : 'Ireland',
-        'positionCity' : 'Dublin'
+        'positionCity' : 'Dublin',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Ireland-Flag.png'
     },
     {
         'positionTitle' : 'Sales Development Representative',
+        'positionText' : 'You will be in charge to extend our reach and feed the Dutch team with Qualified Leads.',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
         'positionALT' : 'Sales development representative at Sunday',
         'positionURL' : 'x',
         'positionCountry' : 'Netherlands',
-        'positionCity' : 'Amsterdam'
+        'positionCity' : 'Amsterdam',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Netherlands-Flag.png'
     },
     {
         'positionTitle' : 'Sales Development Representative',
+        'positionText' : 'lorem10',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
         'positionALT' : 'Sales development representative at Sunday',
         'positionURL' : 'x',
         'positionCountry' : 'Belgium',
-        'positionCity' : 'Roeselare'
+        'positionCity' : 'Roeselare',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png'
     },
     {
         'positionTitle' : 'Sales Development Representative',
+        'positionText' : 'lorem10',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DSC01202-1-1.jpg',
         'positionALT' : 'Sales development representative at Sunday',
         'positionURL' : 'x',
         'positionCountry' : 'Germany',
-        'positionCity' : 'Berlin'
+        'positionCity' : 'Berlin',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Germany-Flag.png'
     }
 ];
 
@@ -91,22 +96,25 @@ function createJobBox() {
                     <img src="${jobsArray[i].positionIMG}" alt="${jobsArray[i].positionALT}">
                 </div>
                 <div class="col">
-                    <div>
-                        <img src="" alt="${jobsArray[i].positionCountry}">
-                        <p>
+                    <div class="country-wrapper">
+                        <img class="flag-img" src="${jobsArray[i].flagURL}" alt="${jobsArray[i].positionCountry}">
+                        <p class="flag-country">
                             ${jobsArray[i].positionCity}
                         </p>
                     </div>
                     <h3>
                         ${jobsArray[i].positionTitle}
                     </h3>
+                    <p>
+                        ${jobsArray[i].positionText}
+                    </p>
                     <a class="custom-btn" href="${jobsArray[i].positionURL}">Read more</a>
                 </div>
             </div>
         `;
-        console.log(jobTemplate);
         jobsWrapper.insertAdjacentHTML("beforeend", jobTemplate);
     };
 };
 
 createJobBox();
+dropdown.addEventListener('change', dropdownFilter);
