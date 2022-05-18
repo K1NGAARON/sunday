@@ -116,5 +116,8 @@ function createJobBox() {
     };
 };
 
-createJobBox();
+$(document).ready(function() {
+    createJobBox();
+});
+
 dropdown.addEventListener('change', dropdownFilter);
