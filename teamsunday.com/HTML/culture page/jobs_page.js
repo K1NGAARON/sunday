@@ -3,6 +3,7 @@ const dropdown = document.querySelector("#country");
 function dropdownFilter() {
     $(this).find("option:selected").each(function() {
         var selectedCountry = $(this).attr("value");
+        
         if(selectedCountry) {
             $('.job-post').show(); // Show everything first to ensure that making multiple selections work (kinda like a reset feature)
             $(".job-post").not("." + selectedCountry).hide();
