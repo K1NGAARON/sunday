@@ -28,6 +28,10 @@ html {
     font-size: 42px;
 }
 
+.custom-section-full .custom-row ul li {
+    font-size: 14px;
+}
+
 .custom-section-full .custom-row ul li::marker {
     color: var(--purple);
 }
