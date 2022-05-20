@@ -102,6 +102,7 @@
     left: 50%;
     width: 300px;
     margin-left: -150px;
+    font-family: Poppins;
 }
 
 .custom-section-full .custom-col.relative-col .custom-btn {
@@ -158,18 +159,21 @@
     position: absolute;
     top: 30%;
     width: 60%;
+    font-family: Poppins;
 }
 
 .custom-section-full h2 {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 15px;
+    font-family: Poppins;
 }
 
 .custom-section-full h3 {
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 15px;
+    font-family: Poppins;
 }
 
 .custom-section-full p:not(.counter) {
@@ -711,6 +715,7 @@ html {
     top: unset;
     left: unset;
     color: var(--black);
+    font-family: Poppins;
 }
 
 #intro .custom-row {
@@ -735,10 +740,12 @@ html {
 .custom-section-full .custom-col.relative-col h2 {
     width: 500px;
     margin-left: -250px;
+    font-family: Poppins;
 }
 
 .custom-section-full .custom-col.relative-col h2 {
     top: 40%;
+    font-family: Poppins;
 }
 
 .custom-section-full .custom-col.relative-col .custom-btn {
@@ -797,6 +804,7 @@ html {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 20px;
+    font-family: Poppins;
 }
 
 .custom-wrapper .solution-btn.active,
