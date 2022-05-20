@@ -13,6 +13,10 @@
     align-items: center;
 }
 
+.row-section .breadcrumb a {
+    color: var(--purple);
+}
+
 .row-section .breadcrumb a,
 .row-section .breadcrumb p {
     margin: 0!important;

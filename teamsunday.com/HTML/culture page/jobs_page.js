@@ -22,40 +22,60 @@ const jobsWrapper = document.querySelector("#jobs-section");
 const jobsArray = [
     {
         'positionTitle' : 'International Recruiter',
-        'positionText' : 'lorem10',
+        'positionText' : 'You’re in charge of growing the Sunday team with A-players.',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/BE.jpg',
         'positionALT' : 'International recruiter at Sunday',
-        'positionURL' : 'x',
+        'positionURL' : '/en/jobs/international-recruiter-belgium/',
         'positionCountry' : 'Belgium',
         'positionCity' : 'Roeselare',
         'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png' 
     },
     {
         'positionTitle' : 'Account Executive',
-        'positionText' : 'lorem10',
+        'positionText' : 'Our business grows with you. Close some interesting deals with us!',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DE.jpg',
         'positionALT' : 'Account executive at Sunday',
-        'positionURL' : 'x',
+        'positionURL' : '/en/jobs/account-executive-germany/',
         'positionCountry' : 'Germany',
         'positionCity' : 'Berlin',
         'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Germany-Flag.png'
     },
     {
-        'positionTitle' : 'Sales Development Representative',
-        'positionText' : 'Our business starts with you. Hunt for promising leads with us!',
-        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/IRL2.jpg',
-        'positionALT' : 'Sales development representative at Sunday',
-        'positionURL' : 'x',
+        'positionTitle' : 'Account Executive',
+        'positionText' : 'Our business grows with you. Close some interesting deals with us!',
+        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/EXTRA3.jpg',
+        'positionALT' : 'Account executive at Sunday',
+        'positionURL' : '/en/jobs/account-executive-belgium/',
+        'positionCountry' : 'Belgium',
+        'positionCity' : 'Roeselare',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png'
+    },
+    {
+        'positionTitle' : 'Account Executive',
+        'positionText' : 'Our business grows with you. Close some interesting deals with us!',
+        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/IRL.jpg',
+        'positionALT' : 'Account executive at Sunday',
+        'positionURL' : '/en/jobs/account-executive-ireland/',
         'positionCountry' : 'Ireland',
         'positionCity' : 'Dublin',
         'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Ireland-Flag.png'
+    },
+    {
+        'positionTitle' : 'Account Executive',
+        'positionText' : 'Our business grows with you. Close some interesting deals with us!',
+        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/EXTRA.jpg',
+        'positionALT' : 'Account executive at Sunday',
+        'positionURL' : '/en/jobs/account-executive-netherlands/',
+        'positionCountry' : 'Netherlands',
+        'positionCity' : 'Amsterdam',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Netherlands-Flag.png'
     },
     {
         'positionTitle' : 'Sales Development Representative',
         'positionText' : 'Our business starts with you. Hunt for promising leads with us!',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/NL.jpg',
         'positionALT' : 'Sales development representative at Sunday',
-        'positionURL' : 'x',
+        'positionURL' : '/en/jobs/sales-development-representative-netherlands/',
         'positionCountry' : 'Netherlands',
         'positionCity' : 'Amsterdam',
         'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Netherlands-Flag.png'
@@ -65,7 +85,7 @@ const jobsArray = [
         'positionText' : 'Our business starts with you. Hunt for promising leads with us!',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/BE2.jpg',
         'positionALT' : 'Sales development representative at Sunday',
-        'positionURL' : 'x',
+        'positionURL' : '/en/jobs/sales-development-representative-belgium/',
         'positionCountry' : 'Belgium',
         'positionCity' : 'Roeselare',
         'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png'
@@ -75,10 +95,20 @@ const jobsArray = [
         'positionText' : 'Our business starts with you. Hunt for promising leads with us!',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DE2.jpg',
         'positionALT' : 'Sales development representative at Sunday',
-        'positionURL' : 'x',
+        'positionURL' : '/en/jobs/sales-development-representative-germany/',
         'positionCountry' : 'Germany',
         'positionCity' : 'Berlin',
         'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Germany-Flag.png'
+    },
+    {
+        'positionTitle' : 'Sales Development Representative',
+        'positionText' : 'Our business starts with you. Hunt for promising leads with us!',
+        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/IRL2.jpg',
+        'positionALT' : 'Sales development representative at Sunday',
+        'positionURL' : '/en/jobs/sales-development-representative-ireland/',
+        'positionCountry' : 'Ireland',
+        'positionCity' : 'Dublin',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Ireland-Flag.png'
     }
 ];
 
