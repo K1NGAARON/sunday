@@ -67,6 +67,7 @@
     background-color: var(--white)!important;
     color: var(--purple)!important;
     margin-bottom: 0;
+    display: none;
 }
 
 #job-post-page .contact-box h3 {
