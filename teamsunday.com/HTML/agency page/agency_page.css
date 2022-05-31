@@ -24,6 +24,43 @@
     line-height: 1.8;
 }
 
+#hero-section {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+#hero-section .custom-row h1 {
+    color: var(--white);
+    font-size: 60px;
+    line-height: 1.2;
+}
+
+.custom-section-full.background-grey {
+    background-color: var(--light-grey);
+}
+
+.custom-section-full .custom-row .strength-toggle.active {
+    color: var(--purple);
+}
+
+.custom-section-full .custom-row .strength-toggle:hover {
+    text-decoration: underline;
+}
+
+#contact-section {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
+
+
+
+
+
+
+
+
 .vce-row[data-vce-stretch-content=true] {
     padding: 0!important;
 }
