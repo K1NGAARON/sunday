@@ -11,7 +11,7 @@
 }
 
 .first-section {
-    max-height: 90vh!important;
+    max-height: 85vh!important;
 }
 
 ._checkbox-radio {
@@ -120,7 +120,7 @@
 }
 
 .custom-section-full.first-section .custom-row .custom-col:nth-child(1) {
-    margin-top: calc(100% / 12);
+    margin-top: 5%;
 }
 
 .custom-section-full.first-section .custom-row .custom-col:nth-child(2) {
