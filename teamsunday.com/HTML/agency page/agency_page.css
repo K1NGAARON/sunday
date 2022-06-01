@@ -18,7 +18,7 @@
 
 #hero-section .custom-row h1 {
     color: var(--white);
-    font-size: 60px;
+    font-size: 50px;
     line-height: 1.2;
     font-weight: 700;
     font-family: Poppins;
@@ -156,6 +156,10 @@
     transition: var(--transition);
 }
 
+.client-collections-wrapper img {
+    width: 100%;
+}
+
 
 
 
@@ -223,6 +227,19 @@
     appearance: none;
 }
 
+.custom-section-full .custom-row .custom-btn.white-btn {
+    background-color: var(--white)!important;
+    color: var(--blue);
+    transition: var(--transition);
+}
+
+.custom-section-full .custom-row .custom-btn.white-btn:hover {
+    background-color: var(--white)!important;
+    color: var(--blue);
+    transition: var(--transition);
+    transform: scale(1.05);
+}
+
 .custom-section-full .custom-row .custom-btn:hover {
     background-color: var(--black)!important;
     transition: var(--transition);
@@ -230,7 +247,7 @@
 }
 
 .small-headline {
-    color: var(--dark-grey)!important;
+    color: var(--white)!important;
     font-size: 14px;
     text-transform: uppercase;
 }
