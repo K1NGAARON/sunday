@@ -53,17 +53,17 @@
     background-color: var(--light-grey);
 }
 
-.custom-section-full .custom-row .strength-toggle {
+.custom-section-full .strength-wrapper {
+    background-color: var(--white);
     color: var(--black);
-    font-size: 18px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 0 20px;
 }
 
-.custom-section-full .custom-row .strength-toggle.active {
-    color: var(--purple);
-}
-
-.custom-section-full .custom-row .strength-toggle:hover {
-    text-decoration: underline;
+.custom-section-full .strength-wrapper h3 {
+    margin-bottom: 15px;
 }
 
 #contact-section {
@@ -134,7 +134,27 @@
 }
 
 
+.client-collections-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3);
+    position: relative;
+}
 
+.client-collections-wrapper .collections-title {
+    font-size: 30px;
+    color: var(--white);
+    text-shadow: 3px 3px 2px var(--black);
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    transition: var(--transition);
+}
+
+.client-collections-wrapper .collections-title:hover {
+    transform: scale(1.10);
+    transition: var(--transition);
+}
 
 
 
