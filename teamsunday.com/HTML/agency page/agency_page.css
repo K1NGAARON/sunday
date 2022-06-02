@@ -9,6 +9,7 @@
 #hero-section {
     background-color: var(--blue);
     color: var(--white);
+    height: 90vh;
 }
 
 #hero-section .custom-row {
@@ -66,9 +67,27 @@
     margin-bottom: 15px;
 }
 
+.custom-section-full .lookbook-img {
+    max-height: 800px;
+}
+
 #contact-section {
     background-color: var(--white);
     color: var(--black);
+}
+
+#client-cases .custom-row {
+    margin-bottom: 20px;
+    padding-bottom: 0;
+}
+
+#lookbook-section .custom-row {
+    padding: 0;
+    margin: 0 auto; 
+}
+
+#lookbook-section .custom-row .small-headline {
+    color: var(--dark-grey)!important;
 }
 
 #contact-section ul li::before {
@@ -141,14 +160,29 @@
     position: relative;
 }
 
+.collection-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent, #00000030);
+    z-index: 99;
+}
+
 .client-collections-wrapper .collections-title {
     font-size: 30px;
     color: var(--white);
-    text-shadow: 3px 3px 2px var(--black);
     position: absolute;
-    right: 5px;
-    bottom: 5px;
+    right: 20px;
+    bottom: 10px;
     transition: var(--transition);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.client-collections-wrapper .arrow-img {
+    width: 30px;
 }
 
 .client-collections-wrapper .collections-title:hover {
@@ -158,8 +192,57 @@
 
 .client-collections-wrapper img {
     width: 100%;
+    z-index: 1;
 }
 
+
+/* 3D MODEL */
+model-viewer {
+    width: auto;
+    height: 70vh;
+    background-color: var(--blue);
+}
+
+#default-poster {
+    background-color: transparent!important;
+}
+
+.progress-bar {
+    display: block;
+    width: 33%;
+    height: 10%;
+    max-height: 2%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    border-radius: 25px;
+    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.progress-bar.hide {
+    visibility: hidden;
+    transition: visibility 0.3s;
+}
+
+.update-bar {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 0%;
+    height: 100%;
+    border-radius: 25px;
+    float: left;
+    transition: width 0.3s;
+}
+
+
+
+@media all and (min-width: 1600px) {
+    .custom-section-full .client-logos-wrapper {
+        max-width: 50%;
+    }
+}
 
 
 
@@ -260,11 +343,6 @@
 
 .custom-section-full a:hover {
     transition: var(--transition);
-}
-
-.custom-section-full img {
-    max-width: 600px;
-    height: auto;
 }
 
 .custom-section-full.contact-section .contact-person-wrapper {
