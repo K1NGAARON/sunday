@@ -56,8 +56,8 @@ function createCollections() {
     for (let i = 0; i < collections.length; i++) {
         const collectionTemplate = `
             <div class="client-collections-wrapper">
-            <div class="collection-overlay"></div>
                 <a href="${collections[i].url}">
+            <div class="collection-overlay"></div>
                     <img src="${collections[i].src}" alt="${collections[i].name}">
                     <a href="${collections[i].url}" class="collections-title">${collections[i].name} <img class="arrow-img" src="/wp-content/uploads/2022/06/arrow.svg"></a>
                 </a>
