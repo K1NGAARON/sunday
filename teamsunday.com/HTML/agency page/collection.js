@@ -37,17 +37,17 @@ let collections = [
     {
         'name': 'Brooklyn',
         'src' : '/wp-content/uploads/2022/01/Brooklyn-collection.jpg',
-        'url' : 'google.com'
+        'url' : '/en/collections/local-heroes-of-brooklyn/'
     },
     {
         'name': 'Uberall',
         'src' : '/wp-content/uploads/2021/12/Uberall-Collection-1.jpg',
-        'url' : 'google.com'
+        'url' : '/en/collections/uberall-collection/'
     },
     {
         'name': 'Ablo',
         'src' : '/wp-content/uploads/2022/01/Ablo-collection.jpg',
-        'url' : 'google.com'
+        'url' : '/en/collections/eye-catching-influencers-for-ablo/'
     }
 ];
 
@@ -59,7 +59,7 @@ function createCollections() {
             <div class="collection-overlay"></div>
                 <a href="${collections[i].url}">
                     <img src="${collections[i].src}" alt="${collections[i].name}">
-                    <a class="collections-title">${collections[i].name} <img class="arrow-img" src="/wp-content/uploads/2022/06/arrow.svg"></a>
+                    <a href="${collections[i].url}" class="collections-title">${collections[i].name} <img class="arrow-img" src="/wp-content/uploads/2022/06/arrow.svg"></a>
                 </a>
             </div>
         `; 
