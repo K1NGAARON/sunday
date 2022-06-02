@@ -1,3 +1,7 @@
+:root {
+    --poster-color: transparent;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
