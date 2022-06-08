@@ -126,7 +126,7 @@ form input:focus-visible {
 .custom-section-full h1 {
     font-size: 38px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 30px!important;
     color: var(--white);
 }
 
@@ -155,7 +155,12 @@ form input:focus-visible {
     width: 100%;
     padding-top: 0;
     margin-top: 30px!important;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-section-full .custom-row.flex-col {
+    flex-direction: column;
 }
 
 .custom-section-full.first-section .custom-row .custom-col:nth-child(2) {
