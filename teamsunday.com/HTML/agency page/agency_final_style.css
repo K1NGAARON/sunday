@@ -507,4 +507,48 @@ model-viewer {
     .custom-section-full .custom-col {
         width: 100%;
     }
+
+    #hero-section {
+        height: fit-content;
+    }
+
+    #hero-section .custom-row h1 {
+        font-size: 46px;
+    }
+
+    #hero-section img {
+        display: none;
+    }
+
+    .custom-section-full .strength-wrapper:nth-child(2) {
+        margin: 20px;
+    }
+
+    .custom-section-full h2.heading-lg {
+        font-size: 42px;
+    }
+
+    .custom-section-full h2 {
+        font-size: 32px;
+    }
+
+    #faq .custom-row h2 {
+        font-size: 30px;
+    }
+
+    #faq .custom-row .faq {
+        font-size: 70px;
+    }
+
+    #client-cases .custom-row {
+        flex-direction: row;
+    }
+
+    .client-collections-wrapper .collections-title {
+        font-size: 14px;
+    }
+
+    .client-collections-wrapper .arrow-img {
+        width: 15px;
+    }
 }
