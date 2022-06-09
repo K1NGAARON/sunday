@@ -55,22 +55,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     // Select top mock up
-    let firstIMG = document.querySelector(".image-container > img");
+	let firstIMG = document.querySelector(".image-container > img");
 	let firstIMGSrc = firstIMG.src;
-
 	$('.table-standard.bom-page-table').each(function() {
 		var dynamicDivIMGHolder = `<div class="floating-img"><img src="${firstIMGSrc}"></div>`;
 		$(this).append(dynamicDivIMGHolder);
 	});
-
-	// Add replace-style-id to style ID replacement
-	/*
-	let replaceStyleID = document.querySelectorAll(".header-table > tbody > tr:nth-child(2) > td:nth-child(1)");
-	for (let i = 0; i < replaceStyleID.length; i++) {
-        replaceStyleID[i].classList.add("replace-style-id");
-    }
-
-    */
 
 	// Change "Style ID" to "Product Category"
 	$('.replace-style-id').each(function(){

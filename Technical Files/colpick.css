@@ -140,7 +140,7 @@ table.table-standard {
 }
 
 .table-standard.bom-page-table.bom_table tbody {
-	width: 50%;
+	width: 60%;
 }
 
 .header-table td, table.table-standard td, table.table-standard th {
@@ -184,7 +184,7 @@ table.table-standard {
 }
 
 .stamp-page-top-container .table-standard {
-	width: 50%!important;
+	width: 95%!important;
 	margin: 0 auto;
 	border: 1px solid black;
 	margin-top: 40px;
@@ -194,9 +194,33 @@ table.table-standard {
 	text-align: center!important;
 }
 
-.stamp-page-top-container .table-standard tr td {
-	width: 50%!important;
+/* CHANGE MADE 09 06 2022 */
+.stamp-page-top-container .table-standard tr td:nth-child(1) {
+	width: 10%!important;
+	background-color: rgb(206, 206, 206);
 }
+
+.stamp-page-top-container .table-standard tr td:nth-child(2) {
+	width: 100%!important;
+	display: flex;
+}
+
+.color-cell.flex-col {
+	flex-wrap: wrap;
+	max-width: 55%;
+}
+
+.color-box-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-col, .color-cell.flex-col {
+	max-width: 100%;
+}
+
 
 .stamp-left-bar .stamp-info-box:nth-child(1),
 .stamp-left-bar .stamp-info-box:nth-child(2) {
@@ -207,8 +231,7 @@ table.table-standard {
 	width: 20px!important;
 	height: 20px!important;
 	border-radius: 50%;
-	margin-right: 10px;
-	margin-left: 0;
+	margin: 3px;
 }
 
 .inner-color-box {
