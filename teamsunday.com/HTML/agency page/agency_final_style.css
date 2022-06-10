@@ -11,7 +11,7 @@
 }
 
 #hero-section {
-    background-color: var(--blue);
+    background-color: #FF6720;
     color: var(--white);
     height: 90vh;
 }
@@ -73,7 +73,7 @@
 }
 
 .custom-section-full .lookbook-img {
-    max-height: 800px;
+    max-height: 1200px;
 }
 
 #contact-section {
@@ -104,24 +104,20 @@
     margin: 0 auto;
 }
 
-#faq .custom-row h2 {
-    font-size: 80px;
-    text-transform: uppercase;
-    line-height: 1;
+#faq .custom-row {
+    padding: 0;
 }
 
-#faq .custom-row .faq {
-    font-weight: 700;
-    font-size: 200px;
-    text-transform: uppercase;
-    line-height: 1;
+#faq .custom-row img {
+    max-height: 800px;
+    width: auto;
 }
 
 .custom-section-full .client-logos-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 60%;
+    max-width: 100%;
     z-index: 3;
     justify-content: center;
 }
@@ -258,7 +254,7 @@ model-viewer {
 
 @media all and (min-width: 1600px) {
     .custom-section-full .client-logos-wrapper {
-        max-width: 50%;
+        max-width: 100%;
     }
 }
 
@@ -328,15 +324,15 @@ model-viewer {
     appearance: none;
 }
 
-.custom-section-full .custom-row .custom-btn.white-btn {
+.custom-section-full .custom-row .custom-btn.orange-btn {
     background-color: var(--white)!important;
-    color: var(--blue);
+    color: #FF6720;
     transition: var(--transition);
 }
 
-.custom-section-full .custom-row .custom-btn.white-btn:hover {
+.custom-section-full .custom-row .custom-btn.orange-btn:hover {
     background-color: var(--white)!important;
-    color: var(--blue);
+    color: #FF6720;
     transition: var(--transition);
     transform: scale(1.05);
 }
@@ -408,27 +404,16 @@ model-viewer {
     position: relative;
     margin: 0;
     padding: 0.625em 0.625em 0.625em 2em;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: normal;
     color: var(--black);
     font-weight: 700;
     cursor: pointer;
+    font-family: Poppins!important;
 }
 
 .accordion-container .article-title:nth-child(1) {
     border-top: transparent;
-}
-
-.accordion-container .article-title:hover,
-.accordion-container .article-title:active,
-.accordion-container .content-entry.open .article-title {
-    color: var(--blue);
-}
-
-.accordion-container .article-title:hover i:before,
-.accordion-container .article-title:hover i:active,
-.accordion-container .content-entry.open i {
-    color: var(--blue);
 }
 
 .accordion-container .content-entry i {
@@ -438,6 +423,10 @@ model-viewer {
     font-style: normal;
     font-size: 24px;
     color: var(--black);
+}
+
+.accordion-container .content-entry {
+    margin: 10px 0;
 }
 
 .accordion-container .content-entry i:before {
