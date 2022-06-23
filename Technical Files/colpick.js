@@ -1,66 +1,77 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-    // Change logo to white Sunday logo
-    let sundayLogo = document.querySelectorAll(".logo-img");
-    for (let i = 0; i < sundayLogo.length; i++) {
-        sundayLogo[i].src="https://teamsunday.com/wp-content/uploads/2022/03/Sunday_Full_White.png";
-    }
+	// Change logo to white Sunday logo
+	let sundayLogo = document.querySelectorAll(".logo-img");
+	for (let i = 0; i < sundayLogo.length; i++) {
+		sundayLogo[i].src="https://teamsunday.com/wp-content/uploads/2022/03/Sunday_Full_White.png";
+	}
 
-    // Center Sunday logo on a black background
-    let headerTF = document.querySelectorAll(".header-table > tbody > tr:first-child > td:nth-child(3)");
-    for (let i = 0; i < headerTF.length; i++) {
-        headerTF[i].setAttribute("colspan", "8");
-        headerTF[i].classList.add("center");
-    }
+	// Center Sunday logo on a black background
+	let headerTF = document.querySelectorAll(".header-table > tbody > tr:first-child > td:nth-child(3)");
+	for (let i = 0; i < headerTF.length; i++) {
+		headerTF[i].setAttribute("colspan", "8");
+		headerTF[i].classList.add("center");
+	}
 
-    // Hide matching style column
-    let matchingStyleCol = document.querySelectorAll(".header-table > tbody > tr:nth-child(2) > td:nth-child(3)");
-    for (let i = 0; i < matchingStyleCol.length; i++) {
-        matchingStyleCol[i].classList.add("hidden");
-    }
+	// Hide matching style column
+	let matchingStyleCol = document.querySelectorAll(".header-table > tbody > tr:nth-child(2) > td:nth-child(3)");
+	for (let i = 0; i < matchingStyleCol.length; i++) {
+		matchingStyleCol[i].classList.add("hidden");
+	}
 
-    // Change "hoodie" to "color" in table head
-    let replaceHoodie = document.querySelectorAll(".table-standard.bom-page-table.bom_table > thead > tr > th:nth-child(6)");
-    for (let i = 0; i < replaceHoodie.length; i++) {
-        replaceHoodie[i].innerHTML = "Color";
-    }
+	// Change "hoodie" to "color" in table head
+	let replaceHoodie = document.querySelectorAll(".table-standard.bom-page-table.bom_table > thead > tr > th:nth-child(6)");
+	for (let i = 0; i < replaceHoodie.length; i++) {
+		replaceHoodie[i].innerHTML = "Color";
+	}
 
 	// Change "Material Name" to "Fabric/decoration"
 	let replaceMaterialName = document.querySelectorAll(".table-standard.bom-page-table.bom_table > thead > tr > th:nth-child(3)");
 	for (let i = 0; i < replaceMaterialName.length; i++) {
-        replaceMaterialName[i].innerHTML = "Fabric/decoration";
-    }
+		replaceMaterialName[i].innerHTML = "Fabric/decoration";
+	}
 
 	// Hide "Position"
 	let removePosition = document.querySelectorAll(".stamp-info-box > table > tbody > tr:nth-child(2)");
 	for (let i = 0; i < removePosition.length; i++) {
-        removePosition[i].classList.add("hidden");
-    }
+		removePosition[i].classList.add("hidden");
+	}
 
 	// Place "Width" & "Height" in a column
 	let widthHeightCol = document.querySelectorAll(".stamp-info-box > table > tbody > tr:nth-child(1)");
 	for (let i = 0; i < widthHeightCol.length; i++) {
-        widthHeightCol[i].classList.add("flex-col");
-    }
+		widthHeightCol[i].classList.add("flex-col");
+	}
 
 	// Hide "Layers" and "product"
 	let removeLayersProducts = document.querySelectorAll(".table-standard > tbody > tr > th");
 	for (let i = 0; i < removeLayersProducts.length; i++) {
-        removeLayersProducts[i].classList.add("hidden");
-    }
+		removeLayersProducts[i].classList.add("hidden");
+	}
 
+	// Hidden because it removes too many rows on each table.
 	// Hide "Effect Artwork Execution"
-	let removeEffectArtwork = document.querySelectorAll(".table-standard > tbody > tr:nth-child(4) > td");
-	for (let i = 0; i < removeEffectArtwork.length; i++) {
-        removeEffectArtwork[i].classList.add("hidden");
-    }
+	// let removeEffectArtwork = document.querySelectorAll(".table-standard > tbody > tr:nth-child(4) > td");
+	// for (let i = 0; i < removeEffectArtwork.length; i++) {
+	//     removeEffectArtwork[i].classList.add("hidden");
+	// }
 
-    // Select top mock up
+	// Select top mock up
 	let firstIMG = document.querySelector(".image-container > img");
 	let firstIMGSrc = firstIMG.src;
+
 	$('.table-standard.bom-page-table').each(function() {
 		var dynamicDivIMGHolder = `<div class="floating-img"><img src="${firstIMGSrc}"></div>`;
 		$(this).append(dynamicDivIMGHolder);
 	});
+
+	// Add replace-style-id to style ID replacement
+	/*
+	let replaceStyleID = document.querySelectorAll(".header-table > tbody > tr:nth-child(2) > td:nth-child(1)");
+	for (let i = 0; i < replaceStyleID.length; i++) {
+        replaceStyleID[i].classList.add("replace-style-id");
+    }
+
+    */
 
 	// Change "Style ID" to "Product Category"
 	$('.replace-style-id').each(function(){
@@ -75,9 +86,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	// Place color boxes in a column if there's more than 1 color
 	$('.color-cell').each(function(){
 		var $this = $(this);
-		if ($this.find('.color-box').length > 1) { 
+		if ($this.find('.color-box').length > 1) {
 			$this.addClass("flex-col");
-	}});
+		}});
 
 	$('.table-standard > tbody > tr:nth-child(2) > td:nth-child(1)').each(function() {
 		$(this).addClass("artwork-holder");
@@ -93,7 +104,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	$('tr > .new-section.hidden').closest('tr').css("display", "none");
 
 	$('header').next().css("height", "160mm");
-	
+
 	// Make position x & y bold
 	$('.inner-table > tbody > tr:nth-child(1) > td:nth-child(1) > div:nth-child(2)').each(function(){
 		$(this).addClass("hidden");
@@ -110,7 +121,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	let sizesTable = document.querySelectorAll(".border-spacing-table > tbody > .stamp-layout-container");
 
 	let amountOfSizes = sizesTable.length;
-	console.log("Sizes", amountOfSizes);
 
 	// Delete first logo pattern image
 	if (amountOfSizes > 0) {
@@ -159,6 +169,60 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		});
 	};
 
+	// Explicitly remove all editor options from this template
+	$('.editor-options').remove();
+
+	// An array of objects, where the key is the name of the element and the value is the exact matchint innerText (when trimmed)
+	const hideRowsWith = [
+		{
+			'span': 'Eyelets',
+		},
+		{
+			'span': 'Necklabel',
+		},
+		{
+			'span': 'Effect (Artwork Execution)',
+		},
+	];
+
+	((hideRowsWith) => {
+		if (!Array.isArray(hideRowsWith)) {
+			return;
+		}
+
+		for (let i = 0; i < hideRowsWith.length; i++) {
+			for (const [nodeToSearch, requiredText] of Object.entries(hideRowsWith[i])) {
+				// Create an xpath query to search for all nodes containing given text.
+				const xpathEyelets = `//${nodeToSearch}[contains(text(),'${requiredText}')]`;
+
+				// Grab all nodes by evaluating the xpath query.
+				const matchingElements = document.evaluate(xpathEyelets, document, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
+				let results = [];
+
+				// Loop over all found nodes.
+				while (element = matchingElements.iterateNext()) {
+					const el = $(element);
+					const closestRow = el.closest('tr');
+					if (el.closest('td').text().trim() === requiredText) {
+						results.push(el);
+					} else {
+						console.warn('Unable to remove the row, because it contains other text.', closestRow);
+					}
+				}
+
+				for (let j = 0; j < results.length; j++) {
+					results[j].closest('tr').addClass('to-be-removed').remove();
+				}
+			}
+		}
+	})(hideRowsWith);
+
+	// First hide all the unnecessary pages. (Needed to make an accurate count of the headers.)
+	$('header + .stamp-page-top-container').each((index, element) => {
+		$(element).prev().addClass('hidden');
+	});
+
+	// Commented this section as the system will automatically add a new page at this moment
 	// split color table over multiple pages (max 8 rows per page)
 	let colorTableFirst = document.querySelectorAll(".table-standard.bom-page-table.bom_table");
 	let colorTableRows = document.querySelectorAll(".table-standard.bom-page-table.bom_table > tbody > tr");
@@ -168,28 +232,267 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	if (mainColorArray.length < 8) {
 		// Less than 8 => keep
 	} else {
-		// Split array in half
-		let halfArray = Math.ceil(mainColorArray.length / 2);
+		let counterTables = 1;
+		const splitAt = 8;
+		let startAt = 0;
+		let endAt = splitAt;
+		let endAtMax = Math.min(16, mainColorArray.length);
 
-		let firstColorArray = mainColorArray.slice(0, halfArray); // Splits the array in 2 
-		let secondColorArray = mainColorArray.slice(-halfArray);
+		const firstColorArray = mainColorArray.slice(startAt, endAt);
 
 		// Remove color rows from table and add array 1 to the table
-		let firstTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table > tbody");
+		const firstTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table > tbody");
 		$(firstTable).html(firstColorArray);
 
-		// Create a new page
-		let header = document.querySelector("header");
-		let headerClone = $(header).clone();
-		let bodyClone = $(colorTableFirst).clone().addClass("second-table");
+		let hasRowsLeft = true;
 
-		$(colorTableFirst).after(headerClone);
-		$(headerClone).after(bodyClone);
+		while (hasRowsLeft) {
+			startAt = (counterTables - 1) * splitAt;
+			endAt = counterTables * splitAt;
+			endAtMax = Math.min((counterTables + 1) * splitAt, mainColorArray.length);
 
-		// Remove color rows from table and add array 1 to the table
-		let secondTable = document.querySelectorAll(".table-standard.bom-page-table.bom_table.second-table > tbody");
-		$(secondTable).html(secondColorArray);
+			// Split array in half
+			const secondColorArray = mainColorArray.slice(endAt, endAtMax);
+			//
+			// // Create a new page
+			// const header = document.querySelector("header");
+			// // let headerClone = $(header).clone();
+			// const bodyClone = $(colorTableFirst).clone().addClass("second-table");
+			//
+			// const headerClone = insertHeader();
+			// // $(colorTableFirst).after(headerClone);
+			// $(headerClone).after(bodyClone);
+			//
+			// Remove color rows from table and add array 1 to the table
+			const lastTable = $('.table-standard.bom-page-table.bom_table').last().find('tbody');
+			$(lastTable).html(secondColorArray);
+			counterTables++;
+
+			hasRowsLeft = endAt >= mainColorArray.length;
+		}
 	};
+
+	$('.table-standard.bom-page-table.bom_table td:visible:first').each(element => {
+		$(element).addClass('first-visible-cell');
+	});
+
+	function insertPage(parentContainer, $original, style) {
+		const stampPageContainer = $(`<div class="stamp-container" style="${style}">
+				<div class="stamp-logo" style="align-items: center;display:flex;height:30mm;justify-content: center;overflow:hidden;text-align: center;"></div>
+				<div class="stamp-right-bar" style="text-align: center;"></div>
+				<div class="stamp-left-bar" style="text-align: center;"></div>
+				<div class="stamp-colors-container" style="text-align: center;">
+					<span class="stamp-colors-title">Color(s)</span>
+					<div class="stamp-colors"></div>
+				</div>
+			</div>`);
+		const stampPageInfo = $original.find('.stamp-left-bar').html();
+		const stampMaterialInfo = $original.find('.stamp-right-bar').clone();
+		stampMaterialInfo.find('.link-container').addClass('hidden');
+		stampMaterialInfo.find('.caption-bar').text('Decoration: ');
+
+		const stampTable = $original.find('.table-standard');
+		const artworkLogo = stampTable.find('.artwork-logo .stamp-small').clone();
+		artworkLogo.style = 'height:100% !important;';
+
+		const stampColors = stampTable.find('.color-box-wrapper').clone();
+		stampColors.addClass('color-cell flex-col').css('justify-content', 'center!important');
+
+		stampPageContainer.find('.stamp-left-bar').append(stampPageInfo);
+		stampPageContainer.find('.stamp-right-bar').append(stampMaterialInfo.html());
+		stampPageContainer.find('.stamp-logo').append(artworkLogo);
+		stampPageContainer.find('.stamp-colors').append(stampColors);
+
+		$(parentContainer).append(stampPageContainer);
+
+		$original.addClass('hidden');
+	}
+
+	function insertHeader() {
+		let headerClone = $(document.querySelector("header")).clone();
+		const pageNumber = $('header:not(.hidden)').length + 1;
+		headerClone.find('tr:last-child td:last-child').text(`Page: ${pageNumber}`);
+
+		$('#reportData').append(headerClone);
+
+		return headerClone;
+	}
+
+	function insertPageContainer() {
+		const parentContainer = $('<div class="stamp-page-top-container" style="font-size:0;height:160mm;padding:10px;">');
+		$('#reportData').append(parentContainer);
+
+		return parentContainer;
+	}
+
+	function setStyle() {
+		const totalStamps = $('.stamp-page-top-container').length;
+		let style = 'display:inline-block;overflow:hidden;padding:0 20px 20px 20px;';
+		let insertHeaderAfterCount = 4;
+
+		if (totalStamps === 1) {
+			style += 'height:100%;width:100%;';
+			insertHeaderAfterCount = 1;
+		} else if (totalStamps === 2) {
+			style += 'height:100%;width:50%;';
+			insertHeaderAfterCount = 2;
+		} else {
+			style += 'height:80mm;width:50%;';
+		}
+
+		return [
+			insertHeaderAfterCount,
+			style,
+			totalStamps,
+		]
+	}
+
+	function includeStyle() {
+		let style = `
+		<style>
+			.color-cell {
+				flex-wrap:wrap;
+				line-height:2;
+				white-space: pre-wrap;
+			}
+			.color-box-container {
+				margin-right:5px;
+			}
+			.color-box-container:last-child {
+				margin:0;
+			}
+			.color-box-container hr {
+				display: none;
+			}
+			.color-box {
+				float:left;
+				margin-bottom:5px;
+				position:relative;
+			}
+			.inner-color-box {
+				left:0;
+				position:absolute;
+				top:0;
+			}
+			.stamp-info-box {
+			 	padding-bottom:10px;
+			}
+			.stamp-colors {
+				display: flex;
+				flex-wrap:wrap;
+				justify-content: center;
+			}
+			.stamp-colors-title {
+				display:block;
+				font-weight: 700;
+				margin-bottom:10px;
+			}
+			.stamp-colors .color-cell {
+				width:auto!important;
+			}
+			.stamp-colors .color-box {
+				margin-bottom:0;
+			}
+			.stam-size-header {
+				font-weight: 700;
+				text-decoration: none;
+			}
+			.stamp-info-box > p {
+				margin:0;
+			}
+			.stamp-info-box > p > :first-child {
+				font-weight: 700;
+			}
+			.stamp-small {
+				height:90px !important;
+				max-width: 100%;
+			}
+		 	.table-standard.bom-page-table.bom_table td.color-cell {
+		 		/*display:table-cell !important;*/
+		 	}
+			.table-standard td,
+		 	.table-standard.bom-page-table.bom_table td:nth-child(odd) {
+				border-right:0 none!important;
+			}
+		 	.table-standard.bom-page-table.bom_table .last-visible-cell {
+				border-left: 1px solid black!important;
+			}
+			.table-standard.bom-page-table.bom_table tbody {
+				width: 60%
+			}
+		</style>`;
+
+		$('head').get(0).insertAdjacentHTML('beforeend', style);
+	}
+
+	$('.table-standard.bom-page-table.bom_table td:visible').each((index, e) => {
+		const parent = $(e).parent();
+
+		if (parent.find('td:visible').last().get(0) === e) {
+			$(e).addClass('last-visible-cell');
+		}
+	});
+
+	// flex display color-cell flex-col -->  justify-content: center!important;
+	// align-items: flex-start!important;
+	// flex-direction: row-reverse!important;
+	// justify-content: center!important;
+
+
+	(() => {
+		// Used to pass a container through the loop.
+		let pageContainer = null;
+
+		// TODO - grab all stamp pages - swith according to amount
+		// 1 = full page
+		// 2 = left half - right half
+		// > 2 = all in quarters (also next pages)
+		$('.stamp-page-top-container').each((index, element) => {
+			[insertHeaderAfterCount, style, totalStamps] = setStyle();
+
+			if (index % insertHeaderAfterCount === 0) {
+				insertHeader();
+				pageContainer = insertPageContainer();
+			}
+
+			switch (index % insertHeaderAfterCount) {
+				case 0:
+					if (totalStamps > 1) {
+						style += 'border-right: 1px solid #000;';
+					}
+
+					if (totalStamps > 2) {
+						style += 'border-bottom: 1px solid #000;';
+					}
+
+					break;
+				case 1:
+					if (totalStamps > 2) {
+						style += 'border-bottom: 1px solid #000;';
+					}
+					break;
+				case 2:
+					style += 'border-right: 1px solid #000;';
+					break;
+				default:
+					break;
+			}
+
+			insertPage(pageContainer, $(element), style);
+		});
+
+		$('.color-cell').each((index, element) => {
+			const trimmedOldHtml = $(element).html().trim().replace(/(?:^(?:&nbsp;)+)|(?:(?:&nbsp;)+$)/g, '');
+			let newHtml = '<div class="contains-color-boxes"><div class="color-box-container">';
+			newHtml += trimmedOldHtml.replaceAll('</div></div>', '</div></div></div></div><div class="color-box-container">');
+			newHtml += '</div></div>';
+			$(newHtml).find('.color-box-container:last-child').remove();
+			$(element).html(newHtml);
+		});
+
+		includeStyle();
+	})();
+
 });
 
 
@@ -334,11 +637,11 @@ For usage and examples: colpick.com/plugin
 				};
 				$(document).on('mouseup touchend',current,upHue);
 				$(document).on('mousemove touchmove',current,moveHue);
-				
+
 				var pageY = ((ev.type == 'touchstart') ? ev.originalEvent.changedTouches[0].pageY : ev.pageY );
 				change.apply(
 					current.cal.data('colpick')
-					.fields.eq(4).val(parseInt(360*(current.cal.data('colpick').height - (pageY - current.y))/current.cal.data('colpick').height, 10))
+						.fields.eq(4).val(parseInt(360*(current.cal.data('colpick').height - (pageY - current.y))/current.cal.data('colpick').height, 10))
 						.get(0),
 					[current.cal.data('colpick').livePreview]
 				);
@@ -348,7 +651,7 @@ For usage and examples: colpick.com/plugin
 				var pageY = ((ev.type == 'touchmove') ? ev.originalEvent.changedTouches[0].pageY : ev.pageY );
 				change.apply(
 					ev.data.cal.data('colpick')
-					.fields.eq(4).val(parseInt(360*(ev.data.cal.data('colpick').height - Math.max(0,Math.min(ev.data.cal.data('colpick').height,(pageY - ev.data.y))))/ev.data.cal.data('colpick').height, 10))
+						.fields.eq(4).val(parseInt(360*(ev.data.cal.data('colpick').height - Math.max(0,Math.min(ev.data.cal.data('colpick').height,(pageY - ev.data.y))))/ev.data.cal.data('colpick').height, 10))
 						.get(0),
 					[ev.data.preview]
 				);
@@ -369,14 +672,14 @@ For usage and examples: colpick.com/plugin
 					pos: $(this).offset()
 				};
 				current.preview = current.cal.data('colpick').livePreview;
-				
+
 				$(document).on('mouseup touchend',current,upSelector);
 				$(document).on('mousemove touchmove',current,moveSelector);
 
 				var payeX,pageY;
 				if(ev.type == 'touchstart') {
 					pageX = ev.originalEvent.changedTouches[0].pageX,
-					pageY = ev.originalEvent.changedTouches[0].pageY;
+						pageY = ev.originalEvent.changedTouches[0].pageY;
 				} else {
 					pageX = ev.pageX;
 					pageY = ev.pageY;
@@ -384,9 +687,9 @@ For usage and examples: colpick.com/plugin
 
 				change.apply(
 					current.cal.data('colpick').fields
-					.eq(6).val(parseInt(100*(current.cal.data('colpick').height - (pageY - current.pos.top))/current.cal.data('colpick').height, 10)).end()
-					.eq(5).val(parseInt(100*(pageX - current.pos.left)/current.cal.data('colpick').height, 10))
-					.get(0),
+						.eq(6).val(parseInt(100*(current.cal.data('colpick').height - (pageY - current.pos.top))/current.cal.data('colpick').height, 10)).end()
+						.eq(5).val(parseInt(100*(pageX - current.pos.left)/current.cal.data('colpick').height, 10))
+						.get(0),
 					[current.preview]
 				);
 				return false;
@@ -395,7 +698,7 @@ For usage and examples: colpick.com/plugin
 				var payeX,pageY;
 				if(ev.type == 'touchmove') {
 					pageX = ev.originalEvent.changedTouches[0].pageX,
-					pageY = ev.originalEvent.changedTouches[0].pageY;
+						pageY = ev.originalEvent.changedTouches[0].pageY;
 				} else {
 					pageX = ev.pageX;
 					pageY = ev.pageY;
@@ -403,9 +706,9 @@ For usage and examples: colpick.com/plugin
 
 				change.apply(
 					ev.data.cal.data('colpick').fields
-					.eq(6).val(parseInt(100*(ev.data.cal.data('colpick').height - Math.max(0,Math.min(ev.data.cal.data('colpick').height,(pageY - ev.data.pos.top))))/ev.data.cal.data('colpick').height, 10)).end()
-					.eq(5).val(parseInt(100*(Math.max(0,Math.min(ev.data.cal.data('colpick').height,(pageX - ev.data.pos.left))))/ev.data.cal.data('colpick').height, 10))
-					.get(0),
+						.eq(6).val(parseInt(100*(ev.data.cal.data('colpick').height - Math.max(0,Math.min(ev.data.cal.data('colpick').height,(pageY - ev.data.pos.top))))/ev.data.cal.data('colpick').height, 10)).end()
+						.eq(5).val(parseInt(100*(Math.max(0,Math.min(ev.data.cal.data('colpick').height,(pageX - ev.data.pos.left))))/ev.data.cal.data('colpick').height, 10))
+						.get(0),
 					[ev.data.preview]
 				);
 				return false;
@@ -427,12 +730,12 @@ For usage and examples: colpick.com/plugin
 			},
 			clickAcoColor = function (ev) {
 				var aco = $(this);
-				
+
 				var col = aco.data('color');
 				var hsb = hexToHsb(col);
-				
+
 				var cal = $(this).parent().parent();
-				
+
 				cal.data('colpick').origColor = col;
 				cal.data('colpick').color = col;
 				fillRGBFields(hsb, cal.get(0));
@@ -441,13 +744,13 @@ For usage and examples: colpick.com/plugin
 				setSelector(hsb, cal.get(0));
 				setHue(hsb, cal.get(0));
 				setNewColor(hsb, cal.get(0));
-				
-				
+
+
 				setCurrentColor(hsb, cal.get(0));
 				cal.data('colpick').onSubmit(hsb, col, col, cal.data('colpick').el);
-				
+
 			},
-			
+
 			//Show/hide the color picker
 			show = function (ev) {
 				// Prevent the trigger of any direct parent
@@ -490,7 +793,7 @@ For usage and examples: colpick.com/plugin
 					s: Math.min(100, Math.max(0, hsb.s)),
 					b: Math.min(100, Math.max(0, hsb.b))
 				};
-			}, 
+			},
 			fixRGB = function (rgb) {
 				return {
 					r: Math.min(255, Math.max(0, rgb.r)),
@@ -525,7 +828,7 @@ For usage and examples: colpick.com/plugin
 			init: function (opt) {
 				opt = $.extend({}, defaults, opt||{});
 				//Set color
-				
+
 				if (typeof opt.color == 'string') {
 					opt.color = hexToHsb(opt.color);
 				} else if (opt.color.r != undefined && opt.color.g != undefined && opt.color.b != undefined) {
@@ -535,7 +838,7 @@ For usage and examples: colpick.com/plugin
 				} else {
 					return this;
 				}
-				
+
 				//For each selected DOM element
 				return this.each(function () {
 					//If the element does not have an ID
@@ -607,7 +910,7 @@ For usage and examples: colpick.com/plugin
 								position:'absolute'
 							});
 						}
-						
+
 						//aco colors
 						if (opt.acoColors)
 						{
@@ -617,11 +920,11 @@ For usage and examples: colpick.com/plugin
 							{
 								var acoColor = opt.acoColors[i];
 								var acoColorDiv = $('<div class="acoColorRow"></div>').html(acoColor.name).attr('style','background-color:#' 	+ intToHex(acoColor.int)).attr('title',acoColor.name);
-								
+
 								//attach event
 								acoColorDiv.data('color',intToHex(acoColor.int));
 								acoColorDiv.on('click', clickAcoColor);
-								
+
 								acoColorPicker.append(acoColorDiv);
 							}
 						}
@@ -666,7 +969,7 @@ For usage and examples: colpick.com/plugin
 						fillHexFields(col, cal.get(0));
 						setHue(col, cal.get(0));
 						setSelector(col, cal.get(0));
-						
+
 						setNewColor(col, cal.get(0));
 						cal.data('colpick').onChange.apply(cal.parent(), [col, hsbToHex(col), hsbToRgb(col), cal.data('colpick').el, 1]);
 						if(setCurrent) {
@@ -748,7 +1051,7 @@ For usage and examples: colpick.com/plugin
 		colpickSetColor: colpick.setColor
 	});
 	$.extend({
-		colpick:{ 
+		colpick:{
 			rgbToHex: rgbToHex,
 			rgbToHsb: rgbToHsb,
 			hsbToHex: hsbToHex,
