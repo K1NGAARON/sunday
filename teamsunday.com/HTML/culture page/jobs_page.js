@@ -21,6 +21,16 @@ function dropdownFilter() {
 const jobsWrapper = document.querySelector("#jobs-section");
 const jobsArray = [
     {
+        'positionTitle' : 'Office Assistant',
+        'positionText' : 'You are our office elf.',
+        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/EXTRA3.jpg',
+        'positionALT' : 'Office Assistant at Sunday',
+        'positionURL' : '/en/jobs/office-assistant-belgium/',
+        'positionCountry' : 'Belgium',
+        'positionCity' : 'Roeselare',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png' 
+    },
+    {
         'positionTitle' : 'International Recruiter',
         'positionText' : 'You’re in charge of growing the Sunday team with A-players.',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/BE.jpg',
