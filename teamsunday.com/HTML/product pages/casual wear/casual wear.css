@@ -141,6 +141,10 @@ ul li {
 }
 
 /* FIRST SECTION */
+.first-section {
+    max-height: 100vh;
+}
+
 .custom-section-full.first-section .custom-row {
     width: 90%;
 }
