@@ -114,6 +114,7 @@ a:hover {
 
 img:not(.sunday-nav-logo) {
     margin: 20px 0;
+    width: 100%;
 }
 
 ul,
