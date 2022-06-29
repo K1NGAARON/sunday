@@ -126,6 +126,32 @@ const team = [
         'USP_3' : 'Brightens up office parties with his dance skills (especially to the song ‘Everybody’ by the Backstreet Boys)'
     },
     {
+        'name' : 'Gilles',
+        'role' : 'Account Manager',
+        'country' : 'Belgium',
+        'img' : '/wp-content/uploads/2021/11/GillesCossement.jpg',
+        'USP_1' : 'Salesman with a special interest in international business',
+        'USP_2' : 'Loves to spend his time in the soccer stadium to cheer on his favorite team Club Brugge.',
+        'USP_3' : 'His favorite snack (and the way to his heart) is a Grany Moelleux'
+    },
+    {
+        'name' : 'Iris',
+        'role' : 'CSM',
+        'country' : 'Belgium',
+        'img' : '/wp-content/uploads/2021/11/IrisDevos.jpg',
+        'USP_1' : 'Loves good food and drinks and is the life of the (office) party',
+        'USP_2' : 'Always has exciting plans for the weekend'
+    },
+    {
+        'name' : 'Birgit',
+        'role' : 'Sales Enablement Manager',
+        'country' : 'Belgium',
+        'img' : '/wp-content/uploads/2021/11/BirgitRaes.jpg',
+        'USP_1' : 'Always open for a quick chat and happy to help with whatever you need',
+        'USP_2' : 'Loves reading, cooking and playing music on Sundays',
+        'USP_3' : 'Considers winning ‘best halloween costume’ as one of her greatest professional achievements'
+    },
+    {
         'name' : '',
         'role' : '',
         'country' : '',
