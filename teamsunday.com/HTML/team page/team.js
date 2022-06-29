@@ -72,22 +72,58 @@ const team = [
         'USP_2' : 'Great on the basketball court, loves beers with friends, lives with his fiancée who puts out Christmas decorations way too early in the year without his permission.'
     },
     {
-        'name' : '',
-        'role' : '',
-        'country' : '',
-        'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
+        'name' : 'Morgane',
+        'role' : 'Content Creator',
+        'country' : 'Belgium',
+        'img' : '/wp-content/uploads/2021/11/MorganeLemiengre.jpeg',
+        'USP_1' : 'Loves the sea',
+        'USP_2' : 'Loves tennis and taking in fresh air',
+        'USP_3' : 'Listens to Dutch hip hop in public and to Abba in secret'
     },
     {
-        'name' : '',
-        'role' : '',
-        'country' : '',
-        'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
+        'name' : 'Dorothée',
+        'role' : 'Marketing Project Manager',
+        'country' : 'Belgium',
+        'img' : '/wp-content/uploads/2021/11/DorotheeHespeel.jpeg',
+        'USP_1' : 'Creates awesome marketing campaigns',
+        'USP_2' : 'Loves a good brunch with friends',
+        'USP_3' : 'Dressed to the nines every day'
+    },
+    {
+        'name' : 'Bartel',
+        'role' : 'Senior Developer',
+        'country' : 'Belgium',
+        'img' : '/wp-content/uploads/2021/11/bartelSamyn.jpg',
+        'USP_1' : 'Writes code like nobody’s business',
+        'USP_2' : 'Dad of two adorable kids',
+        'USP_3' : 'Loves sushi & Lego'
+    },
+    {
+        'name' : 'Awet',
+        'role' : 'PHP Developer',
+        'country' : 'Belgium',
+        'img' : '/wp-content/uploads/2021/11/AwetTesfay.jpg',
+        'USP_1' : 'Computer wizard',
+        'USP_2' : 'Enjoys spending time with his family on Sundays',
+        'USP_3' : 'Big fan of Turkish action movies'
+    },
+    {
+        'name' : 'Vanessa',
+        'role' : 'Product Manager',
+        'country' : 'Belgium',
+        'img' : '/wp-content/uploads/2021/11/VanessaHostens.jpg',
+        'USP_1' : 'OG Sunday employee',
+        'USP_2' : 'Loves travelling and shopping on Sunday',
+        'USP_3' : 'Superfan of the singer P!nk'
+    },
+    {
+        'name' : 'Mazelli',
+        'role' : 'Partner Manager',
+        'country' : 'Belgium',
+        'img' : '/wp-content/uploads/2021/11/MazelliDetavernier.jpg',
+        'USP_1' : 'Has awesome people skills',
+        'USP_2' : 'Loves music, drinks and food on Sundays',
+        'USP_3' : 'Brightens up office parties with his dance skills (especially to the song ‘Everybody’ by the Backstreet Boys)'
     },
     {
         'name' : '',
