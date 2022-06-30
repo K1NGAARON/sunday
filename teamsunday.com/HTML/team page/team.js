@@ -180,7 +180,7 @@ const team = [
     },
     {
         'name' : 'Anna',
-        'role' : 'SDR Coordinator',
+        'role' : 'Sales Development Representative',
         'country' : 'Belgium',
         'img' : '/wp-content/uploads/2021/11/AnnaBaffour.jpeg',
         'USP_1' : 'Loves meeting friends and binge watching Netflix on Sundays',
