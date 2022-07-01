@@ -10,11 +10,24 @@
     line-height: 1.2;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+p,
+ul,
+ul li,
+li {
+    font-family: Poppins!important;
+}
+
+
 ul li {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
-    font-family: Poppins;
 }
 
 .vce-row[data-vce-stretch-content=true] {
@@ -143,10 +156,14 @@ ul li {
 /* FIRST SECTION */
 .first-section {
     max-height: 100vh;
+    background-image: url('https://teamsunday.com/wp-content/uploads/2021/07/background-1-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .custom-section-full.first-section .custom-row {
     width: 90%;
+    background-color: transparent;
 }
 
 .custom-section-full.first-section .custom-row .custom-col img {
@@ -176,7 +193,7 @@ ul li {
 }
 
 .custom-section-full.client-logos {
-    background-color: #f5f5f5;
+    background-color: #efefef;
 }
 
 .custom-section-full.client-logos .custom-row.client-logos {
