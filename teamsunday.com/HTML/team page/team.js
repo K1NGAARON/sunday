@@ -136,7 +136,7 @@ const team = [
     },
     {
         'name' : 'Iris',
-        'role' : 'CSM',
+        'role' : 'Customer Success Manager',
         'country' : 'Belgium',
         'img' : '/wp-content/uploads/2021/11/IrisDevos.jpg',
         'USP_1' : 'Loves good food and drinks and is the life of the (office) party',
@@ -191,17 +191,18 @@ const team = [
         'role' : 'Sales Development Representative',
         'country' : 'Belgium',
         'img' : '/wp-content/uploads/2021/11/CharlotteVens.jpeg',
-        'USP_1' : 'Loves to surf and go on adventures on Sundays',
-        'USP_2' : 'If you’re looking for Charlotte during the weekend, there’s a big chance you will find her touring the Netherlands or France in her van'
+        'USP_1' : 'Might have magic hair that glows when she sings…',
+        'USP_2' : 'Working on her sneaker basement',
+        'USP_3' : "Professional sarcastic teaser (so don’t take her jokes too seriously)"
     },
     {
         'name' : 'Ana',
         'role' : 'Sales Development Representative',
         'country' : 'Belgium',
         'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
+        'USP_1' : 'Fashion Amateur, fan of 19-th Century Victorian Clothing',
+        'USP_2' : 'Less is more: adopting a sustainable approach to living',
+        'USP_3' : 'Being clumsy is her second nature'
     },
     {
         'name' : 'Joeri',
@@ -217,9 +218,9 @@ const team = [
         'role' : 'Sales Development Representative',
         'country' : 'Ireland',
         'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
+        'USP_1' : 'Passionate about makeup, because it’s artistic and a great way to express herself',
+        'USP_2' : 'Loves bright colours, currently has a yellow purse, a green phone and pink keys',
+        'USP_3' : 'Travels as much as she can in order to push herself out of her comfort zone.'
     },
     {
         'name' : 'Chiara',
@@ -262,9 +263,9 @@ const team = [
         'role' : 'Account Executive',
         'country' : 'Netherlands',
         'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
+        'USP_1' : 'Nothing makes her happier than spontaneous plans. Do you have a crazy idea and need a partner in crime? Hit her up!',
+        'USP_2' : "Clumsiest person you'll ever meet: ask her about her fracture track record & don't trust her with your valuables",
+        'USP_3' : 'Speaks multiple languages, but is most fluent in sarcasm'
     },
     {
         'name' : 'Sebastiaan',
@@ -315,6 +316,60 @@ const team = [
         'name' : 'Sohair',
         'role' : '',
         'country' : 'Ireland',
+        'img' : '',
+        'USP_1' : 'Enjoys the simple things in life',
+        'USP_2' : 'Pretty obsessed with eating crisps',
+        'USP_3' : 'Love-hate relationship with the gym'
+    },
+    {
+        'name' : 'Lieselot',
+        'role' : 'International Recruiter',
+        'country' : 'Belgium',
+        'img' : '',
+        'USP_1' : 'Becoming a true LinkedIn guru',
+        'USP_2' : 'Enjoys good cheese and fine wine',
+        'USP_3' : 'Not the biggest hero on ice (broke her wrist 3 times already)'
+    },
+    {
+        'name' : 'Annelien',
+        'role' : 'Head Of People',
+        'country' : 'Belgium',
+        'img' : '',
+        'USP_1' : '',
+        'USP_2' : '',
+        'USP_3' : ''
+    },
+    {
+        'name' : 'Jeroen',
+        'role' : 'Customer Success Manager',
+        'country' : 'Belgium',
+        'img' : '',
+        'USP_1' : 'Sunday is friends and family day',
+        'USP_2' : 'Always wanted to become a professional football player',
+        'USP_3' : 'Used to be an international checkers player as a child instead'
+    },
+    {
+        'name' : 'Elisa',
+        'role' : 'Customer Success Manager',
+        'country' : 'belgium',
+        'img' : '',
+        'USP_1' : 'Likes to crack jokes, all the time',
+        'USP_2' : 'Coffee was her first love and it will be her last',
+        'USP_3' : 'Award to the cutest dog off all time goes to her furry friend Vino'
+    },
+    {
+        'name' : 'Ana ',
+        'role' : '',
+        'country' : '',
+        'img' : '',
+        'USP_1' : '',
+        'USP_2' : '',
+        'USP_3' : ''
+    },
+    {
+        'name' : '',
+        'role' : '',
+        'country' : '',
         'img' : '',
         'USP_1' : '',
         'USP_2' : '',
