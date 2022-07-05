@@ -199,9 +199,9 @@ const team = [
         'role' : 'Sales Development Representative',
         'country' : 'Belgium',
         'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
+        'USP_1' : 'Fashion Amateur, fan of 19-th Century Victorian Clothing',
+        'USP_2' : 'Less is more: adopting a sustainable approach to living',
+        'USP_3' : 'Being clumsy is her second nature'
     },
     {
         'name' : 'Joeri',
@@ -216,10 +216,10 @@ const team = [
         'name' : 'Sarah',
         'role' : 'Sales Development Representative',
         'country' : 'Ireland',
-        'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
+        'img' : '/wp-content/uploads/2022/07/SarahOBoyle.jpg',
+        'USP_1' : 'Passionate about makeup, because it’s artistic and a great way to express herself',
+        'USP_2' : 'Loves bright colours, currently has a yellow purse, a green phone and pink keys',
+        'USP_3' : 'Travels as much as she can in order to push herself out of her comfort zone.'
     },
     {
         'name' : 'Chiara',
@@ -261,10 +261,10 @@ const team = [
         'name' : 'Carlin',
         'role' : 'Account Executive',
         'country' : 'Netherlands',
-        'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
+        'img' : '/wp-content/uploads/2022/07/CarlinKleinWolterink.jpg',
+        'USP_1' : 'Nothing makes her happier than spontaneous plans. Do you have a crazy idea and need a partner in crime? Hit her up!  ',
+        'USP_2' : "Clumsiest person you'll ever meet: ask her about her fracture track record & don't trust her with your valuables",
+        'USP_3' : 'Speaks multiple languages, but is most fluent in sarcasm'
     },
     {
         'name' : 'Sebastiaan',
