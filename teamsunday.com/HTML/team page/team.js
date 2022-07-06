@@ -208,7 +208,7 @@ const team = [
         'name' : 'Joeri',
         'role' : 'Sales Development Representative',
         'country' : 'Netherlands',
-        'img' : '',
+        'img' : 'https://teamsunday.com/wp-content/uploads/2022/07/JoeriBredenhoff.jpg',
         'USP_1' : '',
         'USP_2' : '',
         'USP_3' : ''
@@ -262,7 +262,7 @@ const team = [
         'name' : 'Carlin',
         'role' : 'Account Executive',
         'country' : 'Netherlands',
-        'img' : '',
+        'img' : '/wp-content/uploads/2022/07/CarlinKleinWolterink.jpg',
         'USP_1' : 'Nothing makes her happier than spontaneous plans. Do you have a crazy idea and need a partner in crime? Hit her up!',
         'USP_2' : "Clumsiest person you'll ever meet: ask her about her fracture track record & don't trust her with your valuables",
         'USP_3' : 'Speaks multiple languages, but is most fluent in sarcasm'
@@ -278,7 +278,7 @@ const team = [
     },
     {
         'name' : 'Alexis',
-        'role' : '',
+        'role' : 'Account Executive',
         'country' : 'Germany',
         'img' : '/wp-content/uploads/2021/11/AlexisKivu.jpg',
         'USP_1' : 'Open minded and curious',
@@ -287,7 +287,7 @@ const team = [
     },
     {
         'name' : 'Laura',
-        'role' : '',
+        'role' : 'Account Manager',
         'country' : 'Germany',
         'img' : '/wp-content/uploads/2022/03/LauraKraft.png',
         'USP_1' : 'Loves Pop Music and Trash TV',
@@ -305,7 +305,7 @@ const team = [
     },
     {
         'name' : 'Ankur',
-        'role' : '',
+        'role' : 'Account Executive',
         'country' : 'Ireland',
         'img' : '/wp-content/uploads/2021/11/AnkurBaliyan.jpg',
         'USP_1' : 'Cricket freak',
@@ -314,9 +314,9 @@ const team = [
     },
     {
         'name' : 'Sohair',
-        'role' : '',
+        'role' : 'Account Executive',
         'country' : 'Ireland',
-        'img' : '',
+        'img' : 'https://teamsunday.com/wp-content/uploads/2022/07/SohairOsman.jpg',
         'USP_1' : 'Enjoys the simple things in life',
         'USP_2' : 'Pretty obsessed with eating crisps',
         'USP_3' : 'Love-hate relationship with the gym'
@@ -325,7 +325,7 @@ const team = [
         'name' : 'Lieselot',
         'role' : 'International Recruiter',
         'country' : 'Belgium',
-        'img' : '',
+        'img' : 'https://teamsunday.com/wp-content/uploads/2022/07/LieselotTanghe-scaled.jpg',
         'USP_1' : 'Becoming a true LinkedIn guru',
         'USP_2' : 'Enjoys good cheese and fine wine',
         'USP_3' : 'Not the biggest hero on ice (broke her wrist 3 times already)'
@@ -334,7 +334,7 @@ const team = [
         'name' : 'Annelien',
         'role' : 'Head Of People',
         'country' : 'Belgium',
-        'img' : '',
+        'img' : 'https://teamsunday.com/wp-content/uploads/2022/07/AnnelienDecaestecker.jpeg',
         'USP_1' : '',
         'USP_2' : '',
         'USP_3' : ''
@@ -343,7 +343,7 @@ const team = [
         'name' : 'Jeroen',
         'role' : 'Customer Success Manager',
         'country' : 'Belgium',
-        'img' : '',
+        'img' : 'https://teamsunday.com/wp-content/uploads/2022/07/JeroenMullie.jpg',
         'USP_1' : 'Sunday is friends and family day',
         'USP_2' : 'Always wanted to become a professional football player',
         'USP_3' : 'Used to be an international checkers player as a child instead'
@@ -352,73 +352,10 @@ const team = [
         'name' : 'Elisa',
         'role' : 'Customer Success Manager',
         'country' : 'belgium',
-        'img' : '',
+        'img' : 'https://teamsunday.com/wp-content/uploads/2022/07/EliseVandendorpe.jpg',
         'USP_1' : 'Likes to crack jokes, all the time',
         'USP_2' : 'Coffee was her first love and it will be her last',
         'USP_3' : 'Award to the cutest dog off all time goes to her furry friend Vino'
-    },
-    {
-        'name' : 'Ana ',
-        'role' : '',
-        'country' : '',
-        'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
-    },
-    {
-        'name' : '',
-        'role' : '',
-        'country' : '',
-        'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
-    },
-    {
-        'name' : '',
-        'role' : '',
-        'country' : '',
-        'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
-    },
-    {
-        'name' : '',
-        'role' : '',
-        'country' : '',
-        'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
-    },
-    {
-        'name' : '',
-        'role' : '',
-        'country' : '',
-        'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
-    },
-    {
-        'name' : '',
-        'role' : '',
-        'country' : '',
-        'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
-    },
-    {
-        'name' : '',
-        'role' : '',
-        'country' : '',
-        'img' : '',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
     }
 ]
 
