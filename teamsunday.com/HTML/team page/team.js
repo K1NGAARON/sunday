@@ -217,7 +217,7 @@ const team = [
         'name' : 'Sarah',
         'role' : 'Sales Development Representative',
         'country' : 'Ireland',
-        'img' : '',
+        'img' : '/wp-content/uploads/2022/07/SarahOBoyle.jpg',
         'USP_1' : 'Passionate about makeup, because it’s artistic and a great way to express herself',
         'USP_2' : 'Loves bright colours, currently has a yellow purse, a green phone and pink keys',
         'USP_3' : 'Travels as much as she can in order to push herself out of her comfort zone.'
