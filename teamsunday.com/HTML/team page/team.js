@@ -52,7 +52,7 @@ const team = [
         'img' : '/wp-content/uploads/2021/11/Aaron-BW.png',
         'USP_1' : 'Takes care of our online presence and ads',
         'USP_2' : 'After work you will surely find him in the gym',
-        'USP_3' : 'Always open for a chat about crypto'
+        'USP_3' : 'Loves website creation - check out <a href="https://blitz-media.io" target="_blank">blitz-media.io</a>'
     },
     {
         'name' : 'Nils',
@@ -364,16 +364,16 @@ function createTeam() {
         const teamMember = `
         <div class="blog-post-listing">
             <div class="col">
-                <img src="${blogsArray[i].blogIMG}" alt="${blogsArray[i].blogTitle}">
+                <img src="${team[i].blogIMG}" alt="${team[i].blogTitle}">
             </div>
             <div class="col">
                 <h3>
-                    ${blogsArray[i].blogTitle}
+                    ${team[i].blogTitle}
                 </h3>
                 <p>
-                ${blogsArray[i].blogIntro}
+                ${team[i].blogIntro}
                 </p>
-                <a href="${blogsArray[i].blogURL}">
+                <a href="${team[i].blogURL}">
                     Lees verder ➔
                 </a>
             </div>
