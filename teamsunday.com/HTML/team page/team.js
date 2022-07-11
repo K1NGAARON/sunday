@@ -199,7 +199,7 @@ const team = [
         'name' : 'Ana',
         'role' : 'Sales Development Representative',
         'country' : 'Belgium',
-        'img' : '',
+        'img' : 'https://teamsunday.com/wp-content/uploads/2022/07/AnaBighiu.jpg',
         'USP_1' : 'Fashion Amateur, fan of 19-th Century Victorian Clothing',
         'USP_2' : 'Less is more: adopting a sustainable approach to living',
         'USP_3' : 'Being clumsy is her second nature'
@@ -209,9 +209,9 @@ const team = [
         'role' : 'Sales Development Representative',
         'country' : 'Netherlands',
         'img' : 'https://teamsunday.com/wp-content/uploads/2022/07/JoeriBredenhoff.jpg',
-        'USP_1' : '',
-        'USP_2' : '',
-        'USP_3' : ''
+        'USP_1' : 'Loves to talk about football, especially Ajax',
+        'USP_2' : 'Likes to have a drink with friends',
+        'USP_3' : 'Discovering Berlin every day'
     },
     {
         'name' : 'Sarah',
@@ -264,7 +264,7 @@ const team = [
         'country' : 'Netherlands',
         'img' : '/wp-content/uploads/2022/07/CarlinKleinWolterink.jpg',
         'USP_1' : 'Nothing makes her happier than spontaneous plans. Do you have a crazy idea and need a partner in crime? Hit her up!',
-        'USP_2' : "Clumsiest person you'll ever meet: ask her about her fracture track record & don't trust her with your valuables",
+        'USP_2' : "Clumsiest person you'll ever meet: ask her about her fracture track record",
         'USP_3' : 'Speaks multiple languages, but is most fluent in sarcasm'
     },
     {
