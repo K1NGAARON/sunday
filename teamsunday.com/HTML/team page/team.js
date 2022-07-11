@@ -387,14 +387,58 @@ $(document).ready(function() {
 
 
 // Filter
-$('.blog-filter a').on('click', function(e) {
+function hideAll() {
+    $('.team-member-wrapper').hide();
+};
+
+function showAll() {
+    $('.team-member-wrapper').show();
+};
+
+
+// SHOW ALL
+$('.job-offer-button-wrapper > a#all-btn').on('click', function(e) {
     e.preventDefault();
+    showAll();
+});
 
-    $('.blog-filter a').removeClass('active')
-    $(this).addClass('active');
+// SHOW BELGIUM
+$('.job-offer-button-wrapper > a#job-country-belgium-btn').on('click', function(e) {
+    e.preventDefault();
+    hideAll();
+    
+    $('team-member-wrapper.Belgium').show();
+});
 
-    let selectedTopic = $(this).text();
+// SHOW NETHERLANDS
+$('.job-offer-button-wrapper > a#job-country-netherlands-btn').on('click', function(e) {
+    e.preventDefault();
+    hideAll();
+    
+    $('team-member-wrapper.Netherlands').show();
+});
 
-    // Hide everything
-    // Show clicked element label
+// SHOW GERMANY
+$('.job-offer-button-wrapper > a#job-country-germany-btn').on('click', function(e) {
+    e.preventDefault();
+    hideAll();
+    
+    $('team-member-wrapper.Germany').show();
+});
+
+
+// SHOW IRELAND
+$('.job-offer-button-wrapper > a#job-country-ireland-btn').on('click', function(e) {
+    e.preventDefault();
+    hideAll();
+    
+    $('team-member-wrapper.Ireland').show();
+});
+
+// SHOW POLAND
+$('.job-offer-button-wrapper > a#job-country-poland-btn').on('click', function(e) {
+    e.preventDefault();
+    hideAll();
+    
+    $('team-member-wrapper.Poland').show();
 });
