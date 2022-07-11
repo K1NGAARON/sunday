@@ -362,20 +362,20 @@ const team = [
 function createTeam() {
     for (let i = 0; i < team.length; i++) {
         const teamMember = `
-        <div class="team-member-wrapper ${team[i].country}">
-            <img src="${team[i].img}" alt="${team[i].name}">
-            <h3>
-                ${team[i].name}
-            </h3>
-            <p>
-                ${team[i].role}
-            </p>
-            <ul>
-                <li>${team[i].USP_1}</li>
-                <li>${team[i].USP_2}</li>
-                <li>${team[i].USP_3}</li>
-            </ul>
-        </div>
+            <div class="team-member-wrapper ${team[i].country}">
+                <img src="${team[i].img}" alt="${team[i].name}">
+                <h3>
+                    ${team[i].name}
+                </h3>
+                <p>
+                    ${team[i].role}
+                </p>
+                <ul>
+                    <li>${team[i].USP_1}</li>
+                    <li>${team[i].USP_2}</li>
+                    <li>${team[i].USP_3}</li>
+                </ul>
+            </div>
         `;
         teamTarget.insertAdjacentHTML("beforeend", teamMember);
     };
