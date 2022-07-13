@@ -126,12 +126,13 @@ html {
 
 .section .row {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1600px;
     display: flex;
     flex-direction: row;
     margin: 60px auto;
     align-items: center;
     justify-content: center;
+    padding: 0 30px;
 }
 
 .row.row-reverse {
