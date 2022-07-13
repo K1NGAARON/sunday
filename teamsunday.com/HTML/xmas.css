@@ -224,6 +224,47 @@ html {
     color: var(--black)!important;
 }
 
+
+/* REVIEW WRAPPER */
+.review-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue);
+    width: fit-content;
+    max-width: 500px;
+    border-radius: 12px;
+}
+
+.review-wrapper .col {
+    width: 100%!important;
+    margin: unset!important;
+    padding: 0;
+}
+
+.review-wrapper .col img {
+    width: 125px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    padding: 20px 20px 0 20px;
+}
+
+.review-wrapper .col p {
+    font-size: 14px;
+    color: var(--white);
+    padding: 0 20px;
+}
+
+.review-wrapper .col .author {
+    font-size: 14px;
+    font-weight: 700!important;
+    padding-bottom: 20px;
+}
+
+
+
+
+
 /* REVIEWS */
 .reviews-wrapper-right {
     display: flex;
