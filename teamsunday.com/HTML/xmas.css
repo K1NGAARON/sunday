@@ -160,10 +160,17 @@ html {
 }
 
 #hero-section {
-    background-color: var(--white);
+    background-color: #01907e;
     color: var(--black);
     position: relative;
     overflow: hidden;
+}
+
+#hero-section p,
+#hero-section h1,
+#hero-section ul li,
+#hero-section .small-headline {
+    color: var(--white)!important;
 }
 
 #hero-section .row {
@@ -229,7 +236,7 @@ html {
 .review-wrapper {
     display: flex;
     flex-direction: column;
-    background-color: var(--blue);
+    background-color: #01907e;
     width: fit-content;
     max-width: 500px;
     border-radius: 12px;
@@ -349,14 +356,14 @@ html {
 }
 
 #steps .steps-wrapper .step-item .col:nth-child(1) p {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 1.5!important;
     text-align: center;
     color: var(--white);
     background-color: var(--primary);
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 }
 
