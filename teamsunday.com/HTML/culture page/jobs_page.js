@@ -31,6 +31,26 @@ const jobsArray = [
         'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png' 
     },
     {
+        'positionTitle' : 'Project Manager',
+        'positionText' : 'Voor de groei van Sunday gaan wij op zoek naar een Hands on Project Manager.',
+        'positionIMG' : '/wp-content/uploads/2022/05/NL.jpg',
+        'positionALT' : 'Project Manager at Sunday',
+        'positionURL' : '/en/jobs/project-manager-roeselare/',
+        'positionCountry' : 'Belgium',
+        'positionCity' : 'Roeselare',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png' 
+    },
+    {
+        'positionTitle' : 'Financial Controller',
+        'positionText' : 'Je bent verantwoordelijk om de financiële rapportering van de groep tot een hoger niveau te tillen.',
+        'positionIMG' : '/wp-content/uploads/2022/05/EXTRA.jpg',
+        'positionALT' : 'Financial controller at Sunday',
+        'positionURL' : '/en/jobs/financial-controller-roeselare/',
+        'positionCountry' : 'Belgium',
+        'positionCity' : 'Roeselare',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png' 
+    },
+    {
         'positionTitle' : 'International Recruiter',
         'positionText' : 'You’re in charge of growing the Sunday team with A-players.',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/BE.jpg',
