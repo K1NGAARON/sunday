@@ -43,7 +43,7 @@ const jobsArray = [
     {
         'positionTitle' : 'Financial Controller',
         'positionText' : 'Je bent verantwoordelijk om de financiële rapportering van de groep tot een hoger niveau te tillen.',
-        'positionIMG' : '/wp-content/uploads/2022/05/EXTRA.jpg',
+        'positionIMG' : '/wp-content/uploads/2022/05/DE.jpg',
         'positionALT' : 'Financial controller at Sunday',
         'positionURL' : '/en/jobs/financial-controller-roeselare/',
         'positionCountry' : 'Belgium',
@@ -93,7 +93,7 @@ const jobsArray = [
     {
         'positionTitle' : 'Account Executive',
         'positionText' : 'Our business grows with you. Close some interesting deals with us!',
-        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/EXTRA.jpg',
+        'positionIMG' : '/wp-content/uploads/2022/05/DE.jpg',
         'positionALT' : 'Account executive at Sunday',
         'positionURL' : '/en/jobs/account-executive-netherlands/',
         'positionCountry' : 'Netherlands',
