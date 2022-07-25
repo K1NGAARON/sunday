@@ -368,4 +368,7 @@ ul li::before {
     .custom-blog.cta-section h2 {
         font-size: 20px;
     }
+    .timeline-row-section {
+        display: none;
+    }
 }
