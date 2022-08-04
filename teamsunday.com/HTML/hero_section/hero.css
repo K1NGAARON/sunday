@@ -99,7 +99,8 @@
 }
 
 .custom-section .custom-row .hero-img {
-    max-width: 55%!important;
+    width: 55%!important;
+    max-width: 900px;
     height: auto!important;
     position: absolute!important;
     right: 0!important;
@@ -167,5 +168,11 @@
 
     #hero.custom-section .custom-row .custom-col:nth-child(2) {
         display: none;
+    }
+}
+
+@media all and (min-width: 1600px) {
+    #hero {
+        height: 62vh;
     }
 }
