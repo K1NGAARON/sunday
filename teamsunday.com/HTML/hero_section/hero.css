@@ -22,8 +22,9 @@
 }
 
 #hero {
-    background-color: var(--light-grey);
-    color: var(--black);
+    background-color: var(--purple);
+    color: var(--white);
+    height: 100vh;
 }
 
 #hero.custom-section {
@@ -43,24 +44,25 @@
 #hero.custom-section .custom-row p,
 #hero.custom-section .custom-row a {
     font-family: Poppins;
-    color: var(--black);
+    color: var(--white);
 }
 
 #hero.custom-section .custom-row h1 {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 36px;
 }
 
 #hero.custom-section .custom-row .primary-btn {
+    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
     width: fit-content;
     padding: 13px 23px;
     border-radius: 6px;
-    background-color: var(--black);
+    background-color: var(--green);
     color: var(--white);
-    border: 1px solid var(--black);
+    border: none;
     text-transform: capitalize;
     text-decoration: none;
     cursor: pointer;
@@ -73,13 +75,13 @@
 #hero.custom-section .custom-row .primary-btn.ghost-btn {
     background-color: var(--white);
     color: var(--black);
-    border: 1px solid var(--black);
+    /* border: 1px solid var(--black); */
 }
 
 #hero.custom-section .custom-row .primary-btn:hover {
-    background-color: var(--purple);
-    color: var(--white);
-    border: 1px solid var(--purple);
+    /* background-color: var(--purple);
+    color: var(--white); 
+    border: 1px solid var(--green); */
     transition: var(--transition);
     transform: scale(1.05);
 }
