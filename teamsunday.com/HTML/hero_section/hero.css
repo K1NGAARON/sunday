@@ -113,8 +113,9 @@
 }
 
 .custom-section .custom-row .primary-btn.ghost-btn {
-    background-color: var(--white);
-    color: var(--black);
+    background-color: transparent;
+    border: 3px solid var(--white);
+    color: var(--white);
     /* border: 1px solid var(--black); */
 }
 
