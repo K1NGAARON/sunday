@@ -160,6 +160,11 @@
 }
 
 @media all and (max-width: 1000px) {
+    #hero {
+        height: fit-content;
+        padding: 60px 0;
+    }
+
     #hero.custom-section .custom-row .custom-col:nth-child(2) {
         display: none;
     }
