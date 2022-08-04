@@ -99,9 +99,8 @@
 }
 
 .custom-section .custom-row .hero-img {
-    width: 55%!important;
-    max-width: 900px;
-    height: auto!important;
+    width: auto!important;
+    height: 107%;
     position: absolute!important;
     right: 0!important;
     bottom: 0!important;
@@ -168,6 +167,37 @@
 
     #hero.custom-section .custom-row .custom-col:nth-child(2) {
         display: none;
+    }
+}
+
+
+@media all and (max-width: 1400px) {
+    .custom-section .custom-row .hero-img {
+        height: 90%;
+    }
+}
+
+@media all and (max-width: 1300px) {
+    .custom-section .custom-row .hero-img {
+        height: 80%;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .custom-section .custom-row .hero-img {
+        height: 75%;
+    }
+}
+
+@media all and (max-width: 1100px) {
+    .custom-section .custom-row .hero-img {
+        height: 70%;
+    }
+}
+
+@media all and (max-width: 1600px) {
+    #hero {
+        height: 65vh;
     }
 }
 
