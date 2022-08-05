@@ -205,4 +205,13 @@
     #hero {
         height: 62vh;
     }
+
+    #hero .custom-row {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .custom-section .custom-row .hero-img {
+        height: 100%;
+    }
 }
