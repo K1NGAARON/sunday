@@ -53,6 +53,19 @@
 
 /* FONTS */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+ul li,
+ol li,
+p {
+    font-family: Poppins;
+}
+
+
 h1 {
     font-weight: 700;
     font-size: 48px;
@@ -65,11 +78,13 @@ h2 {
     font-size: 28px;
     margin-bottom: 16px;
     margin-top: 60px;
+    text-align: left;
 }
 
 h3 {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
+    color: #00000095;
 }
 
 h4 {
