@@ -288,4 +288,18 @@ ul li::before {
     .custom-blog.cta-section h2 {
         font-size: 20px;
     }
+
+    .custom-section .flexb-row {
+        flex-direction: column;
+        max-width: 700px;
+        padding: 30px 30px 0 30px; 
+    }
+
+    .custom-section .flexb-row .col:nth-child(1) {
+        display: none;
+    }
+
+    .custom-section .flexb-row .col:nth-child(2) {
+        width: 100%;
+    }
 }
