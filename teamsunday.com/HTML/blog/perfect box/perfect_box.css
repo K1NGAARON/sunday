@@ -69,7 +69,7 @@ p {
 h1 {
     font-weight: 700;
     font-size: 48px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 16px;
 }
 
@@ -197,6 +197,25 @@ ul li::before {
 
 .custom-blog.cta-section h2 {
     text-align: center;
+}
+
+.custom-section:nth-child(1) {
+    background-color: var(--light-grey);
+}
+
+.custom-section .flexb-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.custom-section .flexb-row .col {
+    width: 50%;
 }
 
 
