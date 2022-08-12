@@ -51,16 +51,6 @@ const jobsArray = [
         'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png' 
     },
     {
-        'positionTitle' : 'International Recruiter',
-        'positionText' : 'You’re in charge of growing the Sunday team with A-players.',
-        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/BE.jpg',
-        'positionALT' : 'International recruiter at Sunday',
-        'positionURL' : '/en/jobs/international-recruiter-belgium/',
-        'positionCountry' : 'Belgium',
-        'positionCity' : 'Roeselare',
-        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png' 
-    },
-    {
         'positionTitle' : 'Account Executive',
         'positionText' : 'Our business grows with you. Close some interesting deals with us!',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DE.jpg',
