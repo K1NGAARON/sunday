@@ -21,16 +21,6 @@ function dropdownFilter() {
 const jobsWrapper = document.querySelector("#jobs-section");
 const jobsArray = [
     {
-        'positionTitle' : 'Office Assistant',
-        'positionText' : 'You are our office elf.',
-        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/EXTRA3.jpg',
-        'positionALT' : 'Office Assistant at Sunday',
-        'positionURL' : '/en/jobs/office-assistant-belgium/',
-        'positionCountry' : 'Belgium',
-        'positionCity' : 'Roeselare',
-        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png' 
-    },
-    {
         'positionTitle' : 'Project Manager',
         'positionText' : 'Voor de groei van Sunday gaan wij op zoek naar een Hands on Project Manager.',
         'positionIMG' : '/wp-content/uploads/2022/05/NL.jpg',
