@@ -1,0 +1,125 @@
+<div class="social-post-wrapper">
+    <div class="social-posts" data-amount-of-logos="14">
+
+    </div>
+</div>
+
+<script>
+    (function (window) {
+        let socialPosts = {
+            parentClassName : 'social-posts',
+            imageSources : [
+                {
+                    'alt' : 'Discover what Tobania has to say about Sunday.',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:share:6862305041424891904'
+                },
+                {
+                    'alt' : 'Discover what UX Connections has to say about Sunday.',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:share:6864109407287025664' 
+                },
+                {
+                    'alt' : 'Discover what ML6 has to say about Sunday.',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:share:6861943180053544960'
+                },
+                {
+                    'alt' : 'Discover what Streamz has to say about Sunday.',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6853600703840047104',
+                },
+                {
+                    'alt' : 'Discover what Nuri has to say about Sunday.',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:share:6844181268347801600'
+                },
+                {
+                    'alt' : 'Discover what Daisy De Waele has to say about Sunday.',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:share:6844285398475145216'
+                },
+                {
+                    'alt' : 'Discover what Engels has to say about Sunday.',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6839526939435311104'
+                },
+                {
+                    'alt' : 'Discover what ML2 Grow has to say about Sunday.',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:share:6831879412984741888'
+                },
+                {
+                    'alt' : 'Discover what Showpad has to say about Sunday.',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:share:6826067154811535361'
+                },
+                {
+                    'alt' : 'Discover what KV Kortrijk has to say about Sunday.',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:share:6849408867277824000'
+                },
+                {
+                    'alt' : 'Discover what icapps has to say about Sunday.',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6849676409804328961'
+                },
+                {
+                    'alt' : 'Discover what Izabela Michalska has to say about Sunday.',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:share:6855814617638195200'
+                },
+                {
+                    'alt' : 'Discover what Jan Verlinden has to say about Sunday.',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:share:6866033503633473536'
+                },
+                {
+                    'alt' : 'Discover what Dennis Pettinga has to say about Sunday',
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:share:6881142564326539265'
+                },
+                {
+                    'alt' : "Just had a nice meeting with Carlin Klein Wolterink from Sunday Thank you for the socks they're awesome :-)",
+                    'src' : 'https://www.linkedin.com/embed/feed/update/urn:li:share:6960934295246938112'
+                }
+            ],
+            loaded() {
+                let parents = window.document.getElementsByClassName(this.parentClassName);
+                window.console.log(parents);
+                for (let i = 0; i < parents.length; i++) {
+                    this.selectRandomClients(parents[i]);
+                }
+            },
+            generateTemplate(image) {
+                if (!image.src) {
+                    return '';
+                }
+
+                let postSource = image.src;
+                let imageAlt = image.alt ?? '';
+
+                let template = `<div class="social-post"><iframe src="${postSource}" height="722" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></div>`;
+                return template;
+            },
+            selectRandomClients(parent) {
+                let amount = parent.dataset.amountOfLogos;
+                parent.innerHtml = '';
+                window.console.log('amount');
+                let notSelectedImages = this.imageSources;
+                let selectedImages = [];
+                for (let i = 0; i < amount; i++) {
+                    let index = Math.floor(Math.random() * notSelectedImages.length);
+                    selectedImages.push(notSelectedImages[index]);
+                    notSelectedImages.splice(index, 1);
+                }
+
+                for (let i = 0; i < selectedImages.length; i++) {
+                    let html = this.generateTemplate(selectedImages[i]);
+                    window.console.log(html);
+                    window.console.log(parent.innerHtml);
+                    parent.insertAdjacentHTML('beforeend', html);
+                }
+            }
+        }
+        socialPosts.loaded();
+    }(window));
+</script>
+
+<style>
+.social-posts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.social-post {
+    margin: 30px;
+}
+</style>
