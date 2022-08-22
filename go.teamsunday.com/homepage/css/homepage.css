@@ -6,10 +6,14 @@
 
 #first {
     height: 80vh;
-    background-image: url('https://teamsunday.com/wp-content/uploads/2021/07/background-1-1.png');
+    /* background-image: url('https://teamsunday.com/wp-content/uploads/2021/07/background-1-1.png');
     background-position: center right;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; */
+}
+
+#first img {
+    border-radius: 6px;
 }
 
 #header,
