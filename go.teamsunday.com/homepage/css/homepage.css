@@ -1,0 +1,18 @@
+.btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#first {
+    height: 80vh;
+    background-image: url('https://teamsunday.com/wp-content/uploads/2021/07/background-1-1.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#header,
+#footer {
+    background-color: var(--black);
+}
