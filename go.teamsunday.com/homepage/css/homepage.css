@@ -2,18 +2,40 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+    margin: 0 auto;
 }
 
 #first {
     height: 80vh;
-    /* background-image: url('https://teamsunday.com/wp-content/uploads/2021/07/background-1-1.png');
+    background-image: url('../img/sunday_banner.jpg');
+    background-color: #e1dfe0;
     background-position: center right;
     background-repeat: no-repeat;
-    background-size: contain; */
+    background-size: contain;
 }
 
 #first img {
     border-radius: 6px;
+}
+
+#first h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#first h1,
+#first p {
+    text-align: center;
+}
+
+#first .btn-wrapper .primary-btn {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+#first .btn-wrapper .primary-btn:hover {
+    background-color: var(--white);
+    color: var(--black);
 }
 
 #header,
