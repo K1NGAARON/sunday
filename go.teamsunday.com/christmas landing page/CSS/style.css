@@ -423,8 +423,8 @@ ul li {
         text-align: center;
     }
 
-    .primary-btn {
-        margin: auto auto;
+    .section .primary-btn {
+        margin: 0 auto;
     }
 
     img:not(#header-logo) {
