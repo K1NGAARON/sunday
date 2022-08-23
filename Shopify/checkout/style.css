@@ -1,0 +1,13 @@
+.custom-input {
+    border: 2px solid #000000;
+    font-size: 16px;
+    border-radius: 6px;
+    height: 30px;
+}
+
+.custom-input:focus-visible {
+    outline: none;
+    outline-offset: unset;
+    box-shadow: none;
+    border: 2px solid #702dbd;
+}
