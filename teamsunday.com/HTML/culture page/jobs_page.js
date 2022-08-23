@@ -21,8 +21,8 @@ function dropdownFilter() {
 const jobsWrapper = document.querySelector("#jobs-section");
 const jobsArray = [
     {
-        'positionTitle' : 'Project Manager',
-        'positionText' : 'Voor de groei van Sunday gaan wij op zoek naar een Hands on Project Manager.',
+        'positionTitle' : 'Business Process Manager',
+        'positionText' : 'Voor de groei van Sunday gaan wij op zoek naar een Hands on Business Process Manager.',
         'positionIMG' : '/wp-content/uploads/2022/05/NL.jpg',
         'positionALT' : 'Project Manager at Sunday',
         'positionURL' : '/en/jobs/project-manager-roeselare/',
