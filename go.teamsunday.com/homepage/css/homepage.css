@@ -6,13 +6,16 @@
 }
 
 #first {
-    height: 80vh;
+    height: 100vh;
     background-image: url('../img/sunday_banner.jpg');
     background-color: #e1dfe0;
     background-position: center right;
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+/* header & footer height aftrekken van height */
+/*  min-height voor mobiel */
 
 #first img {
     border-radius: 6px;
