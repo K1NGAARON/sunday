@@ -34,6 +34,8 @@
 #first .btn-wrapper .primary-btn {
     background-color: var(--white);
     color: var(--black);
+    display: flex;
+    align-items: center;
 }
 
 #first .btn-wrapper .primary-btn:hover {
@@ -44,4 +46,11 @@
 #header,
 #footer {
     background-color: var(--black);
+}
+
+@media all and (max-width: 540px) {
+    #first {
+        background-image: none;
+        height: 90vh;
+    }
 }
