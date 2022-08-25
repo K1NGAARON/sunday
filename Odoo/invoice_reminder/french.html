@@ -1,0 +1,41 @@
+<div style="font-size:13px;font-family:Poppins, Helvetica, sans-serif;">
+    <div style="font-size:13px;font-family:Poppins, Helvetica, sans-serif, Helvetica, Verdana, Arial, sans-serif;margin:0 0 20px 0;text-align: center; margin-bottom: 20px;">
+        <img style="border-style:none;margin:0px auto;vertical-align: middle; max-width: 125px; width: auto; height: auto;" src="https://teamsunday.com/wp-content/uploads/2021/11/sunday_white_bg.png" width="125" height="24.5625">
+    </div>
+
+    <div style="font-size:13px;font-family:Poppins, Helvetica, sans-serif, Helvetica, Verdana, Arial, sans-serif;border-radius:6px;padding:20px 40px 20px 40px;margin:0 auto 0 auto;box-shadow:rgba(36, 50, 66, 0.1) 0px 3px 5px 0px;max-width:80%;background-color:rgb(250, 250, 250);text-align: center;">
+        <img style="border-style:none;margin:0px auto;vertical-align: middle; max-width: 70px; width: auto; height: auto;" src="https://teamsunday.com/wp-content/uploads/2021/09/Internationalization-at-Sunday.png" width="70" height="75.675">
+        <h2 style="margin:0px 0 0.5rem 0;color:rgb(33, 37, 41);line-height:1.2;font-weight:700;font-size: 24px; font-weight: 700;">
+            Veuillez consulter votre facture
+        </h2>
+        <p style="font-family:Poppins, Helvetica, sans-serif, Helvetica, Verdana, Arial, sans-serif;margin-top:16px;font-size: 14px;">
+            Après examen de nos comptes, nous avons constaté que cette facture est restée impayée. Pouvons-nous vos prier de régler le paiement le plus vite possible? Merci.
+        </p>
+
+        <div style="font-size:13px;font-family:Poppins, Helvetica, sans-serif, Helvetica, Verdana, Arial, sans-serif;border-radius:6px;border-style:solid;padding:20px;margin:40px 0 0 0;text-align:left;border-left-color:rgb(245, 245, 245);border-bottom-color:rgb(245, 245, 245);border-right-color:rgb(245, 245, 245);border-top-color:rgb(245, 245, 245);border-left-width:2px;border-bottom-width:2px;border-right-width:2px;border-top-width:2px;background-color: #ffffff; border-radius: 6px; margin-top: 40px; border: 2px solid #f5f5f5; text-align: left; padding: 20px;">
+            <div style="font-size:13px;font-family:Poppins, Helvetica, sans-serif, Helvetica, Verdana, Arial, sans-serif;align-items:center;flex-direction:row;display: flex; flex-direction: row; align-items: center;">
+                <p style="margin:0px;font-family:Poppins, Helvetica, sans-serif;flex-basis:0%;flex-shrink:0;flex-grow:1;font-size:18px;font-weight:700;flex: 1 0; font-weight: 700; font-size: 18px; width: 50%; text-align: left;">
+                    ${object['name']}
+                </p>
+                <p style="margin:0px;font-family:Poppins, Helvetica, sans-serif;flex-basis:0%;flex-shrink:0;flex-grow:1;font-size:18px;font-weight:700;flex: 1 0; font-weight: 700; font-size: 18px; width: 50%; text-align: right;">
+                    ${format_amount(object.amount_total, object.currency_id)}
+                </p>
+            </div>
+
+            <hr style="border-top-style:solid;border-bottom-width:0px;overflow-y:visible;overflow-x:visible;height:0px;box-sizing:content-box;border-style:solid solid none solid;margin:10px 0 10px 0;border-top-color:rgb(250, 250, 250);border-top-width:2px;border-left-color:rgb(250, 250, 250);border-right-color:rgb(250, 250, 250);border-left-width:2px;border-right-width:2px;border: 2px solid #fafafa; margin-top: 10px; margin-bottom: 10px; border-bottom: none;">
+
+            <a style="text-decoration:none;border-radius:6px;border-style:none;padding:13px 23px 13px 23px;margin:20px auto 8px auto;appearance:none;transition-property:all;transition-delay:0s;transition-timing-function:ease-in-out;transition-duration:0.25s;cursor:pointer;white-space:normal;vertical-align:middle;text-shadow:none;text-transform:capitalize;font-weight:600;line-height:20px;font-size:0.875rem;font-family:inherit;box-shadow:none;width:fit-content;text-align:center;background-color:rgb(113, 45, 190);color:rgb(255, 255, 255);display: flex; text-align: center; width: fit-content; margin: 0 auto 8px auto; padding: 13px 23px; border-radius: 6px; background-color: #712dbe; color: #ffffff; font-size: .875rem; font-weight: 600; text-transform: capitalize; text-decoration: none;" class="wardrobe-mail-btn" href="${ctx['url']}">
+                Voir la facture ➔
+            </a>
+        </div>
+    </div>
+
+    <div style="font-size:13px;font-family:Poppins, Helvetica, sans-serif, Helvetica, Verdana, Arial, sans-serif;margin:20px 0 0 0;text-align: center; margin-top: 20px;">
+        <p style="font-family:Poppins, Helvetica, sans-serif, Helvetica, Verdana, Arial, sans-serif;margin:20px 0px 0px 0px;color:rgb(152, 153, 155);font-size: 10px; color: #98999b; margin-top: 20px;">
+            Copyright Sunday 2021 | Questions? We're here to help.
+            <a href="mailto:info@teamsunday.com" style="text-decoration:none;background-color:transparent;color:rgb(98, 180, 229);">
+                Contact us
+            </a>
+        </p>
+    </div>
+</div>
