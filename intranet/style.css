@@ -14,6 +14,45 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Poppins!important;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+body {
+	font-family: Poppins!important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+ul li,
+ol li {
+	font-family: Poppins!important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 700!important;
+}
+
 .scheme_default, 
 body.scheme_default {
 	--theme-color-accent_hover: #000!important;
@@ -27,4 +66,8 @@ body.scheme_default {
 
 #page_preloader {
 	display: none!important;
+}
+
+.page_content_wrap {
+	margin-top: 50px;
 }
