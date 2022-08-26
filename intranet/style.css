@@ -68,6 +68,7 @@ body.scheme_default {
 	display: none!important;
 }
 
-.page_content_wrap {
-	margin-top: 50px;
+.page_content_wrap,
+.content-warp {
+	margin-top: 120px;
 }
