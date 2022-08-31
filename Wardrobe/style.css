@@ -1,0 +1,85 @@
+:root {
+    --red: #b92e22;
+    --red-light: #f4c7c3;
+    --nav: #f5f5f5;
+    --border: #d3d3d3;
+}
+
+.pcoded-navbar {
+    background-color: var(--white);
+    box-shadow: none;
+}
+
+.pcoded-navbar .navbar-content,
+.pcoded-navbar .header-logo {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-right: 1px solid #d3d3d3;
+}
+
+.pcoded-navbar .header-logo,
+.navbar-content {
+    background-color: var(--nav);
+}
+
+.pcoded-navbar a, 
+.pcoded-navbar .pcoded-inner-navbar li.pcoded-menu-caption > label {
+    color: var(--sunday-black);
+}
+
+.nav-item active {
+    background-color: var(--sunday-purple);
+}
+
+.btn-primary {
+    text-transform: capitalize;
+    background-color: var(--sunday-purple);
+    border-color: var(--sunday-purple);
+}
+
+.btn-danger {
+    background-color: var(--sunday-purple);
+    border-color: var(--sunday-purple);
+}
+
+header, 
+.pcoded-header {
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.table-striped tbody tr:nth-of-type(2n+1),
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: transparent;
+}
+
+.table.dataTable[class*="table-"] thead th {
+    background-color: #f5f5f5;
+    color: #241c15;
+}
+
+
+/* TO BE IMPLEMENTED */
+/* 
+
+@Bartel
+
+Critical is als het 0 is (donkerrood dus)
+Warning is als het onder treshhold is (lichtrood dus)
+
+.pill {
+    color: var(--sunday-black);
+}
+
+.pill.critical {
+    background-color: var(--red);
+    color: var(--sunday-white);
+}
+
+.pill.warning {
+    background-color: var(--red-light);
+    color: var(--sunday-white);
+}
+
+
+
+*/
