@@ -37,7 +37,7 @@ function animate(obj, initVal, lastVal, duration) {
 
     
     function load() {
-        animate(websites, 0, 3782 , 5200);
+        animate(websites, 0, 3782, 5200);
     }
 
     
