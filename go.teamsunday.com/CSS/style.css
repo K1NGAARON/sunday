@@ -162,7 +162,7 @@ ul li {
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin: 0 30px;
+    padding: 0 30px;
 }
 
 .center-text {
@@ -404,9 +404,13 @@ ul li {
         flex-direction: column-reverse;
     }
 
+    .section .row.flex-col {
+        padding: 0 30px;
+    }
+
     .section .row .col {
         width: 100%;
-        padding: 0;
+        padding: 0 30px;
         margin: 0;
     }
 
