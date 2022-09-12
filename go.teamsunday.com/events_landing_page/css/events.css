@@ -335,7 +335,11 @@
         width: 100%;
     }
 
-    #hero-section .col:nth-child(1) img {
+    #hero-section .row .col:nth-child(2) {
+        display: flex!important;
+    }
+
+    #hero-section .col:nth-child(1) .arrow {
         display: none;
     }
 
@@ -343,5 +347,7 @@
         position: unset;
     }
 
-
+    .social-proof-wrapper .logo-wrapper img {
+        width: 70px;
+    }
 }
