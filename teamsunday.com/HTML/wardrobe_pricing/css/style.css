@@ -23,6 +23,10 @@ table th {
     border: unset;
 }
 
+table tr {
+    width: 100%;
+}
+
 #wardrobePricing {
     padding: 40px;
 }
