@@ -18,6 +18,11 @@
     font-family: Poppins;
 }
 
+table td,
+table th {
+    border: unset;
+}
+
 #wardrobePricing {
     padding: 40px;
 }
@@ -29,6 +34,19 @@
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+}
+
+table::-webkit-scrollbar {
+    width: 20px;
+}
+
+table::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 20px;
+}
+
+table::-webkit-scrollbar-track {
+    background-color: var(--light-grey);
 }
 
 #wardrobePricing table .logo {
@@ -142,4 +160,16 @@
 
 #wardrobePricing .information td {
     color: var(--black);
+}
+
+@media (max-width: 700px) {
+    #wardrobePricing td,
+    #wardrobePricing th,
+    #wardrobePricing .popular td:nth-child(3),
+    #wardrobePricing td:not(:first-child) {
+        font-size: 14px;
+    }
+    #wardrobePricing .fa-check {
+        font-size: 18px;
+    }
 }
