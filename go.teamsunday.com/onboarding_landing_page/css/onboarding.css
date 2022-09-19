@@ -81,7 +81,8 @@
     padding: 0!important;
 }
 
-.contact-form input {
+.contact-form input,
+.contact-form select {
     width: 100%;
     margin: 8px 0!important;
     padding: 10px 15px!important;
@@ -98,7 +99,8 @@
     font-size: 12px!important;
 }
 
-.contact-form input:focus-visible {
+.contact-form input:focus-visible,
+.contact-form select:focus-visible {
     border: 3px solid var(--primary)!important;
     outline: none!important;
 }
