@@ -51,6 +51,11 @@
     margin-left: 50%!important;
 }
 
+#hero-section .focus {
+    color: var(--primary)!important;
+    font-weight: 700;
+}
+
 
 
 @media (max-width: 940px) {
