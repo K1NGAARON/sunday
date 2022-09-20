@@ -30,3 +30,8 @@
 .section ul li:before {
     color: var(--red);
 }
+
+.section .primary-btn:hover {
+    text-decoration: none;
+}
+
