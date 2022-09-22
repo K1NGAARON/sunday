@@ -21,6 +21,26 @@ function dropdownFilter() {
 const jobsWrapper = document.querySelector("#jobs-section");
 const jobsArray = [
     {
+        'positionTitle' : 'Sales Traineeship Amsterdam',
+        'positionText' : 'Ben je ambitieus en leg je graag contacten? Ben je op zoek naar een uitdaging in een internationaal bedrijf?',
+        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/BE2.jpg',
+        'positionALT' : 'Sales Traineeship at Sunday',
+        'positionURL' : '/en/jobs/sales-traineeship/',
+        'positionCountry' : 'Netherlands',
+        'positionCity' : 'Amsterdam',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Netherlands-Flag.png' 
+    },
+    {
+        'positionTitle' : 'Sales Traineeship Roeselare',
+        'positionText' : 'Ben je ambitieus en leg je graag contacten? Ben je op zoek naar een uitdaging in een internationaal bedrijf?',
+        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/EXTRA3.jpg',
+        'positionALT' : 'Sales Traineeship at Sunday',
+        'positionURL' : '/en/jobs/sales-traineeship/',
+        'positionCountry' : 'Belgium',
+        'positionCity' : 'Roeselare',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png' 
+    },
+    {
         'positionTitle' : 'Financial Controller',
         'positionText' : 'Je bent verantwoordelijk om de financiële rapportering van de groep tot een hoger niveau te tillen.',
         'positionIMG' : '/wp-content/uploads/2022/05/DE.jpg',
