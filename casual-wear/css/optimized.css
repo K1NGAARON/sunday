@@ -67,7 +67,7 @@ img {
 .section .row .primary-btn {
     display: flex;
     max-width: fit-content;
-    margin-left: 0;
+    margin: 20px 0;
     padding: 15px 25px;
     border-radius: 6px;
     background-color: var(--purple);
@@ -99,6 +99,11 @@ img {
 .section .row h1 {
     margin: 20px 0;
     font-size: 42px;
+}
+
+.section .row h2 {
+    margin: 10px 0;
+    font-size: 28px;
 }
 
 .section .row .breadcrumb,
@@ -133,6 +138,89 @@ img {
     width: 150px;
     height: auto;
     margin: 0;
+}
+
+/* Button wrapper */
+.section .row .btn-wrapper .primary-btn {
+    background-color: var(--light-grey);
+    color: var(--black);
+}
+
+.section .row .primary-btn.active {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+
+/* Slideshow buttons */
+.section .row .btn-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    margin-top: 20px;
+    max-width: 500px
+}
+
+
+/* Slideshow */
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, 
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, 
+.next:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+
+
+/* Contact section */
+#contact {
+    background-color: var(--purple);
+}
+
+#contact h3,
+#contact p,
+#contact ul li,
+#contact a {
+    color: var(--white);
+}
+
+#contact a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    transition: var(--transition);
 }
 
 
