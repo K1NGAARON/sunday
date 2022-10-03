@@ -2,8 +2,19 @@ function preventDefault(e) {
     e.preventDefault();
 }
 
-function showDesignSteps() {
+function showDesignSteps(e) {
+    console.log(e);
+    console.log(e.target.id);
+    
+    // if (true) {
 
+    // } else if (false) {
+
+    // } else if (true) {
+
+    // } else {
+
+    // }
 }
 
 function changeGallery() {
@@ -15,7 +26,11 @@ function changeGallery() {
 
 
 
-const galleryButtons = document.querySelectorAll('.btn-wrapper > .primary-btn');
+
+const designTitle = document.querySelector('.designTitle').innerText;
+const designBody = document.querySelector('.designBody').innerText;
+const designImg = document.querySelector('.designImg').innerText;
+
 
 const designSteps = [
     {
@@ -47,3 +62,4 @@ const designSteps = [
 
 // Call functions
 $('.btn-wrapper > .primary-btn').on('click', preventDefault);
+$('.btn-wrapper.design-steps > .primary-btn').on('click', showDesignSteps);
