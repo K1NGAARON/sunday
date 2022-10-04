@@ -37,17 +37,32 @@ function showProducts(e) {
 
     const activeProduct = e.target.id;
     console.log(activeProduct);
+
+    if (activeProduct === 'tshirt') {
+        image1.src = productGallery[0].tshirt1;
+        // image2.src = productGallery[0].tshirt2;
+        // image3.src = productGallery[0].tshirt3;
+    } else if (activeProduct === 'hoodie') {
+        image1.src = productGallery[1].hoodie1;
+        // image2.src = productGallery[0].hoodie2;
+        // image3.src = productGallery[0].hoodie3;
+    }
 }
 
 
 
 // PRODUCT GALLERY
+const image1 = document.querySelector('#first-slide');
+const image2 = document.querySelector('#second-slide');
+const image3 = document.querySelector('#third-slide');
+
+
 const productGallery = [
     {
         'tshirt1' : 'https://teamsunday.com/wp-content/uploads/2022/03/T-shirt-1.jpg'
     },
     {
-        'hoodie' : 'https://teamsunday.com/wp-content/uploads/2022/03/Hoodie3.jpg'
+        'hoodie1' : 'https://teamsunday.com/wp-content/uploads/2022/03/Hoodie3.jpg'
     }
 ]
 
