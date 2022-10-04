@@ -3,18 +3,29 @@ function preventDefault(e) {
 }
 
 function showDesignSteps(e) {
-    console.log(e);
-    console.log(e.target.id);
+    $('.design-steps > .primary-btn').removeClass('active');
+    $(this).addClass('active');
+
+    const activeDesignStep = e.target.id;
     
-    // if (true) {
+    if (activeDesignStep === 'step1') {
+        designTitle.innerHTML = designSteps[0].title;
+        designBody.innerHTML = designSteps[0].body;
+        designImg.src = designSteps[0].img;
+    } else if (activeDesignStep === 'step2') {
+        designTitle.innerHTML = designSteps[1].title;
+        designBody.innerHTML = designSteps[1].body;
+        designImg.src = designSteps[1].img;
+    } else if (activeDesignStep === 'step3') {
+        designTitle.innerHTML = designSteps[2].title;
+        designBody.innerHTML = designSteps[2].body;
+        designImg.src = designSteps[2].img;
+    } else {
+        designTitle.innerHTML = designSteps[3].title;
+        designBody.innerHTML = designSteps[3].body;
+        designImg.src = designSteps[3].img;
+    }
 
-    // } else if (false) {
-
-    // } else if (true) {
-
-    // } else {
-
-    // }
 }
 
 function changeGallery() {
@@ -27,9 +38,9 @@ function changeGallery() {
 
 
 
-const designTitle = document.querySelector('.designTitle').innerText;
-const designBody = document.querySelector('.designBody').innerText;
-const designImg = document.querySelector('.designImg').innerText;
+const designTitle = document.querySelector('.designTitle');
+const designBody = document.querySelector('.designBody');
+const designImg = document.querySelector('.designImg');
 
 
 const designSteps = [
