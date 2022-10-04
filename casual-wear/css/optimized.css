@@ -296,4 +296,8 @@ img {
     #contact .row {
         flex-direction: column-reverse;
     }
+
+    #logos .row img {
+        width: 75px;
+    }
 }
