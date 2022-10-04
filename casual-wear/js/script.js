@@ -3,6 +3,8 @@ function preventDefault(e) {
 }
 
 function showDesignSteps(e) {
+    preventDefault(e);
+
     $('.design-steps > .primary-btn').removeClass('active');
     $(this).addClass('active');
 
@@ -25,18 +27,32 @@ function showDesignSteps(e) {
         designBody.innerHTML = designSteps[3].body;
         designImg.src = designSteps[3].img;
     }
-
 }
 
-function changeGallery() {
-    
+function showProducts(e) {
+    preventDefault(e);
+
+    $('.product-wrapper > .primary-btn').removeClass('active');
+    $(this).addClass('active');
+
+    const activeProduct = e.target.id;
+    console.log(activeProduct);
 }
 
 
 
+// PRODUCT GALLERY
+const productGallery = [
+    {
+        'tshirt1' : 'https://teamsunday.com/wp-content/uploads/2022/03/T-shirt-1.jpg'
+    },
+    {
+        'hoodie' : 'https://teamsunday.com/wp-content/uploads/2022/03/Hoodie3.jpg'
+    }
+]
 
 
-
+// DESIGN STEPS
 
 const designTitle = document.querySelector('.designTitle');
 const designBody = document.querySelector('.designBody');
@@ -72,5 +88,5 @@ const designSteps = [
 
 
 // Call functions
-$('.btn-wrapper > .primary-btn').on('click', preventDefault);
 $('.btn-wrapper.design-steps > .primary-btn').on('click', showDesignSteps);
+$('.btn-wrapper.product-wrapper > .primary-btn').on('click', showProducts);
