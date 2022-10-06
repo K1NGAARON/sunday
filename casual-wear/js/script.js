@@ -49,10 +49,36 @@ function showProducts(e) {
     }
 }
 
-function changeSlides(e) {
-    
+function plusSlides(e) {
+    showSlides(slideIndex += e);
 }
 
+function minSlides(e) {
+    showSlides(slideIndex -= e);
+}
+
+function currentSlide(e) {
+    showSlides(slideIndex = e);
+}
+
+function showSlides(e) {
+    let slides = document.getElementsByClassName("mySlides");
+
+    if (e > slides.length) {
+        slideIndex = 1;
+    }
+
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex-1].style.display = "block";
+
+}
 
 
 // PRODUCT GALLERY
@@ -109,3 +135,6 @@ const designSteps = [
 // Call functions
 $('.btn-wrapper.design-steps > .primary-btn').on('click', showDesignSteps);
 $('.btn-wrapper.product-wrapper > .primary-btn').on('click', showProducts);
+
+let slideIndex = 1;
+showSlides(slideIndex);
