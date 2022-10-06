@@ -49,6 +49,10 @@ function showProducts(e) {
     }
 }
 
+function changeSlides(e) {
+    
+}
+
 
 
 // PRODUCT GALLERY
