@@ -49,6 +49,10 @@ function showProducts(e) {
     }
 }
 
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
 function plusSlides(e) {
     showSlides(slideIndex += e);
 }
@@ -68,7 +72,7 @@ function showSlides(e) {
         slideIndex = 1;
     }
 
-    if (n < 1) {
+    if (e < 1) {
         slideIndex = slides.length;
     }
 
@@ -135,6 +139,3 @@ const designSteps = [
 // Call functions
 $('.btn-wrapper.design-steps > .primary-btn').on('click', showDesignSteps);
 $('.btn-wrapper.product-wrapper > .primary-btn').on('click', showProducts);
-
-let slideIndex = 1;
-showSlides(slideIndex);
