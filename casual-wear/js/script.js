@@ -36,7 +36,6 @@ function showProducts(e) {
     $(this).addClass('active');
 
     const activeProduct = e.target.id;
-    console.log(activeProduct);
 
     if (activeProduct === 'tshirt') {
         image1.src = productGallery[0].tshirt1;
