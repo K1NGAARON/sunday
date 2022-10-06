@@ -42,29 +42,29 @@ function showProducts(e) {
         image2.src = productGallery[0].tshirt2;
         image3.src = productGallery[0].tshirt3;
     } else if (activeProduct === 'hoodie') {
-        image1.src = productGallery[1].hoodie1;
-        image2.src = productGallery[1].hoodie2;
-        image3.src = productGallery[1].hoodie3;
+        image1.src = productGallery[0].hoodie1;
+        image2.src = productGallery[0].hoodie2;
+        image3.src = productGallery[0].hoodie3;
     } else if (activeProduct === 'polo') {
-        image1.src = productGallery[2].polo1;
-        image2.src = productGallery[2].polo2;
-        image3.src = productGallery[2].polo3;
+        image1.src = productGallery[0].polo1;
+        image2.src = productGallery[0].polo2;
+        image3.src = productGallery[0].polo3;
     } else if (activeProduct === 'sweater') {
-        image1.src = productGallery[3].sweater1;
-        image2.src = productGallery[3].sweater2;
-        image3.src = productGallery[3].sweater3; 
+        image1.src = productGallery[0].sweater1;
+        image2.src = productGallery[0].sweater2;
+        image3.src = productGallery[0].sweater3; 
     } else if (activeProduct === 'socks') {
-        image1.src = productGallery[4].socks1;
-        image2.src = productGallery[4].socks2;
-        image3.src = productGallery[4].socks3; 
+        image1.src = productGallery[0].socks1;
+        image2.src = productGallery[0].socks2;
+        image3.src = productGallery[0].socks3; 
     } else if (activeProduct === 'sweatpants') {
-        image1.src = productGallery[5].sweatpants1;
-        image2.src = productGallery[5].sweatpants2;
-        image3.src = productGallery[5].sweatpants3;
+        image1.src = productGallery[0].sweatpants1;
+        image2.src = productGallery[0].sweatpants2;
+        image3.src = productGallery[0].sweatpants3;
     } else if (activeProduct === 'totebags') {
-        image1.src = productGallery[6].totebags1;
-        image2.src = productGallery[6].totebags2;
-        image3.src = productGallery[6].totebags3;  
+        image1.src = productGallery[0].totebags1;
+        image2.src = productGallery[0].totebags2;
+        image3.src = productGallery[0].totebags3;  
     }
 }
 
@@ -114,34 +114,22 @@ const productGallery = [
     {
         'tshirt1' : 'https://teamsunday.com/wp-content/uploads/2022/10/shirt1.jpg',
         'tshirt2' : 'https://teamsunday.com/wp-content/uploads/2022/10/shirt2.jpg',
-        'tshirt3' : 'https://teamsunday.com/wp-content/uploads/2022/10/shirt3.jpg'
-    },
-    {
+        'tshirt3' : 'https://teamsunday.com/wp-content/uploads/2022/10/shirt3.jpg',
         'hoodie1' : 'https://teamsunday.com/wp-content/uploads/2022/10/hoodie1.jpg',
         'hoodie2' : 'https://teamsunday.com/wp-content/uploads/2022/10/hoodie2.jpg',
-        'hoodie3' : 'https://teamsunday.com/wp-content/uploads/2022/10/hoodie3.jpg'
-    },
-    {
+        'hoodie3' : 'https://teamsunday.com/wp-content/uploads/2022/10/hoodie3.jpg',
         'polo1' : 'https://teamsunday.com/wp-content/uploads/2022/10/polo1.jpg',
         'polo2' : 'https://teamsunday.com/wp-content/uploads/2022/10/polo2.jpg',
-        'polo3' : 'https://teamsunday.com/wp-content/uploads/2022/10/polo1.jpg'
-    },
-    {
+        'polo3' : 'https://teamsunday.com/wp-content/uploads/2022/10/polo1.jpg',
         'sweater1' : 'https://teamsunday.com/wp-content/uploads/2022/10/sweater1.jpg',
         'sweater2' : 'https://teamsunday.com/wp-content/uploads/2022/10/sweater2.jpg',
-        'sweater3' : 'https://teamsunday.com/wp-content/uploads/2022/10/sweater3.jpg'
-    },
-    {
+        'sweater3' : 'https://teamsunday.com/wp-content/uploads/2022/10/sweater3.jpg',
         'socks1' : 'https://teamsunday.com/wp-content/uploads/2022/10/socks1.jpg',
         'socks2' : 'https://teamsunday.com/wp-content/uploads/2022/10/socks2.jpg',
-        'socks3' : 'https://teamsunday.com/wp-content/uploads/2022/10/socks3.jpg'
-    },
-    {
+        'socks3' : 'https://teamsunday.com/wp-content/uploads/2022/10/socks3.jpg',
         'sweatpants1' : 'https://teamsunday.com/wp-content/uploads/2022/10/sweatpants1.jpg',
         'sweatpants2' : 'https://teamsunday.com/wp-content/uploads/2022/10/sweatpants2.jpg',
-        'sweatpants3' : 'https://teamsunday.com/wp-content/uploads/2022/10/sweatpants3.jpg'
-    },
-    {
+        'sweatpants3' : 'https://teamsunday.com/wp-content/uploads/2022/10/sweatpants3.jpg',
         'totebags1' : 'https://teamsunday.com/wp-content/uploads/2022/10/totebag1.jpg',
         'totebags2' : 'https://teamsunday.com/wp-content/uploads/2022/10/totebag2.jpg',
         'totebags3' : 'https://teamsunday.com/wp-content/uploads/2022/10/totebag3.jpg'
