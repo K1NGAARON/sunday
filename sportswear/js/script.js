@@ -37,7 +37,7 @@ function showProducts(e) {
 
     const activeProduct = e.target.id;
 
-    if (activeProduct === 'sport-tshirt') {
+    if (activeProduct === 'sport-shirt') {
         image1.src = productGallery[0].sportShirt1;
         image2.src = productGallery[0].sportShirt2;
         image3.src = productGallery[0].sportShirt3;
@@ -116,17 +116,17 @@ const image3 = document.querySelector('#third-slide');
 
 const productGallery = [
     {
-        'sportShirt1' : '',
-        'sportShirt2' : '',
-        'sportShirt3' : '',
+        'sportShirt1' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportshirt1.jpg',
+        'sportShirt2' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportshirt2.jpg',
+        'sportShirt3' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportshirt3.jpg',
 
-        'sportPolo1' : '',
-        'sportPolo2' : '',
-        'sportPolo3' : '',
+        'sportPolo1' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportpolo1-scaled.jpg',
+        'sportPolo2' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportpolo2-scaled.jpg',
+        'sportPolo3' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportpolo1-scaled.jpg',
 
-        'sportShort1' : '',
-        'sportShort2' : '',
-        'sportShort3' : '',
+        'sportShort1' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportshort1-scaled.jpg',
+        'sportShort2' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportshort1-scaled.jpg',
+        'sportShort3' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportshort1-scaled.jpg',
 
         'tennisWear1' : '',
         'tennisWear2' : '',
