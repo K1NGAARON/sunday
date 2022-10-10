@@ -14,9 +14,9 @@ function createEvents() {
     for (let i = 0; i < blogsArray.length; i++) {
         const eventTemplate = `
         <div class="event-item">
-            <img>
+            <img src="${eventArray[i].eventImg}" alt="${eventArray[i].eventTitle}">
             <h3>
-
+                ${eventArray[i].eventTitle}
             </h3>
             <p>
 
