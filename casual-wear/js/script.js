@@ -123,7 +123,7 @@ const productGallery = [
         'polo3' : 'https://teamsunday.com/wp-content/uploads/2022/10/polo1.jpg',
         'sweater1' : 'https://teamsunday.com/wp-content/uploads/2022/10/sweater1.jpg',
         'sweater2' : 'https://teamsunday.com/wp-content/uploads/2022/10/sweater2.jpg',
-        'sweater3' : 'https://teamsunday.com/wp-content/uploads/2022/10/sweater3.jpg',
+        'sweater3' : 'https://teamsunday.com/wp-content/uploads/2022/10/sweater4.jpg',
         'socks1' : 'https://teamsunday.com/wp-content/uploads/2022/10/socks1.jpg',
         'socks2' : 'https://teamsunday.com/wp-content/uploads/2022/10/socks2.jpg',
         'socks3' : 'https://teamsunday.com/wp-content/uploads/2022/10/socks3.jpg',
