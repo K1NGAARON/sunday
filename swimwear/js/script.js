@@ -37,38 +37,22 @@ function showProducts(e) {
 
     const activeProduct = e.target.id;
 
-    if (activeProduct === 'sport-shirt') {
-        image1.src = productGallery[0].sportShirt1;
-        image2.src = productGallery[0].sportShirt2;
-        image3.src = productGallery[0].sportShirt3;
-    } else if (activeProduct === 'sport-polo') {
-        image1.src = productGallery[0].sportPolo1;
-        image2.src = productGallery[0].sportPolo2;
-        image3.src = productGallery[0].sportPolo3;
-    } else if (activeProduct === 'sport-short') {
-        image1.src = productGallery[0].sportShort1;
-        image2.src = productGallery[0].sportShort2;
-        image3.src = productGallery[0].sportShort3;
-    } else if (activeProduct === 'tennis-wear') {
-        image1.src = productGallery[0].tennisWear1;
-        image2.src = productGallery[0].tennisWear2;
-        image3.src = productGallery[0].tennisWear3;
-    } else if (activeProduct === 'cycling-wear') {
-        image1.src = productGallery[0].cyclingWear1;
-        image2.src = productGallery[0].cyclingWear2;
-        image3.src = productGallery[0].cyclingWear3;
-    } else if (activeProduct === 'leggings') {
-        image1.src = productGallery[0].leggings1;
-        image2.src = productGallery[0].leggings2;
-        image3.src = productGallery[0].leggings3;
-    } else if (activeProduct === 'tracksuits') {
-        image1.src = productGallery[0].tracksuit1;
-        image2.src = productGallery[0].tracksuit2;
-        image3.src = productGallery[0].tracksuit3;
-    } else if (activeProduct === 'sport-bags') {
-        image1.src = productGallery[0].sportBags1;
-        image2.src = productGallery[0].sportBags2;
-        image3.src = productGallery[0].sportBags3;
+    if (activeProduct === 'swimshorts') {
+        image1.src = productGallery[0].swimshort1;
+        image2.src = productGallery[0].swimshort2;
+        image3.src = productGallery[0].swimshort3;
+    } else if (activeProduct === 'swimsuits') {
+        image1.src = productGallery[0].swimsuits1;
+        image2.src = productGallery[0].swimsuits2;
+        image3.src = productGallery[0].swimsuits3;
+    } else if (activeProduct === 'towel') {
+        image1.src = productGallery[0].towel1;
+        image2.src = productGallery[0].towel2;
+        image3.src = productGallery[0].towel3;
+    } else if (activeProduct === 'sliders') {
+        image1.src = productGallery[0].sliders1;
+        image2.src = productGallery[0].sliders2;
+        image3.src = productGallery[0].sliders3;
     }
 }
 
@@ -116,33 +100,21 @@ const image3 = document.querySelector('#third-slide');
 
 const productGallery = [
     {
-        'sportShirt1' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportshirt1-1.jpg',
-        'sportShirt2' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportshirt2-1.jpg',
-        'sportShirt3' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportshirt3-1.jpg',
+        'swimshort1' : 'https://teamsunday.com/wp-content/uploads/2022/10/swimshort1.jpg',
+        'swimshort2' : 'https://teamsunday.com/wp-content/uploads/2022/10/swimshort2.jpg',
+        'swimshort3' : 'https://teamsunday.com/wp-content/uploads/2022/10/swimshort3.jpg',
 
-        'sportPolo1' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportpolo2-1.jpg',
-        'sportPolo2' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportpolo2-2.jpg',
-        'sportPolo3' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportpolo2-1.jpg',
+        'swimsuits1' : 'https://teamsunday.com/wp-content/uploads/2022/10/swimsuit1.jpg',
+        'swimsuits2' : 'https://teamsunday.com/wp-content/uploads/2022/10/swimsuit2.jpg',
+        'swimsuits3' : 'https://teamsunday.com/wp-content/uploads/2022/10/swimsuit1.jpg',
 
-        'sportShort1' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportshort1.jpg',
-        'sportShort2' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportshort2.jpg',
-        'sportShort3' : 'https://teamsunday.com/wp-content/uploads/2022/10/sportshort1.jpg',
+        'towel1' : 'https://teamsunday.com/wp-content/uploads/2022/10/towels1.jpg',
+        'towel2' : 'https://teamsunday.com/wp-content/uploads/2022/10/towels2.jpg',
+        'towel3' : 'https://teamsunday.com/wp-content/uploads/2022/10/towels3.jpg',
 
-        'tennisWear1' : 'https://teamsunday.com/wp-content/uploads/2022/10/tenniswear1.jpg',
-        'tennisWear2' : 'https://teamsunday.com/wp-content/uploads/2022/10/tenniswear2.jpg',
-        'tennisWear3' : 'https://teamsunday.com/wp-content/uploads/2022/10/tenniswear1.jpg',
-
-        'cyclingWear1' : 'https://teamsunday.com/wp-content/uploads/2022/10/cycling1.jpg',
-        'cyclingWear2' : 'https://teamsunday.com/wp-content/uploads/2022/10/cycling2.jpg',
-        'cyclingWear3' : 'https://teamsunday.com/wp-content/uploads/2022/10/cycling3.jpg',
-
-        'leggings1' : 'https://teamsunday.com/wp-content/uploads/2022/10/legging1.jpg',
-        'leggings2' : 'https://teamsunday.com/wp-content/uploads/2022/10/legging2.jpg',
-        'leggings3' : 'https://teamsunday.com/wp-content/uploads/2022/10/legging1.jpg',
-
-        'tracksuit1' : 'https://teamsunday.com/wp-content/uploads/2022/10/tracksuit1.jpg',
-        'tracksuit2' : 'https://teamsunday.com/wp-content/uploads/2022/10/tracksuit2.jpg',
-        'tracksuit3' : 'https://teamsunday.com/wp-content/uploads/2022/10/tracksuit3.jpg'
+        'sliders1' : 'https://teamsunday.com/wp-content/uploads/2022/10/sliders1.jpg',
+        'sliders2' : 'https://teamsunday.com/wp-content/uploads/2022/10/sliders2.jpg',
+        'sliders3' : 'https://teamsunday.com/wp-content/uploads/2022/10/sliders3.jpg',
     }
 ]
 
