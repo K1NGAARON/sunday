@@ -37,7 +37,7 @@ function showProducts(e) {
 
     const activeProduct = e.target.id;
 
-    if (activeProduct === 'christmas-sweater') {
+    if (activeProduct === 'christmas-sweaters') {
         image1.src = productGallery[0].christmasSweaters1;
         image2.src = productGallery[0].christmasSweaters2;
         image3.src = productGallery[0].christmasSweaters3;
