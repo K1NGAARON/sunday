@@ -1,5 +1,5 @@
-let country;
-let sdrField;
+let country; // TBA
+let sdrField; // TBA
 const amountSDR = 12;
 
 const teamSDR = {
