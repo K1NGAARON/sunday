@@ -49,6 +49,8 @@ function divideLeads() {
            
         } else if (country == 'Germany' || country == 'Austria' || country == 'Switzerland') {
 
+        } else {
+            // Randomize between all SDRs
         }
     } else {
         sdrField = teamSDR.fallback[0]; // Add sdr1 (Louis)
