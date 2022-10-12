@@ -43,17 +43,18 @@ function randomSDR(region) {
 
 function divideLeads() {
     if (country) {
-        if (country == 'Belgium' || country == 'Netherlands' || country == 'Luxemburg') {
+        if (country.toLowerCase() === 'Belgium' || country.toLowerCase() === 'Netherlands' || country.toLowerCase() === 'Luxemburg') {
            randomSDR(teamSDR.benelux); // Pick a random SDR from the BENELUX team
            sdrField = 'sdrMember'; // Add the random value to the sdrField (used to link to ActiveCampaign)
            
-        } else if (country == 'Germany' || country == 'Austria' || country == 'Switzerland') {
+        } else if (country.toLowerCase() === 'Germany' || country.toLowerCase() === 'Austria' || country.toLowerCase() === 'Switzerland') {
 
         } else {
             // Randomize between all SDRs
         }
-    } else {
-        sdrField = teamSDR.fallback[0]; // Add sdr1 (Louis)
+    } else { // Fallback
+        sdrField = 'sdr1'; // (Louis)
     }
 }
 
+// if (['belgium', 'netherlands', 'luxemburg'].includes(country.toLowerCase()))
