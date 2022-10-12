@@ -33,11 +33,15 @@ const teamSDR = {
 }
 
 
-function randomSDR(region) {
-    const random = Math.floor(Math.random() * teamSDR.region.length);
-    console.log(random);
+function randomSDR() {
+    const random = Math.floor(Math.random() * teamSDR.dach.length);
+    console.log(random, teamSDR.dach[random]);
 }
 
+function randomSDR2() {
+    const random = Math.floor(Math.random() * teamSDR.dach.length);
+    console.log(random, teamSDR.dach[random]);
+}
 
 
 
