@@ -34,9 +34,9 @@ const teamSDR = {
 
 
 function randomSDR(region) {
-    const random = Math.floor(Math.random() * region.length);
-    console.log(random, region[random]);
-    return random;
+    const sdrMember = Math.floor(Math.random() * region.length);
+    console.log(sdrMember, region[sdrMember]);
+    return sdrMember;
 }
 
 
@@ -45,7 +45,7 @@ function divideLeads() {
     if (country) {
         if (country == 'Belgium' || country == 'Netherlands' || country == 'Luxemburg') {
            randomSDR(teamSDR.benelux); // Pick a random SDR from the BENELUX team
-           sdrField = 'random'; // Add the random value to the sdrField (used to link to ActiveCampaign)
+           sdrField = 'sdrMember'; // Add the random value to the sdrField (used to link to ActiveCampaign)
            
         } else if (country == 'Germany' || country == 'Austria' || country == 'Switzerland') {
 
