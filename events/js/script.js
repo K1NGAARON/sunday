@@ -3,26 +3,26 @@
 const eventTarget = document.querySelector("#event-content > .row > #eventWrapper");
 const eventArray = [
     {
-        'eventImg' : 'https://teamsunday.com/wp-content/uploads/2022/09/header-3.jpg',
-        'eventTitle' : 'Test event numero uno',
-        'eventDate' : '14 Sept 2022',
-        'eventLocation' : 'Dublin',
-        'eventIntro' : 'Hello this is a small intro from Aaron',
+        'eventImg' : 'https://teamsunday.com/wp-content/uploads/2022/10/Banner-mobiel.jpg',
+        'eventTitle' : 'Bedrijven Contact Dagen',
+        'eventDate' : '26 - 27 October',
+        'eventLocation' : 'Bruges',
+        'eventIntro' : '',
     },
     {
-        'eventImg' : 'https://teamsunday.com/wp-content/uploads/2022/09/header-3.jpg',
-        'eventTitle' : 'Test event numero dos',
-        'eventDate' : '28 Sept 2022',
-        'eventLocation' : 'Dublin',
-        'eventIntro' : 'Hello this is a small intro from Aaron',
+        'eventImg' : 'https://teamsunday.com/wp-content/uploads/2022/10/ws-home-hero-ayo-tometi-1.jpg',
+        'eventTitle' : 'Web Summit',
+        'eventDate' : '1 - 4 November',
+        'eventLocation' : 'Lisbon',
+        'eventIntro' : '',  
     },
     {
-        'eventImg' : 'https://teamsunday.com/wp-content/uploads/2022/09/header-3.jpg',
-        'eventTitle' : 'Test event numero tres',
-        'eventDate' : '28 Sept 2022',
-        'eventLocation' : 'Dublin',
-        'eventIntro' : 'Hello this is a small intro from Aaron',
-    } 
+        'eventImg' : 'https://teamsunday.com/wp-content/uploads/2022/10/c5312b_fe1a0be6497145cc89c55da0e.jpg',
+        'eventTitle' : 'World Employer branding day',
+        'eventDate' : '12 - 14 October',
+        'eventLocation' : 'Lisbon',
+        'eventIntro' : '',  
+    }
 ];
 
 function createEvents() {
