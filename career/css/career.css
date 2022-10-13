@@ -1,0 +1,159 @@
+.section {
+    margin: 60px auto;
+}
+
+.section.grey {
+    background-color: var(--light-grey);
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.section h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+#hero {
+    height: 70vh;
+    background-image: url('https://teamsunday.com/wp-content/uploads/2022/02/John-and-jane-collection-min.jpg');
+    margin-top: 0;
+}
+
+#hero .row {
+    justify-content: center;
+}
+
+#hero .row h1 {
+    font-size: 64px;
+    color: var(--white);
+    text-align: center;
+}
+
+#hero .row #jobs {
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 12px;
+    border: none;
+    margin-top: 20px;
+}
+
+#hero .row #jobs:focus-visible {
+    outline: none;
+}
+
+.section.testimonial .row .small-headline {
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.section.testimonial .row .quote {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.section.testimonial .row .name {
+    font-size: 20px;
+}
+
+#values .row ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+
+#values .row ul li {
+    flex: 1 0 40%;
+    font-size: 18px;
+}
+
+#values .row ul li:hover {
+    cursor: pointer;
+}
+
+#values .row ul li.active {
+    font-weight: 700;
+}
+
+/* Add specific icon to values list items */
+#values .row .value-driven {
+    list-style-image: url('https://teamsunday.com/wp-content/uploads/2022/10/Group-2.svg');
+}
+
+#values .row .holistic {
+    list-style-image: url('https://teamsunday.com/wp-content/uploads/2022/10/Group-3.svg');
+}
+
+#values .row .growth {
+    list-style-image: url('https://teamsunday.com/wp-content/uploads/2022/10/Group-4.svg');
+}
+
+#values .row .worldly {
+    list-style-image: url('https://teamsunday.com/wp-content/uploads/2022/10/Group-5.svg');
+}
+
+#values .row .ownership {
+    list-style-image: url('https://teamsunday.com/wp-content/uploads/2022/10/Path-30.svg');
+}
+
+#vision .row {
+    padding: 0;
+}
+
+#vision .row img {
+    margin: 0;
+}
+
+#vision .row p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#vision .row .focus {
+    color: var(--purple);
+}
+
+#process .row p {
+    width: 60%;
+    text-align: center;
+}
+
+#gallery .gallery-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+#gallery .gallery-wrapper img {
+    border-radius: 0;
+    width: 25%;
+}
+
+#cta {
+    margin-bottom: 0;
+}
+
+#cta .row {
+    padding: 60px 0;
+}
+
+/* POSITION VISION IMAGE */
+#vision {
+    position: relative;
+}
+
+#vision .row {
+    height: 400px;
+}
+
+#vision img {
+    position: absolute;
+    width: 700px;
+    bottom: 0;
+}
