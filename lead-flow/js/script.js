@@ -40,9 +40,12 @@ function getLocation() {
 
 $.get("http://ipinfo.io", function (response) {
     $("#ip").html("IP: " + response.ip);
+  	$("#country").html("country: " + response.country);
     $("#address").html("Location: " + response.city + ", " + response.region);
     $("#details").html(JSON.stringify(response, null, 4));
 }, "jsonp");
+
+// Change script to BE NL etc
 
 
 function randomSDR(region) {
