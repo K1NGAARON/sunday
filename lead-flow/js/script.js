@@ -41,11 +41,7 @@ function getLocation() {
 $.get("http://ipinfo.io", function (response) {
     $("#ip").html("IP: " + response.ip);
   	$("#country").html("country: " + response.country);
-    $("#address").html("Location: " + response.city + ", " + response.region);
-    $("#details").html(JSON.stringify(response, null, 4));
 }, "jsonp");
-
-// Change script to BE NL etc
 
 
 function randomSDR(region) {
@@ -60,13 +56,13 @@ function divideLeads() {
     // Get location function
 
     if (country) {
-        if (country.toLowerCase() === 'belgium' || country.toLowerCase() === 'netherlands' || country.toLowerCase() === 'luxemburg') {
+        if (country.toLowerCase() === 'be' || country.toLowerCase() === 'nl' || country.toLowerCase() === 'lu') {
             console.log('country is BENELUX region');
 
            randomSDR(teamSDR.benelux); // Pick a random SDR from the BENELUX team
            sdrField = 'sdrMember'; // Add the random value to the sdrField (used to link to ActiveCampaign)
            
-        } else if (country.toLowerCase() === 'germany' || country.toLowerCase() === 'austria' || country.toLowerCase() === 'switzerland') {
+        } else if (country.toLowerCase() === 'de' || country.toLowerCase() === 'at' || country.toLowerCase() === 'ch') {
             console.log('country is DACH region');
 
             randomSDR(teamSDR.dach);
