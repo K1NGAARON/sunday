@@ -1,4 +1,4 @@
-let country; // TBA
+let country;
 let sdrField; // TBA
 
 const amountSDR = 12;
@@ -34,13 +34,11 @@ const teamSDR = {
 }
 
 
-function getLocation() {
-
-}
 
 $.get("http://ipinfo.io", function (response) {
     $("#ip").html("IP: " + response.ip);
-  	$("#country").html("country: " + response.country);
+    $("#country").html("country: " + response.country);
+    country = response;
 }, "jsonp");
 
 
@@ -53,7 +51,6 @@ function randomSDR(region) {
 
 function divideLeads() {
 
-    // Get location function
 
     if (country) {
         if (country.toLowerCase() === 'be' || country.toLowerCase() === 'nl' || country.toLowerCase() === 'lu') {
@@ -78,7 +75,6 @@ function divideLeads() {
     }
 }
 
-// if (['belgium', 'netherlands', 'luxemburg'].includes(country.toLowerCase()))
 
 
-// $(document).ready();
+// $(document).ready(divideLeads);
