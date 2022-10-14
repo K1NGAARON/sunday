@@ -56,13 +56,19 @@ function divideLeads() {
 
     if (country) {
         if (country.toLowerCase() === 'belgium' || country.toLowerCase() === 'netherlands' || country.toLowerCase() === 'luxemburg') {
+            console.log('country is BENELUX region');
+
            randomSDR(teamSDR.benelux); // Pick a random SDR from the BENELUX team
            sdrField = 'sdrMember'; // Add the random value to the sdrField (used to link to ActiveCampaign)
            
         } else if (country.toLowerCase() === 'germany' || country.toLowerCase() === 'austria' || country.toLowerCase() === 'switzerland') {
+            console.log('country is DACH region');
+
             randomSDR(teamSDR.dach);
             sdrField = 'sdrMember';
         } else {
+            console.log('country is OTHER region');
+
             randomSDR(teamSDR.general)
             sdrField = 'sdrMember';
         }
