@@ -1,1 +1,0 @@
-// Load product page scripts & CSS through this script
