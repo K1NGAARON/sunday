@@ -1,0 +1,398 @@
+/* Global CSS */
+
+:root {
+    --purple: #702dbd;
+    --blue: #62b5e5;
+    --dark-grey: #98999b;
+    --light-grey: #f5f5f5;
+    --white: #fff;
+    --black: #000;
+    --transition: all .25s ease-in-out;
+}
+
+* {
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+.sunday-nav-logo {
+    margin: 0!important;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+ul {
+    margin: 20px 0 20px 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+.section {
+    display: flex;
+}
+
+.section .row {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.section .row .col {
+    flex: 1 0 400px;
+    padding: 0 30px;
+}
+
+.section .row.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.section .row.flex-col {
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+.section .row .primary-btn {
+    display: flex;
+    max-width: fit-content;
+    margin: 20px 0;
+    padding: 15px 25px;
+    border-radius: 6px;
+    background-color: var(--purple)!important;
+    color: var(--white)!important;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: normal;
+    cursor: pointer;
+    transition: var(--transition);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.section .row .primary-btn:hover {
+    transform: scale(1.05);
+    transition: var(--transition);
+}
+
+
+@media (max-width: 768px) {
+    .section .row,
+    .section .row.row-reverse {
+        flex-direction: column;
+    }
+
+    .section .row h1 {
+        font-size: 32px;
+    }
+
+    .section .row .col {
+        flex: 1;
+    }
+}
+
+.section {
+    margin: 60px auto;
+}
+
+.section.grey {
+    background-color: var(--light-grey);
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.section h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+#hero {
+    height: fit-content;
+    margin-top: 0;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+#hero .video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.background-video {
+    width: 100%;
+}
+
+#hero .container {
+    width: 60%;
+    z-index: 9;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+#hero .row {
+    justify-content: center;
+}
+
+#hero .row h1 {
+    font-size: 68px;
+    color: var(--white);
+    text-align: center;
+    text-shadow: 2px 2px #00000060;
+}
+
+#hero .row #jobs {
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 12px;
+    border: none;
+    margin-top: 20px;
+}
+
+#hero .row #jobs:focus-visible {
+    outline: none;
+}
+
+.section.testimonial .row .small-headline {
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.section.testimonial .row .quote {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.section.testimonial .row .name {
+    font-size: 20px;
+}
+
+#values .row ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+
+#values .row ul li {
+    flex: 1 0 40%;
+    font-size: 18px;
+}
+
+#values .row ul li:hover {
+    cursor: pointer;
+}
+
+#values .row ul li.active {
+    font-weight: 700;
+}
+
+/* Add specific icon to values list items */
+#values .row .value-driven {
+    list-style-image: url('https://teamsunday.com/wp-content/uploads/2022/10/Group-2.svg');
+}
+
+#values .row .holistic {
+    list-style-image: url('https://teamsunday.com/wp-content/uploads/2022/10/Group-3.svg');
+}
+
+#values .row .growth {
+    list-style-image: url('https://teamsunday.com/wp-content/uploads/2022/10/Group-4.svg');
+}
+
+#values .row .worldly {
+    list-style-image: url('https://teamsunday.com/wp-content/uploads/2022/10/Group-5.svg');
+}
+
+#values .row .ownership {
+    list-style-image: url('https://teamsunday.com/wp-content/uploads/2022/10/Path-30.svg');
+}
+
+#vision .row {
+    padding: 0;
+}
+
+#vision .row img {
+    margin: 0;
+}
+
+#vision .row p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#vision .row .focus {
+    color: var(--purple);
+}
+
+#process .row p {
+    width: 60%;
+    text-align: center;
+}
+
+#gallery .gallery-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+#gallery .gallery-wrapper img {
+    border-radius: 0;
+    width: 25%;
+}
+
+#cta {
+    margin-bottom: 0;
+}
+
+#cta .row {
+    padding: 60px 0;
+}
+
+.application-steps-wrapper svg {
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* POSITION VISION IMAGE */
+#vision {
+    position: relative;
+}
+
+#vision .row {
+    height: 400px;
+}
+
+#vision img {
+    position: absolute;
+    max-width: 700px;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .section .row {
+        padding: 40px 0;
+    }
+
+    .section .row .col {
+        width: 100%;
+    }
+
+    #hero .container {
+        width: 100%;
+    }
+
+    #hero .row h1 {
+        font-size: 30px;
+    }
+
+    #hero .row #jobs {
+        font-size: 16px;
+    }
+
+    .section.testimonial .row .small-headline {
+        font-size: 20px;
+    }
+
+    .section.testimonial .row .quote {
+        font-size: 30px;
+    }
+
+    .section.testimonial .row .name {
+        font-size: 16px;
+    }
+    
+    .gallery-wrapper {
+        flex-wrap: wrap;
+    }
+
+    #vision .row {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    #vision .row .col:nth-of-type(1) {
+        display: none;
+    }
+
+    #gallery .gallery-wrapper img {
+        width: 50%;
+        margin: 0;
+    }
+
+    #process .row p {
+        width: 100%;
+    }
+
+    #process h2 {
+        text-align: center;
+    }
+
+    #cta .row {
+        padding: 40px 30px;
+    }
+
+    #cta h2 {
+        font-size: 26px;
+    }
+
+    .video-wrapper {
+        margin-top: 20px;
+    }
+}
+
+
+
+@media (max-width: 1385px) {
+    #vision .row .col:nth-of-type(1) img {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 1140px) {
+    #vision .row .col:nth-of-type(1) img {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #vision .row .col:nth-of-type(1) {
+        display: none;
+    }
+}
