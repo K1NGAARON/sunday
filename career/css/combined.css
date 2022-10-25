@@ -1,5 +1,10 @@
 /* Global CSS */
 
+.vce-row[data-vce-stretch-content=true] {
+    padding-right: 0!important;
+    padding-left: 0!important;
+}
+
 :root {
     --purple: #702dbd;
     --blue: #62b5e5;
