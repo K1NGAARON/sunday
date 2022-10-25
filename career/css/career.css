@@ -182,7 +182,8 @@
 
 #vision img {
     position: absolute;
-    width: 700px;
+    max-width: 700px;
+    width: 100%;
     bottom: 0;
 }
 
@@ -195,6 +196,14 @@
 @media (max-width: 768px) {
     .section .row {
         padding: 40px 0;
+    }
+
+    .section .row .col {
+        width: 100%;
+    }
+
+    #hero .container {
+        width: 100%;
     }
 
     #hero .row h1 {
@@ -230,10 +239,6 @@
         display: none;
     }
 
-    #vision .row .col:nth-of-type(2) {
-        
-    }
-
     #gallery .gallery-wrapper img {
         width: 50%;
         margin: 0;
@@ -253,5 +258,29 @@
 
     #cta h2 {
         font-size: 26px;
+    }
+
+    .video-wrapper {
+        margin-top: 20px;
+    }
+}
+
+
+
+@media (max-width: 1385px) {
+    #vision .row .col:nth-of-type(1) img {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 1140px) {
+    #vision .row .col:nth-of-type(1) img {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #vision .row .col:nth-of-type(1) {
+        display: none;
     }
 }
