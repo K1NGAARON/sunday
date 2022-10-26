@@ -1,0 +1,19 @@
+.checkout-layout-3:not(.woobuilder-active) #order_review .woocommerce-checkout-review-order-table tbody tr.coupon-form .checkout_coupon.woocommerce-form-coupon [name="coupon_code"] {
+    border-radius: 12px;
+}
+
+.checkout-layout-3:not(.woobuilder-active) #order_review .woocommerce-checkout-review-order-table tbody tr.coupon-form .checkout_coupon.woocommerce-form-coupon [name="apply_coupon"] {
+    border-radius: 12px;
+}
+
+.woocommerce-form-coupon-toggle .woocommerce-info {
+    display: none;
+}
+
+.checkout_coupon.woocommerce-form-coupon {
+    display: flex;
+}
+
+.checkout_coupon.woocommerce-form-coupon label {
+    display: none;
+}
