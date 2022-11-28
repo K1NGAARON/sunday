@@ -21,6 +21,16 @@ function dropdownFilter() {
 const jobsWrapper = document.querySelector("#jobs-section");
 const jobsArray = [
     {
+        'positionTitle' : 'Stage HR',
+        'positionText' : 'Als trainee van team Sunday bouw je dagelijks mee aan dit ambassadeurschap.',
+        'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/DE.jpg',
+        'positionALT' : 'stage HR',
+        'positionURL' : '/en/jobs/stage-hr',
+        'positionCountry' : 'Belgium',
+        'positionCity' : 'Roeselare',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png' 
+    },
+    {
         'positionTitle' : 'Sales Traineeship Amsterdam',
         'positionText' : 'Ben je ambitieus en leg je graag contacten? Ben je op zoek naar een uitdaging in een internationaal bedrijf?',
         'positionIMG' : 'https://teamsunday.com/wp-content/uploads/2022/05/BE2.jpg',
