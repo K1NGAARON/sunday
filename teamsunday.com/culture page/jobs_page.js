@@ -34,6 +34,16 @@ const jobsIMG = [
 const jobsWrapper = document.querySelector("#jobs-section");
 const jobsArray = [
     {
+        'positionTitle' : 'Content Creator met copywriting skills',
+        'positionText' : 'Je mixt creativiteit, mode, B2B marketing, sustainability tot een cocktail die klanten doet watertanden.',
+        'positionALT' : 'Content Creator',
+        'positionURL' : '/en/jobs/content-creator',
+        'positionCountry' : 'Belgium',
+        'positionCity' : 'Roeselare',
+        'flagURL' : 'https://teamsunday.com/wp-content/uploads/2021/08/Belgium-Flag.png',
+        'order' : '1'
+    },
+    {
         'positionTitle' : 'HR Traineeship',
         'positionText' : 'Als trainee van team Sunday bouw je dagelijks mee aan dit ambassadeurschap.',
         'positionALT' : 'HR Traineeship',
